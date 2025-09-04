@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -48,6 +49,7 @@ import im.vector.app.features.call.VectorCallActivity
 import im.vector.app.features.call.dialpad.PstnDialActivity
 import im.vector.app.features.call.webrtc.WebRtcCallManager
 import im.vector.app.features.crypto.verification.self.SelfVerificationBottomSheet
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.room.list.UnreadCounterBadgeView
 import im.vector.app.features.home.room.list.actions.RoomListSharedAction
 import im.vector.app.features.home.room.list.actions.RoomListSharedActionViewModel
@@ -222,7 +224,9 @@ class NewHomeDetailFragment :
 
     private fun showFABs() {
         views.newLayoutCreateChatButton.show()
-        views.newLayoutOpenSpacesButton.show()
+        if (!ProductFlavour.isQualiChat()) {
+            views.newLayoutOpenSpacesButton.show()
+        }
     }
 
     private fun setCurrentSpace(spaceId: String?) {
@@ -363,9 +367,9 @@ class NewHomeDetailFragment :
         })
     }
 
-/* ==========================================================================================
- * KeysBackupBanner Listener
- * ========================================================================================== */
+    /* ==========================================================================================
+     * KeysBackupBanner Listener
+     * ========================================================================================== */
 
     override fun onCloseClicked() {
         serverBackupStatusViewModel.handle(ServerBackupStatusAction.OnBannerClosed)
@@ -398,7 +402,9 @@ class NewHomeDetailFragment :
     }
 
     private fun refreshUnreadCounterBadge(badgeState: UnreadCounterBadgeView.State) {
-        views.spacesUnreadCounterBadge.render(badgeState)
+        if (!ProductFlavour.isQualiChat()) {
+            views.spacesUnreadCounterBadge.render(badgeState)
+        }
     }
 
     override fun onTapToReturnToCall() {

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,9 +40,11 @@ import im.vector.app.core.intent.getFilenameFromUri
 import im.vector.app.core.platform.OnBackPressed
 import im.vector.app.core.platform.VectorBaseFragment
 import im.vector.app.core.platform.VectorMenuProvider
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.core.utils.toast
 import im.vector.app.databinding.FragmentRoomSettingGenericBinding
 import im.vector.app.features.analytics.plan.MobileScreen
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.roomprofile.RoomProfileArgs
 import im.vector.app.features.roomprofile.RoomProfileSharedActionViewModel
@@ -168,7 +171,7 @@ class RoomSettingsFragment :
         views.waitingView.root.isVisible = state.isLoading
 
         state.roomSummary()?.let {
-            views.roomSettingsToolbarTitleView.text = it.displayName
+            views.roomSettingsToolbarTitleView.swapToEthereumDisplayName(it.displayName)
             avatarRenderer.render(it.toMatrixItem(), views.roomSettingsToolbarAvatarImageView)
             views.roomSettingsDecorationToolbarAvatarImageView.render(it.roomEncryptionTrustLevel)
         }
@@ -230,6 +233,9 @@ class RoomSettingsFragment :
     }
 
     override fun onAvatarChange() {
+        if (ProductFlavour.isQualiChat()) {
+            return
+        }
         galleryOrCameraDialogHelper.show()
     }
 

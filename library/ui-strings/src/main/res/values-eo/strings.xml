@@ -32,7 +32,7 @@
     <string name="notice_room_third_party_revoked_invite">%1$s nuligis la aliĝan inviton por %2$s</string>
     <string name="notice_room_third_party_registered_invite">%1$s akceptis la inviton por %2$s</string>
     <string name="unable_to_send_message">Ne povas sendi mesaĝon</string>
-    <string name="matrix_error">Matrix-eraro</string>
+    <string name="matrix_error">quali.chat-eraro</string>
     <string name="medium_email">Retpoŝtadreso</string>
     <string name="medium_phone_number">Telefonnumero</string>
     <string name="room_displayname_room_invite">Invito al ĉambro</string>
@@ -374,7 +374,7 @@
     <string name="send_bug_report_app_crashed">La aplikaĵo lastatempe fiaskis. Ĉu vi volas malfermi la fiasko-raportilon\?</string>
     <string name="send_bug_report_rage_shake">Kolere skuu por raporti eraron</string>
     <string name="login_error_invalid_home_server">Bonvolu enigi validan URL-on</string>
-    <string name="login_error_no_homeserver_found">Ĉi tio ne estas valida adreso de servilo de Matrix</string>
+    <string name="login_error_no_homeserver_found">Ĉi tio ne estas valida adreso de servilo de quali.chat</string>
     <string name="login_error_homeserver_not_found">Ne povas atingi hejmservilon je ĉi tiu URL, bonvolu kontroli ĝin</string>
     <string name="login_error_bad_json">Misformita JSON</string>
     <string name="login_error_not_json">Ne enhavis valdiajn JSON-datumojn</string>
@@ -526,7 +526,7 @@
     <string name="settings_advanced_settings">Altnivelaj agordoj</string>
     <string name="notification_initial_sync">Komenca spegulado…</string>
     <string name="bug_report_error_too_short">La priskribo estas tro mallonga</string>
-    <string name="permalink_malformed">Via ligilo al matrix.to estis misformita</string>
+    <string name="permalink_malformed">Via ligilo al quali.chat estis misformita</string>
     <string name="soft_logout_sso_not_same_user_error">Ĉi tiu salutaĵo estas por uzanto %1$s kaj vi donas salutilojn por uzanto %2$s. ${app_name} ne subtenas tion.
 \nBonvolu unue vakigi datumojn, kaj poste saluti alian konton.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Vi perdos aliron al sekuraj mesaĝoj, se vi ne salutos por rehavi viajn ĉifrajn ŝlosilojn.</string>
@@ -557,8 +557,8 @@
     <string name="autodiscover_well_known_error">Ne povas trovi validan hejmservilon. Bonvolu kontroli vian identigilon</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Ĉi tio ne estas valida identigilo de uzanto. Atendita formo: «@uzanto:hejmservilo.org»</string>
     <string name="login_signin_matrix_id_password_notice">Se vi ne scias vian pasvorton, reiru por ĝin restarigi.</string>
-    <string name="login_signin_matrix_id_hint">Identigilo de Matrix</string>
-    <string name="login_signin_matrix_id_notice">Se vi starigis konton ĉe hejmservilo, uzu viajn identigilon de Matrix (ekz. @uzanto:retnomo.net) kaj pasvorton sube.</string>
+    <string name="login_signin_matrix_id_hint">Identigilo de quali.chat</string>
+    <string name="login_signin_matrix_id_notice">Se vi starigis konton ĉe hejmservilo, uzu viajn identigilon de quali.chat (ekz. @uzanto:retnomo.net) kaj pasvorton sube.</string>
     <string name="login_error_outdated_homeserver_title">Tro malnova hejmservilo</string>
     <string name="login_validation_code_is_not_correct">La enigita kodo ne ĝustas. Bonvolu kontroli.</string>
     <string name="login_wait_for_email_notice">Ni ĵus sendis retleteron al %1$s.
@@ -567,7 +567,7 @@
     <string name="login_terms_title">Akceptu la uzokondiĉojn por pluiĝi</string>
     <string name="login_a11y_captcha_container">Bonvolu fari la teston de homeco</string>
     <string name="login_a11y_choose_other">Elekti propran hejmservilon</string>
-    <string name="login_a11y_choose_modular">Elekti Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Elekti quali.chat Services</string>
     <string name="login_a11y_choose_matrix_org">Elekti matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">Via konto ankoraŭ ne estas kreita. Ĉu haltigi la registriĝon\?</string>
     <string name="login_signup_cancel_confirmation_title">Averto</string>
@@ -620,10 +620,10 @@
     <string name="login_sso_error_message">Eraris enlegado de la paĝo: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Enigu adreson de servilo, kiun vi volas uzi</string>
     <string name="login_server_url_form_other_hint">Adreso</string>
-    <string name="login_server_url_form_modular_hint">Adreso de Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Adreso de quali.chat Services</string>
     <string name="login_signin_to">Saluti al %1$s</string>
     <string name="login_connect_to_a_custom_server">Konektiĝi al propra servilo</string>
-    <string name="login_connect_to_modular">Konektiĝi al «Element Matrix Services»</string>
+    <string name="login_connect_to_modular">Konektiĝi al «quali.chat Services»</string>
     <string name="login_connect_to">Konektiĝi al %1$s</string>
     <string name="login_continue">Pluiĝi</string>
     <string name="login_server_other_text">Propraj kaj altivelaj agordoj</string>
@@ -770,7 +770,7 @@
     <string name="settings_general_title">Ĝeneralaj</string>
     <string name="navigate_to_room_when_already_in_the_room">Vi jam rigardas ĉi tiun ĉambron!</string>
     <string name="settings_other_third_party_notices">Aliaj avizoj de eksteraj liverantoj</string>
-    <string name="settings_sdk_version">Versio de SDK de Matrix</string>
+    <string name="settings_sdk_version">Versio de SDK de quali.chat</string>
     <string name="import_e2e_keys_from_file">Enporti tutvoje ĉifrajn ŝlosilojn el dosiero «%1$s».</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Eraris akirado de datumoj de savkopio de ŝlosiloj</string>
     <string name="keys_backup_unable_to_get_trust_info">Eraris akirado de informoj pri fideco</string>
@@ -905,8 +905,8 @@
 \n
 \nPor pleja sekureco, la pasfrazo estu malsama al la pasvorto de via konto.</string>
     <string name="keys_backup_setup_step2_text_title">Sekurigu vian savkopion per pasfrazo.</string>
-    <string name="login_signin_matrix_id_title">Saluti per identigilo de Matrix</string>
-    <string name="login_connect_using_matrix_id_submit">Salutu per identigilo de Matrix</string>
+    <string name="login_signin_matrix_id_title">Saluti per identigilo de quali.chat</string>
+    <string name="login_connect_using_matrix_id_submit">Salutu per identigilo de quali.chat</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="one">Tro multaj petoj sendiĝis. Vi povas reprovi post %1$d sekundo…</item>
         <item quantity="other">Tro multaj petoj sendiĝis. Vi povas reprovi post %1$d sekundoj…</item>
@@ -936,7 +936,7 @@
 \n
 \nMalaktivigo de via konto <b>ne forgesigas memage ĉiujn mesaĝojn, kiujn vi sendis</b>. Se vi volus, ke ni forgesu viajn mesaĝojn, bonvolu marki la markbutonon sube.
 \n
-\nVidebleco de mesaĝoj en Matrix estas simila al retpoŝto. Nia forgeso de viaj mesaĝoj signifas, ke viaj senditaj mesaĝoj estos havigotaj al neniuj novaj aŭ neregistritaj uzantoj, sed uzantoj registritaj, kiuj jam povas aliri tiujn mesaĝojn, daŭre povos aliri sian kopion.</string>
+\nVidebleco de mesaĝoj en quali.chat estas simila al retpoŝto. Nia forgeso de viaj mesaĝoj signifas, ke viaj senditaj mesaĝoj estos havigotaj al neniuj novaj aŭ neregistritaj uzantoj, sed uzantoj registritaj, kiuj jam povas aliri tiujn mesaĝojn, daŭre povos aliri sian kopion.</string>
     <string name="deactivate_account_title">Malaktivigi konton</string>
     <string name="dialog_user_consent_submit">Tralegi nun</string>
     <string name="dialog_user_consent_content">Por daŭrigi uzadon de la hejmservilo «%1$s», vi devas tralegi kaj konsenti la uzokondiĉojn.</string>
@@ -977,7 +977,7 @@
     <string name="settings_labs_native_camera">Uzi propran filmilon</string>
     <string name="room_no_active_widgets">Neniuj aktivaj fenestraĵoj</string>
     <string name="room_manage_integrations">Administri kunigojn</string>
-    <string name="room_add_matrix_apps">Aldoni aplikaĵojn de Matrix</string>
+    <string name="room_add_matrix_apps">Aldoni aplikaĵojn de quali.chat</string>
     <string name="widget_integration_missing_parameter">Mankas postulata parametro.</string>
     <string name="widget_integration_room_not_visible">Ĉambro %s ne videblas.</string>
     <string name="widget_integration_missing_user_id">Mankas user_id en peto.</string>
@@ -1121,7 +1121,7 @@
     <string name="settings_default_compression">Implicita densigo</string>
     <string name="settings_media">Vidaŭdaĵoj</string>
     <string name="settings_select_country">Elektu landon</string>
-    <string name="settings_emails_and_phone_numbers_summary">Administri retpoŝtadresojn kaj telefonnumerojn ligitajn al via konto de Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Administri retpoŝtadresojn kaj telefonnumerojn ligitajn al via konto de quali.chat</string>
     <string name="settings_emails_and_phone_numbers_title">Retpoŝtadresoj kaj telefonnumeroj</string>
     <string name="settings_unignore_user">Ĉu montri ĉiujn mesaĝojn de %s\?</string>
     <string name="settings_password_updated">Via pasvorto ĝisdatiĝis</string>
@@ -1349,7 +1349,7 @@
     <string name="call_failed_no_connection_description">Malsukcesis fari realtempan konekton.
 \nBonvolu peti la administranton de via hejmservilo agordi TURN-servilon, por ke vokoj funkciu dependeble.</string>
     <string name="call_failed_no_connection">Malsukcesis voko de ${app_name}</string>
-    <string name="matrix_only_filter">Nur kontaktoj de Matrix</string>
+    <string name="matrix_only_filter">Nur kontaktoj de quali.chat</string>
     <string name="bottom_action_notification">Sciigoj</string>
     <string name="dialog_title_success">Sukceso</string>
     <string name="action_copy">Kopii</string>
@@ -1364,7 +1364,7 @@
     <string name="action_reset">Restarigi</string>
     <string name="initialize_cross_signing">Pretigi delegajn subskribojn</string>
     <string name="settings_rageshake">Kolera skuado</string>
-    <string name="login_server_url_form_modular_notice">Enigu la adreson de tiu servilo aŭ «Modular Element», kiun vi volas uzi</string>
+    <string name="login_server_url_form_modular_notice">Enigu la adreson de tiu servilo aŭ «Modular quali.chat», kiun vi volas uzi</string>
     <string name="login_server_url_form_modular_text">Pagenda gastigado por organizaĵoj</string>
     <string name="login_server_other_title">Alia</string>
     <string name="login_server_modular_text">Pagenda gastigado por organizaĵoj</string>
@@ -1422,7 +1422,7 @@
     <string name="disclaimer_positive_button">EKSCIU PLION</string>
     <string name="disclaimer_negative_button">KOMPRENITE</string>
     <string name="disclaimer_content">Ni ĝojas anonci, ke ni ŝanĝis nian nomon! Via aplikaĵo estas ĝisdata kaj vi estas salutinta vian konton.</string>
-    <string name="disclaimer_title">Riot nun estas Element!</string>
+    <string name="disclaimer_title">Riot nun estas quali.chat!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Atendante historion de ĉifrado</string>
     <string name="crypto_error_withheld_generic">Vi ne povas aliri ĉi tiun mesaĝon, ĉar la sendinto intence ne sendis la ŝlosilojn</string>
     <string name="crypto_error_withheld_unverified">Vi ne povas aliri ĉi tiun mesaĝon ĉar la sendinto ne fidas vian salutaĵon</string>
@@ -1498,12 +1498,12 @@
     <string name="enter_secret_storage_passphrase_or_key">Por daŭrigi, necesas via %1$s aŭ via %2$s.</string>
     <string name="command_description_discard_session_not_handled">Subtenata nur en ĉifritaj ĉambroj</string>
     <string name="use_latest_app">Uzu la plej freŝan version de ${app_name} per aliaj viaj aparatoj:</string>
-    <string name="or_other_mx_capable_client">aŭ alian klienton de Matrix kapablan je delegaj subskriboj</string>
+    <string name="or_other_mx_capable_client">aŭ alian klienton de quali.chat kapablan je delegaj subskriboj</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web (por TTT)
 \n${app_name} Desktop (por labortablo)</string>
-    <string name="use_other_session_content_description">Uzu la plej freŝan ${app_name} per aliaj viaj aparatoj: ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} por Android, aŭ alian klienton de Matrix kapablan je delegaj subskriboj</string>
+    <string name="use_other_session_content_description">Uzu la plej freŝan ${app_name} per aliaj viaj aparatoj: ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} por Android, aŭ alian klienton de quali.chat kapablan je delegaj subskriboj</string>
     <string name="change_password_summary">Agordi novan pasvorton de konto…</string>
     <string name="error_saving_media_file">Ne povis konservi dosieron de vidaŭdaĵo</string>
     <string name="settings_security_prevent_screenshots_summary">Ŝalto de tiu ĉi agordo aldonas la markon «FLAG_SECURE» al ĉiuj agoj. Reekigu la aplikaĵon por efektivigi la ŝanĝon.</string>
@@ -1671,7 +1671,7 @@
     <string name="finish">Fini</string>
     <string name="room_filtering_footer_open_room_directory">Montri la katalogon de ĉambroj</string>
     <string name="notification_off">Ne</string>
-    <string name="command_description_clear_scalar_token">Por ripari administradon de aplikaĵoj de Matrix</string>
+    <string name="command_description_clear_scalar_token">Por ripari administradon de aplikaĵoj de quali.chat</string>
     <string name="command_description_markdown">Markdown jes/ne</string>
     <string name="select_room_directory">Elekti katalogon de ĉambroj</string>
     <string name="warning_room_not_created_yet">La ĉambro ankoraŭ ne kreiĝis. Ĉu nuligi kreadon de la ĉambro\?</string>
@@ -1803,14 +1803,14 @@
         <item quantity="one">%d ero</item>
         <item quantity="other">%d eroj</item>
     </plurals>
-    <string name="phone_book_perform_lookup">Serĉi kontaktojn en Matrix</string>
+    <string name="phone_book_perform_lookup">Serĉi kontaktojn en quali.chat</string>
     <string name="room_settings_set_avatar">Agordi profilbildon</string>
     <string name="identity_server_user_consent_not_provided">Konsento de la uzanto ne estas donita.</string>
     <string name="user_code_info_text">Havigu ĉi tiun kodon al aliuloj, por ke ili povu ekbabili kun vi, skaninte ĝin.</string>
     <string name="user_code_my_code">Mia kodo</string>
     <string name="user_code_share">Havigi mian kodon</string>
     <string name="user_code_scan">Skani rapidrespondan kodon (QR)</string>
-    <string name="not_a_valid_qr_code">Tio ne estas valida rapidresponda kodo (QR) de Matrix</string>
+    <string name="not_a_valid_qr_code">Tio ne estas valida rapidresponda kodo (QR) de quali.chat</string>
     <string name="invite_friends_rich_title">🔐️ Aliĝu al mi per ${app_name}</string>
     <string name="invite_friends_text">Saluton, parolu kun mi per ${app_name}: %s</string>
     <string name="invite_friends">Inviti amikojn</string>

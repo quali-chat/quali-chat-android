@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +24,7 @@ import androidx.browser.customtabs.CustomTabsServiceConnection
 import androidx.browser.customtabs.CustomTabsSession
 import androidx.viewbinding.ViewBinding
 import com.airbnb.mvrx.withState
+import im.vector.app.core.utils.AnyBrowserMatcher
 import im.vector.app.core.utils.openUrlInChromeCustomTab
 import im.vector.app.features.login.SSORedirectRouterActivity
 import im.vector.app.features.login.hasSso
@@ -41,7 +43,8 @@ abstract class AbstractSSOFtueAuthFragment<VB : ViewBinding> : AbstractFtueAuthF
         super.onStart()
         val hasSSO = withState(viewModel) { it.selectedHomeserver.preferredLoginMode.hasSso() }
         if (hasSSO) {
-            val packageName = CustomTabsClient.getPackageName(requireContext(), null)
+            val browser = BrowserSelector.select(requireContext(), AnyBrowserMatcher)
+            val packageName = browser?.packageName
 
             // packageName can be null if there are 0 or several CustomTabs compatible browsers installed on the device
             if (packageName != null) {
@@ -93,7 +96,7 @@ abstract class AbstractSSOFtueAuthFragment<VB : ViewBinding> : AbstractFtueAuthF
             if (state.selectedHomeserver.preferredLoginMode.hasSso() && state.selectedHomeserver.preferredLoginMode.ssoState().isFallback()) {
                 // in this case we can prefetch (not other cases for privacy concerns)
                 viewModel.fetchSsoUrl(
-                        redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                        redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                         deviceId = state.deviceId,
                         provider = null,
                         action = if (state.onboardingFlow == OnboardingFlow.SignUp) SSOAction.REGISTER else SSOAction.LOGIN

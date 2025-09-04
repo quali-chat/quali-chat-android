@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,6 +44,7 @@ import im.vector.app.core.platform.VectorBaseFragment
 import im.vector.app.core.platform.VectorMenuProvider
 import im.vector.app.core.utils.copyToClipboard
 import im.vector.app.core.utils.startSharePlainTextIntent
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.databinding.FragmentMatrixProfileBinding
 import im.vector.app.databinding.ViewStubRoomProfileHeaderBinding
 import im.vector.app.features.analytics.plan.Interaction
@@ -222,9 +224,11 @@ class RoomProfileFragment :
                 Timber.w("The room has been left")
                 activity?.finish()
             } else {
-                headerViews.roomProfileNameView.text = it.displayName
-                views.matrixProfileToolbarTitleView.text = it.displayName
+
+                headerViews.roomProfileNameView.swapToEthereumDisplayName(it.displayName)
+                views.matrixProfileToolbarTitleView.swapToEthereumDisplayName(it.displayName)
                 headerViews.roomProfileAliasView.setTextOrHide(it.canonicalAlias)
+
                 val matrixItem = it.toMatrixItem()
                 avatarRenderer.render(matrixItem, headerViews.roomProfileAvatarView)
                 avatarRenderer.render(matrixItem, views.matrixProfileToolbarAvatarImageView)

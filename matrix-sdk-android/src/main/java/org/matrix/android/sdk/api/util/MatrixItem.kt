@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -142,7 +143,7 @@ sealed class MatrixItem(
             is RoomAliasItem -> roomDisplayName ?: displayName
             else -> displayName
         }
-        return (displayName?.takeIf { it.isNotBlank() } ?: id)
+        return (displayName?.takeIf { it.isNotBlank() }?.replace("\\[TG] ".toRegex(), "") ?: id)
                 .let { dn ->
                     var startIndex = 0
                     val initial = dn[startIndex]

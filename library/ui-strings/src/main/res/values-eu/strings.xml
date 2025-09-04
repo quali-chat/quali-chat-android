@@ -40,7 +40,7 @@
     <string name="unable_to_send_message">Ezin izan da mezua bidali</string>
 
 
-    <string name="matrix_error">Matrix errorea</string>
+    <string name="matrix_error">quali.chat errorea</string>
 
 
     <string name="medium_email">E-mail helbidea</string>
@@ -151,7 +151,7 @@
     <string name="low_priority_header">Lehentasun baxua</string>
 
     <string name="direct_chats_header">Elkarrizketak</string>
-    <string name="matrix_only_filter">Matrixeko kontaktuak besterik ez</string>
+    <string name="matrix_only_filter">quali.chateko kontaktuak besterik ez</string>
     <string name="no_result_placeholder">Emaitzarik ez</string>
 
     <string name="rooms_header">Gelak</string>
@@ -220,9 +220,9 @@
 
     <string name="permissions_rationale_popup_title">Informazioa</string>
 
-    <string name="permissions_rationale_msg_record_audio">Elementek zure mikrofonoa atzitzeko baimena behar du ahots deiak egin ahal izateko.</string>
+    <string name="permissions_rationale_msg_record_audio">quali.chatek zure mikrofonoa atzitzeko baimena behar du ahots deiak egin ahal izateko.</string>
 
-    <string name="permissions_rationale_msg_camera_and_audio">Elementek zure kamera eta mikrofonoa atzitzeko baimenak behar ditu bideo deiak egin ahal izateko.
+    <string name="permissions_rationale_msg_camera_and_audio">quali.chatek zure kamera eta mikrofonoa atzitzeko baimenak behar ditu bideo deiak egin ahal izateko.
 
 Baimendu sarbidea hurrengo laster-leihoan deia egin ahal izateko.</string>
 
@@ -470,7 +470,7 @@ Kontuan izan ekintza honek aplikazioa berrabiaraziko duela eta denbora bat behar
     <string name="widget_integration_missing_room_id">Eskarian room_id falta da.</string>
     <string name="widget_integration_missing_user_id">Eskarian user_id falta da.</string>
     <string name="widget_integration_room_not_visible">%s gela ez dago ikusgai.</string>
-    <string name="room_add_matrix_apps">Gehitu Matrix aplikazioak</string>
+    <string name="room_add_matrix_apps">Gehitu quali.chat aplikazioak</string>
     <string name="notification_noisy_notifications">Jakinarazpen zaratatsuak</string>
     <string name="notification_silent_notifications">Jakinarazpen isilak</string>
 
@@ -591,7 +591,7 @@ Baten bat gehitu orain?</string>
 
 Kontua desaktibatzean <b>ez dira zuk bidalitako mezuak ahaztuko.</b> Mezuak ahaztea nahi baduzu markatu beheko kutxa.
 
-Matrix-eko mezuen ikusgaitasuna e-mail sistemaren antekoa da. Guk zure mezuak ahaztean ez dizkiogu erabiltzaile berriei edo izena eman ez dutenei erakutsiko, baina jada zure mezuak jaso dituzten erregistratutako erabiltzaileen bere kopia izaten jarraituko dute.</string>
+quali.chat-eko mezuen ikusgaitasuna e-mail sistemaren antekoa da. Guk zure mezuak ahaztean ez dizkiogu erabiltzaile berriei edo izena eman ez dutenei erakutsiko, baina jada zure mezuak jaso dituzten erregistratutako erabiltzaileen bere kopia izaten jarraituko dute.</string>
     <string name="deactivate_account_delete_checkbox">Ahaztu bidali ditudan mezu guztiak kontua desaktibatzean (Abisua: Honekin etorkizuneko erabiltzaileek elkarrizketaren bertsio ez oso bat ikusiko dute)</string>
 
     <string name="action_download">Deskargatu</string>
@@ -623,7 +623,7 @@ Matrix-eko mezuen ikusgaitasuna e-mail sistemaren antekoa da. Guk zure mezuak ah
     <string name="command_description_remove_user">Id zehatz bat duen erabiltzailea kanporatzen du</string>
     <string name="command_description_nick">Zure pantaila-izena aldatzen du</string>
     <string name="command_description_markdown">Markdown bai/ez</string>
-    <string name="command_description_clear_scalar_token">Matrix aplikazioen kudeaketa konpontzeko</string>
+    <string name="command_description_clear_scalar_token">quali.chat aplikazioen kudeaketa konpontzeko</string>
 
     <string name="room_tombstone_versioned_description">Gela hau ordeztu da eta ez dago jada aktibo</string>
     <string name="room_tombstone_continuation_link">Elkarrizketak hemen darrai</string>
@@ -1052,7 +1052,7 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
 
     <string name="import_e2e_keys_from_file">"Inportatu e2e gakoak \"%1$s\"  fitxategitik."</string>
 
-    <string name="settings_sdk_version">Matrix SDK bertsioa</string>
+    <string name="settings_sdk_version">quali.chat SDK bertsioa</string>
     <string name="settings_other_third_party_notices">Beste hirugarrengoen adierazpenak</string>
     <string name="navigate_to_room_when_already_in_the_room">Gela hau ikusten ari zara dagoeneko!</string>
 
@@ -1268,7 +1268,7 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
     <string name="room_widget_webview_access_microphone">Mikrofonoa erabili</string>
     <string name="room_widget_webview_read_protected_media">DRM bidez babestutako multimedia irakurri</string>
 
-    <string name="login_error_no_homeserver_found">Hau ez da baliozko Matrix zerbitzari helbide bat</string>
+    <string name="login_error_no_homeserver_found">Hau ez da baliozko quali.chat zerbitzari helbide bat</string>
     <string name="message_ignore_user">Blokeatu erabiltzailea</string>
 
     <string name="room_list_quick_actions_notifications_all_noisy">Mezu guztiak (ozen)</string>
@@ -1307,17 +1307,17 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
 
     <string name="login_continue">Jarraitu</string>
     <string name="login_connect_to">Konektatu %1$s zerbitzarira</string>
-    <string name="login_connect_to_modular">Konektatu Element Matrix Services-era</string>
+    <string name="login_connect_to_modular">Konektatu quali.chat Services-era</string>
     <string name="login_connect_to_a_custom_server">Konektatu zerbitzari pertsonalizatu batera</string>
     <string name="login_signin_to">Hasi saioa %1$s zerbitzarian</string>
     <string name="login_signup">Erregistratu</string>
     <string name="login_signin">Hasi saioa</string>
-    <string name="login_signin_sso">Jarraitu SSO-rekin</string>
+    <string name="login_signin_sso">Jarraitu Ethereum-rekin</string>
 
-    <string name="login_server_url_form_modular_hint">Element Matrix Services helbidea</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services helbidea</string>
     <string name="login_server_url_form_other_hint">Helbidea</string>
     <string name="login_server_url_form_modular_text">Ordainpeko ostatatzea elkarteentzat</string>
-    <string name="login_server_url_form_modular_notice">Sartu erabili nahi duzun Modular Element edo zerbitzariaren helbidea</string>
+    <string name="login_server_url_form_modular_notice">Sartu erabili nahi duzun Modular quali.chat edo zerbitzariaren helbidea</string>
 
     <string name="login_sso_error_message">Errore bat gertatu da orria kargatzean: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Aplikazioak ezin du hasiera-zerbitzari honetan saioa hasi. Hasiera-zerbitzariak honako saio mota onartzen du: %1$s.
@@ -1388,7 +1388,7 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
     <string name="login_signup_cancel_confirmation_content">Zure kontua ez da oraindik sortu. Utzi erregistratze prozesua\?</string>
 
     <string name="login_a11y_choose_matrix_org">Hautatu matrix.org</string>
-    <string name="login_a11y_choose_modular">Hautatu Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Hautatu quali.chat Services</string>
     <string name="login_a11y_choose_other">Hautatu hasiera-zerbitzari pertsonalizatu bat</string>
     <string name="login_a11y_captcha_container">Bete captcha erronka</string>
     <string name="login_terms_title">Onartu baldintzak jarraitzeko</string>
@@ -1436,7 +1436,7 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
     <string name="soft_logout_sso_not_same_user_error">Oraingo saioa %1$s erabiltzailearena da eta %2$s erabiltzailearen kredentzialak eman dituzu. ${app_name}-k ez du hau onartzen.
 \nAurretik garbitu datuak, gero hasi saioa berriro beste kontu batekin.</string>
 
-    <string name="permalink_malformed">Zure matrix.to esteka gaizki osatua dago</string>
+    <string name="permalink_malformed">Zure quali.chat esteka gaizki osatua dago</string>
     <string name="bug_report_error_too_short">Deskripzio hau laburregia da</string>
 
     <string name="notification_initial_sync">Lehen sinkronizazioa…</string>
@@ -1769,12 +1769,12 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
     <string name="notification_ticker_text_dm">%1$s: %2$s</string>
     <string name="notification_ticker_text_group">%1$s: %2$s %3$s</string>
 
-    <string name="use_other_session_content_description">Erabili azken ${app_name} bertsioa zure beste gailuetan, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} Android plataformarako, edo zeharka sinatzeko gaitasuna duen beste Matrix bezero bat</string>
+    <string name="use_other_session_content_description">Erabili azken ${app_name} bertsioa zure beste gailuetan, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} Android plataformarako, edo zeharka sinatzeko gaitasuna duen beste quali.chat bezero bat</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
-    <string name="or_other_mx_capable_client">edo zeharka sinatzeko gaitasuna duen beste Matrix bezero bat</string>
+    <string name="or_other_mx_capable_client">edo zeharka sinatzeko gaitasuna duen beste quali.chat bezero bat</string>
     <string name="use_latest_app">Erabili azken ${app_name} bertsioa zure beste gailuetan:</string>
     <string name="command_description_discard_session">Uneko irteerako talde saioa zifratutako gela batean baztertzera behartzen du</string>
     <string name="command_description_discard_session_not_handled">Zifratutako gelatan onartzen da soilik</string>
@@ -1825,7 +1825,7 @@ Errore hau ${app_name}-en kontroletik kanpo dago. Ez dago Google konturik gailua
     <string name="uploads_files_subtitle">%1$s %2$s</string>
     <string name="uploads_files_no_result">Ez dago fitxategirik gela honetan</string>
 
-    <string name="login_connect_using_matrix_id_submit">Hasi saioa nire Matrix identifikatzailearekin</string>
+    <string name="login_connect_using_matrix_id_submit">Hasi saioa nire quali.chat identifikatzailearekin</string>
     <string name="login_signin_matrix_id_title">Hasi saioa</string>
     <string name="login_signin_matrix_id_notice">Sartu zure identifikatzailea eta pasahitza</string>
     <string name="login_signin_matrix_id_hint">Erabili identifikatzailea</string>

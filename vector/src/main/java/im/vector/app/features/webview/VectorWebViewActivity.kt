@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2018 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,7 +45,7 @@ class VectorWebViewActivity : VectorBaseActivity<ActivityVectorWebViewBinding>()
     override fun initUiAndData() {
         setupToolbar(views.webviewToolbar)
                 .allowBack()
-        waitingView = views.simpleWebviewLoader
+        waitingView = views.simpleWebviewLoader.animationView
 
         views.simpleWebview.settings.apply {
             // Enable Javascript

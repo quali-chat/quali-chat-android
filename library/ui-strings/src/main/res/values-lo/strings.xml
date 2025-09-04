@@ -48,7 +48,7 @@
     <string name="settings_notification_mentions_and_keywords">ການກ່າວເຖິງແລະຄໍາສໍາຄັນ</string>
     <string name="settings_notification_default">ການແຈ້ງເຕືອນເລີ່ມຕົ້ນ</string>
     <string name="settings_notification_emails_enable_for_email">ເປີດໃຊ້ການແຈ້ງເຕືອນອີເມວສຳລັບ %s</string>
-    <string name="settings_notification_emails_no_emails">ເພື່ອຮັບອີເມວພ້ອມການແຈ້ງເຕືອນ, ກະລຸນາເຊື່ອມຕໍ່ອີເມວເຂົ້າບັນຊີ Matrix ຂອງທ່ານ</string>
+    <string name="settings_notification_emails_no_emails">ເພື່ອຮັບອີເມວພ້ອມການແຈ້ງເຕືອນ, ກະລຸນາເຊື່ອມຕໍ່ອີເມວເຂົ້າບັນຊີ quali.chat ຂອງທ່ານ</string>
     <string name="settings_notification_emails_category">ການແຈ້ງເຕືອນທາງອີເມວ</string>
     <string name="settings_notification_by_event">ຄວາມສຳຄັນຂອງການແຈ້ງເຕືອນຕາມເຫດການ</string>
     <string name="settings_notification_advanced">ການຕັ້ງຄ່າການແຈ້ງເຕືອນຂັ້ນສູງ</string>
@@ -82,7 +82,7 @@
 \n
 \nໃນຂະນະທີ່ພວກເຮົາກະກຽມສໍາລັບສິ່ງນີ້, ພວກເຮົາຈໍາເປັນຕ້ອງເຮັດການປ່ຽນແປງບາງຢ່າງ: ກະທູ້ທີ່ສ້າງຂຶ້ນກ່ອນນີ້ຈະຖືກສະແດງເປັນການຕອບປົກກະຕິ.
 \n
-\nສິ່ງນີ້ຈະເປັນການປ່ຽນແປງຄັ້ງດຽວເນື່ອງຈາກກະທູ້ເປັນສ່ວນໜຶ່ງຂອງຂໍ້ມູນສະເພາະຂອງ Matrix.</string>
+\nສິ່ງນີ້ຈະເປັນການປ່ຽນແປງຄັ້ງດຽວເນື່ອງຈາກກະທູ້ເປັນສ່ວນໜຶ່ງຂອງຂໍ້ມູນສະເພາະຂອງ quali.chat.</string>
     <string name="threads_notice_migration_title">ກະທູ້ໃກ້ຮອດເບຕ້າ 🎉</string>
     <string name="search_thread_from_a_thread">ຈາກກະທູ້</string>
     <string name="thread_list_empty_notice">ຄຳແນະນຳ: ແຕະໃສ່ຂໍ້ຄວາມດົນໆ ແລະໃຊ້ “%s”.</string>
@@ -255,7 +255,7 @@
     <string name="login_error_homeserver_from_url_not_found_enter_manual">ເລືອກ homeserver</string>
     <string name="login_error_homeserver_from_url_not_found">ບໍ່ສາມາດເຂົ້າຫາ homeserver ທີ່ URL %s ໄດ້. ກະລຸນາກວດເບິ່ງລິ້ງຂອງທ່ານ ຫຼືເລືອກ homeserver ດ້ວຍຕົນເອງ.</string>
     <string name="login_error_homeserver_not_found">ບໍ່ສາມາດເຂົ້າຫາ homeserver ຢູ່ URL ນີ້, ກະລຸນາກວດເບິ່ງ</string>
-    <string name="login_error_no_homeserver_found">ນີ້ບໍ່ແມ່ນທີ່ຢູ່ເຊີບເວີ Matrix ທີ່ຖືກຕ້ອງ</string>
+    <string name="login_error_no_homeserver_found">ນີ້ບໍ່ແມ່ນທີ່ຢູ່ເຊີບເວີ quali.chat ທີ່ຖືກຕ້ອງ</string>
     <string name="login_error_invalid_home_server">ກະລຸນາໃສ່ URL ທີ່ຖືກຕ້ອງ</string>
     <string name="auth_accept_policies">ກະລຸນາກວດເບິ່ງ ແລະຍອມຮັບນະໂຍບາຍຂອງ homeserver ນີ້:</string>
     <string name="auth_reset_password_error_unauthorized">ການກວດສອບທີ່ຢູ່ອີເມວບໍ່ສຳເລັດ: ໃຫ້ແນ່ໃຈວ່າທ່ານໄດ້ກົດໃສ່ການເຊື່ອມຕໍ່ໃນອີເມວ</string>
@@ -324,7 +324,7 @@
     <string name="rooms_header">ຫ້ອງ</string>
     <string name="no_more_results">ບໍ່ມີຜົນໄດ້ຮັບອີກຕໍ່ໄປ</string>
     <string name="no_result_placeholder">ບໍ່ມີຜົນໄດ້ຮັບ</string>
-    <string name="matrix_only_filter">ຕິດຕໍ່ Matrix ເທົ່ານັ້ນ</string>
+    <string name="matrix_only_filter">ຕິດຕໍ່ quali.chat ເທົ່ານັ້ນ</string>
     <string name="direct_chats_header">ການສົນທະນາ</string>
     <string name="suggested_header">ຫ້ອງແນະນຳ</string>
     <string name="system_alerts_header">ການແຈ້ງເຕືອນລະບົບ</string>
@@ -542,7 +542,7 @@
     <string name="medium_phone_number">ເບີໂທລະສັບ</string>
     <string name="medium_email">ທີ່ຢູ່ອີເມວ</string>
     <string name="room_error_access_unauthorized">ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ເຂົ້າຮ່ວມຫ້ອງນີ້</string>
-    <string name="matrix_error">Matrix ຜິດພາດ</string>
+    <string name="matrix_error">quali.chat ຜິດພາດ</string>
     <string name="unable_to_send_message">ບໍ່ສາມາດສົ່ງຂໍ້ຄວາມໄດ້</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">ອຸປະກອນຂອງຜູ້ສົ່ງບໍ່ໄດ້ສົ່ງກະແຈໃຫ້ພວກເຮົາສໍາລັບຂໍ້ຄວາມນີ້.</string>
     <string name="notice_crypto_unable_to_decrypt">** ບໍ່ສາມາດຖອດລະຫັດໄດ້: %s **</string>
@@ -714,7 +714,7 @@
     <string name="navigate_to_thread_when_already_in_the_thread">ທ່ານກຳລັງເບິ່ງກະທູ້ນີ້ຢູ່!</string>
     <string name="navigate_to_room_when_already_in_the_room">ທ່ານກຳລັງເບິ່ງຫ້ອງນີ້ຢູ່ແລ້ວ!</string>
     <string name="settings_other_third_party_notices">ແຈ້ງການອື່ນໆຂອງພາກສ່ວນທີສາມ</string>
-    <string name="settings_sdk_version">ສະບັບ Matrix SDK</string>
+    <string name="settings_sdk_version">ສະບັບ quali.chat SDK</string>
     <string name="import_e2e_keys_from_file">ນຳເຂົ້າກະແຈ e2e ຈາກໄຟລ໌ \"%1$s\".</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">ເກີດຄວາມຜິດພາດໃນການຮັບເອົາຂໍ້ມູນສຳຮອງກະແຈ</string>
     <string name="keys_backup_unable_to_get_trust_info">ເກີດຄວາມຜິດພາດໃນການຮັບຂໍ້ມູນໜ້າເຊື່ອຖື</string>
@@ -996,7 +996,7 @@
     <string name="settings_default_compression">ການບີບອັດ</string>
     <string name="settings_media">ສື່ມວນຊົນ</string>
     <string name="settings_select_country">ເລືອກປະເທດ</string>
-    <string name="settings_emails_and_phone_numbers_summary">ຈັດການອີເມວ ແລະເບີໂທລະສັບທີ່ເຊື່ອມຕໍ່ກັບບັນຊີ Matrix ຂອງທ່ານ</string>
+    <string name="settings_emails_and_phone_numbers_summary">ຈັດການອີເມວ ແລະເບີໂທລະສັບທີ່ເຊື່ອມຕໍ່ກັບບັນຊີ quali.chat ຂອງທ່ານ</string>
     <string name="settings_emails_and_phone_numbers_title">ອີເມວ ແລະເບີໂທລະສັບ</string>
     <string name="settings_unignore_user">ສະແດງຂໍ້ຄວາມທັງໝົດຈາກ %s \?</string>
     <string name="settings_password_updated">ລະຫັດຜ່ານຂອງທ່ານໄດ້ຮັບການປັບປຸງ</string>
@@ -1172,7 +1172,7 @@
     <string name="labs_swipe_to_reply_in_timeline">ເປີດໃຊ້ງານການປັດເພື່ອຕອບກັບໃນທາມລາຍ</string>
     <string name="search_hint_room_name">ຊອກຫາຊື່</string>
     <string name="user_directory_search_hint_2">ຄົ້ນຫາດ້ວຍຊື່, ID ຫຼື mail</string>
-    <string name="room_directory_search_hint">ຊື່ ຫຼື ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">ຊື່ ຫຼື ID</string>
     <string name="room_filtering_footer_open_room_directory">ເບິ່ງລາຍການຫ້ອງ</string>
     <string name="room_filtering_footer_create_new_direct_message">ສົ່ງຂໍ້ຄວາມໃໝ່ໂດຍກົງ</string>
     <string name="room_filtering_footer_create_new_room">ສ້າງຫ້ອງໃຫມ່</string>
@@ -1266,7 +1266,7 @@
 \n
 \nການປິດໃຊ້ງານບັນຊີຂອງທ່ານ &lt;b&gt;ບໍ່ໄດ້ເປັນຄ່າເລີ່ມຕົ້ນເຮັດໃຫ້ພວກເຮົາລືມຂໍ້ຄວາມທີ່ທ່ານໄດ້ສົ່ງໄປ&lt;/b&gt;. ຖ້າທ່ານຕ້ອງການໃຫ້ພວກເຮົາລືມຂໍ້ຄວາມຂອງທ່ານ, ກະລຸນາຫມາຍໃສ່ໃນກ່ອງຂ້າງລຸ່ມນີ້.
 \n
-\nການເບິ່ງເຫັນຂໍ້ຄວາມໃນ Matrix ແມ່ນຄ້າຍຄືກັນກັບອີເມວ. ການລືມຂໍ້ຄວາມຂອງພວກເຮົາຫມາຍຄວາມວ່າຂໍ້ຄວາມທີ່ທ່ານໄດ້ສົ່ງໄປຈະບໍ່ຖືກແບ່ງປັນກັບຜູ້ໃຊ້ໃຫມ່ຫຼືບໍ່ໄດ້ລົງທະບຽນ, ແຕ່ຜູ້ໃຊ້ທີ່ລົງທະບຽນແລ້ວທີ່ມີການເຂົ້າເຖິງຂໍ້ຄວາມເຫຼົ່ານີ້ຈະຍັງຄົງມີການເຂົ້າເຖິງສໍາເນົາຂອງພວກເຂົາ.</string>
+\nການເບິ່ງເຫັນຂໍ້ຄວາມໃນ quali.chat ແມ່ນຄ້າຍຄືກັນກັບອີເມວ. ການລືມຂໍ້ຄວາມຂອງພວກເຮົາຫມາຍຄວາມວ່າຂໍ້ຄວາມທີ່ທ່ານໄດ້ສົ່ງໄປຈະບໍ່ຖືກແບ່ງປັນກັບຜູ້ໃຊ້ໃຫມ່ຫຼືບໍ່ໄດ້ລົງທະບຽນ, ແຕ່ຜູ້ໃຊ້ທີ່ລົງທະບຽນແລ້ວທີ່ມີການເຂົ້າເຖິງຂໍ້ຄວາມເຫຼົ່ານີ້ຈະຍັງຄົງມີການເຂົ້າເຖິງສໍາເນົາຂອງພວກເຂົາ.</string>
     <string name="deactivate_account_title">ປິດການນຳໃຊ້ບັນຊີ</string>
     <string name="dialog_user_consent_submit">ກວດເບິ່ງດຽວນີ້</string>
     <string name="dialog_user_consent_content">ເພື່ອສືບຕໍ່ນຳໃຊ້ %1$s homeserver ທ່ານຕ້ອງທົບທວນຄືນ ແລະ ຕົກລົງເຫັນດີກັບຂໍ້ກຳນົດ ແລະເງື່ອນໄຂ.</string>
@@ -1285,7 +1285,7 @@
     <string name="markdown_has_been_disabled">Markdown ໄດ້ຖືກປິດໃຊ້ງານ.</string>
     <string name="markdown_has_been_enabled">ເປີດໃຊ້ Markdown ແລ້ວ.</string>
     <string name="command_description_whois">ສະແດງຂໍ້ມູນກ່ຽວກັບຜູ້ໃຊ້</string>
-    <string name="command_description_clear_scalar_token">ເພື່ອແກ້ໄຂການຈັດການແອັບ Matrix</string>
+    <string name="command_description_clear_scalar_token">ເພື່ອແກ້ໄຂການຈັດການແອັບ quali.chat</string>
     <string name="command_description_markdown">ເປີດ/ປິດ markdown</string>
     <string name="command_description_avatar_for_room">ປ່ຽນຮູບແທນຕົວຂອງທ່ານຢູ່ໃນຫ້ອງປັດຈຸບັນນີ້ເທົ່ານັ້ນ</string>
     <string name="command_description_room_avatar">ປ່ຽນຮູບແທນຕົວຂອງຫ້ອງປັດຈຸບັນ</string>
@@ -1327,7 +1327,7 @@
     <string name="settings_labs_native_camera">ໃຊ້ກ້ອງຖ່າຍຮູບລູ້ນດັ່ງເດີມ</string>
     <string name="room_no_active_widgets">ບໍ່ມີ widget ທີ່ໃຊ້ງານຢູ່</string>
     <string name="room_manage_integrations">ຈັດການການເຊື່ອມໂຍງ</string>
-    <string name="room_add_matrix_apps">ເພີ່ມແອັບ Matrix</string>
+    <string name="room_add_matrix_apps">ເພີ່ມແອັບ quali.chat</string>
     <string name="widget_integration_missing_parameter">ບໍ່ມີparameter ທີ່ຕ້ອງການ.</string>
     <string name="widget_integration_room_not_visible">ບໍ່ເຫັນຫ້ອງ %s.</string>
     <string name="widget_integration_missing_user_id">ບໍ່ມີ user_id ໃນການຮ້ອງຂໍ.</string>
@@ -1541,7 +1541,7 @@
     <string name="member_banned_by">ຫ້າມໂດຍ %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">ຍົກເລີກການເຊີນໄປຫາ %1$s ບໍ\?</string>
     <string name="three_pid_revoke_invite_dialog_title">ຍົກເລີກຄຳເຊີນ</string>
-    <string name="phone_book_perform_lookup">ຄົ້ນຫາລາຍຊື່ຕິດຕໍ່ໃນ Matrix</string>
+    <string name="phone_book_perform_lookup">ຄົ້ນຫາລາຍຊື່ຕິດຕໍ່ໃນ quali.chat</string>
     <string name="contacts_book_title">ບັນຊີຕິດຕໍ່</string>
     <string name="empty_contact_book">ປື້ມບັນທຶກການຕິດຕໍ່ຂອງທ່ານຫວ່າງເປົ່າ</string>
     <string name="loading_contact_book">ກຳລັງດຶງຂໍ້ມູນລາຍຊື່ຜູ່ຕິດຕໍ່ຂອງທ່ານ…</string>
@@ -1655,12 +1655,12 @@
     <string name="command_description_discard_session_not_handled">ຮອງຮັບສະເພາະຫ້ອງທີ່ເຂົ້າລະຫັດໄວ້</string>
     <string name="command_description_discard_session">ບັງຄັບໃຫ້ຍົກເລີກຈາກລະບົບກຸ່ມຂາອອກໃນປະຈຸບັນໃນຫ້ອງທີ່ເຂົ້າລະຫັດ</string>
     <string name="use_latest_app">ໃຊ້ ${app_name} ລ່າສຸດໃນອຸປະກອນອື່ນຂອງທ່ານ:</string>
-    <string name="or_other_mx_capable_client">ຫຼື ລູກຄ້າ Matrix ທີ່ສາມາດcross-signing ໄດ້</string>
+    <string name="or_other_mx_capable_client">ຫຼື ລູກຄ້າ quali.chat ທີ່ສາມາດcross-signing ໄດ້</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
-    <string name="use_other_session_content_description">ໃຊ້ ${app_name} ລ່າສຸດໃນອຸປະກອນອື່ນຂອງທ່ານ, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} ສໍາລັບ Android, ຫຼື ລູກຄ້າ Matrix ອື່ນທີ່ສາມາດ cross-signing ໄດ້</string>
+    <string name="use_other_session_content_description">ໃຊ້ ${app_name} ລ່າສຸດໃນອຸປະກອນອື່ນຂອງທ່ານ, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} ສໍາລັບ Android, ຫຼື ລູກຄ້າ quali.chat ອື່ນທີ່ສາມາດ cross-signing ໄດ້</string>
     <string name="change_password_summary">ຕັ້ງລະຫັດຜ່ານບັນຊີໃໝ່…</string>
     <string name="error_saving_media_file">ບໍ່ສາມາດບັນທຶກໄຟລ໌ມີເດຍໄດ້</string>
     <string name="settings_security_prevent_screenshots_summary">ການເປີດໃຊ້ງານການຕັ້ງຄ່ານີ້ຈະເພີ່ມ FLAG_SECURE ໃສ່ກິດຈະກຳທັງໝົດ. ການຕັ້ງຄ່າຄືນໃໝ່ແອັບພລິເຄຊັນເພື່ອໃຫ້ການປ່ຽນແປງ.</string>
@@ -1804,7 +1804,7 @@
     <string name="settings_advanced_settings">ຕັ້ງຄ່າຂັ້ນສູງ</string>
     <string name="notification_initial_sync">ການຊິງຄ໌ເບື້ອງຕົ້ນ…</string>
     <string name="bug_report_error_too_short">ຄຳອະທິບາຍສັ້ນເກີນໄປ</string>
-    <string name="permalink_malformed">ລິ້ງ matrix.to ຂອງທ່ານບໍ່ຖືກຕ້ອງ</string>
+    <string name="permalink_malformed">ລິ້ງ quali.chat ຂອງທ່ານບໍ່ຖືກຕ້ອງ</string>
     <string name="soft_logout_sso_not_same_user_error">ລະບົບປັດຈຸບັນແມ່ນສໍາລັບຜູ້ໃຊ້ %1$s ແລະ ທ່ານໃຫ້ຂໍ້ມູນປະຈໍາຕົວສໍາລັບຜູ້ໃຊ້ %2$s. ອັນນີ້ບໍ່ຮອງຮັບໂດຍ ${app_name}.
 \nກະລຸນາລຶບຂໍ້ມູນກ່ອນ, ຈາກນັ້ນເຂົ້າສູ່ລະບົບອີກຄັ້ງໃນບັນຊີອື່ນ.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">ທ່ານຈະສູນເສຍການເຂົ້າເຖິງຂໍ້ຄວາມທີ່ປອດໄພເວັ້ນເສຍແຕ່ວ່າທ່ານເຂົ້າສູ່ລະບົບເພື່ອກູ້ຄືນການເຂົ້າລະຫັດຂອງທ່ານ.</string>
@@ -1835,10 +1835,10 @@
     <string name="autodiscover_well_known_error">ບໍ່ສາມາດຊອກຫາ homeserver ທີ່ຖືກຕ້ອງໄດ້. ກະລຸນາກວດເບິ່ງຕົວລະບຸຂອງທ່ານ</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">ນີ້ບໍ່ແມ່ນຕົວລະບຸຜູ້ໃຊ້ທີ່ຖືກຕ້ອງ. ຮູບແບບທີ່ຄາດໄວ້: \'@user:homeserver.org\'</string>
     <string name="login_signin_matrix_id_password_notice">ຖ້າທ່ານບໍ່ຮູ້ລະຫັດຜ່ານຂອງທ່ານ, ໃຫ້ກັບຄືນໄປຕັ້ງຄ່າໃໝ່.</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
-    <string name="login_signin_matrix_id_notice">ຖ້າທ່ານຕັ້ງບັນຊີຢູ່ໃນ homeserver, ໃຊ້ Matrix ID ຂອງທ່ານ (ເຊັ່ນ: @user:domain.com) ແລະລະຫັດຜ່ານຂ້າງລຸ່ມນີ້.</string>
-    <string name="login_signin_matrix_id_title">ເຂົ້າສູ່ລະບົບດ້ວຍ Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">ເຂົ້າສູ່ລະບົບດ້ວຍ Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
+    <string name="login_signin_matrix_id_notice">ຖ້າທ່ານຕັ້ງບັນຊີຢູ່ໃນ homeserver, ໃຊ້ quali.chat ID ຂອງທ່ານ (ເຊັ່ນ: @user:domain.com) ແລະລະຫັດຜ່ານຂ້າງລຸ່ມນີ້.</string>
+    <string name="login_signin_matrix_id_title">ເຂົ້າສູ່ລະບົບດ້ວຍ quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">ເຂົ້າສູ່ລະບົບດ້ວຍ quali.chat ID</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="other">ສົ່ງຄຳຮ້ອງຂໍຫຼາຍເກີນໄປ. ທ່ານສາມາດລອງໃໝ່ໃນອີກ %1$d ວິນາທີ…</item>
     </plurals>
@@ -1851,7 +1851,7 @@
     <string name="login_terms_title">ຍອມຮັບເງື່ອນໄຂເພື່ອສືບຕໍ່</string>
     <string name="login_a11y_captcha_container">ກະລຸນາດໍາເນີນການ captcha</string>
     <string name="login_a11y_choose_other">ເລືອກ homeserver ແບບກຳນົດເອງ</string>
-    <string name="login_a11y_choose_modular">ເລືອກບໍລິການ Element Matrix</string>
+    <string name="login_a11y_choose_modular">ເລືອກບໍລິການ quali.chat</string>
     <string name="login_a11y_choose_matrix_org">ເລືອກ matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">ທ່ານຍັງບໍ່ໄດ້ສ້າງບັນຊີເທື່ອ.
 \n
@@ -1915,17 +1915,17 @@
 \nທ່ານຕ້ອງການເຂົ້າສູ່ລະບົບໂດຍໃຊ້ web client ບໍ\?</string>
     <string name="login_sso_error_message">ເກີດຄວາມຜິດພາດຂຶ້ນໃນເວລາໂຫລດໜ້າ: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">ໃສ່ທີ່ຢູ່ຂອງເຊີບເວີທີ່ທ່ານຕ້ອງການໃຊ້</string>
-    <string name="login_server_url_form_modular_notice">ໃສ່ທີ່ຢູ່ຂອງ Modular Element ຫຼື Server ທີ່ທ່ານຕ້ອງການໃຊ້</string>
+    <string name="login_server_url_form_modular_notice">ໃສ່ທີ່ຢູ່ຂອງ Modular quali.chat ຫຼື Server ທີ່ທ່ານຕ້ອງການໃຊ້</string>
     <string name="login_server_url_form_modular_text">ການເປັນເຈົ້າພາບເປັນທີ່ນິຍົມສໍາລັບອົງການຈັດຕັ້ງ</string>
     <string name="login_server_url_form_other_hint">ທີ່ຢູ່</string>
-    <string name="login_server_url_form_modular_hint">ທີ່ຢູ່ບໍລິການ Element Matrix</string>
+    <string name="login_server_url_form_modular_hint">ທີ່ຢູ່ບໍລິການ quali.chat</string>
     <string name="login_clear_homeserver_history">ລ້າງປະຫວັດ</string>
-    <string name="login_signin_sso">ສືບຕໍ່ກັບລະບົບປະຕູດຽວ(SSO)</string>
+    <string name="login_signin_sso">ສືບຕໍ່ກັບລະບົບປະຕູດຽວ(Ethereum)</string>
     <string name="login_signin">ເຂົ້າສູ່ລະບົບ</string>
     <string name="login_signup">ລົງທະບຽນ</string>
     <string name="login_signin_to">ເຂົ້າສູ່ລະບົບ %1$s</string>
     <string name="login_connect_to_a_custom_server">ເຊື່ອມຕໍ່ກັບເຊີບເວີທີ່ກໍາຫນົດເອງ</string>
-    <string name="login_connect_to_modular">ເຊື່ອມຕໍ່ກັບການບໍລິການ Element Matrix</string>
+    <string name="login_connect_to_modular">ເຊື່ອມຕໍ່ກັບການບໍລິການ quali.chat</string>
     <string name="login_connect_to">ເຊື່ອມຕໍ່ຫາ %1$s</string>
     <string name="login_continue">ສືບຕໍ່</string>
     <string name="login_social_sso">ລະບົບປະຕູດຽວ</string>
@@ -2252,7 +2252,7 @@
     <string name="ftue_auth_use_case_title">ທ່ານຈະສົນທະນາກັບໃຜຫຼາຍທີ່ສຸດ\?</string>
     <string name="ftue_auth_carousel_workplace_body">${app_name} ແມ່ນດີຫຼາຍສຳລັບບ່ອນເຮັດວຽກ. ໄດ້ຮັບຄວາມໄວ້ວາງໃຈໂດຍອົງການຈັດຕັ້ງທີ່ປອດໄພທີ່ສຸດຂອງໂລກ.</string>
     <string name="ftue_auth_carousel_encrypted_body">ເຂົ້າລະຫັດແຕ່ຕົ້ນທາງຮອດປາຍທາງ ແລະ ບໍ່ຕ້ອງການເບີໂທລະສັບ. ບໍ່ມີການໂຄສະນາ ຫຼືການຂຸດຄົ້ນຂໍ້ມູນ.</string>
-    <string name="ftue_auth_carousel_control_body">ເລືອກບ່ອນທີ່ຈະເກັບການສົນທະນາຂອງທ່ານ, ໃຫ້ທ່ານຄວບຄຸມແລະເປັນເອກະລາດ. ເຊື່ອມຕໍ່ຜ່ານ Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">ເລືອກບ່ອນທີ່ຈະເກັບການສົນທະນາຂອງທ່ານ, ໃຫ້ທ່ານຄວບຄຸມແລະເປັນເອກະລາດ. ເຊື່ອມຕໍ່ຜ່ານ quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">ການສື່ສານທີ່ປອດໄພ ແລະ ເປັນເອກະລາດທີ່ເຮັດໃຫ້ທ່ານມີຄວາມເປັນສ່ວນຕົວໃນລະດັບດຽວກັນກັບການສົນທະນາແບບເຫັນໜ້າຢູ່ໃນເຮືອນຂອງທ່ານເອງ.</string>
     <string name="ftue_auth_carousel_workplace_title">ຂໍ້ຄວາມສໍາລັບທີມງານຂອງທ່ານ.</string>
     <string name="ftue_auth_carousel_encrypted_title">ການສົ່ງຂໍ້ຄວາມທີ່ປອດໄພ.</string>

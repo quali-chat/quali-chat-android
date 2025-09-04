@@ -1,0 +1,21 @@
+android {
+
+    flavorDimensions = ["store", "env"]
+
+    productFlavors {
+        quali {
+            dimension "store"
+            isDefault = true
+        }
+
+        staging {
+            dimension "env"
+            isDefault = false
+        }
+
+        production {
+            dimension "env"
+            isDefault = false
+        }
+    }
+}

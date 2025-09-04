@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -216,7 +217,7 @@ class FtueAuthCombinedRegisterFragment :
         views.ssoGroup.isVisible = true
         views.ssoButtons.render(loginMode, SocialLoginButtonsView.Mode.MODE_CONTINUE) { provider ->
             viewModel.fetchSsoUrl(
-                    redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                    redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                     deviceId = deviceId,
                     provider = provider,
                     action = SSOAction.REGISTER

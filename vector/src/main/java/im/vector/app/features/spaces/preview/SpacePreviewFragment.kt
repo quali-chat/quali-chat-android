@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,6 +35,7 @@ import im.vector.app.R
 import im.vector.app.core.extensions.cleanup
 import im.vector.app.core.extensions.configureWith
 import im.vector.app.core.platform.VectorBaseFragment
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.databinding.FragmentSpacePreviewBinding
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.spaces.SpacePreviewSharedAction
@@ -152,7 +154,7 @@ class SpacePreviewFragment :
         val spaceAvatarUrl = spacePreviewState.spaceInfo.invoke()?.avatarUrl ?: spacePreviewState.avatarUrl
         val mxItem = MatrixItem.SpaceItem(spacePreviewState.idOrAlias, spaceName, spaceAvatarUrl)
         avatarRenderer.render(mxItem, views.spacePreviewToolbarAvatar)
-        views.roomPreviewNoPreviewToolbarTitle.text = spaceName
+        views.roomPreviewNoPreviewToolbarTitle.swapToEthereumDisplayName(spaceName)
 //            }
 //            is SpacePeekResult.SpacePeekError,
 //            null -> {

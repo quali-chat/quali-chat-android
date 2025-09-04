@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Alias to the palette colors
+      Source: https://www.figma.com/file/X4XTH9iS2KGJ2wFKDqkyed/Compound?node-id=1521%3A23026 -->
+
+    <color name="element_accent_light">@color/palette_element_green</color>
+    <color name="element_accent_dark">@color/palette_element_green</color>
+
+    <color name="element_alert_light">@color/palette_vermilion</color>
+    <color name="element_alert_dark">@color/palette_vermilion</color>
+
+    <color name="element_link_light">@color/palette_links</color>
+    <color name="element_link_dark">@color/palette_links</color>
+
+    <!-- attr for content colors -->
+    <attr name="vctr_content_primary" format="color" />
+    <attr name="vctr_content_secondary" format="color" />
+    <attr name="vctr_content_tertiary" format="color" />
+    <attr name="vctr_content_quaternary" format="color" />
+    <attr name="vctr_content_quinary" format="color" />
+
+    <color name="element_content_primary_light">@color/palette_black_900</color>
+    <color name="element_content_secondary_light">@color/palette_gray_200</color>
+    <color name="element_content_tertiary_light">@color/palette_gray_150</color>
+    <color name="element_content_quaternary_light">@color/palette_gray_100</color>
+    <color name="element_content_quinary_light">@color/palette_gray_50</color>
+
+    <color name="element_content_primary_dark">@color/palette_white</color>
+    <color name="element_content_secondary_dark">@color/palette_white</color>
+    <color name="element_content_tertiary_dark">@color/palette_gray_300</color>
+    <color name="element_content_quaternary_dark">@color/palette_gray_400</color>
+    <color name="element_content_quinary_dark">@color/palette_gray_450</color>
+
+    <attr name="vctr_system" format="color" />
+    <color name="element_system_light">@color/palette_gray_25</color>
+    <color name="element_system_dark">@color/palette_black_950</color>
+
+    <color name="element_background_light">@color/palette_white</color>
+    <color name="element_background_dark">@color/palette_black_800</color>
+    <color name="element_background_black">@android:color/black</color>
+
+    <color name="element_name_01">#CEE59C</color>
+    <color name="element_name_02">#80D4DE</color>
+    <color name="element_name_03">#9BAFF7</color>
+    <color name="element_name_04">#FCA780</color>
+    <color name="element_name_05">#EFB4E2</color>
+    <color name="element_name_06">#AD93F8</color>
+    <color name="element_name_07">#96BFEF</color>
+    <color name="element_name_08">#F8D288</color>
+
+    <!-- Also create alias for rooms -->
+    <color name="element_room_01">#80D4DE</color>
+    <color name="element_room_02">#F8D288</color>
+    <color name="element_room_03">#AD93F8</color>
+
+    <attr name="qualiButtonText" format="color" />
+    <color name="quali_button_text_light">@color/palette_black_900</color>
+    <color name="quali_button_text_dark">@android:color/black</color>
+
+    <attr name="qualiButtonTextDisabled" format="color" />
+    <color name="quali_button_text_disabled_light">#a2a4a3</color>
+    <color name="quali_button_text_disabled_dark">#b1b1b1</color>
+
+    <color name="blockchain_selection_title">#80D4DE</color>
+    <color name="blockchain_selection_selected">#C3E1F6</color>
+    <color name="blockchain_selection_unselected">#696969</color>
+    <color name="blockchain_selection_footer">#989898</color>
+
+    <attr name="quali_color_primary" format="color" />
+    <color name="quali_color_primary_light">@color/palette_black_950</color>
+    <color name="quali_color_primary_dark">@color/palette_white</color>
+
+</resources>

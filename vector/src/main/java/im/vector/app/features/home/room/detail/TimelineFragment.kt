@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -112,6 +113,7 @@ import im.vector.app.core.utils.saveMedia
 import im.vector.app.core.utils.shareMedia
 import im.vector.app.core.utils.shareText
 import im.vector.app.core.utils.startInstallFromSourceIntent
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.core.utils.toast
 import im.vector.app.databinding.DialogReportContentBinding
 import im.vector.app.databinding.FragmentTimelineBinding
@@ -129,6 +131,7 @@ import im.vector.app.features.call.conference.JitsiCallViewModel
 import im.vector.app.features.call.webrtc.WebRtcCallManager
 import im.vector.app.features.crypto.keysbackup.restore.KeysBackupRestoreActivity
 import im.vector.app.features.crypto.verification.user.UserVerificationBottomSheet
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.home.room.detail.arguments.TimelineArgs
 import im.vector.app.features.home.room.detail.composer.CanSendStatus
@@ -138,6 +141,7 @@ import im.vector.app.features.home.room.detail.composer.MessageComposerViewModel
 import im.vector.app.features.home.room.detail.composer.boolean
 import im.vector.app.features.home.room.detail.composer.voice.VoiceRecorderFragment
 import im.vector.app.features.home.room.detail.error.RoomNotFound
+import im.vector.app.features.home.room.detail.poll.PollState
 import im.vector.app.features.home.room.detail.timeline.TimelineEventController
 import im.vector.app.features.home.room.detail.timeline.action.EventSharedAction
 import im.vector.app.features.home.room.detail.timeline.action.MessageActionsBottomSheet
@@ -221,14 +225,7 @@ import java.net.URL
 import java.util.UUID
 import javax.inject.Inject
 
-@AndroidEntryPoint
-class TimelineFragment :
-        VectorBaseFragment<FragmentTimelineBinding>(),
-        TimelineEventController.Callback,
-        VectorInviteView.Callback,
-        GalleryOrCameraDialogHelper.Listener,
-        CurrentCallsView.Callback,
-        VectorMenuProvider {
+@AndroidEntryPoint class TimelineFragment : VectorBaseFragment<FragmentTimelineBinding>(), TimelineEventController.Callback, VectorInviteView.Callback, GalleryOrCameraDialogHelper.Listener, CurrentCallsView.Callback, VectorMenuProvider {
 
     @Inject lateinit var session: Session
     @Inject lateinit var avatarRenderer: AvatarRenderer
@@ -332,8 +329,7 @@ class TimelineFragment :
         )
         keyboardStateUtils = KeyboardStateUtils(requireActivity())
         lazyLoadedViews.bind(views)
-        setupToolbar(views.roomToolbar)
-                .allowBack()
+        setupToolbar(views.roomToolbar).allowBack()
         setupRecyclerView()
         setupNotificationView()
         setupJumpToReadMarkerView()
@@ -347,34 +343,24 @@ class TimelineFragment :
             navigator.openRoomProfile(requireActivity(), timelineArgs.roomId)
         }
 
-        sharedActionViewModel
-                .stream()
-                .onEach {
-                    handleActions(it)
-                }
-                .launchIn(viewLifecycleOwner.lifecycleScope)
+        sharedActionViewModel.stream().onEach {
+            handleActions(it)
+        }.launchIn(viewLifecycleOwner.lifecycleScope)
 
-        knownCallsViewModel
-                .liveKnownCalls
-                .observe(viewLifecycleOwner) {
-                    currentCallsViewPresenter.updateCall(callManager.getCurrentCall(), it)
-                    invalidateOptionsMenu()
-                }
+        knownCallsViewModel.liveKnownCalls.observe(viewLifecycleOwner) {
+            currentCallsViewPresenter.updateCall(callManager.getCurrentCall(), it)
+            invalidateOptionsMenu()
+        }
 
         timelineViewModel.onEach(RoomDetailViewState::canShowJumpToReadMarker, RoomDetailViewState::unreadState) { _, _ ->
             updateJumpToReadMarkerViewVisibility()
         }
 
         timelineViewModel.onEach(
-                RoomDetailViewState::syncState,
-                RoomDetailViewState::incrementalSyncRequestState,
-                RoomDetailViewState::pushCounter
+                RoomDetailViewState::syncState, RoomDetailViewState::incrementalSyncRequestState, RoomDetailViewState::pushCounter
         ) { syncState, incrementalSyncStatus, pushCounter ->
             views.syncStateView.render(
-                    syncState,
-                    incrementalSyncStatus,
-                    pushCounter,
-                    vectorPreferences.developerShowDebugInfo()
+                    syncState, incrementalSyncStatus, pushCounter, vectorPreferences.developerShowDebugInfo()
             )
         }
 
@@ -401,7 +387,11 @@ class TimelineFragment :
                 RoomDetailViewEvents.HideWaitingView -> vectorBaseActivity.hideWaitingView()
                 is RoomDetailViewEvents.RequestNativeWidgetPermission -> requestNativeWidgetPermission(it)
                 is RoomDetailViewEvents.OpenRoom -> handleOpenRoom(it)
-                RoomDetailViewEvents.OpenInvitePeople -> navigator.openInviteUsersToRoom(requireActivity(), timelineArgs.roomId)
+                RoomDetailViewEvents.OpenInvitePeople -> navigator.openInviteUsersToRoom(
+                        requireActivity(),
+                        timelineArgs.roomId,
+                        directRoomMembersLimit = Int.MAX_VALUE
+                )
                 RoomDetailViewEvents.OpenSetRoomAvatarDialog -> galleryOrCameraDialogHelper.show()
                 RoomDetailViewEvents.OpenRoomSettings -> handleOpenRoomSettings(RoomProfileActivity.EXTRA_DIRECT_ACCESS_ROOM_SETTINGS)
                 RoomDetailViewEvents.OpenRoomProfile -> handleOpenRoomSettings()
@@ -433,8 +423,7 @@ class TimelineFragment :
                     messageComposerViewModel.handle(MessageComposerAction.SetFullScreen(false))
                 } else {
                     remove() // Remove callback to avoid infinite loop
-                    @Suppress("DEPRECATION")
-                    requireActivity().onBackPressed()
+                    @Suppress("DEPRECATION") requireActivity().onBackPressed()
                 }
             }
         }
@@ -462,9 +451,7 @@ class TimelineFragment :
 
     private fun acceptIncomingCall(event: RoomDetailViewEvents.DisplayAndAcceptCall) {
         val intent = VectorCallActivity.newIntent(
-                context = vectorBaseActivity,
-                call = event.call,
-                mode = VectorCallActivity.INCOMING_ACCEPT
+                context = vectorBaseActivity, call = event.call, mode = VectorCallActivity.INCOMING_ACCEPT
         )
         startActivity(intent)
     }
@@ -504,17 +491,14 @@ class TimelineFragment :
         uri ?: return
         timelineViewModel.handle(
                 RoomDetailAction.SetAvatarAction(
-                        newAvatarUri = uri,
-                        newAvatarFileName = getFilenameFromUri(requireContext(), uri) ?: UUID.randomUUID().toString()
+                        newAvatarUri = uri, newAvatarFileName = getFilenameFromUri(requireContext(), uri) ?: UUID.randomUUID().toString()
                 )
         )
     }
 
     private fun handleOpenRoomSettings(directAccess: Int? = null) {
         navigator.openRoomProfile(
-                requireContext(),
-                timelineArgs.roomId,
-                directAccess
+                requireContext(), timelineArgs.roomId, directAccess
         )
     }
 
@@ -527,20 +511,18 @@ class TimelineFragment :
 
     private fun handleShowLocationPreview(locationContent: MessageLocationContent, senderId: String) {
         val isSelfLocation = locationContent.isSelfLocation()
-        navigator
-                .openLocationSharing(
-                        context = requireContext(),
-                        roomId = timelineArgs.roomId,
-                        mode = LocationSharingMode.PREVIEW,
-                        initialLocationData = locationContent.toLocationData(),
-                        locationOwnerId = if (isSelfLocation) senderId else null
-                )
+        navigator.openLocationSharing(
+                context = requireContext(),
+                roomId = timelineArgs.roomId,
+                mode = LocationSharingMode.PREVIEW,
+                initialLocationData = locationContent.toLocationData(),
+                locationOwnerId = if (isSelfLocation) senderId else null
+        )
     }
 
     private fun navigateToLiveLocationMap() {
         navigator.openLiveLocationMap(
-                context = requireContext(),
-                roomId = timelineArgs.roomId
+                context = requireContext(), roomId = timelineArgs.roomId
         )
     }
 
@@ -556,25 +538,19 @@ class TimelineFragment :
         } else {
             RoomWidgetPermissionBottomSheet.newInstance(
                     WidgetArgs(
-                            baseUrl = it.domain,
-                            kind = WidgetKind.ROOM,
-                            roomId = timelineArgs.roomId,
-                            widgetId = it.widget.widgetId
+                            baseUrl = it.domain, kind = WidgetKind.ROOM, roomId = timelineArgs.roomId, widgetId = it.widget.widgetId
                     )
             ).apply {
                 directListener = { granted ->
                     if (granted) {
                         timelineViewModel.handle(
                                 RoomDetailAction.EnsureNativeWidgetAllowed(
-                                        widget = it.widget,
-                                        userJustAccepted = true,
-                                        grantedEvents = it.grantedEvents
+                                        widget = it.widget, userJustAccepted = true, grantedEvents = it.grantedEvents
                                 )
                         )
                     }
                 }
-            }
-                    .show(childFragmentManager, tag)
+            }.show(childFragmentManager, tag)
         }
     }
 
@@ -595,14 +571,12 @@ class TimelineFragment :
     private fun createFailedMessagesWarningCallback(): FailedMessagesWarningView.Callback {
         return object : FailedMessagesWarningView.Callback {
             override fun onDeleteAllClicked() {
-                MaterialAlertDialogBuilder(requireContext())
-                        .setTitle(R.string.event_status_delete_all_failed_dialog_title)
-                        .setMessage(getString(R.string.event_status_delete_all_failed_dialog_message))
-                        .setNegativeButton(R.string.no, null)
-                        .setPositiveButton(R.string.yes) { _, _ ->
-                            timelineViewModel.handle(RoomDetailAction.RemoveAllFailedMessages)
-                        }
-                        .show()
+                MaterialAlertDialogBuilder(requireContext()).setTitle(R.string.event_status_delete_all_failed_dialog_title).setMessage(getString(R.string.event_status_delete_all_failed_dialog_message)).setNegativeButton(
+                        R.string.no,
+                        null
+                ).setPositiveButton(R.string.yes) { _, _ ->
+                    timelineViewModel.handle(RoomDetailAction.RemoveAllFailedMessages)
+                }.show()
             }
 
             override fun onRetryClicked() {
@@ -629,7 +603,7 @@ class TimelineFragment :
     }
 
     private fun startOpenFileIntent(action: RoomDetailViewEvents.OpenFile) {
-        if (action.mimeType == MimeTypes.Apk) {
+        if (action.mimeType == MimeTypes.Apk && !ProductFlavour.isQualiChat()) {
             installApk(action)
         } else {
             openFile(action)
@@ -676,16 +650,12 @@ class TimelineFragment :
         // The Sticker picker widget is not installed yet. Propose the user to install it
         val builder = MaterialAlertDialogBuilder(requireContext())
         val v: View = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_no_sticker_pack, null)
-        builder
-                .setView(v)
-                .setPositiveButton(R.string.yes) { _, _ ->
-                    // Open integration manager, to the sticker installation page
-                    openIntegrationManager(
-                            screen = WidgetType.StickerPicker.preferred
-                    )
-                }
-                .setNegativeButton(R.string.no, null)
-                .show()
+        builder.setView(v).setPositiveButton(R.string.yes) { _, _ ->
+            // Open integration manager, to the sticker installation page
+            openIntegrationManager(
+                    screen = WidgetType.StickerPicker.preferred
+            )
+        }.setNegativeButton(R.string.no, null).show()
     }
 
     private fun handleSpaceShare() {
@@ -727,10 +697,7 @@ class TimelineFragment :
         }
 
         jumpToBottomViewVisibilityManager = JumpToBottomViewVisibilityManager(
-                views.jumpToBottomView,
-                debouncer,
-                views.timelineRecyclerView,
-                layoutManager
+                views.jumpToBottomView, debouncer, views.timelineRecyclerView, layoutManager
         )
     }
 
@@ -839,19 +806,19 @@ class TimelineFragment :
             if (widgetsCount == 0 || hasOnlyJitsiWidget) {
                 // icon should be default color no badge
                 val actionView = matrixAppsMenuItem.actionView
-                actionView
-                        ?.findViewById<ImageView>(R.id.action_view_icon_image)
-                        ?.setColorFilter(ThemeUtils.getColor(requireContext(), R.attr.vctr_content_secondary))
+                actionView?.findViewById<ImageView>(R.id.action_view_icon_image)?.setColorFilter(
+                        ThemeUtils.getColor(
+                                requireContext(),
+                                R.attr.vctr_content_secondary
+                        )
+                )
                 actionView?.findViewById<TextView>(R.id.cart_badge)?.isVisible = false
                 matrixAppsMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
             } else {
                 val actionView = matrixAppsMenuItem.actionView
-                actionView
-                        ?.findViewById<ImageView>(R.id.action_view_icon_image)
-                        ?.setColorFilter(colorProvider.getColorFromAttribute(R.attr.colorPrimary))
+                actionView?.findViewById<ImageView>(R.id.action_view_icon_image)?.setColorFilter(colorProvider.getColorFromAttribute(R.attr.colorPrimary))
                 actionView?.findViewById<TextView>(R.id.cart_badge)?.setTextOrHide("$widgetsCount")
-                @Suppress("AlwaysShowAction")
-                matrixAppsMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+                @Suppress("AlwaysShowAction") matrixAppsMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
             }
 
             // Handle custom threads badge notification
@@ -862,7 +829,7 @@ class TimelineFragment :
     override fun handleMenuItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.invite -> {
-                navigator.openInviteUsersToRoom(requireActivity(), timelineArgs.roomId)
+                navigator.openInviteUsersToRoom(requireActivity(), timelineArgs.roomId, directRoomMembersLimit = Int.MAX_VALUE)
                 true
             }
             R.id.timeline_setting -> {
@@ -963,14 +930,11 @@ class TimelineFragment :
     }
 
     private fun displayDisabledIntegrationDialog() {
-        MaterialAlertDialogBuilder(requireActivity())
-                .setTitle(R.string.disabled_integration_dialog_title)
-                .setMessage(R.string.disabled_integration_dialog_content)
-                .setPositiveButton(R.string.settings) { _, _ ->
-                    navigator.openSettings(requireActivity(), VectorSettingsActivity.EXTRA_DIRECT_ACCESS_GENERAL)
-                }
-                .setNegativeButton(R.string.action_cancel, null)
-                .show()
+        MaterialAlertDialogBuilder(requireActivity()).setTitle(R.string.disabled_integration_dialog_title).setMessage(R.string.disabled_integration_dialog_content).setPositiveButton(
+                R.string.settings
+        ) { _, _ ->
+            navigator.openSettings(requireActivity(), VectorSettingsActivity.EXTRA_DIRECT_ACCESS_GENERAL)
+        }.setNegativeButton(R.string.action_cancel, null).show()
     }
 
     override fun onResume() {
@@ -985,12 +949,14 @@ class TimelineFragment :
     private fun handlePendingAction(roomDetailPendingAction: RoomDetailPendingAction) {
         when (roomDetailPendingAction) {
             RoomDetailPendingAction.DoNothing -> Unit
-            is RoomDetailPendingAction.JumpToReadReceipt ->
-                timelineViewModel.handle(RoomDetailAction.JumpToReadReceipt(roomDetailPendingAction.userId))
-            is RoomDetailPendingAction.MentionUser ->
-                messageComposerViewModel.handle(MessageComposerAction.InsertUserDisplayName(roomDetailPendingAction.userId))
-            is RoomDetailPendingAction.OpenRoom ->
-                handleOpenRoom(RoomDetailViewEvents.OpenRoom(roomDetailPendingAction.roomId, roomDetailPendingAction.closeCurrentRoom))
+            is RoomDetailPendingAction.JumpToReadReceipt -> timelineViewModel.handle(RoomDetailAction.JumpToReadReceipt(roomDetailPendingAction.userId))
+            is RoomDetailPendingAction.MentionUser -> messageComposerViewModel.handle(MessageComposerAction.InsertUserDisplayName(roomDetailPendingAction.userId))
+            is RoomDetailPendingAction.OpenRoom -> handleOpenRoom(
+                    RoomDetailViewEvents.OpenRoom(
+                            roomDetailPendingAction.roomId,
+                            roomDetailPendingAction.closeCurrentRoom
+                    )
+            )
         }
     }
 
@@ -1014,10 +980,9 @@ class TimelineFragment :
     private val stickerActivityResultLauncher = registerStartForActivityResult { activityResult ->
         val data = activityResult.data ?: return@registerStartForActivityResult
         if (activityResult.resultCode == Activity.RESULT_OK) {
-            WidgetActivity.getOutput(data).toModel<MessageStickerContent>()
-                    ?.let { content ->
-                        timelineViewModel.handle(RoomDetailAction.SendSticker(content))
-                    }
+            WidgetActivity.getOutput(data).toModel<MessageStickerContent>()?.let { content ->
+                timelineViewModel.handle(RoomDetailAction.SendSticker(content))
+            }
         }
     }
 
@@ -1082,11 +1047,7 @@ class TimelineFragment :
                         return false
                     }
                     return when (model) {
-                        is MessageFileItem,
-                        is MessageAudioItem,
-                        is MessageVoiceItem,
-                        is MessageImageVideoItem,
-                        is MessageTextItem -> {
+                        is MessageFileItem, is MessageAudioItem, is MessageVoiceItem, is MessageImageVideoItem, is MessageTextItem -> {
                             return (model as AbsMessageItem).attributes.informationData.sendState == SendState.SYNCED
                         }
                         else -> false
@@ -1097,14 +1058,11 @@ class TimelineFragment :
             val touchHelper = ItemTouchHelper(swipeCallback)
             touchHelper.attachToRecyclerView(views.timelineRecyclerView)
         }
-        views.timelineRecyclerView.addGlidePreloader(
-                epoxyController = timelineEventController,
+        views.timelineRecyclerView.addGlidePreloader(epoxyController = timelineEventController,
                 requestManager = GlideApp.with(this),
                 preloader = glidePreloader { requestManager, epoxyModel: MessageImageVideoItem, _ ->
                     imageContentRenderer.createGlideRequest(
-                            epoxyModel.mediaData,
-                            ImageContentRenderer.Mode.THUMBNAIL,
-                            requestManager as GlideRequests
+                            epoxyModel.mediaData, ImageContentRenderer.Mode.THUMBNAIL, requestManager as GlideRequests
                     )
                 })
     }
@@ -1116,8 +1074,7 @@ class TimelineFragment :
                 viewLifecycleOwner.lifecycleScope.launch {
                     val state = timelineViewModel.awaitState()
                     val showJumpToUnreadBanner = when (state.unreadState) {
-                        UnreadState.Unknown,
-                        UnreadState.HasNoUnread -> false
+                        UnreadState.Unknown, UnreadState.HasNoUnread -> false
                         is UnreadState.ReadMarkerNotLoaded -> true
                         is UnreadState.HasUnread -> {
                             if (state.canShowJumpToReadMarker) {
@@ -1156,6 +1113,7 @@ class TimelineFragment :
             lazyLoadedViews.failedMessagesWarningView(inflateIfNeeded = false)?.isVisible = false
         }
         val inviter = mainState.asyncInviter()
+
         if (summary?.membership == Membership.JOIN) {
             views.jumpToBottomView.count = summary.notificationCount
             views.jumpToBottomView.drawBadge = summary.hasUnreadMessages
@@ -1165,6 +1123,7 @@ class TimelineFragment :
             if (mainState.tombstoneEvent == null) {
                 views.composerContainer.isInvisible = !messageComposerState.isComposerVisible
                 views.voiceMessageRecorderContainer.isVisible = messageComposerState.isVoiceMessageRecorderVisible
+                PollState.isPollVoteEnabled = messageComposerState.canSendMessage is CanSendStatus.Allowed
                 when (messageComposerState.canSendMessage) {
                     CanSendStatus.Allowed -> {
                         NotificationAreaView.State.Hidden
@@ -1206,12 +1165,11 @@ class TimelineFragment :
         views.roomNotFoundText.text = when (asyncRoomSummary.error) {
             is RoomNotFound -> {
                 getString(
-                        R.string.timeline_error_room_not_found,
-                        if (vectorPreferences.developerMode()) {
-                            "\nDeveloper info: $timelineArgs"
-                        } else {
-                            ""
-                        }
+                        R.string.timeline_error_room_not_found, if (vectorPreferences.developerMode()) {
+                    "\nDeveloper info: $timelineArgs"
+                } else {
+                    ""
+                }
                 )
             }
             else -> errorFormatter.toHumanReadable(asyncRoomSummary.error)
@@ -1232,9 +1190,7 @@ class TimelineFragment :
             isLocalRoom() -> {
                 views.includeRoomToolbar.roomToolbarContentView.isVisible = false
                 views.includeThreadToolbar.roomToolbarThreadConstraintLayout.isVisible = false
-                setupToolbar(views.roomToolbar)
-                        .setTitle(R.string.room_member_open_or_create_dm)
-                        .allowBack(useCross = true)
+                setupToolbar(views.roomToolbar).setTitle(R.string.room_member_open_or_create_dm).allowBack(useCross = true)
             }
             isThreadTimeLine() -> {
                 views.includeRoomToolbar.roomToolbarContentView.isVisible = false
@@ -1243,7 +1199,7 @@ class TimelineFragment :
                     val matrixItem = MatrixItem.RoomItem(it.roomId, it.displayName, it.avatarUrl)
                     avatarRenderer.render(matrixItem, views.includeThreadToolbar.roomToolbarThreadImageView)
                     views.includeThreadToolbar.roomToolbarThreadShieldImageView.render(it.roomEncryptionTrustLevel)
-                    views.includeThreadToolbar.roomToolbarThreadSubtitleTextView.text = it.displayName
+                    views.includeThreadToolbar.roomToolbarThreadSubtitleTextView.swapToEthereumDisplayName(it.displayName)
                 }
                 views.includeThreadToolbar.roomToolbarThreadTitleTextView.text = resources.getText(R.string.thread_timeline_title)
             }
@@ -1254,7 +1210,9 @@ class TimelineFragment :
                     views.includeRoomToolbar.roomToolbarContentView.isClickable = false
                 } else {
                     views.includeRoomToolbar.roomToolbarContentView.isClickable = roomSummary.membership == Membership.JOIN
-                    views.includeRoomToolbar.roomToolbarTitleView.text = roomSummary.displayName
+
+                    views.includeRoomToolbar.roomToolbarTitleView.swapToEthereumDisplayName(roomSummary.displayName)
+
                     avatarRenderer.render(roomSummary.toMatrixItem(), views.includeRoomToolbar.roomToolbarAvatarImageView)
                     val showPresence = roomSummary.isDirect
                     views.includeRoomToolbar.roomToolbarPresenceImageView.render(showPresence, roomSummary.directUserPresence)
@@ -1270,14 +1228,10 @@ class TimelineFragment :
         val msgId = when (withHeldCode) {
             WithHeldCode.BLACKLISTED -> R.string.crypto_error_withheld_blacklisted
             WithHeldCode.UNVERIFIED -> R.string.crypto_error_withheld_unverified
-            WithHeldCode.UNAUTHORISED,
-            WithHeldCode.UNAVAILABLE -> R.string.crypto_error_withheld_generic
+            WithHeldCode.UNAUTHORISED, WithHeldCode.UNAVAILABLE -> R.string.crypto_error_withheld_generic
             else -> R.string.notice_crypto_unable_to_decrypt_friendly_desc
         }
-        MaterialAlertDialogBuilder(requireActivity())
-                .setMessage(msgId)
-                .setPositiveButton(R.string.ok, null)
-                .show()
+        MaterialAlertDialogBuilder(requireActivity()).setMessage(msgId).setPositiveButton(R.string.ok, null).show()
     }
 
     private fun promptReasonToReportContent(action: EventSharedAction.ReportContentCustom) {
@@ -1285,29 +1239,23 @@ class TimelineFragment :
         val layout = inflater.inflate(R.layout.dialog_report_content, null)
         val views = DialogReportContentBinding.bind(layout)
 
-        MaterialAlertDialogBuilder(requireActivity())
-                .setTitle(R.string.report_content_custom_title)
-                .setView(layout)
-                .setPositiveButton(R.string.report_content_custom_submit) { _, _ ->
-                    val reason = views.dialogReportContentInput.text.toString()
-                    timelineViewModel.handle(RoomDetailAction.ReportContent(action.eventId, action.senderId, reason))
-                }
-                .setNegativeButton(R.string.action_cancel, null)
-                .show()
+        MaterialAlertDialogBuilder(requireActivity()).setTitle(R.string.report_content_custom_title).setView(layout).setPositiveButton(R.string.report_content_custom_submit) { _, _ ->
+            val reason = views.dialogReportContentInput.text.toString()
+            timelineViewModel.handle(RoomDetailAction.ReportContent(action.eventId, action.senderId, reason))
+        }.setNegativeButton(R.string.action_cancel, null).show()
     }
 
     private fun promptConfirmationToRedactEvent(action: EventSharedAction.Redact) {
-        ConfirmationDialogBuilder
-                .show(
-                        activity = requireActivity(),
-                        askForReason = action.askForReason,
-                        confirmationRes = action.dialogDescriptionRes,
-                        positiveRes = R.string.action_remove,
-                        reasonHintRes = R.string.delete_event_dialog_reason_hint,
-                        titleRes = action.dialogTitleRes
-                ) { reason ->
-                    timelineViewModel.handle(RoomDetailAction.RedactAction(action.eventId, reason))
-                }
+        ConfirmationDialogBuilder.show(
+                activity = requireActivity(),
+                askForReason = action.askForReason,
+                confirmationRes = action.dialogDescriptionRes,
+                positiveRes = R.string.action_remove,
+                reasonHintRes = R.string.delete_event_dialog_reason_hint,
+                titleRes = action.dialogTitleRes
+        ) { reason ->
+            timelineViewModel.handle(RoomDetailAction.RedactAction(action.eventId, reason))
+        }
     }
 
     private fun displayRoomDetailActionFailure(result: RoomDetailViewEvents.ActionFailure) {
@@ -1315,11 +1263,10 @@ class TimelineFragment :
             RoomDetailAction.VoiceBroadcastAction.Recording.Start -> R.string.error_voice_broadcast_unauthorized_title
             else -> R.string.dialog_title_error
         }
-        MaterialAlertDialogBuilder(requireActivity())
-                .setTitle(titleResId)
-                .setMessage(errorFormatter.toHumanReadable(result.throwable))
-                .setPositiveButton(R.string.ok, null)
-                .show()
+        MaterialAlertDialogBuilder(requireActivity()).setTitle(titleResId).setMessage(errorFormatter.toHumanReadable(result.throwable)).setPositiveButton(
+                R.string.ok,
+                null
+        ).show()
     }
 
     private fun displayRoomDetailActionSuccess(result: RoomDetailViewEvents.ActionSuccess) {
@@ -1327,59 +1274,61 @@ class TimelineFragment :
             is RoomDetailAction.ReportContent -> {
                 when {
                     data.spam -> {
-                        MaterialAlertDialogBuilder(requireActivity(), R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive)
-                                .setTitle(R.string.content_reported_as_spam_title)
-                                .setMessage(R.string.content_reported_as_spam_content)
-                                .setPositiveButton(R.string.ok, null)
-                                .setNegativeButton(R.string.block_user) { _, _ ->
-                                    timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
-                                }
-                                .show()
+                        MaterialAlertDialogBuilder(
+                                requireActivity(),
+                                R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive
+                        ).setTitle(R.string.content_reported_as_spam_title).setMessage(R.string.content_reported_as_spam_content).setPositiveButton(
+                                R.string.ok,
+                                null
+                        ).setNegativeButton(R.string.block_user) { _, _ ->
+                            timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
+                        }.show()
                     }
                     data.inappropriate -> {
-                        MaterialAlertDialogBuilder(requireActivity(), R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive)
-                                .setTitle(R.string.content_reported_as_inappropriate_title)
-                                .setMessage(R.string.content_reported_as_inappropriate_content)
-                                .setPositiveButton(R.string.ok, null)
-                                .setNegativeButton(R.string.block_user) { _, _ ->
-                                    timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
-                                }
-                                .show()
+                        MaterialAlertDialogBuilder(
+                                requireActivity(),
+                                R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive
+                        ).setTitle(R.string.content_reported_as_inappropriate_title).setMessage(R.string.content_reported_as_inappropriate_content).setPositiveButton(
+                                R.string.ok,
+                                null
+                        ).setNegativeButton(R.string.block_user) { _, _ ->
+                            timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
+                        }.show()
                     }
                     data.user -> {
-                        MaterialAlertDialogBuilder(requireActivity(), R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive)
-                                .setTitle(R.string.user_reported_as_inappropriate_title)
-                                .setMessage(R.string.user_reported_as_inappropriate_content)
-                                .setPositiveButton(R.string.ok, null)
-                                .setNegativeButton(R.string.block_user) { _, _ ->
-                                    timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
-                                }
-                                .show()
+                        MaterialAlertDialogBuilder(
+                                requireActivity(),
+                                R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive
+                        ).setTitle(R.string.user_reported_as_inappropriate_title).setMessage(R.string.user_reported_as_inappropriate_content).setPositiveButton(
+                                R.string.ok,
+                                null
+                        ).setNegativeButton(R.string.block_user) { _, _ ->
+                            timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
+                        }.show()
                     }
                     else -> {
-                        MaterialAlertDialogBuilder(requireActivity(), R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive)
-                                .setTitle(R.string.content_reported_title)
-                                .setMessage(R.string.content_reported_content)
-                                .setPositiveButton(R.string.ok, null)
-                                .setNegativeButton(R.string.block_user) { _, _ ->
-                                    timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
-                                }
-                                .show()
+                        MaterialAlertDialogBuilder(
+                                requireActivity(),
+                                R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive
+                        ).setTitle(R.string.content_reported_title).setMessage(R.string.content_reported_content).setPositiveButton(
+                                R.string.ok,
+                                null
+                        ).setNegativeButton(R.string.block_user) { _, _ ->
+                            timelineViewModel.handle(RoomDetailAction.IgnoreUser(data.senderId))
+                        }.show()
                     }
                 }
             }
             is RoomDetailAction.RequestVerification -> {
                 Timber.v("## SAS RequestVerification action $data")
                 UserVerificationBottomSheet.verifyUser(
-                        timelineArgs.roomId,
-                        data.userId
+                        timelineArgs.roomId, data.userId
                 ).show(parentFragmentManager, "REQ")
             }
             is RoomDetailAction.AcceptVerificationRequest -> {
                 Timber.v("## SAS AcceptVerificationRequest action $data")
                 UserVerificationBottomSheet.verifyUser(
-                        data.otherUserId,
-                        data.transactionId
+                        data.otherUserId, data.transactionId
                 ).show(parentFragmentManager, "REQ")
             }
             is RoomDetailAction.ResumeVerification -> {
@@ -1397,51 +1346,48 @@ class TimelineFragment :
     // TimelineEventController.Callback ************************************************************
     override fun onUrlClicked(url: String, title: String): Boolean {
         viewLifecycleOwner.lifecycleScope.launch {
-            val isManaged = permalinkHandler
-                    .launch(requireActivity(), url, object : NavigationInterceptor {
-                        override fun navToRoom(roomId: String?, eventId: String?, deepLink: Uri?, rootThreadEventId: String?): Boolean {
-                            // Same room?
-                            if (roomId != timelineArgs.roomId) return false
-                            // Navigation to same room
-                            if (!isThreadTimeLine()) {
-                                if (rootThreadEventId != null && userPreferencesProvider.areThreadMessagesEnabled()) {
-                                    // Thread link, so PermalinkHandler will handle the navigation
-                                    return false
-                                }
-                                return if (eventId == null) {
-                                    showSnackWithMessage(getString(R.string.navigate_to_room_when_already_in_the_room))
-                                    true
-                                } else {
-                                    // Highlight and scroll to this event
-                                    timelineViewModel.handle(RoomDetailAction.NavigateToEvent(eventId, true))
-                                    true
-                                }
-                            } else {
-                                return if (rootThreadEventId == getRootThreadEventId() && eventId == null) {
-                                    showSnackWithMessage(getString(R.string.navigate_to_thread_when_already_in_the_thread))
-                                    true
-                                } else if (rootThreadEventId == getRootThreadEventId() && eventId != null) {
-                                    // we are in the same thread
-                                    timelineViewModel.handle(RoomDetailAction.NavigateToEvent(eventId, true))
-                                    true
-                                } else {
-                                    false
-                                }
-                            }
+            val isManaged = permalinkHandler.launch(requireActivity(), url, object : NavigationInterceptor {
+                override fun navToRoom(roomId: String?, eventId: String?, deepLink: Uri?, rootThreadEventId: String?): Boolean {
+                    // Same room?
+                    if (roomId != timelineArgs.roomId) return false
+                    // Navigation to same room
+                    if (!isThreadTimeLine()) {
+                        if (rootThreadEventId != null && userPreferencesProvider.areThreadMessagesEnabled()) {
+                            // Thread link, so PermalinkHandler will handle the navigation
+                            return false
                         }
+                        return if (eventId == null) {
+                            showSnackWithMessage(getString(R.string.navigate_to_room_when_already_in_the_room))
+                            true
+                        } else {
+                            // Highlight and scroll to this event
+                            timelineViewModel.handle(RoomDetailAction.NavigateToEvent(eventId, true))
+                            true
+                        }
+                    } else {
+                        return if (rootThreadEventId == getRootThreadEventId() && eventId == null) {
+                            showSnackWithMessage(getString(R.string.navigate_to_thread_when_already_in_the_thread))
+                            true
+                        } else if (rootThreadEventId == getRootThreadEventId() && eventId != null) {
+                            // we are in the same thread
+                            timelineViewModel.handle(RoomDetailAction.NavigateToEvent(eventId, true))
+                            true
+                        } else {
+                            false
+                        }
+                    }
+                }
 
-                        override fun navToMemberProfile(userId: String, deepLink: Uri): Boolean {
-                            openRoomMemberProfile(userId)
-                            return true
-                        }
-                    })
+                override fun navToMemberProfile(userId: String, deepLink: Uri): Boolean {
+                    openRoomMemberProfile(userId)
+                    return true
+                }
+            })
             if (!isManaged) {
                 when {
                     url.containsRtLOverride() -> {
                         displayUrlConfirmationDialog(
-                                seenUrl = title.ensureEndsLeftToRight(),
-                                actualUrl = url.filterDirectionOverrides(),
-                                continueTo = url
+                                seenUrl = title.ensureEndsLeftToRight(), actualUrl = url.filterDirectionOverrides(), continueTo = url
                         )
                     }
                     title.isValidUrl() && url.isValidUrl() && URL(title).host != URL(url).host -> {
@@ -1458,19 +1404,17 @@ class TimelineFragment :
     }
 
     private fun displayUrlConfirmationDialog(seenUrl: String, actualUrl: String, continueTo: String = actualUrl) {
-        MaterialAlertDialogBuilder(requireActivity(), R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive)
-                .setTitle(R.string.external_link_confirmation_title)
-                .setMessage(
-                        getString(R.string.external_link_confirmation_message, seenUrl, actualUrl)
-                                .toSpannable()
-                                .colorizeMatchingText(actualUrl, colorProvider.getColorFromAttribute(R.attr.vctr_content_tertiary))
-                                .colorizeMatchingText(seenUrl, colorProvider.getColorFromAttribute(R.attr.vctr_content_tertiary))
-                )
-                .setPositiveButton(R.string._continue) { _, _ ->
-                    openUrlInExternalBrowser(requireContext(), continueTo)
-                }
-                .setNegativeButton(R.string.action_cancel, null)
-                .show()
+        MaterialAlertDialogBuilder(
+                requireActivity(),
+                R.style.ThemeOverlay_Vector_MaterialAlertDialog_NegativeDestructive
+        ).setTitle(R.string.external_link_confirmation_title).setMessage(
+                getString(R.string.external_link_confirmation_message, seenUrl, actualUrl).toSpannable().colorizeMatchingText(
+                        actualUrl,
+                        colorProvider.getColorFromAttribute(R.attr.vctr_content_tertiary)
+                ).colorizeMatchingText(seenUrl, colorProvider.getColorFromAttribute(R.attr.vctr_content_tertiary))
+        ).setPositiveButton(R.string._continue) { _, _ ->
+            openUrlInExternalBrowser(requireContext(), continueTo)
+        }.setNegativeButton(R.string.action_cancel, null).show()
     }
 
     override fun onUrlLongClicked(url: String): Boolean {
@@ -1494,17 +1438,10 @@ class TimelineFragment :
     }
 
     override fun onImageMessageClicked(
-            messageImageContent: MessageImageInfoContent,
-            mediaData: ImageContentRenderer.Data,
-            view: View,
-            inMemory: List<AttachmentData>
+            messageImageContent: MessageImageInfoContent, mediaData: ImageContentRenderer.Data, view: View, inMemory: List<AttachmentData>
     ) {
         navigator.openMediaViewer(
-                activity = requireActivity(),
-                roomId = timelineArgs.roomId,
-                mediaData = mediaData,
-                view = view,
-                inMemory = inMemory
+                activity = requireActivity(), roomId = timelineArgs.roomId, mediaData = mediaData, view = view, inMemory = inMemory
         ) { pairs ->
             pairs.add(Pair(views.roomToolbar, ViewCompat.getTransitionName(views.roomToolbar) ?: ""))
             pairs.add(Pair(views.composerContainer, ViewCompat.getTransitionName(views.composerContainer) ?: ""))
@@ -1513,10 +1450,7 @@ class TimelineFragment :
 
     override fun onVideoMessageClicked(messageVideoContent: MessageVideoContent, mediaData: VideoContentRenderer.Data, view: View) {
         navigator.openMediaViewer(
-                activity = requireActivity(),
-                roomId = timelineArgs.roomId,
-                mediaData = mediaData,
-                view = view
+                activity = requireActivity(), roomId = timelineArgs.roomId, mediaData = mediaData, view = view
         ) { pairs ->
             pairs.add(Pair(views.roomToolbar, ViewCompat.getTransitionName(views.roomToolbar) ?: ""))
             pairs.add(Pair(views.composerContainer, ViewCompat.getTransitionName(views.composerContainer) ?: ""))
@@ -1563,9 +1497,10 @@ class TimelineFragment :
         val roomId = timelineArgs.roomId
         this.view?.hideKeyboard()
 
-        MessageActionsBottomSheet
-                .newInstance(roomId, informationData, isThreadTimeLine())
-                .show(requireActivity().supportFragmentManager, "MESSAGE_CONTEXTUAL_ACTIONS")
+        MessageActionsBottomSheet.newInstance(roomId, informationData, isThreadTimeLine()).show(
+                requireActivity().supportFragmentManager,
+                "MESSAGE_CONTEXTUAL_ACTIONS"
+        )
 
         return true
     }
@@ -1574,14 +1509,12 @@ class TimelineFragment :
         if (action.force) {
             timelineViewModel.handle(RoomDetailAction.CancelSend(action.event, true))
         } else {
-            MaterialAlertDialogBuilder(requireContext())
-                    .setTitle(R.string.dialog_title_confirmation)
-                    .setMessage(getString(R.string.event_status_cancel_sending_dialog_message))
-                    .setNegativeButton(R.string.no, null)
-                    .setPositiveButton(R.string.yes) { _, _ ->
-                        timelineViewModel.handle(RoomDetailAction.CancelSend(action.event, false))
-                    }
-                    .show()
+            MaterialAlertDialogBuilder(requireContext()).setTitle(R.string.dialog_title_confirmation).setMessage(getString(R.string.event_status_cancel_sending_dialog_message)).setNegativeButton(
+                    R.string.no,
+                    null
+            ).setPositiveButton(R.string.yes) { _, _ ->
+                timelineViewModel.handle(RoomDetailAction.CancelSend(action.event, false))
+            }.show()
         }
     }
 
@@ -1618,13 +1551,11 @@ class TimelineFragment :
     }
 
     override fun onLongClickOnReactionPill(informationData: MessageInformationData, reaction: String) {
-        ViewReactionsBottomSheet.newInstance(timelineArgs.roomId, informationData)
-                .show(requireActivity().supportFragmentManager, "DISPLAY_REACTIONS")
+        ViewReactionsBottomSheet.newInstance(timelineArgs.roomId, informationData).show(requireActivity().supportFragmentManager, "DISPLAY_REACTIONS")
     }
 
     override fun onEditedDecorationClicked(informationData: MessageInformationData) {
-        ViewEditHistoryBottomSheet.newInstance(timelineArgs.roomId, informationData)
-                .show(requireActivity().supportFragmentManager, "DISPLAY_EDITS")
+        ViewEditHistoryBottomSheet.newInstance(timelineArgs.roomId, informationData).show(requireActivity().supportFragmentManager, "DISPLAY_EDITS")
     }
 
     override fun onTimelineItemAction(itemAction: RoomDetailAction) {
@@ -1639,21 +1570,19 @@ class TimelineFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             withResumed {
                 viewLifecycleOwner.lifecycleScope.launch {
-                    permalinkHandler
-                            .launch(requireActivity(), url, object : NavigationInterceptor {
-                                override fun navToRoom(roomId: String?, eventId: String?, deepLink: Uri?, rootThreadEventId: String?): Boolean {
-                                    requireActivity().finish()
-                                    return false
-                                }
-                            })
+                    permalinkHandler.launch(requireActivity(), url, object : NavigationInterceptor {
+                        override fun navToRoom(roomId: String?, eventId: String?, deepLink: Uri?, rootThreadEventId: String?): Boolean {
+                            requireActivity().finish()
+                            return false
+                        }
+                    })
                 }
             }
         }
     }
 
     override fun onReadReceiptsClicked(readReceipts: List<ReadReceiptData>) {
-        DisplayReadReceiptsBottomSheet.newInstance(readReceipts)
-                .show(requireActivity().supportFragmentManager, "DISPLAY_READ_RECEIPTS")
+        DisplayReadReceiptsBottomSheet.newInstance(readReceipts).show(requireActivity().supportFragmentManager, "DISPLAY_READ_RECEIPTS")
     }
 
     override fun onReadMarkerVisible() {
@@ -1700,10 +1629,7 @@ class TimelineFragment :
                 lifecycleScope.launch {
                     val result = runCatching { session.fileService().downloadFile(messageContent = action.messageContent) }
                     if (!isAdded) return@launch
-                    result.fold(
-                            { shareMedia(requireContext(), it, getMimeTypeFromUri(requireContext(), it.toUri())) },
-                            { showErrorInSnackbar(it) }
-                    )
+                    result.fold({ shareMedia(requireContext(), it, getMimeTypeFromUri(requireContext(), it.toUri())) }, { showErrorInSnackbar(it) })
                 }
             }
         }
@@ -1729,8 +1655,11 @@ class TimelineFragment :
     }
 
     private fun onSaveActionClicked(action: EventSharedAction.Save) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q &&
-                !checkPermissions(PERMISSIONS_FOR_WRITING_FILES, requireActivity(), saveActionActivityResultLauncher)) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q && !checkPermissions(
+                        PERMISSIONS_FOR_WRITING_FILES,
+                        requireActivity(),
+                        saveActionActivityResultLauncher
+                )) {
             sharedActionViewModel.pendingAction = action
             return
         }
@@ -1746,11 +1675,10 @@ class TimelineFragment :
                         notificationUtils = notificationUtils,
                         currentTimeMillis = clock.epochMillis()
                 )
+            }.onFailure {
+                if (!isAdded) return@onFailure
+                showErrorInSnackbar(it)
             }
-                    .onFailure {
-                        if (!isAdded) return@onFailure
-                        showErrorInSnackbar(it)
-                    }
         }
     }
 
@@ -1763,8 +1691,10 @@ class TimelineFragment :
                 openEmojiReactionPicker(action.eventId)
             }
             is EventSharedAction.ViewReactions -> {
-                ViewReactionsBottomSheet.newInstance(timelineArgs.roomId, action.messageInformationData)
-                        .show(requireActivity().supportFragmentManager, "DISPLAY_REACTIONS")
+                ViewReactionsBottomSheet.newInstance(timelineArgs.roomId, action.messageInformationData).show(
+                        requireActivity().supportFragmentManager,
+                        "DISPLAY_REACTIONS"
+                )
             }
             is EventSharedAction.Copy -> {
                 // I need info about the current selected message :/
@@ -1785,16 +1715,12 @@ class TimelineFragment :
             }
             is EventSharedAction.ViewSource -> {
                 JSonViewerDialog.newInstance(
-                        action.content,
-                        -1,
-                        createJSonViewerStyleProvider(colorProvider)
+                        action.content, -1, createJSonViewerStyleProvider(colorProvider)
                 ).show(childFragmentManager, "JSON_VIEWER")
             }
             is EventSharedAction.ViewDecryptedSource -> {
                 JSonViewerDialog.newInstance(
-                        action.content,
-                        -1,
-                        createJSonViewerStyleProvider(colorProvider)
+                        action.content, -1, createJSonViewerStyleProvider(colorProvider)
                 ).show(childFragmentManager, "JSON_VIEWER")
             }
             is EventSharedAction.QuickReact -> {
@@ -1902,25 +1828,23 @@ class TimelineFragment :
     }
 
     private fun askConfirmationToEndPoll(eventId: String) {
-        MaterialAlertDialogBuilder(requireContext(), R.style.ThemeOverlay_Vector_MaterialAlertDialog)
-                .setTitle(R.string.end_poll_confirmation_title)
-                .setMessage(R.string.end_poll_confirmation_description)
-                .setNegativeButton(R.string.action_cancel, null)
-                .setPositiveButton(R.string.end_poll_confirmation_approve_button) { _, _ ->
-                    timelineViewModel.handle(RoomDetailAction.EndPoll(eventId))
-                }
-                .show()
+        MaterialAlertDialogBuilder(requireContext(), R.style.ThemeOverlay_Vector_MaterialAlertDialog).setTitle(R.string.end_poll_confirmation_title).setMessage(
+                R.string.end_poll_confirmation_description
+        ).setNegativeButton(R.string.action_cancel, null).setPositiveButton(R.string.end_poll_confirmation_approve_button) { _, _ ->
+            timelineViewModel.handle(RoomDetailAction.EndPoll(eventId))
+        }.show()
     }
 
     private fun askConfirmationToIgnoreUser(senderId: String) {
-        MaterialAlertDialogBuilder(requireContext(), R.style.ThemeOverlay_Vector_MaterialAlertDialog_Destructive)
-                .setTitle(R.string.room_participants_action_ignore_title)
-                .setMessage(R.string.room_participants_action_ignore_prompt_msg)
-                .setNegativeButton(R.string.action_cancel, null)
-                .setPositiveButton(R.string.room_participants_action_ignore) { _, _ ->
-                    timelineViewModel.handle(RoomDetailAction.IgnoreUser(senderId))
-                }
-                .show()
+        MaterialAlertDialogBuilder(
+                requireContext(),
+                R.style.ThemeOverlay_Vector_MaterialAlertDialog_Destructive
+        ).setTitle(R.string.room_participants_action_ignore_title).setMessage(R.string.room_participants_action_ignore_prompt_msg).setNegativeButton(
+                R.string.action_cancel,
+                null
+        ).setPositiveButton(R.string.room_participants_action_ignore) { _, _ ->
+            timelineViewModel.handle(RoomDetailAction.IgnoreUser(senderId))
+        }.show()
     }
 
     private fun showSnackWithMessage(message: String) {
@@ -1928,18 +1852,13 @@ class TimelineFragment :
     }
 
     private fun showDialogWithMessage(message: String) {
-        MaterialAlertDialogBuilder(requireContext())
-                .setMessage(message)
-                .setPositiveButton(getString(R.string.ok), null)
-                .show()
+        MaterialAlertDialogBuilder(requireContext()).setMessage(message).setPositiveButton(getString(R.string.ok), null).show()
     }
 
     private fun onReplyInThreadClicked(action: EventSharedAction.ReplyInThread) {
         if (vectorPreferences.areThreadMessagesEnabled()) {
             navigateToThreadTimeline(
-                    rootThreadEventId = action.eventId,
-                    startsThread = action.startsThread,
-                    showKeyboard = true
+                    rootThreadEventId = action.eventId, startsThread = action.startsThread, showKeyboard = true
             )
         } else {
             displayThreadsBetaOptInDialog()
@@ -1972,20 +1891,14 @@ class TimelineFragment :
 
     private fun displayThreadsBetaOptInDialog() {
         activity?.let {
-            MaterialAlertDialogBuilder(it)
-                    .setTitle(R.string.threads_beta_enable_notice_title)
-                    .setMessage(threadsManager.getBetaEnableThreadsMessage())
-                    .setCancelable(true)
-                    .setNegativeButton(R.string.action_not_now) { _, _ -> }
-                    .setPositiveButton(R.string.action_try_it_out) { _, _ ->
-                        threadsManager.enableThreadsAndRestart(it)
-                    }
-                    .show()
-                    ?.findViewById<TextView>(android.R.id.message)
-                    ?.apply {
-                        linksClickable = true
-                        movementMethod = LinkMovementMethod.getInstance()
-                    }
+            MaterialAlertDialogBuilder(it).setTitle(R.string.threads_beta_enable_notice_title).setMessage(threadsManager.getBetaEnableThreadsMessage()).setCancelable(
+                    true
+            ).setNegativeButton(R.string.action_not_now) { _, _ -> }.setPositiveButton(R.string.action_try_it_out) { _, _ ->
+                threadsManager.enableThreadsAndRestart(it)
+            }.show()?.findViewById<TextView>(android.R.id.message)?.apply {
+                linksClickable = true
+                movementMethod = LinkMovementMethod.getInstance()
+            }
         }
     }
 
@@ -2025,44 +1938,36 @@ class TimelineFragment :
     }
 
     private fun onViewWidgetsClicked() {
-        RoomWidgetsBottomSheet.newInstance()
-                .show(childFragmentManager, "ROOM_WIDGETS_BOTTOM_SHEET")
+        RoomWidgetsBottomSheet.newInstance().show(childFragmentManager, "ROOM_WIDGETS_BOTTOM_SHEET")
     }
 
     private fun handleOpenElementCallWidget() = withState(timelineViewModel) { state ->
-        state
-                .activeRoomWidgets()
-                ?.find { it.type == WidgetType.ElementCall }
-                ?.also { widget ->
-                    navigator.openRoomWidget(requireContext(), state.roomId, widget)
-                }
+        state.activeRoomWidgets()?.find { it.type == WidgetType.ElementCall }?.also { widget ->
+            navigator.openRoomWidget(requireContext(), state.roomId, widget)
+        }
     }
 
     private fun displayPromptToStopVoiceBroadcast() {
-        ConfirmationDialogBuilder
-                .show(
-                        activity = requireActivity(),
-                        askForReason = false,
-                        confirmationRes = R.string.stop_voice_broadcast_content,
-                        positiveRes = R.string.action_stop,
-                        reasonHintRes = 0,
-                        titleRes = R.string.stop_voice_broadcast_dialog_title
-                ) {
-                    timelineViewModel.handle(RoomDetailAction.VoiceBroadcastAction.Recording.StopConfirmed)
-                }
+        ConfirmationDialogBuilder.show(
+                activity = requireActivity(),
+                askForReason = false,
+                confirmationRes = R.string.stop_voice_broadcast_content,
+                positiveRes = R.string.action_stop,
+                reasonHintRes = 0,
+                titleRes = R.string.stop_voice_broadcast_dialog_title
+        ) {
+            timelineViewModel.handle(RoomDetailAction.VoiceBroadcastAction.Recording.StopConfirmed)
+        }
     }
 
     private fun revokeFilePermission(revokeFilePermission: RoomDetailViewEvents.RevokeFilePermission) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             requireContext().revokeUriPermission(
-                    requireContext().applicationContext.packageName,
-                    revokeFilePermission.uri,
-                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                    requireContext().applicationContext.packageName, revokeFilePermission.uri, Intent.FLAG_GRANT_READ_URI_PERMISSION
             )
         } else {
             requireContext().revokeUriPermission(
-                    revokeFilePermission.uri,
-                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                    revokeFilePermission.uri, Intent.FLAG_GRANT_READ_URI_PERMISSION
             )
         }
     }

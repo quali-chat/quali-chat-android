@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Nie je možné dešifrovať: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Zariadenie odosielateľa nám neposlalo kľúče pre túto správu.</string>
     <string name="unable_to_send_message">Nie je možné odoslať správu</string>
-    <string name="matrix_error">Chyba Matrix</string>
+    <string name="matrix_error">Chyba quali.chat</string>
     <string name="medium_email">Emailová adresa</string>
     <string name="medium_phone_number">Telefónne číslo</string>
     <string name="room_displayname_room_invite">Pozvanie do miestnosti</string>
@@ -213,7 +213,7 @@
     <string name="invitations_header">Pozvania</string>
     <string name="low_priority_header">Nízka priorita</string>
     <string name="direct_chats_header">Konverzácie</string>
-    <string name="matrix_only_filter">Len Matrix kontakty</string>
+    <string name="matrix_only_filter">Len quali.chat kontakty</string>
     <string name="no_result_placeholder">Žiadne výsledky</string>
     <string name="rooms_header">Miestnosti</string>
     <string name="send_bug_report_include_logs">Odoslať záznamy</string>
@@ -315,7 +315,7 @@
     <string name="settings_messages_in_one_to_one">Správy v priamych konverzáciách</string>
     <string name="settings_messages_in_group_chat">Správy v skupinových konverzáciách</string>
     <string name="settings_invited_to_room">Keď ma pozvú do miestnosti</string>
-    <string name="settings_call_invitations">Audio / Video hovory</string>
+    <string name="settings_call_invitations">Audio hovory</string>
     <string name="settings_messages_sent_by_bot">Správy odosielané robotmi</string>
     <string name="settings_start_on_boot">Spustiť po reštarte zariadenia</string>
     <string name="settings_background_sync">Synchronizácia na pozadí</string>
@@ -410,7 +410,7 @@
     <string name="select_room_directory">Vyberte adresár miestností</string>
     <string name="directory_server_placeholder">Názov servera</string>
     <string name="directory_server_all_rooms_on_server">Všetky miestnosti na serveri %s</string>
-    <string name="directory_server_native_rooms">Všetky Matrix miestnosti na serveri %s</string>
+    <string name="directory_server_native_rooms">Všetky quali.chat miestnosti na serveri %s</string>
     <string name="font_size">Veľkosť písma</string>
     <string name="tiny">Veľmi malé</string>
     <string name="small">Malé</string>
@@ -428,7 +428,7 @@
     <string name="widget_integration_missing_room_id">V požiadavke chýba room_id.</string>
     <string name="widget_integration_missing_user_id">V požiadavke chýba user_id.</string>
     <string name="widget_integration_room_not_visible">Miestnosť %s nie je viditeľná.</string>
-    <string name="room_add_matrix_apps">Pridať Matrix aplikácie</string>
+    <string name="room_add_matrix_apps">Pridať quali.chat aplikácie</string>
     <string name="you_added_a_new_device">Pridali ste novú reláciu \'%s\', ktorá požaduje šifrovacie kľúče.</string>
     <string name="your_unverified_device_requesting">Vaša neoverená relácia \'%s\' požaduje šifrovacie kľúče.</string>
     <string name="start_verification">Spustiť overenie</string>
@@ -510,7 +510,7 @@
 \n
 \nDeaktivácia vášho účtu <b>nezapríčiní štandardne, že zabudneme na správy, ktoré ste odoslali</b>. Ak chcete, aby sme vaše správy zabudli, označte nižšie uvedené políčko.
 \n
-\nViditeľnosť správ v Matrixe je podobná ako v prípade e-mailu. Naše zabudnutie vašich správ znamená, že správy, ktoré ste poslali, nebudú sprístupnené žiadnym novým alebo neregistrovaným používateľom, ale registrovaní používatelia, ktorí už majú prístup k týmto správam, budú mať stále prístup k ich kópii.</string>
+\nViditeľnosť správ v quali.chate je podobná ako v prípade e-mailu. Naše zabudnutie vašich správ znamená, že správy, ktoré ste poslali, nebudú sprístupnené žiadnym novým alebo neregistrovaným používateľom, ale registrovaní používatelia, ktorí už majú prístup k týmto správam, budú mať stále prístup k ich kópii.</string>
     <string name="deactivate_account_delete_checkbox">Spolu s deaktivovaním účtu si želám odstrániť všetky mnou odoslané správy (Pozor: Môže sa stať, že noví používatelia uvidia neúplnú históriu konverzácií)</string>
     <string name="deactivate_account_submit">Deaktivovať účet</string>
     <string name="action_download">Stiahnuť</string>
@@ -538,7 +538,7 @@
     <string name="command_description_remove_user">Vykáže zadaného používateľa z miestnosti</string>
     <string name="command_description_nick">Mení vaše zobrazované meno / prezývku</string>
     <string name="command_description_markdown">Zapnutie/vypnutie formátovanie textu markdown</string>
-    <string name="command_description_clear_scalar_token">Užitočné na opravu spravovania Matrix aplikácií</string>
+    <string name="command_description_clear_scalar_token">Užitočné na opravu spravovania quali.chat aplikácií</string>
     <string name="room_tombstone_versioned_description">Táto miestnosť bola nahradená inou a nie je viac aktívna.</string>
     <string name="room_tombstone_continuation_link">Konverzácia pokračuje tu</string>
     <string name="room_tombstone_continuation_description">Táto miestnosť je pokračovaním predchádzajúcej konverzácii</string>
@@ -651,7 +651,7 @@
     <string name="action_ignore">Ignorovať</string>
     <string name="action_sign_out_confirmation_simple">Ste si istí, že sa chcete odhlásiť\?</string>
     <string name="action_mark_room_read">Označiť ako prečítané</string>
-    <string name="auth_login_sso">Prihlásiť sa použitím jednotného prihlásenia SSO</string>
+    <string name="auth_login_sso">Prihlásiť sa použitím jednotného prihlásenia Ethereum</string>
     <string name="settings_notification_advanced">Pokročilé nastavenia oznámení</string>
     <string name="settings_notification_by_event">Dôležitosť oznámení pre udalosti</string>
     <string name="settings_troubleshoot_test_bing_settings_title">Vlastné nastavenia.</string>
@@ -702,7 +702,7 @@
     <string name="action_revoke">Zrušiť</string>
     <string name="action_disconnect">Odpojiť sa</string>
     <string name="action_decline">Odmietnuť</string>
-    <string name="login_error_no_homeserver_found">Toto nie je platná adresa Matrix serveru</string>
+    <string name="login_error_no_homeserver_found">Toto nie je platná adresa quali.chat serveru</string>
     <string name="login_error_homeserver_not_found">Domovský server je nedostupný na tejto URL adrese, preverte to prosím</string>
     <string name="room_member_profile_sessions_section_title">Relácie</string>
     <string name="action_play">Prehrať</string>
@@ -981,7 +981,7 @@
     <string name="keys_backup_unable_to_get_trust_info">Pri získavaní stavu dôveryhodnosti nastala chyba</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Pri získavaní údajov o zálohe kľúčov nastala chyba</string>
     <string name="import_e2e_keys_from_file">Importovať šifrovacie kľúče zo súboru \"%1$s\".</string>
-    <string name="settings_sdk_version">Verzia Matrix SDK</string>
+    <string name="settings_sdk_version">Verzia quali.chat SDK</string>
     <string name="settings_other_third_party_notices">Ďalšie poznámky tretích strán</string>
     <string name="navigate_to_room_when_already_in_the_room">Už máte túto miestnosť zobrazenú!</string>
     <string name="settings_general_title">Všeobecné</string>
@@ -1107,7 +1107,7 @@
     <string name="notification_initial_sync">Úvodná synchronizácia…</string>
     <string name="soft_logout_signin_submit">Prihlásiť sa</string>
     <string name="soft_logout_signin_title">Prihlásiť sa</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
     <string name="login_error_outdated_homeserver_title">Zastaralý domovský server</string>
     <string name="login_msisdn_confirm_send_again">Poslať znova</string>
     <string name="login_msisdn_confirm_hint">Zadať kód</string>
@@ -1435,7 +1435,7 @@
     <string name="call_resume_action">Pokračovať</string>
     <string name="settings_rageshake">Zúrivé trasenie</string>
     <string name="create_spaces_just_me">Iba ja</string>
-    <string name="disclaimer_title">Riot je teraz Element!</string>
+    <string name="disclaimer_title">Riot je teraz quali.chat!</string>
     <string name="login_wait_for_email_title">Skontrolujte prosím svoj e-mail</string>
     <string name="poll_end_room_list_preview">Anketa skončila</string>
     <string name="ftue_auth_carousel_secure_title">Vlastnite svoje konverzácie.</string>
@@ -1546,7 +1546,7 @@
     <string name="tooltip_attachment_contact">Otvoriť kontakty</string>
     <string name="tooltip_attachment_poll">Vytvoriť anketu</string>
     <string name="ftue_auth_carousel_secure_body">Bezpečná a nezávislá komunikácia, ktorá vám poskytuje rovnakú úroveň súkromia ako rozhovor zoči-voči vo vašom vlastnom dome.</string>
-    <string name="ftue_auth_carousel_control_body">Vyberte si, kde budú vaše rozhovory uložené, a získajte tak kontrolu a nezávislosť. Pripojené cez Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Vyberte si, kde budú vaše rozhovory uložené, a získajte tak kontrolu a nezávislosť. Pripojené cez quali.chat.</string>
     <string name="ftue_auth_carousel_encrypted_body">End-to-end šifrovanie a bez potreby telefónneho čísla. Žiadne reklamy ani zneužívanie údajov.</string>
     <string name="ftue_auth_carousel_workplace_title">Zasielanie správ pre váš tím.</string>
     <string name="login_splash_create_account">Vytvoriť účet</string>
@@ -1568,7 +1568,7 @@
     <string name="login_server_url_form_modular_text">Prémiový hosting pre organizácie</string>
     <string name="login_signin_to">Prihlásiť sa do %1$s</string>
     <string name="login_connect_to_a_custom_server">Pripojiť sa k vlastnému serveru</string>
-    <string name="login_connect_to_modular">Pripojiť sa k službám Element Matrix</string>
+    <string name="login_connect_to_modular">Pripojiť sa k službám quali.chat</string>
     <string name="login_connect_to">Pripojiť sa k %1$s</string>
     <string name="login_server_modular_text">Prémiový hosting pre organizácie</string>
     <string name="login_server_matrix_org_text">Pripojte sa k miliónom ľudí zadarmo na najväčšom verejnom serveri</string>
@@ -1677,8 +1677,8 @@
     <string name="autodiscover_well_known_error">Nie je možné nájsť platný domovský server. Skontrolujte prosím svoj identifikátor</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Toto nie je platný identifikátor používateľa. Očakávaný formát je: \'@pouzivatel:domovskyserver.sk\'</string>
     <string name="login_signin_matrix_id_password_notice">Ak svoje heslo nepoznáte, vráťte sa späť a obnovte ho.</string>
-    <string name="login_signin_matrix_id_title">Prihláste sa pomocou Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">Prihláste sa pomocou Matrix ID</string>
+    <string name="login_signin_matrix_id_title">Prihláste sa pomocou quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">Prihláste sa pomocou quali.chat ID</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="one">Bolo odoslaných príliš veľa žiadostí. Pokus môžete zopakovať za %1$d sekundu…</item>
         <item quantity="few">Bolo odoslaných príliš veľa žiadostí. Pokus môžete zopakovať za %1$d sekundy…</item>
@@ -1691,7 +1691,7 @@
     <string name="login_terms_title">Prijmite podmienky pre pokračovanie</string>
     <string name="login_a11y_captcha_container">Vykonajte prosím výzvu captcha</string>
     <string name="login_a11y_choose_other">Vybrať vlastný domovský server</string>
-    <string name="login_a11y_choose_modular">Vybrať službu Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Vybrať službu quali.chat Services</string>
     <string name="login_signup_error_user_in_use">Toto používateľské meno je obsadené</string>
     <string name="login_signup_to">Prihlásiť sa do %1$s</string>
     <string name="login_msisdn_error_other">Telefónne číslo sa zdá byť neplatné. Prosím, skontrolujte ho</string>
@@ -1846,7 +1846,7 @@
     <string name="settings_notification_keyword_contains_dot">Kľúčové slová nemôžu začínať na \".\"</string>
     <string name="settings_notification_new_keyword">Pridať nové kľúčové slovo</string>
     <string name="settings_notification_emails_enable_for_email">Povoliť e-mailové oznámenia pre %s</string>
-    <string name="settings_notification_emails_no_emails">Ak chcete dostávať e-mail s upozornením, priraďte e-mail k svojmu Matrix účtu</string>
+    <string name="settings_notification_emails_no_emails">Ak chcete dostávať e-mail s upozornením, priraďte e-mail k svojmu quali.chat účtu</string>
     <string name="settings_notification_emails_category">E-mailové oznámenie</string>
     <string name="room_settings_room_notifications_notify_me">Upozorniť ma na</string>
     <string name="settings_notification_notify_me_for">Upozorniť ma na</string>
@@ -1859,12 +1859,12 @@
     <string name="identity_server_consent_dialog_title_2">Odoslať emailové adresy a telefónne čísla na %s</string>
     <string name="settings_discovery_consent_notice_on">Dali ste súhlas na odosielanie e-mailov a telefónnych čísel na tento server totožností na objavenie ďalších používateľov z vašich kontaktov.</string>
     <string name="settings_discovery_consent_title">Odoslať e-maily a telefónne čísla</string>
-    <string name="settings_emails_and_phone_numbers_summary">Spravujte e-maily a telefónne čísla prepojené s vaším účtom Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Spravujte e-maily a telefónne čísla prepojené s vaším účtom quali.chat</string>
     <string name="settings_emails_and_phone_numbers_title">Emaily a telefónne čísla</string>
     <string name="change_password_summary">Nastaviť nové heslo k účtu…</string>
     <string name="bootstrap_dont_reuse_pwd">Nepoužívajte heslo k svojmu účtu.</string>
     <string name="enter_account_password">Zadajte svoje %s pre pokračovanie.</string>
-    <string name="login_signin_matrix_id_notice">Ak ste si vytvorili účet na domovskom serveri, použite svoje Matrix ID (napr. @pouzivatel:domena.sk) a heslo.</string>
+    <string name="login_signin_matrix_id_notice">Ak ste si vytvorili účet na domovskom serveri, použite svoje quali.chat ID (napr. @pouzivatel:domena.sk) a heslo.</string>
     <string name="login_reset_password_error_not_found">Tento e-mail nie je prepojený so žiadnym účtom</string>
     <string name="spaces_no_server_support_title">Vyzerá to, že váš domovský server zatiaľ nepodporuje Priestory</string>
     <string name="spaces_feeling_experimental_subspace">Chcete experimentovať\?
@@ -1911,7 +1911,7 @@
     <string name="bad_passphrase_key_reset_all_action">Zabudli ste alebo ste stratili všetky možnosti obnovy\? Obnovte všetko</string>
     <string name="verification_cannot_access_other_session">Použite prístupovú frázu na obnovenie alebo kľúč</string>
     <string name="use_latest_app">Použite najnovšiu aplikáciu ${app_name} na svojich ostatných zariadeniach:</string>
-    <string name="use_other_session_content_description">Použite najnovšiu aplikáciu ${app_name} na svojich ostatných zariadeniach, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} pre Android alebo iného klienta Matrix podporujúceho krížové podpisovanie</string>
+    <string name="use_other_session_content_description">Použite najnovšiu aplikáciu ${app_name} na svojich ostatných zariadeniach, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} pre Android alebo iného klienta quali.chat podporujúceho krížové podpisovanie</string>
     <string name="verification_use_passphrase">Ak nemáte prístup k existujúcej relácii</string>
     <string name="verification_open_other_to_verify">Použite existujúcu reláciu na overenie tejto relácie, čím jej udelíte prístup k zašifrovaným správam.</string>
     <string name="analytics_opt_in_list_item_3">Túto funkciu môžete kedykoľvek vypnúť v nastaveniach</string>
@@ -1958,7 +1958,7 @@
     <string name="too_many_pin_failures">Príliš veľa chýb, boli ste odhlásení</string>
     <string name="failed_to_unban">Nepodarilo sa zrušiť zákaz používateľovi</string>
     <string name="member_banned_by">Zakázaný používateľom %1$s</string>
-    <string name="phone_book_perform_lookup">Vyhľadávanie kontaktov v službe Matrix</string>
+    <string name="phone_book_perform_lookup">Vyhľadávanie kontaktov v službe quali.chat</string>
     <string name="empty_contact_book">Váš telefónny zoznam je prázdny</string>
     <string name="loading_contact_book">Získanie vašich kontaktov…</string>
     <string name="save_recovery_key_chooser_hint">Uložiť kľúč na obnovu do</string>
@@ -2019,7 +2019,7 @@
     <string name="use_recovery_key">Použite kľúč na obnovu</string>
     <string name="command_description_discard_session_not_handled">Podporované len v zašifrovaných miestnostiach</string>
     <string name="command_description_discard_session">Vynúti zrušenie aktuálnej relácie odchádzajúcej skupiny v zašifrovanej miestnosti</string>
-    <string name="or_other_mx_capable_client">alebo iného klienta Matrix, ktorý dokáže krížovo podpisovať</string>
+    <string name="or_other_mx_capable_client">alebo iného klienta quali.chat, ktorý dokáže krížovo podpisovať</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
@@ -2107,7 +2107,7 @@
     <string name="autocomplete_limited_results">Zobrazujú sa len prvé výsledky, zadajte ďalšie písmená…</string>
     <string name="settings_rageshake_detection_threshold_summary">Zatraste telefónom a otestujte prah detekcie</string>
     <string name="settings_rageshake_detection_threshold">Prahová hodnota detekcie</string>
-    <string name="permalink_malformed">Váš odkaz matrix.to bol nesprávne vytvorený</string>
+    <string name="permalink_malformed">Váš odkaz quali.chat bol nesprávne vytvorený</string>
     <string name="soft_logout_sso_not_same_user_error">Aktuálna relácia je pre používateľa %1$s a vy ste zadali poverenia pre používateľa %2$s. Toto nie je podporované aplikáciou ${app_name}.
 \nNajprv vymažte údaje a potom sa znovu prihláste na inom účte.</string>
     <string name="login_reset_password_on">Obnoviť heslo na %1$s</string>
@@ -2328,7 +2328,7 @@
     <string name="a11y_import_key_from_file">Importovať kľúč zo súboru</string>
     <string name="bootstrap_migration_backup_recovery_key">Kľúč obnovy zálohy kľúča</string>
     <string name="bootstrap_progress_compute_curve_key">Získavanie kľúča krivky</string>
-    <string name="login_server_url_form_modular_hint">Adresa služby Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Adresa služby quali.chat Services</string>
     <string name="spoiler">Spojler</string>
     <string name="command_description_spoiler">Odošle danú správu ako spojler</string>
     <string name="content_reported_as_inappropriate_title">Nahlásené ako nevhodné</string>
@@ -2416,8 +2416,8 @@
     </plurals>
     <string name="room_notification_more_than_two_users_are_typing">%1$s, %2$s a ďalší</string>
     <string name="room_notification_two_users_are_typing">%1$s a %2$s</string>
-    <string name="login_signin_sso">Pokračovať pomocou jednotného prihlásenia SSO</string>
-    <string name="login_social_sso">jednotné prihlásenie SSO</string>
+    <string name="login_signin_sso">Pokračovať pomocou jednotného prihlásenia Ethereum</string>
+    <string name="login_social_sso">jednotné prihlásenie Ethereum</string>
     <string name="a11y_close_keys_backup_banner">Zatvoriť výzvu na zálohovanie kľúčov</string>
     <string name="a11y_unchecked">Nezaškrtnuté</string>
     <string name="a11y_checked">Zaškrtnuté</string>
@@ -2429,7 +2429,7 @@
         <item quantity="few">%1$d ďalšie</item>
         <item quantity="other">%1$d ďalších</item>
     </plurals>
-    <string name="login_server_url_form_modular_notice">Zadajte URL adresu servera Modular Element alebo adresu servera, ktorý si želáte použiť</string>
+    <string name="login_server_url_form_modular_notice">Zadajte URL adresu servera Modular quali.chat alebo adresu servera, ktorý si želáte použiť</string>
     <string name="poll_response_room_list_preview">Hlasovať</string>
     <string name="dev_tools_send_state_event">Odoslať stav udalosti</string>
     <string name="identity_server_error_binding_error">Priradenie sa nepodarilo.</string>
@@ -2457,7 +2457,7 @@
 \n
 \nV rámci príprav na ňu musíme urobiť niekoľko zmien: vlákna vytvorené pred týmto bodom sa budú zobrazovať ako bežné odpovede.
 \n
-\nPôjde o jednorazový prechod, keďže vlákna sú teraz súčasťou špecifikácie Matrix.</string>
+\nPôjde o jednorazový prechod, keďže vlákna sú teraz súčasťou špecifikácie quali.chat.</string>
     <string name="threads_notice_migration_title">Vlákna sa blížia k beta verzii 🎉</string>
     <string name="ftue_account_created_subtitle">Váš účet %s bol vytvorený</string>
     <string name="live_location_sharing_notification_description">Prebieha zdieľanie polohy</string>
@@ -2611,7 +2611,7 @@
     <string name="ftue_auth_terms_subtitle">Prečítajte si prosím podmienky a zásady servera %s</string>
     <string name="ftue_auth_terms_title">Zásady používania servera</string>
     <string name="ftue_auth_choose_server_ems_cta">Kontaktujte nás</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) je robustná a spoľahlivá hostingová služba na rýchlu, bezpečnú komunikáciu v reálnom čase. Zistite, ako na <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) je robustná a spoľahlivá hostingová služba na rýchlu, bezpečnú komunikáciu v reálnom čase. Zistite, ako na <a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Chcete hosťovať svoj vlastný server\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL adresa servera</string>
     <string name="ftue_auth_choose_server_subtitle">Aká je adresa vášho servera\? Je to ako domov pre všetky vaše údaje</string>
@@ -2627,8 +2627,8 @@
     <string name="font_size_section_manually">Vybrať manuálne</string>
     <string name="font_size_section_auto">Nastaviť automaticky</string>
     <string name="font_size_title">Vyberte veľkosť písma</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Automaticky schvaľovať miniaplikácie Element Call a udeliť prístup ku kamere/mikrofónu</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Zapnúť skratky na povolenie Element hovorov</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Automaticky schvaľovať miniaplikácie quali.chat Call a udeliť prístup ku kamere/mikrofónu</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Zapnúť skratky na povolenie quali.chat hovorov</string>
     <string name="live_location_description">Poloha v reálnom čase</string>
     <string name="verify_invalid_qr_notice">Tento QR kód vyzerá chybne. Skúste vykonať overenie inou metódou.</string>
     <string name="crosssigning_cannot_verify_this_session_desc">K zašifrovanej histórii správ nebudete mať prístup. Obnovte zálohu zabezpečených správ a overovacie kľúče a začnite odznova.</string>
@@ -2758,7 +2758,7 @@
     <string name="device_manager_verification_status_detail_current_session_verified">Vaša aktuálna relácia je pripravená na bezpečné zasielanie správ.</string>
     <string name="labs_enable_deferred_dm_summary">Vytvoriť priamu správu len pri prvej správe</string>
     <string name="labs_enable_deferred_dm_title">Povoliť odložené priame správy</string>
-    <string name="labs_enable_new_app_layout_summary">Zjednodušený Element s voliteľnými kartami</string>
+    <string name="labs_enable_new_app_layout_summary">Zjednodušený quali.chat s voliteľnými kartami</string>
     <string name="labs_enable_new_app_layout_title">Zapnúť nové usporiadanie</string>
     <string name="device_manager_learn_more_session_rename">Ostatní používatelia v priamych správach a miestnostiach, do ktorých sa pripojíte, si môžu pozrieť úplný zoznam vašich relácií.
 \n
@@ -2924,7 +2924,7 @@
 \n
 \nPri používaní tejto relácie sa nebudete môcť zúčastňovať konverzácií v miestnostiach, kde je zapnuté šifrovanie.
 \n
-\nNa dosiahnutie čo najlepšieho zabezpečenia a súkromia sa odporúča používať Matrix klientov, ktoré podporujú šifrovanie.</string>
+\nNa dosiahnutie čo najlepšieho zabezpečenia a súkromia sa odporúča používať quali.chat klientov, ktoré podporujú šifrovanie.</string>
     <string name="device_manager_signout_all_other_sessions">Odhlásiť zo všetkých ostatných relácií</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">Táto relácia nepodporuje šifrovanie, a preto ju nemožno overiť.</string>
     <string name="settings_nightly_build_update">Získajte najnovšiu zostavu (poznámka: môžete mať problémy s prihlásením)</string>
@@ -3018,11 +3018,11 @@
     <string name="crosssigning_verify_after_update">Aplikácia bola aktualizovaná</string>
     <string name="sign_out_anyway">Aj tak sa odhlásiť</string>
     <string name="sign_out_failed_dialog_message">Nie je možné sa spojiť s domovským serverom. Ak sa aj tak odhlásite, toto zariadenie nebude vymazané zo zoznamu zariadení, môžete ho odstrániť pomocou iného klienta.</string>
-    <string name="create_room_unknown_users_dialog_content">Nie je možné nájsť profily pre nižšie uvedené Matrix ID. Chceli by ste napriek tomu začať konverzáciu\?
+    <string name="create_room_unknown_users_dialog_content">Nie je možné nájsť profily pre nižšie uvedené quali.chat ID. Chceli by ste napriek tomu začať konverzáciu\?
 \n
 \n%s</string>
     <string name="create_room_unknown_users_dialog_submit">Spustiť konverzáciu aj tak</string>
-    <string name="invite_unknown_users_dialog_content">Nie je možné nájsť profily pre nižšie uvedené Matrix ID. Chcete ich aj tak pozvať\?
+    <string name="invite_unknown_users_dialog_content">Nie je možné nájsť profily pre nižšie uvedené quali.chat ID. Chcete ich aj tak pozvať\?
 \n
 \n%s</string>
     <string name="invite_unknown_users_dialog_submit">Napriek tomu pozvať</string>

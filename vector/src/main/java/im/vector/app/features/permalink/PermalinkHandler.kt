@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -250,7 +251,7 @@ class PermalinkHandler @Inject constructor(
     }
 
     companion object {
-        const val MATRIX_TO_CUSTOM_SCHEME_URL_BASE = "element://"
+        const val MATRIX_TO_CUSTOM_SCHEME_URL_BASE = "qualichat://"
         const val ROOM_LINK_PREFIX = "${MATRIX_TO_CUSTOM_SCHEME_URL_BASE}room/"
         const val USER_LINK_PREFIX = "${MATRIX_TO_CUSTOM_SCHEME_URL_BASE}user/"
     }

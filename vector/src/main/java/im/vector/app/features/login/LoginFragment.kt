@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -203,7 +204,7 @@ class LoginFragment :
                 views.loginSocialLoginContainer.isVisible = true
                 views.loginSocialLoginButtons.render(state.loginMode, ssoMode(state)) { provider ->
                     loginViewModel.getSsoUrl(
-                            redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                            redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                             deviceId = state.deviceId,
                             providerId = provider?.id,
                             action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN

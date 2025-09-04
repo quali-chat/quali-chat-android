@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +20,7 @@ package im.vector.app.features.home.room.detail.timeline.format
 import im.vector.app.ActiveSessionDataSource
 import im.vector.app.R
 import im.vector.app.core.resources.StringProvider
+import im.vector.app.core.utils.removeTgTag
 import im.vector.app.features.roomprofile.permissions.RoleFormatter
 import im.vector.app.features.settings.VectorPreferences
 import im.vector.app.features.voicebroadcast.VoiceBroadcastConstants
@@ -231,9 +233,9 @@ class NoticeEventFormatter @Inject constructor(
             }
         } else {
             if (event.isSentByCurrentUser()) {
-                sp.getString(R.string.notice_room_name_changed_by_you, content.name)
+                sp.getString(R.string.notice_room_name_changed_by_you, content.name.removeTgTag())
             } else {
-                sp.getString(R.string.notice_room_name_changed, senderName, content.name)
+                sp.getString(R.string.notice_room_name_changed, senderName, content.name.removeTgTag())
             }
         }
     }

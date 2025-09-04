@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -51,7 +52,7 @@ class DefaultVectorFeatures : VectorFeatures {
     override fun onboardingVariant() = Config.ONBOARDING_VARIANT
     override fun isOnboardingAlreadyHaveAccountSplashEnabled() = true
     override fun isOnboardingSplashCarouselEnabled() = true
-    override fun isOnboardingUseCaseEnabled() = true
+    override fun isOnboardingUseCaseEnabled() = false
     override fun isOnboardingPersonalizeEnabled() = true
     override fun isOnboardingCombinedRegisterEnabled() = true
     override fun isOnboardingCombinedLoginEnabled() = true

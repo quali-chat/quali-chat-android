@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -53,6 +54,7 @@ class CrossSigningSettingsController @Inject constructor(
                 genericButtonItem {
                     id("Reset")
                     text(host.stringProvider.getString(R.string.reset_cross_signing))
+                    textColor(host.colorProvider.getColor(R.color.base_color))
                     buttonClickAction {
                         host.interactionListener?.didTapInitializeCrossSigning()
                     }
@@ -67,6 +69,7 @@ class CrossSigningSettingsController @Inject constructor(
                 genericButtonItem {
                     id("Reset")
                     text(host.stringProvider.getString(R.string.reset_cross_signing))
+                    textColor(host.colorProvider.getColor(R.color.base_color))
                     buttonClickAction {
                         host.interactionListener?.didTapInitializeCrossSigning()
                     }
@@ -81,6 +84,7 @@ class CrossSigningSettingsController @Inject constructor(
                 genericButtonItem {
                     id("Reset")
                     text(host.stringProvider.getString(R.string.reset_cross_signing))
+                    textColor(host.colorProvider.getColor(R.color.base_color))
                     buttonClickAction {
                         host.interactionListener?.didTapInitializeCrossSigning()
                     }
@@ -95,6 +99,7 @@ class CrossSigningSettingsController @Inject constructor(
                 genericPositiveButtonItem {
                     id("Initialize")
                     text(host.stringProvider.getString(R.string.initialize_cross_signing))
+                    textColor(host.colorProvider.getColor(R.color.base_color))
                     buttonClickAction {
                         host.interactionListener?.didTapInitializeCrossSigning()
                     }

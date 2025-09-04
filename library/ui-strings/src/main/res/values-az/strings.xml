@@ -35,7 +35,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Şifrəni aça bilmir: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Göndərənin cihazı bu mesaj üçün açarları bizə göndərməyib.</string>
     <string name="unable_to_send_message">Mesaj göndərmək olmur</string>
-    <string name="matrix_error">Matrix xətası</string>
+    <string name="matrix_error">quali.chat xətası</string>
     <string name="encrypted_message">Şifrəli mesaj</string>
     <string name="medium_email">Elektron poçt ünvanı</string>
     <string name="medium_phone_number">Telefon nömrəsi</string>

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +28,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
 import im.vector.app.core.extensions.toReducedUrl
 import im.vector.app.databinding.FragmentLoginSignupSigninSelectionBinding
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.login.LoginMode
 import im.vector.app.features.login.SSORedirectRouterActivity
 import im.vector.app.features.login.ServerType
@@ -41,9 +43,10 @@ import org.matrix.android.sdk.api.auth.SSOAction
 /**
  * In this screen, the user is asked to sign up or to sign in to the homeserver.
  */
-@AndroidEntryPoint
-class FtueAuthSignUpSignInSelectionFragment :
-        AbstractSSOFtueAuthFragment<FragmentLoginSignupSigninSelectionBinding>() {
+
+@AndroidEntryPoint class FtueAuthSignUpSignInSelectionFragment : AbstractSSOFtueAuthFragment<FragmentLoginSignupSigninSelectionBinding>() {
+
+    private lateinit var dismissCallback: () -> Unit
 
     override fun getBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentLoginSignupSigninSelectionBinding {
         return FragmentLoginSignupSigninSelectionBinding.inflate(inflater, container, false)
@@ -51,7 +54,6 @@ class FtueAuthSignUpSignInSelectionFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupViews()
     }
 
@@ -81,16 +83,18 @@ class FtueAuthSignUpSignInSelectionFragment :
         }
 
         when (state.selectedHomeserver.preferredLoginMode) {
-            is LoginMode.SsoAndPassword -> {
+            is LoginMode.Sso, is LoginMode.SsoAndPassword -> {
                 views.loginSignupSigninSignInSocialLoginContainer.isVisible = true
                 views.loginSignupSigninSocialLoginButtons.render(state.selectedHomeserver.preferredLoginMode, Mode.MODE_CONTINUE) { provider ->
                     viewModel.fetchSsoUrl(
-                            redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                            redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                             deviceId = state.deviceId,
                             provider = provider,
                             action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
-                    )
-                            ?.let { openInCustomTab(it) }
+                    )?.let {
+                        dismissCallback()
+                        openInCustomTab(it)
+                    }
                 }
             }
             else -> {
@@ -113,6 +117,7 @@ class FtueAuthSignUpSignInSelectionFragment :
         when (state.selectedHomeserver.preferredLoginMode) {
             is LoginMode.Sso -> {
                 // change to only one button that is sign in with sso
+                views.loginSignupSigninSubmit.isAllCaps = ProductFlavour.isQualiChat()
                 views.loginSignupSigninSubmit.text =
                         if (state.selectedHomeserver.hasOidcCompatibilityFlow) getString(R.string.login_continue) else getString(R.string.login_signin_sso)
                 views.loginSignupSigninSignIn.isVisible = false
@@ -127,12 +132,14 @@ class FtueAuthSignUpSignInSelectionFragment :
     private fun submit() = withState(viewModel) { state ->
         if (state.selectedHomeserver.preferredLoginMode is LoginMode.Sso) {
             viewModel.fetchSsoUrl(
-                    redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                    redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                     deviceId = state.deviceId,
                     provider = null,
                     action = if (state.onboardingFlow == OnboardingFlow.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
-            )
-                    ?.let { openInCustomTab(it) }
+            )?.let {
+                dismissCallback()
+                openInCustomTab(it)
+            }
         } else {
             viewModel.handle(OnboardingAction.UpdateSignMode(SignMode.SignUp))
         }
@@ -150,6 +157,10 @@ class FtueAuthSignUpSignInSelectionFragment :
         render(state)
         setupButtons(state)
         // if talking to OIDC enabled homeserver in compatibility mode then immediately start SSO
-        if (state.selectedHomeserver.hasOidcCompatibilityFlow) submit()
+        // if (state.selectedHomeserver.hasOidcCompatibilityFlow) submit()
+    }
+
+    fun setCallback(dismiss: () -> Unit) {
+        this.dismissCallback = dismiss
     }
 }

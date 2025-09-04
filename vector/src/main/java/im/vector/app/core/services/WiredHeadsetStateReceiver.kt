@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,6 +22,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.media.AudioManager
+import androidx.core.content.ContextCompat
 import timber.log.Timber
 import java.lang.ref.WeakReference
 
@@ -69,7 +71,12 @@ class WiredHeadsetStateReceiver : BroadcastReceiver() {
             val receiver = WiredHeadsetStateReceiver()
             receiver.delegate = WeakReference(listener)
             val action = AudioManager.ACTION_HEADSET_PLUG
-            context.registerReceiver(receiver, IntentFilter(action))
+            ContextCompat.registerReceiver(
+                    context,
+                    receiver,
+                    IntentFilter(action),
+                    ContextCompat.RECEIVER_NOT_EXPORTED,
+            )
             return receiver
         }
 

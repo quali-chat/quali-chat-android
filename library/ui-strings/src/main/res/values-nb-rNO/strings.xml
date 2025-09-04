@@ -197,7 +197,7 @@
     <string name="login_continue">Fortsett</string>
     <string name="login_signup">Registrer deg</string>
     <string name="login_signin">Logg inn</string>
-    <string name="login_signin_sso">Fortsett med SSO</string>
+    <string name="login_signin_sso">Fortsett med Ethereum</string>
     <string name="login_reset_password_submit">Neste</string>
     <string name="login_reset_password_email_hint">E-post</string>
     <string name="login_reset_password_password_hint">Nytt passord</string>
@@ -300,7 +300,7 @@
     <string name="room_widget_permission_title">Last inn modul</string>
     <string name="room_widget_permission_display_name">Ditt visningsnavn</string>
     <string name="room_widget_permission_avatar_url">Din avatars URL</string>
-    <string name="room_add_matrix_apps">Legg til Matrix-apper</string>
+    <string name="room_add_matrix_apps">Legg til quali.chat-apper</string>
     <string name="start_verification">Begynn verifisering</string>
     <string name="command_error">Kommandofeil</string>
     <string name="command_description_part_room">Forlat rommet</string>
@@ -513,10 +513,10 @@
     <string name="event_redacted">Meldingen ble slettet</string>
     <string name="settings_show_redacted">Vis fjernede meldinger</string>
     <string name="settings_show_redacted_summary">Vis en stattholder for fjernede meldinger</string>
-    <string name="settings_sdk_version">Matrix SDK-versjon</string>
+    <string name="settings_sdk_version">quali.chat SDK-versjon</string>
     <string name="send_suggestion">Send inn et forslag</string>
     <string name="send_file_step_encrypting_file">Krypterer filen …</string>
-    <string name="room_directory_search_hint">Navn eller ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Navn eller ID</string>
     <string name="message_view_edit_history">Vis redigeringshistorikk</string>
     <string name="uploads_media_title">MEDIA</string>
     <string name="uploads_files_title">FILER</string>
@@ -536,7 +536,7 @@
     <string name="login_signup_to">Registrer deg på %1$s</string>
     <string name="login_signin_username_hint">Brukernavn eller E-postadresse</string>
     <string name="login_signup_error_user_in_use">Det brukernavnet har blitt tatt</string>
-    <string name="login_signin_matrix_id_hint">Matrix-ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat-ID</string>
     <string name="signed_out_title">Du er logget av</string>
     <string name="soft_logout_title">Du er logget av</string>
     <string name="soft_logout_clear_data_submit">Tøm alle data</string>
@@ -606,13 +606,13 @@
     <string name="crypto_error_withheld_unverified">Du får ikke tilgang til denne meldingen fordi økten ikke er klarert av avsenderen</string>
     <string name="crypto_error_withheld_generic">Du får ikke tilgang til denne meldingen fordi avsenderen med vilje ikke sendte nøklene</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Venter på krypteringshistorikk</string>
-    <string name="disclaimer_title">Riot er nå Element!</string>
+    <string name="disclaimer_title">Riot er nå quali.chat!</string>
     <string name="disclaimer_content">Vi er glade for å kunngjøre at vi har byttet navn! Appen din er oppdatert, og du er logget på kontoen din.</string>
     <string name="save_recovery_key_chooser_hint">Lagre gjenopprettingsnøkkel i</string>
     <string name="loading_contact_book">Henter kontaktene dine…</string>
     <string name="empty_contact_book">Kontaktboken din er tom</string>
     <string name="contacts_book_title">Kontaktbok</string>
-    <string name="phone_book_perform_lookup">Søk etter kontakter på Matrix</string>
+    <string name="phone_book_perform_lookup">Søk etter kontakter på quali.chat</string>
     <string name="alert_push_are_disabled_title">Push-varsler er deaktivert</string>
     <string name="alert_push_are_disabled_description">Gjennomgå innstillingene dine for å aktivere push-varsler</string>
     <plurals name="wrong_pin_message_remaining_attempts">
@@ -745,7 +745,7 @@
     <string name="e2e_re_request_encryption_key_dialog_content">Start ${app_name} på en annen enhet som kan dekryptere meldingen, slik at den kan sende nøklene til denne økten.</string>
     <string name="login_error_ssl_peer_unverified">SSL Feil: Denne partnerns identitet har ikke blitt verifisert.</string>
     <string name="login_error_homeserver_not_found">Kan ikke nå hjemmetjeneren på denne URLen, vennligst sjekk den</string>
-    <string name="login_error_no_homeserver_found">Dette er ikke en gyldig adresse for en Matrix tjener</string>
+    <string name="login_error_no_homeserver_found">Dette er ikke en gyldig adresse for en quali.chat tjener</string>
     <string name="action_unpublish">Fjern publiseringen</string>
     <string name="action_add">Legg til</string>
     <string name="start_chatting">Begynn å chatte</string>
@@ -864,7 +864,7 @@
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Dette er ikke en gyldig brukeridentifikator. Forventet format: \'@bruker:homeserver.org\'</string>
     <string name="soft_logout_signin_e2e_warning_notice">Logg på for å gjenopprette krypteringsnøkler som er lagret eksklusivt på denne enheten. Du trenger dem for å lese alle dine sikre meldinger på hvilken som helst enhet.</string>
     <string name="soft_logout_clear_data_title">Fjern personlige data</string>
-    <string name="permalink_malformed">Linken din til matrix.to var feil</string>
+    <string name="permalink_malformed">Linken din til quali.chat var feil</string>
     <string name="bug_report_error_too_short">Beskrivelsen er for kort</string>
     <string name="autocomplete_limited_results">Viser bare de første resultatene, skriv flere bokstaver…</string>
     <string name="hide_advanced">Skjul avansert</string>
@@ -899,10 +899,10 @@
     <string name="login_msisdn_error_not_international">Internasjonale telefonnumre må starte med \'+\'</string>
     <string name="login_msisdn_error_other">Telefonnummeret virker ugyldig. Vennligst sjekk det</string>
     <string name="login_a11y_choose_matrix_org">Velg matrix.org</string>
-    <string name="login_a11y_choose_modular">Velg Element Matrix Services</string>
-    <string name="login_connect_using_matrix_id_submit">Logg på med Matrix ID</string>
-    <string name="login_signin_matrix_id_notice">Hvis du oppretter en konto på en hjemmeserver, bruker du Matrix-ID (f.eks. @Bruker:domene.com) og passord nedenfor.</string>
-    <string name="login_signin_matrix_id_title">Logg på med Matrix ID</string>
+    <string name="login_a11y_choose_modular">Velg quali.chat Services</string>
+    <string name="login_connect_using_matrix_id_submit">Logg på med quali.chat ID</string>
+    <string name="login_signin_matrix_id_notice">Hvis du oppretter en konto på en hjemmeserver, bruker du quali.chat-ID (f.eks. @Bruker:domene.com) og passord nedenfor.</string>
+    <string name="login_signin_matrix_id_title">Logg på med quali.chat ID</string>
     <string name="login_signin_matrix_id_password_notice">Hvis du ikke vet passordet ditt, kan du gå tilbake for å tilbakestille det.</string>
     <string name="signed_out_submit">Logg på igjen</string>
     <string name="soft_logout_clear_data_dialog_title">Slett data</string>
@@ -1142,7 +1142,7 @@
     <string name="event_status_delete_all_failed_dialog_message">Er du sikker på at du vil slette alle usendte meldinger i dette rommet\?</string>
     <string name="room_displayname_two_members">%1$s og %2$s</string>
     <string name="medium_phone_number">Telefonnummer</string>
-    <string name="matrix_error">Matrix feil</string>
+    <string name="matrix_error">quali.chat feil</string>
     <string name="unable_to_send_message">Kan ikke sende melding</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Avsenderens enhet har ikke sendt oss nøklene til denne meldingen.</string>
     <string name="notice_crypto_unable_to_decrypt">** Kan ikke dekryptere: %s **</string>

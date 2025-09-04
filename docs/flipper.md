@@ -16,7 +16,7 @@
 
 [Flipper](https://fbflipper.com) is a powerful tool from Meta, which allow to inspect the running application details and states from your computer.
 
-Flipper is configured in the Element Android project to let the developers be able to:
+Flipper is configured in the quali.chat Android project to let the developers be able to:
 - inspect all the Realm databases content;
 - do layout inspection;
 - see the crash logs;
@@ -29,7 +29,7 @@ Flipper is configured in the Element Android project to let the developers be ab
 ## Setup
 
 - Install Flipper on your computer. Follow instructions here: https://fbflipper.com/docs/getting-started/index/
-- Run the debug version of Element on an emulator or on a real device.
+- Run the debug version of quali.chat on an emulator or on a real device.
 
 ### Troubleshoot
 

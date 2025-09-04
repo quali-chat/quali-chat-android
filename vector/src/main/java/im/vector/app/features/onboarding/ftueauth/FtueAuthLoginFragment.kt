@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -218,7 +219,7 @@ class FtueAuthLoginFragment :
                 views.loginSocialLoginContainer.isVisible = true
                 views.loginSocialLoginButtons.render(state.selectedHomeserver.preferredLoginMode, ssoMode(state)) { provider ->
                     viewModel.fetchSsoUrl(
-                            redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                            redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                             deviceId = state.deviceId,
                             provider = provider,
                             action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN

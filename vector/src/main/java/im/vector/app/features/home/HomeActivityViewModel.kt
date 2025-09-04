@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,6 +38,7 @@ import im.vector.app.features.analytics.AnalyticsTracker
 import im.vector.app.features.analytics.extensions.toAnalyticsType
 import im.vector.app.features.analytics.plan.Signup
 import im.vector.app.features.analytics.store.AnalyticsStore
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.room.list.home.release.ReleaseNotesPreferencesStore
 import im.vector.app.features.login.ReAuthHelper
 import im.vector.app.features.onboarding.AuthenticationDescription
@@ -128,7 +130,9 @@ class HomeActivityViewModel @AssistedInject constructor(
         observeInitialSync()
         checkSessionPushIsOn()
         observeCrossSigningReset()
-        observeAnalytics()
+        if (!ProductFlavour.isQualiChat()) {
+            observeAnalytics()
+        }
         observeReleaseNotes()
         initThreadsMigration()
         viewModelScope.launch { stopOngoingVoiceBroadcastUseCase.execute() }
@@ -308,6 +312,10 @@ class HomeActivityViewModel @AssistedInject constructor(
                         copy(
                                 syncRequestState = status
                         )
+                    }
+
+                    if (ProductFlavour.isQualiChat() && status is SyncRequestState.IncrementalSyncDone) {
+                        observeAnalytics()
                     }
                 }
                 .launchIn(viewModelScope)
@@ -530,11 +538,11 @@ class HomeActivityViewModel @AssistedInject constructor(
 private suspend fun CrossSigningService.awaitCrossSigninInitialization(
         block: Continuation<UIABaseAuth>.(response: RegistrationFlowResponse, errCode: String?) -> Unit
 ) {
-        initializeCrossSigning(
-                object : UserInteractiveAuthInterceptor {
-                    override fun performStage(flowResponse: RegistrationFlowResponse, errCode: String?, promise: Continuation<UIABaseAuth>) {
-                        promise.block(flowResponse, errCode)
-                    }
+    initializeCrossSigning(
+            object : UserInteractiveAuthInterceptor {
+                override fun performStage(flowResponse: RegistrationFlowResponse, errCode: String?, promise: Continuation<UIABaseAuth>) {
+                    promise.block(flowResponse, errCode)
                 }
-        )
+            }
+    )
 }

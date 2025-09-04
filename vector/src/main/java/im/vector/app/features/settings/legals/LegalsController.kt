@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,6 +33,7 @@ import im.vector.app.features.discovery.ServerPolicy
 import im.vector.app.features.discovery.discoveryPolicyItem
 import im.vector.app.features.discovery.settingsInfoItem
 import im.vector.app.features.discovery.settingsSectionTitleItem
+import im.vector.app.features.flavour.ProductFlavour
 import javax.inject.Inject
 
 class LegalsController @Inject constructor(
@@ -46,7 +48,9 @@ class LegalsController @Inject constructor(
 
     override fun buildModels(data: LegalsState) {
         buildAppSection()
-        buildHomeserverSection(data)
+        if (!ProductFlavour.isQualiChat()) {
+            buildHomeserverSection(data)
+        }
         buildIdentityServerSection(data)
         buildThirdPartyNotices()
     }

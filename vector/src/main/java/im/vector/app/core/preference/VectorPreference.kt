@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2018 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,10 +29,12 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.animation.doOnEnd
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.ImageViewCompat
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import im.vector.app.R
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.themes.ThemeUtils
 import org.matrix.android.sdk.api.extensions.orFalse
 import timber.log.Timber
@@ -103,18 +106,30 @@ open class VectorPreference : Preference {
 
             summary?.setTypeface(null, mTypeface)
 
-            if (tintIcon) {
-                // Tint icons (See #1786)
-                val icon = holder.findViewById(android.R.id.icon) as? ImageView
-
-                icon?.let {
-                    val color = ThemeUtils.getColor(context, R.attr.vctr_content_secondary)
-                    ImageViewCompat.setImageTintList(it, ColorStateList.valueOf(color))
+            if (title != null) {
+                title.isSingleLine = false
+                if (!ProductFlavour.isQualiChat()) {
+                    title.setTypeface(null, mTypeface)
+                } else {
+                    title.typeface = ResourcesCompat.getFont(context, R.font.nutino_regular)
                 }
             }
 
-            // cancel existing animation (find a way to resume if happens during anim?)
-            currentHighlightAnimator?.cancel()
+            if (!ProductFlavour.isQualiChat()) {
+                summary?.setTypeface(null, mTypeface)
+            } else {
+                summary?.setTypeface(ResourcesCompat.getFont(context, R.font.nutino_regular))
+            }
+
+            // Tint icons (See #1786)
+            val icon = holder.findViewById(android.R.id.icon) as? ImageView
+
+            icon?.let {
+                val color = ThemeUtils.getColor(context, R.attr.vctr_content_secondary)
+                ImageViewCompat.setImageTintList(it, ColorStateList.valueOf(color))
+            }
+
+
             if (isHighlighted) {
                 val colorFrom = Color.TRANSPARENT
                 val colorTo = ThemeUtils.getColor(itemView.context, R.attr.colorPrimary)

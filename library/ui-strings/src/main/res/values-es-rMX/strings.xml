@@ -40,7 +40,7 @@
     <string name="unable_to_send_message">No se puede enviar el mensaje</string>
 
 
-    <string name="matrix_error">Error de Matrix</string>
+    <string name="matrix_error">Error de quali.chat</string>
 
 
 
@@ -91,7 +91,7 @@
     <string name="invitations_header">Invitaciones</string>
     <string name="low_priority_header">Prioridad baja</string>
     <string name="direct_chats_header">Conversaciones</string>
-    <string name="matrix_only_filter">Solamente contactos Matrix</string>
+    <string name="matrix_only_filter">Solamente contactos quali.chat</string>
     <string name="no_result_placeholder">Sin resultados</string>
     <string name="rooms_header">Salas</string>
 

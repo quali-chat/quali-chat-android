@@ -142,7 +142,7 @@
     <string name="settings_call_show_confirmation_dialog_title">ป้องกันการโทรโดยไม่ได้ตั้งใจ</string>
     <string name="login_error_invalid_home_server">โปรดป้อน URL ที่ถูกต้อง</string>
     <string name="option_send_voice">ส่งข้อความเสียง</string>
-    <string name="matrix_only_filter">เฉพาะรายชื่อผู้ติดต่อ Matrix</string>
+    <string name="matrix_only_filter">เฉพาะรายชื่อผู้ติดต่อ quali.chat</string>
     <string name="action_mark_all_as_read">ทำเครื่องหมายทั้งหมดว่าอ่านแล้ว</string>
     <string name="notice_room_invite_no_invitee">คำเชิญของ %s</string>
     <string name="notice_room_invite_no_invitee_by_you">คำเชิญของคุณ</string>

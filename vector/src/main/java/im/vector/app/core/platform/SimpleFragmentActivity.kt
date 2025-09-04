@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -48,14 +49,14 @@ abstract class SimpleFragmentActivity : VectorBaseActivity<ActivityBinding>() {
                 views.waitingView.waitingHorizontalProgress.progress = data.progress
                 views.waitingView.waitingHorizontalProgress.max = data.progressTotal
                 views.waitingView.waitingHorizontalProgress.isVisible = true
-                views.waitingView.waitingCircularProgress.isVisible = false
+                views.waitingView.waitingCircularProgress.animationView.isVisible = false
             } else if (data.isIndeterminate) {
                 views.waitingView.waitingHorizontalProgress.isIndeterminate = true
                 views.waitingView.waitingHorizontalProgress.isVisible = true
-                views.waitingView.waitingCircularProgress.isVisible = false
+                views.waitingView.waitingCircularProgress.animationView.isVisible = false
             } else {
                 views.waitingView.waitingHorizontalProgress.isVisible = false
-                views.waitingView.waitingCircularProgress.isVisible = true
+                views.waitingView.waitingCircularProgress.animationView.isVisible = true
             }
 
             showWaitingView()

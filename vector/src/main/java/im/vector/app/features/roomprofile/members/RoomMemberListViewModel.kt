@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,6 +27,7 @@ import im.vector.app.core.di.hiltMavericksViewModelFactory
 import im.vector.app.core.platform.EmptyViewEvents
 import im.vector.app.core.platform.VectorViewModel
 import im.vector.app.features.powerlevel.PowerLevelsFlowFactory
+import im.vector.app.features.userdirectory.directRoomMembersLimit
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -74,7 +76,6 @@ class RoomMemberListViewModel @AssistedInject constructor(
         observeRoomMemberSummaries()
         observeThirdPartyInvites()
         observeRoomSummary()
-        observePowerLevel()
         observeIgnoredUsers()
     }
 
@@ -88,9 +89,12 @@ class RoomMemberListViewModel @AssistedInject constructor(
                 roomFlow.liveRoomMembers(roomMemberQueryParams),
                 roomFlow
                         .liveStateEvent(EventType.STATE_ROOM_POWER_LEVELS, QueryStringValue.IsEmpty)
-                        .mapOptional { it.content.toModel<PowerLevelsContent>() }
+                        .mapOptional {
+                            it.content.toModel<PowerLevelsContent>()
+                        }
                         .unwrap()
         ) { roomMembers, powerLevelsContent ->
+            observePowerLevel(roomMembers.size)
             buildRoomMemberSummaries(powerLevelsContent, roomMembers)
         }
                 .execute { async ->
@@ -150,11 +154,11 @@ class RoomMemberListViewModel @AssistedInject constructor(
         }
     }
 
-    private fun observePowerLevel() {
+    private fun observePowerLevel(roomMembersSize: Int) {
         PowerLevelsFlowFactory(room).createFlow()
                 .onEach {
                     val permissions = ActionPermissions(
-                            canInvite = PowerLevelsHelper(it).isUserAbleToInvite(session.myUserId),
+                            canInvite = PowerLevelsHelper(it).isUserAbleToInvite(session.myUserId) && roomMembersSize < directRoomMembersLimit,
                             canRevokeThreePidInvite = PowerLevelsHelper(it).isUserAllowedToSend(
                                     userId = session.myUserId,
                                     isState = true,
@@ -244,5 +248,9 @@ class RoomMemberListViewModel @AssistedInject constructor(
                     filter = action.searchTerm
             )
         }
+    }
+
+    fun countDirectRoomMembersLimit(membersSize: Int): Int {
+        return directRoomMembersLimit - membersSize
     }
 }

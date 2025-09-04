@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,6 +31,7 @@ import android.os.Build
 import android.util.Rational
 import androidx.annotation.RequiresApi
 import androidx.core.app.PictureInPictureModeChangedInfo
+import androidx.core.content.ContextCompat
 import androidx.core.util.Consumer
 import androidx.core.view.isVisible
 import com.airbnb.mvrx.Mavericks
@@ -198,7 +200,12 @@ class WidgetActivity : VectorBaseActivity<ActivityWidgetBinding>() {
                     }
                 }
             }
-            registerReceiver(hangupBroadcastReceiver, IntentFilter(ACTION_MEDIA_CONTROL))
+            ContextCompat.registerReceiver(
+                    this,
+                    hangupBroadcastReceiver,
+                    IntentFilter(ACTION_MEDIA_CONTROL),
+                    ContextCompat.RECEIVER_NOT_EXPORTED,
+            )
         } else {
             unregisterReceiver(hangupBroadcastReceiver)
         }

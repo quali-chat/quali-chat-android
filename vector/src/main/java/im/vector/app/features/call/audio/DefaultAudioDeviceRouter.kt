@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,6 +23,7 @@ import androidx.media.AudioFocusRequestCompat
 import androidx.media.AudioManagerCompat
 import timber.log.Timber
 
+@Suppress("DEPRECATION")
 class DefaultAudioDeviceRouter(
         private val audioManager: AudioManager,
         private val callAudioManager: CallAudioManager

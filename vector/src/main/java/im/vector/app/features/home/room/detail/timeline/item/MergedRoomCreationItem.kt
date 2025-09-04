@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,6 +34,8 @@ import com.airbnb.epoxy.EpoxyModelClass
 import im.vector.app.R
 import im.vector.app.core.epoxy.onClick
 import im.vector.app.core.extensions.setTextOrHide
+import im.vector.app.core.utils.removeTgTag
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.core.utils.tappableMatchingText
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.home.room.detail.RoomDetailAction
@@ -177,6 +180,8 @@ abstract class MergedRoomCreationItem : BasedMergedItem<MergedRoomCreationItem.H
         val membersCount = roomSummary?.otherMemberIds?.size ?: 0
 
         holder.roomNameText.setTextOrHide(roomDisplayName)
+        holder.roomNameText.swapToEthereumDisplayName(roomDisplayName)
+
         renderRoomDescription(holder)
         renderRoomTopic(holder)
 
@@ -232,7 +237,7 @@ abstract class MergedRoomCreationItem : BasedMergedItem<MergedRoomCreationItem.H
                 holder.view.resources.getString(R.string.this_is_the_beginning_of_room, roomDisplayName)
             }
         }
-        holder.roomDescriptionText.text = description
+        holder.roomDescriptionText.text = description.removeTgTag()
         if (isDirectRoom && attributes.isLocalRoom) {
             TextViewCompat.setTextAppearance(holder.roomDescriptionText, R.style.TextAppearance_Vector_Subtitle)
             holder.roomDescriptionText.setTextColor(ThemeUtils.getColor(holder.roomDescriptionText.context, R.attr.vctr_content_primary))

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,6 +34,7 @@ import im.vector.app.core.intent.getMimeTypeFromUri
 import im.vector.app.core.platform.VectorBaseFragment
 import im.vector.app.core.utils.saveMedia
 import im.vector.app.core.utils.shareMedia
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.databinding.FragmentRoomUploadsBinding
 import im.vector.app.features.analytics.plan.MobileScreen
 import im.vector.app.features.home.AvatarRenderer
@@ -114,7 +116,7 @@ class RoomUploadsFragment :
 
     private fun renderRoomSummary(state: RoomUploadsViewState) {
         state.roomSummary()?.let {
-            views.roomUploadsToolbarTitleView.text = it.displayName
+            views.roomUploadsToolbarTitleView.swapToEthereumDisplayName(it.displayName)
             views.roomUploadsDecorationToolbarAvatarImageView.render(it.roomEncryptionTrustLevel)
             avatarRenderer.render(it.toMatrixItem(), views.roomUploadsToolbarAvatarImageView)
         }

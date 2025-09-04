@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +19,7 @@ package im.vector.app.features.autocomplete.command
 
 import android.text.Spannable
 import com.otaliastudios.autocomplete.AutocompletePolicy
+import im.vector.app.features.flavour.ProductFlavour
 import javax.inject.Inject
 
 class CommandAutocompletePolicy @Inject constructor() : AutocompletePolicy {
@@ -37,6 +39,9 @@ class CommandAutocompletePolicy @Inject constructor() : AutocompletePolicy {
 
     // Only if text which starts with '/' and without space
     override fun shouldShowPopup(text: Spannable, cursorPos: Int): Boolean {
+        if (ProductFlavour.isQualiChat()) {
+            return false
+        }
         return enabled && text.startsWith("/") && !text.contains(" ")
     }
 

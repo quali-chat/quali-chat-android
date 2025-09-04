@@ -12,7 +12,7 @@
     <string name="no_more_results">Không còn kết quả nào nữa</string>
     <string name="action_ignore">Bỏ qua</string>
     <string name="no_result_placeholder">Không có kết quả nào</string>
-    <string name="matrix_only_filter">Chỉ những liên hệ Matrix</string>
+    <string name="matrix_only_filter">Chỉ những liên hệ quali.chat</string>
     <string name="direct_chats_header">Cuộc trò chuyện</string>
     <string name="system_alerts_header">Cảnh báo hệ thống</string>
     <string name="low_priority_header">Ưu tiên thấp</string>
@@ -136,7 +136,7 @@
     <string name="login_error_bad_json">JSON không hợp lệ</string>
     <string name="login_error_ssl_other">Lỗi SSL.</string>
     <string name="login_error_ssl_peer_unverified">Lỗi SSL: danh tính của đối tác chưa được kiểm chứng.</string>
-    <string name="login_error_no_homeserver_found">Đây không phải là một địa chỉ máy chủ Matrix hợp lệ</string>
+    <string name="login_error_no_homeserver_found">Đây không phải là một địa chỉ máy chủ quali.chat hợp lệ</string>
     <string name="call_failed_no_connection_description">Thiết lập kết nối thời gian thực thất bại.
 \nXin vui lòng yêu cầu quản trị viên máy chủ nhà của bạn thiết lập máy chủ TURN để có thể gọi điện bình thường.</string>
     <string name="call_connecting">Cuộc gọi đang được kết nối…</string>
@@ -197,7 +197,7 @@
     <string name="event_status_a11y_sending">Đang gửi</string>
     <string name="medium_phone_number">Số điện thoại</string>
     <string name="medium_email">Địa chỉ thư điện tử</string>
-    <string name="matrix_error">Lỗi Matrix</string>
+    <string name="matrix_error">Lỗi quali.chat</string>
     <string name="notice_power_level_changed">%1$s đã thay đổi cấp độ quyền lực của %2$s.</string>
     <string name="notice_power_level_changed_by_you">Bạn đã thay đổi cấp độ quyền lực của %1$s.</string>
     <string name="unable_to_send_message">Không thể gửi tin nhắn</string>
@@ -318,7 +318,7 @@
     <string name="disclaimer_positive_button">TÌM HIỂU THÊM</string>
     <string name="disclaimer_negative_button">HIỂU RỒI</string>
     <string name="disclaimer_content">Chúng tôi rất háo hức muốn tuyên bố rằng chúng tôi đã đổi tên! Ứng dụng của bạn đã được cập nhật và bạn đã đăng nhập vào tài khoản của bạn.</string>
-    <string name="disclaimer_title">Riot bây giờ là Element!</string>
+    <string name="disclaimer_title">Riot bây giờ là quali.chat!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Đang đợi lịch sử mã hoá</string>
     <string name="crypto_error_withheld_generic">Bạn không thể truy cập tin nhắn này vì người gửi đã cố tình không gửi các mã khoá</string>
     <string name="crypto_error_withheld_unverified">Bạn không thể truy cập tin nhắn này vì phiên làm việc của bạn không được người gửi tin cậy</string>
@@ -789,7 +789,7 @@
     <string name="settings_default_compression">Nén dữ liệu mặc định</string>
     <string name="settings_media">Media</string>
     <string name="settings_select_country">Chọn quốc gia</string>
-    <string name="settings_emails_and_phone_numbers_summary">Quản lý địa chỉ thư điện tử và số điện thoại liên kết với tài khoản Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Quản lý địa chỉ thư điện tử và số điện thoại liên kết với tài khoản quali.chat</string>
     <string name="settings_emails_and_phone_numbers_title">Địa chỉ thư điện tử và số điện thoại</string>
     <string name="settings_unignore_user">Hiện tất cả tin nhắn từ %s\?</string>
     <string name="settings_password_updated">Mật khẩu của bạn vừa được cập nhật</string>
@@ -884,7 +884,7 @@
     <string name="login_terms_title">Chấp nhận điều khoản để tiếp tục</string>
     <string name="login_a11y_captcha_container">Hãy thực hiện thách thức captcha</string>
     <string name="login_a11y_choose_other">Chọn một máy chủ khác</string>
-    <string name="login_a11y_choose_modular">Chọn Dịch vụ Element Matrix</string>
+    <string name="login_a11y_choose_modular">Chọn Dịch vụ quali.chat</string>
     <string name="login_a11y_choose_matrix_org">Chọn matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">Tài khoản của bạn chưa được tạo. Bạn muốn ngừng tiến trình đăng ký\?</string>
     <string name="login_signup_cancel_confirmation_title">Cảnh báo</string>
@@ -936,9 +936,9 @@
     <string name="login_reset_password_on">Đặt lại mật khẩu ở %1$s</string>
     <string name="login_login_with_email_error">Địa chỉ thư điện tử này không được liên kết với tài khoản nào.</string>
     <string name="login_server_url_form_other_hint">Địa chỉ</string>
-    <string name="login_server_url_form_modular_hint">Địa chỉ Dịch vụ Element Matrix</string>
+    <string name="login_server_url_form_modular_hint">Địa chỉ Dịch vụ quali.chat</string>
     <string name="login_clear_homeserver_history">Xóa lịch sử</string>
-    <string name="login_signin_sso">Tiếp tục với SSO</string>
+    <string name="login_signin_sso">Tiếp tục với Ethereum</string>
     <string name="login_signin">Đăng Nhập</string>
     <string name="login_signup">Đăng Ký</string>
     <string name="login_signin_to">Đăng nhập vào %1$s</string>
@@ -1116,7 +1116,7 @@
     <string name="settings_troubleshoot_diagnostic_run_button_title">Chạy thử</string>
     <string name="settings_troubleshoot_diagnostic">Chuẩn đoán khắc phục sự cố</string>
     <string name="settings_notification_emails_enable_for_email">Bật thông báo qua thư điện tử cho %s</string>
-    <string name="settings_notification_emails_no_emails">Để được nhận thông báo qua thư điện tử, hãy liên kết một địa chỉ thư điện tử với tài khoản Matrix của bạn</string>
+    <string name="settings_notification_emails_no_emails">Để được nhận thông báo qua thư điện tử, hãy liên kết một địa chỉ thư điện tử với tài khoản quali.chat của bạn</string>
     <string name="settings_notification_emails_category">Thông báo qua thư điện tử</string>
     <string name="room_permissions_upgrade_the_space">Nâng cấp không gian</string>
     <string name="room_permissions_change_space_name">Thay đổi tên không gian</string>
@@ -1393,7 +1393,7 @@
     <string name="member_banned_by">Bị cấm bởi %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">Thu hồi lời mời đến %1$s\?</string>
     <string name="three_pid_revoke_invite_dialog_title">Thu hồi lời mời</string>
-    <string name="phone_book_perform_lookup">Tìm kiếm danh bạ trên Matrix</string>
+    <string name="phone_book_perform_lookup">Tìm kiếm danh bạ trên quali.chat</string>
     <string name="contacts_book_title">Sổ danh bạ</string>
     <string name="empty_contact_book">Sổ danh bạ của bạn trống</string>
     <string name="loading_contact_book">Lấy lại danh bạ của bạn…</string>
@@ -1446,7 +1446,7 @@
     <string name="user_code_share">Chia sẻ mã của tôi</string>
     <string name="user_code_scan">Quét mã QR</string>
     <string name="invite_users_to_room_failure">Chúng tôi không thể mời người dùng. Vui lòng kiểm tra người dùng bạn muốn mời và thử lại.</string>
-    <string name="not_a_valid_qr_code">Nó không phải là mã QR Matrix hợp lệ</string>
+    <string name="not_a_valid_qr_code">Nó không phải là mã QR quali.chat hợp lệ</string>
     <string name="invitations_sent_to_two_users">Lời mời được gửi đến %1$s và %2$s</string>
     <string name="invitation_sent_to_one_user">Lời mời được gửi đến %1$s</string>
     <string name="invite_friends_rich_title">🔐️ Tham gia với tôi trên ${app_name}</string>
@@ -1489,12 +1489,12 @@
     <string name="command_description_discard_session_not_handled">Chỉ được hỗ trợ trong các phòng được mã hóa</string>
     <string name="command_description_discard_session">Buộc nhóm phiên hướng ra hiện tại trong một phòng được mã hóa phải bị loại bỏ</string>
     <string name="use_latest_app">Sử dụng ${app_name mới nhất} trên các thiết bị khác của bạn:</string>
-    <string name="or_other_mx_capable_client">hoặc một máy khách Matrix khác có khả năng xác thực chéo</string>
+    <string name="or_other_mx_capable_client">hoặc một máy khách quali.chat khác có khả năng xác thực chéo</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
-    <string name="use_other_session_content_description">Sử dụng ${app_name} mới nhất trên các thiết bị khác của bạn, Web ${app_name}, Máy tính để bàn ${app_name}, iOS ${app_name}, Android ${app_name} hoặc một máy khách Matrix khác có khả năng xác thực chéo</string>
+    <string name="use_other_session_content_description">Sử dụng ${app_name} mới nhất trên các thiết bị khác của bạn, Web ${app_name}, Máy tính để bàn ${app_name}, iOS ${app_name}, Android ${app_name} hoặc một máy khách quali.chat khác có khả năng xác thực chéo</string>
     <string name="change_password_summary">Đặt mật khẩu tài khoản mới…</string>
     <string name="error_saving_media_file">Không thể lưu tệp Media</string>
     <string name="settings_security_prevent_screenshots_summary">Bật thiết đặt này thêm FLAG_SECURE cho tất cả các Hoạt động. Khởi động lại ứng dụng để thay đổi có hiệu lực.</string>
@@ -1712,7 +1712,7 @@
     <string name="settings_advanced_settings">Cài đặt nâng cao</string>
     <string name="notification_initial_sync">Đồng bộ ban đầu…</string>
     <string name="bug_report_error_too_short">Mô tả quá ngắn</string>
-    <string name="permalink_malformed">Liên kết matrix.to của bạn bị dị hỏng</string>
+    <string name="permalink_malformed">Liên kết quali.chat của bạn bị dị hỏng</string>
     <string name="soft_logout_sso_not_same_user_error">Phiên hiện tại dành cho người dùng %1$s và bạn cung cấp thông tin đăng nhập cho người dùng %2$s. Điều này không được hỗ trợ bởi ${app_name}.
 \nTrước tiên, hãy xóa dữ liệu, sau đó đăng nhập lại trên tài khoản khác.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Bạn sẽ mất quyền truy cập vào các tin nhắn an toàn trừ khi bạn đăng nhập để khôi phục khóa mã hóa của mình.</string>
@@ -1743,10 +1743,10 @@
     <string name="autodiscover_well_known_error">Không thể tìm thấy một homeerver hợp lệ. Vui lòng kiểm tra mã định danh của bạn</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Đây không phải là mã định danh người dùng hợp lệ. Định dạng dự kiến: \'@user:homeserver.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Nếu bạn không biết mật khẩu của mình, hãy quay lại để đặt lại mật khẩu đó.</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
-    <string name="login_signin_matrix_id_notice">Nếu bạn thiết lập tài khoản trên homeerver, hãy sử dụng Matrix ID của bạn (ví dụ: @user:domain.com) và mật khẩu bên dưới.</string>
-    <string name="login_signin_matrix_id_title">Đăng nhập bằng Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">Đăng nhập bằng Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
+    <string name="login_signin_matrix_id_notice">Nếu bạn thiết lập tài khoản trên homeerver, hãy sử dụng quali.chat ID của bạn (ví dụ: @user:domain.com) và mật khẩu bên dưới.</string>
+    <string name="login_signin_matrix_id_title">Đăng nhập bằng quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">Đăng nhập bằng quali.chat ID</string>
     <string name="login_error_outdated_homeserver_warning_content">Homeerver này đang chạy một phiên bản cũ. Yêu cầu người quản trị homeerver của bạn nâng cấp. Bạn có thể tiếp tục, nhưng một số tính năng có thể không hoạt động chính xác.</string>
     <string name="login_error_outdated_homeserver_title">Homeerver lỗi thời</string>
     <string name="does_not_look_like_valid_email">Không giống một địa chỉ thư điện tử hợp lệ</string>
@@ -1759,7 +1759,7 @@
 \nBạn có muốn đăng nhập bằng máy khách web không\?</string>
     <string name="login_sso_error_message">Lỗi xảy ra khi tải trang: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Nhập địa chỉ của máy chủ bạn muốn sử dụng</string>
-    <string name="login_server_url_form_modular_notice">Nhập địa chỉ của Mô-đun Element hoặc Máy chủ bạn muốn sử dụng</string>
+    <string name="login_server_url_form_modular_notice">Nhập địa chỉ của Mô-đun quali.chat hoặc Máy chủ bạn muốn sử dụng</string>
     <string name="login_server_url_form_modular_text">Lưu trữ cao cấp cho các tổ chức</string>
     <string name="login_server_modular_text">Lưu trữ cao cấp cho các tổ chức</string>
     <string name="login_server_matrix_org_text">Tham gia hàng triệu máy chủ công cộng miễn phí lớn nhất</string>
@@ -1818,7 +1818,7 @@
     <string name="settings_general_title">Tổng quát</string>
     <string name="navigate_to_room_when_already_in_the_room">Bạn đang xem phòng này rồi!</string>
     <string name="settings_other_third_party_notices">Thông báo của bên thứ ba khác</string>
-    <string name="settings_sdk_version">Phiên bản Matrix SDK</string>
+    <string name="settings_sdk_version">Phiên bản quali.chat SDK</string>
     <string name="import_e2e_keys_from_file">Nhập khóa e2e từ tệp \"%1$s\".</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Lỗi xảy ra khi nhận được dữ liệu sao lưu khóa</string>
     <string name="keys_backup_unable_to_get_trust_info">Lỗi xảy ra khi nhận được thông tin xác thực</string>
@@ -2062,7 +2062,7 @@
 \n
 \nHủy kích hoạt tài khoản của bạn &lt;b&gt;does không theo mặc định khiến chúng tôi quên tin nhắn bạn đã gửi&lt;/b&gt;. Nếu bạn muốn chúng tôi quên tin nhắn của bạn, vui lòng đánh dấu vào hộp bên dưới.
 \n
-\nKhả năng hiển thị tin nhắn trong Matrix tương tự như email. Chúng tôi quên tin nhắn của bạn có nghĩa là tin nhắn bạn đã gửi sẽ không được chia sẻ với bất kỳ người dùng mới hoặc chưa đăng ký nào, nhưng người dùng đã đăng ký đã có quyền truy cập vào các tin nhắn này vẫn sẽ có quyền truy cập vào bản sao của họ.</string>
+\nKhả năng hiển thị tin nhắn trong quali.chat tương tự như email. Chúng tôi quên tin nhắn của bạn có nghĩa là tin nhắn bạn đã gửi sẽ không được chia sẻ với bất kỳ người dùng mới hoặc chưa đăng ký nào, nhưng người dùng đã đăng ký đã có quyền truy cập vào các tin nhắn này vẫn sẽ có quyền truy cập vào bản sao của họ.</string>
     <string name="dialog_user_consent_content">Để tiếp tục sử dụng homeserver %1$s, bạn phải xem xét và đồng ý với các điều khoản và điều kiện.</string>
     <string name="avatar">Avatar</string>
     <string name="reason_colon">Lý do: %1$s</string>
@@ -2079,7 +2079,7 @@
     <string name="markdown_has_been_disabled">Tính năng định dạng tin nhắn chuẩn Markdown đã bị vô hiệu hoá.</string>
     <string name="markdown_has_been_enabled">Tính năng định dạng tin nhắn chuẩn Markdown đã được kích hoạt.</string>
     <string name="command_description_whois">Hiển thị thông tin về người dùng</string>
-    <string name="command_description_clear_scalar_token">Để sửa trình quản lý ứng dụng Matrix</string>
+    <string name="command_description_clear_scalar_token">Để sửa trình quản lý ứng dụng quali.chat</string>
     <string name="command_description_markdown">Bật/tắt tính năng định dạng Markdown</string>
     <string name="command_description_avatar_for_room">Chỉ thay đổi avatar của bạn trong căn phòng hiện tại này</string>
     <string name="command_description_room_avatar">Thay đổi avatar của căn phòng hiện tại</string>
@@ -2117,7 +2117,7 @@
     <string name="settings_labs_native_camera">Sử dụng máy ảnh gốc</string>
     <string name="room_no_active_widgets">Không có widget hoạt động</string>
     <string name="room_manage_integrations">Quản lý Tích hợp</string>
-    <string name="room_add_matrix_apps">Thêm ứng dụng Matrix</string>
+    <string name="room_add_matrix_apps">Thêm ứng dụng quali.chat</string>
     <string name="widget_integration_missing_parameter">Một tham số cần thiết bị thiếu.</string>
     <string name="widget_integration_room_not_visible">Phòng %s không hiển thị.</string>
     <string name="widget_integration_missing_user_id">Thiếu user_id trong yêu cầu.</string>
@@ -2454,7 +2454,7 @@
 \nNghĩa là bạn đã có tất cả các khóa cần thiết để mở khóa các tin nhắn đã được mã hóa và xác nhận với những người khác là bạn tin cậy phiên này.</string>
     <string name="labs_enable_session_manager_summary">Hiển thị và kiểm soát các phiên của bạn tốt hơn.</string>
     <string name="home_empty_no_rooms_message">Ứng dụng nhắn tin bảo mật tất cả-trong-một cho nhóm, bạn bè và tổ chức. Tạo một cuộc trò chuyện, hay tham gia vào một phòng, để bắt đầu.</string>
-    <string name="ftue_auth_carousel_control_body">Chọn nơi lưu trữ các cuộc trò chuyện của bạn, cho bạn quyền kiểm soát và độc lập. Kết nối qua giao thức Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Chọn nơi lưu trữ các cuộc trò chuyện của bạn, cho bạn quyền kiểm soát và độc lập. Kết nối qua giao thức quali.chat.</string>
     <string name="secure_backup_reset_danger_warning">Chỉ tiếp tục nếu bạn chắc chắn là bạn đã mất tất cả các thiết bị và khóa bảo mật.</string>
     <string name="a11y_collapse_space_children">Đóng %s mục</string>
     <string name="a11y_expand_space_children">Mở %s mục</string>
@@ -2543,7 +2543,7 @@
     <string name="thread_list_empty_title">Sắp xếp các cuộc thảo luận với các chủ đề</string>
     <string name="thread_timeline_title">Chủ đề</string>
     <string name="thread_list_modal_my_threads_subtitle">Hiển thị tất cả chủ đề bạn đã tham gia</string>
-    <string name="labs_enable_new_app_layout_summary">Element đã được đơn giản hóa với các mục tùy chọn</string>
+    <string name="labs_enable_new_app_layout_summary">quali.chat đã được đơn giản hóa với các mục tùy chọn</string>
     <string name="labs_enable_deferred_dm_summary">Chỉ tạo cuộc trò chuyện riêng cho tin nhắn đầu tiên</string>
     <string name="labs_enable_deferred_dm_title">Bật trì hoãn cho các tin nhắn riêng</string>
     <string name="thread_list_modal_my_threads_title">Các chủ đề của tôi</string>

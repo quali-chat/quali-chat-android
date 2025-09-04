@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -51,6 +52,14 @@ sealed class PollOptionViewState(
      * Represents a poll that is ended.
      */
     data class PollEnded(
+            override val optionId: String,
+            override val optionAnswer: String,
+            val voteCount: Int,
+            val votePercentage: Double,
+            val isWinner: Boolean
+    ) : PollOptionViewState(optionId, optionAnswer)
+
+    data class PollDisabled(
             override val optionId: String,
             override val optionAnswer: String,
             val voteCount: Int,

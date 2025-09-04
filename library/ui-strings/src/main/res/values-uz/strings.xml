@@ -50,7 +50,7 @@
     <string name="send_bug_report_include_logs">Loglarni joʻnatish</string>
     <string name="no_more_results">Boshqa natijalar yoʻq</string>
     <string name="no_result_placeholder">Natija yoʻq</string>
-    <string name="matrix_only_filter">Faqat Matrix kontaktlari uchun</string>
+    <string name="matrix_only_filter">Faqat quali.chat kontaktlari uchun</string>
     <string name="rooms_header">Xonalar</string>
     <string name="dialog_title_error">Xato</string>
     <string name="dialog_title_warning">Ogohlantirish</string>

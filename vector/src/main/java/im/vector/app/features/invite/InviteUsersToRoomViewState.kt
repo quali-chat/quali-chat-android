@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,8 +23,9 @@ import com.airbnb.mvrx.Uninitialized
 
 data class InviteUsersToRoomViewState(
         val roomId: String,
+        val limit: Int,
         val inviteState: Async<Unit> = Uninitialized
 ) : MavericksState {
 
-    constructor(args: InviteUsersToRoomArgs) : this(roomId = args.roomId)
+    constructor(args: InviteUsersToRoomArgs) : this(roomId = args.roomId, limit = args.directRoomMembersLimit)
 }

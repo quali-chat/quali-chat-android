@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -292,8 +293,9 @@ class HomeRoomListViewModel @AssistedInject constructor(
                 } else {
                     val userName = session.getUserOrDefault(session.myUserId).toMatrixItem().getBestName()
                     StateView.State.Empty(
-                            title = stringProvider.getString(R.string.home_empty_no_rooms_title, userName),
-                            message = stringProvider.getString(R.string.home_empty_no_rooms_message),
+                            title = stringProvider.getString(R.string.home_quali_empty_no_rooms_title, userName),
+                            userName = userName,
+                            message = stringProvider.getString(R.string.home_quali_empty_no_rooms_message),
                             image = drawableProvider.getDrawable(R.drawable.ill_empty_all_chats),
                             isBigImage = true
                     )

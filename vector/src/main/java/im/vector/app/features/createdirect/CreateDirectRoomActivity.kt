@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  *
  *  * Copyright 2019 New Vector Ltd
  *  *
@@ -53,6 +54,7 @@ import im.vector.app.features.userdirectory.UserListFragment
 import im.vector.app.features.userdirectory.UserListFragmentArgs
 import im.vector.app.features.userdirectory.UserListSharedAction
 import im.vector.app.features.userdirectory.UserListSharedActionViewModel
+import im.vector.app.features.userdirectory.directRoomMembersLimit
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.matrix.android.sdk.api.failure.Failure
@@ -95,6 +97,7 @@ class CreateDirectRoomActivity : SimpleFragmentActivity() {
                             menuResId = R.menu.vector_create_direct_room,
                             submitMenuItemId = R.id.action_create_direct_room,
                             single3pidSelection = true,
+                            directRoomMembersLimit = directRoomMembersLimit - 1 //-1 for the creator of the group
                     )
             )
         }

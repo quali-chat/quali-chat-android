@@ -27,7 +27,7 @@ import kotlin.math.min
  * BottomSheetBehavior that dynamically resizes its contents as it grows or shrinks.
  * Most of the nested scrolling and touch events code is the same as in [BottomSheetBehavior], but we couldn't just extend it.
  */
-class ExpandingBottomSheetBehavior<V : View> : CoordinatorLayout.Behavior<V> {
+@Suppress("DEPRECATION") class ExpandingBottomSheetBehavior<V : View> : CoordinatorLayout.Behavior<V> {
 
     companion object {
         /** Gets a [ExpandingBottomSheetBehavior] from the passed [view] if it exists. */

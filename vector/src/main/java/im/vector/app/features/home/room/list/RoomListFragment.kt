@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -54,6 +55,7 @@ import im.vector.app.features.home.room.list.actions.RoomListQuickActionsSharedA
 import im.vector.app.features.home.room.list.widget.NotifsFabMenuView
 import im.vector.app.features.matrixto.OriginOfMatrixTo
 import im.vector.app.features.notifications.NotificationDrawerManager
+import im.vector.app.features.userdirectory.directRoomMembersLimit
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -264,7 +266,7 @@ class RoomListFragment :
 
     // FilteredRoomFooterItem.Listener
     override fun createRoom(initialName: String) {
-        navigator.openCreateRoom(requireActivity(), initialName)
+        navigator.openCreateRoom(requireActivity(), initialName, directRoomMembersLimit = directRoomMembersLimit)
     }
 
     override fun createDirectChat() {

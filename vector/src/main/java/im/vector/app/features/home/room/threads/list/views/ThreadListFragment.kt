@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,6 +34,7 @@ import im.vector.app.core.extensions.cleanup
 import im.vector.app.core.extensions.configureWith
 import im.vector.app.core.platform.VectorBaseFragment
 import im.vector.app.core.platform.VectorMenuProvider
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.databinding.FragmentThreadListBinding
 import im.vector.app.features.analytics.plan.MobileScreen
 import im.vector.app.features.home.AvatarRenderer
@@ -212,7 +214,7 @@ class ThreadListFragment :
         avatarRenderer.render(matrixItem, views.includeThreadListToolbar.roomToolbarThreadImageView)
         views.includeThreadListToolbar.roomToolbarThreadShieldImageView.render(threadListArgs.roomEncryptionTrustLevel)
         views.includeThreadListToolbar.roomToolbarThreadTitleTextView.text = resources.getText(R.string.thread_list_title)
-        views.includeThreadListToolbar.roomToolbarThreadSubtitleTextView.text = threadListArgs.displayName
+        views.includeThreadListToolbar.roomToolbarThreadSubtitleTextView.swapToEthereumDisplayName(threadListArgs.displayName)
     }
 
     override fun onThreadSummaryClicked(threadSummary: ThreadSummary) {

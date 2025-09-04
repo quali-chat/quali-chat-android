@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -65,7 +66,7 @@ class BootstrapSaveRecoveryKeyFragment :
         val intent = Intent(Intent.ACTION_CREATE_DOCUMENT)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
         intent.type = "text/plain"
-        intent.putExtra(Intent.EXTRA_TITLE, "element-recovery-key.txt")
+        intent.putExtra(Intent.EXTRA_TITLE, "quali-recovery-key.txt")
 
         try {
             sharedViewModel.handle(BootstrapActions.SaveReqQueryStarted)

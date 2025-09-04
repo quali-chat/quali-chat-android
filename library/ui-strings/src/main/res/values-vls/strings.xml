@@ -40,7 +40,7 @@
     <string name="unable_to_send_message">Kosteg ’t bericht nie verzendn</string>
 
 
-    <string name="matrix_error">Matrix-fout</string>
+    <string name="matrix_error">quali.chat-fout</string>
 
 
     <string name="medium_email">E-mailadresse</string>

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,6 +29,7 @@ import androidx.core.graphics.drawable.IconCompat
 import im.vector.app.core.glide.GlideApp
 import im.vector.app.core.resources.BuildMeta
 import im.vector.app.core.utils.DimensionConverter
+import im.vector.app.core.utils.removeTgTag
 import im.vector.app.features.MainActivity
 import im.vector.app.features.settings.VectorPreferences
 import org.matrix.android.sdk.api.session.room.model.RoomSummary
@@ -84,7 +86,7 @@ class ShortcutCreator @Inject constructor(
         }
 
         return ShortcutInfoCompat.Builder(context, roomSummary.roomId)
-                .setShortLabel(roomSummary.displayName)
+                .setShortLabel(roomSummary.displayName.removeTgTag())
                 .setIcon(bitmap?.toProfileImageIcon())
                 .setIntent(intent)
                 .setLongLived(true)

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -140,14 +141,14 @@ class SpaceManageActivity : VectorBaseActivity<ActivitySimpleLoadingBinding>() {
                     addFragmentToBackstack(
                             views.simpleFragmentContainer,
                             CreateRoomFragment::class.java,
-                            CreateRoomArgs("", parentSpaceId = args?.spaceId)
+                            CreateRoomArgs(initialName = "", parentSpaceId = args?.spaceId, limit = Int.MAX_VALUE)
                     )
                 }
                 SpaceManagedSharedViewEvents.NavigateToCreateSpace -> {
                     addFragmentToBackstack(
                             views.simpleFragmentContainer,
                             CreateRoomFragment::class.java,
-                            CreateRoomArgs("", parentSpaceId = args?.spaceId, isSpace = true)
+                            CreateRoomArgs(initialName = "", parentSpaceId = args?.spaceId, isSpace = true, limit = Int.MAX_VALUE)
                     )
                 }
                 SpaceManagedSharedViewEvents.NavigateToManageRooms -> {

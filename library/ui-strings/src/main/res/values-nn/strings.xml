@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Fekk ikkje til å dekryptera: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Avsendareiningi hev ikkje sendt oss nyklane fyr denna meldingi.</string>
     <string name="unable_to_send_message">Fekk ikkje til å senda meldingi</string>
-    <string name="matrix_error">Noko gjekk gale med Matrix</string>
+    <string name="matrix_error">Noko gjekk gale med quali.chat</string>
     <string name="medium_email">Epostadresse</string>
     <string name="medium_phone_number">Telefonnummer</string>
     <string name="room_displayname_room_invite">Rominnbjoding</string>
@@ -85,7 +85,7 @@
     <string name="invitations_header">Invitasjonar</string>
     <string name="low_priority_header">Låg prioritering</string>
     <string name="direct_chats_header">Samtalar</string>
-    <string name="matrix_only_filter">Berre Matrix-kontaktar</string>
+    <string name="matrix_only_filter">Berre quali.chat-kontaktar</string>
     <string name="no_result_placeholder">Ingen treff</string>
     <string name="rooms_header">Rom</string>
     <string name="send_bug_report_include_logs">Send loggar</string>
@@ -349,7 +349,7 @@
     <string name="widget_integration_missing_user_id">Vantande brukar_id i førespurnaden.</string>
     <string name="widget_integration_room_not_visible">Rommet %s er ikkje synleg.</string>
     <string name="widget_integration_missing_parameter">Ein krevd parameter vantar.</string>
-    <string name="room_add_matrix_apps">Legg til Matrix-applikasjonar</string>
+    <string name="room_add_matrix_apps">Legg til quali.chat-applikasjonar</string>
     <string name="you_added_a_new_device">Du la til den nye sesjonen \'%s\', som etterspør krypteringsnøkklar.</string>
     <string name="your_unverified_device_requesting">Den ikkje-verifiserte sesjonen din \'%s\' etterspør krypteringsnøkklar.</string>
     <string name="start_verification">Start verifikasjon</string>
@@ -367,7 +367,7 @@
     <string name="command_description_remove_user">Sparkar brukarar med gjeven ID</string>
     <string name="command_description_nick">Forandrar visingsnamnet ditt</string>
     <string name="command_description_markdown">På/Av markdown</string>
-    <string name="command_description_clear_scalar_token">For å ordne opp i Matrix-App-administrasjon</string>
+    <string name="command_description_clear_scalar_token">For å ordne opp i quali.chat-App-administrasjon</string>
     <string name="notification_off">Av</string>
     <string name="notification_noisy">Bråket</string>
     <string name="encrypted_message">Kryptert melding</string>
@@ -378,7 +378,7 @@
     <string name="has_been_removed">Du vart sparka frå %1$s av %2$s</string>
     <string name="has_been_banned">Du var stengd ute frå %1$s av %2$s</string>
     <string name="reason_colon">Grunnlag: %1$s</string>
-    <string name="directory_server_native_rooms">Alle %s-rom på Matrix</string>
+    <string name="directory_server_native_rooms">Alle %s-rom på quali.chat</string>
     <string name="settings_labs_native_camera">Bruk det innebygde kameraet</string>
     <string name="avatar">Avatar</string>
     <string name="dialog_user_consent_content">For å halda fram med å bruka %1$s-heimtenaren må du sjå over og seia deg einig i vilkåret og føresetnader.</string>
@@ -388,7 +388,7 @@
 
 Å avliva brukaren din <b>gjer i utgangspunktet ikkje at vi gløymer meldingane du har send.</b> Viss du vil at vi skal gløyma meldingane dine, ver venleg og kryss av i firkanten under.
 
-Meldingssynlegheit på Matrix liknar på epost. At vi gløymer meldingane dine tyder at meldingar du har send ikkje vil verta delt med nye, ikkje-innmeldte brukarar, men brukare som er meldt på som allereie har tilgang til desse meldingane vil fortsatt kunne sjå kopien deira.</string>
+Meldingssynlegheit på quali.chat liknar på epost. At vi gløymer meldingane dine tyder at meldingar du har send ikkje vil verta delt med nye, ikkje-innmeldte brukarar, men brukare som er meldt på som allereie har tilgang til desse meldingane vil fortsatt kunne sjå kopien deira.</string>
     <string name="deactivate_account_delete_checkbox">Ver venleg og gløym alle meldingane eg har send når brukarkontoen min vert deaktivert (Åtvaring: dette gjer at framtidige brukarar ikkje får eit fullstendig oversyn av samtalene)</string>
     <string name="deactivate_account_submit">Deaktiver konto</string>
     <string name="error_empty_field_your_password">Ver venleg og skriv passordet ditt inn.</string>
@@ -460,8 +460,8 @@ Meldingssynlegheit på Matrix liknar på epost. At vi gløymer meldingane dine t
     <string name="action_revoke">Trekk tilbake</string>
     <string name="action_disconnect">Koble frå</string>
     <string name="action_decline">Avvis</string>
-    <string name="auth_login_sso">Logg inn med SSO (single sign-on)</string>
-    <string name="login_error_no_homeserver_found">Dette er ikkje ei gyldig Matrix-tenaradresse</string>
+    <string name="auth_login_sso">Logg inn med Ethereum (single sign-on)</string>
+    <string name="login_error_no_homeserver_found">Dette er ikkje ei gyldig quali.chat-tenaradresse</string>
     <string name="login_error_homeserver_not_found">Klarar ikkje å nå ein heimetenar på denne URL\'en, sjekk at den er korrekt</string>
     <string name="settings_integrations">Integrasjonar</string>
     <string name="settings_integrations_summary">Bruk ein integrasjonshandterar (Integration Manager) for å handtere botar, bruer, tillegg og klistermerkepakker. 
@@ -478,7 +478,7 @@ Meldingssynlegheit på Matrix liknar på epost. At vi gløymer meldingane dine t
     <string name="room_widget_open_in_browser">Opna i nettlesar</string>
     <string name="keys_backup_restore_is_getting_backup_version">Hentar sikkerheitskopiversjon…</string>
     <string name="keys_backup_info_title_version">Versjon</string>
-    <string name="settings_sdk_version">Matrix SDK versjon</string>
+    <string name="settings_sdk_version">quali.chat SDK versjon</string>
     <string name="settings_preferences">Innstillingar</string>
     <string name="settings_security_and_privacy">Tryggleik og personvern</string>
     <string name="preference_voice_and_video">Tale og video</string>
@@ -505,7 +505,7 @@ Meldingssynlegheit på Matrix liknar på epost. At vi gløymer meldingane dine t
     <string name="settings_category_timeline">Historikk</string>
     <string name="settings_send_markdown_summary">Formater meldingar skrivne med Markdown-syntaksen før dei blir sendt. Dette gjer at ein kan t.d. bruke stjerne(*) for å vise tekst i kursiv.</string>
     <string name="settings_send_markdown">Bruk Markdown-formatering</string>
-    <string name="settings_emails_and_phone_numbers_summary">Still inn korleis e-postadresser og telefonnummer er knytta til Matrix-kontoen din</string>
+    <string name="settings_emails_and_phone_numbers_summary">Still inn korleis e-postadresser og telefonnummer er knytta til quali.chat-kontoen din</string>
     <string name="settings_discovery_manage">Still inn korleis kontoen din kan bli oppdaga.</string>
     <string name="settings_emails_and_phone_numbers_title">E-postadresser og telefonnummer</string>
     <string name="settings_discovery_category">Synlegheit</string>

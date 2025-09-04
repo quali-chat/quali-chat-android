@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,6 +50,7 @@ class PollOptionView @JvmOverloads constructor(
             is PollOptionViewState.PollReady -> renderPollReady()
             is PollOptionViewState.PollVoted -> renderPollVoted(state)
             is PollOptionViewState.PollUndisclosed -> renderPollUndisclosed(state)
+            is PollOptionViewState.PollDisabled -> renderPollDisabled(state)
         }
     }
 
@@ -69,6 +71,18 @@ class PollOptionView @JvmOverloads constructor(
         )
         showVotes(state.voteCount, state.votePercentage)
         renderVoteSelection(state.isWinner)
+    }
+
+    private fun renderPollDisabled(state: PollOptionViewState.PollDisabled) {
+        views.optionCheckImageView.isVisible = false
+        views.optionContainer.alpha = 0.8f
+        val drawableStart = if (state.isWinner) R.drawable.ic_poll_winner else 0
+        views.optionVoteCountTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(drawableStart, 0, 0, 0)
+        views.optionVoteCountTextView.setTextColor(
+                if (state.isWinner) ThemeUtils.getColor(context, R.attr.colorPrimary)
+                else ThemeUtils.getColor(context, R.attr.vctr_content_secondary)
+        )
+        showVotes(state.voteCount, state.votePercentage)
     }
 
     private fun renderPollReady() {

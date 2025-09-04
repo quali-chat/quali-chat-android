@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,6 +36,10 @@ class SSORedirectRouterActivity : AppCompatActivity() {
 
     companion object {
         // Note that the domain can be displayed to the user for confirmation that he trusts it. So use a human readable string
-        const val VECTOR_REDIRECT_URL = "element://connect"
+        fun vectorRedirectUrl(packageName: String): String {
+            val stagingEnv = "staging"
+            val suffix = if (packageName.contains(stagingEnv)) stagingEnv else ""
+            return "qualichat$suffix://connect"
+        }
     }
 }

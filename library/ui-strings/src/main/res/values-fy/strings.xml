@@ -66,7 +66,7 @@
     <string name="low_priority_header">Lege prioriteit</string>
     <string name="system_alerts_header">Systeemmeldingen</string>
     <string name="direct_chats_header">Petearen</string>
-    <string name="matrix_only_filter">Allinnich Matrix-kontakten</string>
+    <string name="matrix_only_filter">Allinnich quali.chat-kontakten</string>
     <string name="no_result_placeholder">Gjin resultaten</string>
     <string name="rooms_header">Petearen</string>
     <string name="send_bug_report_include_logs">Lochboek ferstjoere</string>
@@ -142,7 +142,7 @@
     <string name="search">Sykje</string>
     <string name="username">Brûkersnamme</string>
     <string name="logout">Ofmelde</string>
-    <string name="phone_book_perform_lookup">Matrix-kontakten sykje</string>
+    <string name="phone_book_perform_lookup">quali.chat-kontakten sykje</string>
     <string name="message_action_item_redact">Fuortsmite…</string>
     <string name="share_confirm_room">Wolle jo dizze bylage nei %1$s ferstjoere\?</string>
     <string name="send_attachment">Bylage ferstjoere</string>
@@ -164,7 +164,7 @@
     <string name="edited_suffix">(bewurke)</string>
     <string name="send_file_step_idle">Wachtsje…</string>
     <string name="preference_root_help_about">Help &amp; oer</string>
-    <string name="settings_sdk_version">Matrix SDK-ferzje</string>
+    <string name="settings_sdk_version">quali.chat SDK-ferzje</string>
     <string name="create_room_settings_section">Keamerynstellingen</string>
     <string name="create_room_topic_hint">Underwerp</string>
     <string name="create_room_topic_section">Keamerûnderwerp (opsjoneel)</string>
@@ -210,7 +210,7 @@
     <string name="login_error_bad_json">Unjildige JSON</string>
     <string name="login_error_ssl_other">SSL-flater.</string>
     <string name="login_error_homeserver_not_found">Kin de thússerver op dizze URL net berikke, kontrolearje dit</string>
-    <string name="login_error_no_homeserver_found">Dit is net in jildich Matrix-serveradres</string>
+    <string name="login_error_no_homeserver_found">Dit is net in jildich quali.chat-serveradres</string>
     <string name="login_error_invalid_home_server">Fier in jildige URL yn</string>
     <string name="auth_reset_password_error_unauthorized">Koe it e-mailadres net ferifiearje: soargje dat jo op de keppeling yn it e-mailberjocht klikt hawwe</string>
     <string name="auth_forgot_password">Wachtwurd fergetten\?</string>
@@ -243,7 +243,7 @@
     <string name="action_add">Tafoegje</string>
     <string name="bottom_action_notification">Notifikaasjes</string>
     <string name="create_spaces_default_public_room_name">Algemien</string>
-    <string name="matrix_error">Matrix-flater</string>
+    <string name="matrix_error">quali.chat-flater</string>
     <string name="unable_to_send_message">Kin it berjocht net ferstjoere</string>
     <string name="you_are_invited">Jo binne útnûge</string>
     <string name="notice_room_visibility_world_readable">elkenien.</string>
@@ -555,7 +555,7 @@
     <string name="room_settings_room_read_history_rules_pref_title">Tagong ta de petearskiednis</string>
     <string name="settings_default_compression">Standert komprimearing</string>
     <string name="settings_media">Media</string>
-    <string name="settings_emails_and_phone_numbers_summary">E-mailadressen en telefoannûmers dy’t oan jo Matrix-account keppele binne beheare</string>
+    <string name="settings_emails_and_phone_numbers_summary">E-mailadressen en telefoannûmers dy’t oan jo quali.chat-account keppele binne beheare</string>
     <string name="settings_old_password">Aktuele wachtwurd</string>
     <string name="devices_details_last_seen_format">%1$s @ %2$s</string>
     <string name="settings_deactivate_my_account">Myn account deaktivearje</string>
@@ -749,14 +749,14 @@
     <string name="soft_logout_clear_data_submit">Alle gegevens wiskje</string>
     <string name="soft_logout_clear_data_title">Persoanlike gegevens wiskje</string>
     <string name="login_clear_homeserver_history">Skiednis wiskje</string>
-    <string name="command_description_clear_scalar_token">Om Matrix-appbehear te werstellen</string>
+    <string name="command_description_clear_scalar_token">Om quali.chat-appbehear te werstellen</string>
     <string name="settings_clear_media_cache">Mediabuffer wiskje</string>
     <string name="settings_clear_cache">Buffer wiskje</string>
     <string name="room_manage_integrations">Yntegraasjes beheare</string>
     <string name="settings_integrations">Yntegraasjes</string>
     <string name="settings_discovery_emails_title">Te finen e-mailadressen</string>
     <string name="settings_notification_emails_enable_for_email">E-mailnotifikaasjes ynskeakelje foar %s</string>
-    <string name="settings_notification_emails_no_emails">Foegje in e-mailadres ta oan jo Matrix-account, om e-mailnotifikaasjes te ûntfangen</string>
+    <string name="settings_notification_emails_no_emails">Foegje in e-mailadres ta oan jo quali.chat-account, om e-mailnotifikaasjes te ûntfangen</string>
     <string name="settings_notification_emails_category">E-mailnotifikaasje</string>
     <string name="settings_emails_empty">Der is gjin e-mailadres oan jo account tafoege</string>
     <string name="settings_display_name">Werjeftenamme</string>

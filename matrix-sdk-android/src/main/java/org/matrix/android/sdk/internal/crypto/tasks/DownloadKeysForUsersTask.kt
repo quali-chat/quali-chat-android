@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +23,6 @@ import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.matrix.android.sdk.internal.crypto.api.CryptoApi
-import org.matrix.android.sdk.internal.crypto.model.rest.DeviceKeysWithUnsigned
 import org.matrix.android.sdk.internal.crypto.model.rest.KeysQueryBody
 import org.matrix.android.sdk.internal.crypto.model.rest.KeysQueryResponse
 import org.matrix.android.sdk.internal.crypto.model.rest.RestKeyInfo
@@ -52,7 +52,7 @@ internal class DefaultDownloadKeysForUsers @Inject constructor(
 
         return if (bestChunkSize.shouldChunk()) {
             // Store server results in these mutable maps
-            val deviceKeys = mutableMapOf<String, Map<String, DeviceKeysWithUnsigned>>()
+            val deviceKeys = mutableMapOf<String, Map<String, Map<String, Any>>>()
             val failures = mutableMapOf<String, Map<String, Any>>()
             val masterKeys = mutableMapOf<String, RestKeyInfo?>()
             val selfSigningKeys = mutableMapOf<String, RestKeyInfo?>()

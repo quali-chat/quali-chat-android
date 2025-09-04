@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2023 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,21 +45,21 @@ internal class PillDisplayHandlerTest {
         const val ROOM_ID = "!thisroom:matrix.org"
         const val NON_MATRIX_URL = "https://example.com"
         const val UNKNOWN_MATRIX_ROOM_ID = "!unknown:matrix.org"
-        const val UNKNOWN_MATRIX_ROOM_URL = "https://matrix.to/#/$UNKNOWN_MATRIX_ROOM_ID"
+        const val UNKNOWN_MATRIX_ROOM_URL = "https://quali.chat/#/$UNKNOWN_MATRIX_ROOM_ID"
         const val KNOWN_MATRIX_ROOM_ID = "!known:matrix.org"
-        const val KNOWN_MATRIX_ROOM_URL = "https://matrix.to/#/$KNOWN_MATRIX_ROOM_ID"
+        const val KNOWN_MATRIX_ROOM_URL = "https://quali.chat/#/$KNOWN_MATRIX_ROOM_ID"
         const val KNOWN_MATRIX_ROOM_AVATAR = "https://example.com/avatar.png"
         const val KNOWN_MATRIX_ROOM_NAME = "known room"
         const val UNKNOWN_MATRIX_USER_ID = "@unknown:matrix.org"
-        const val UNKNOWN_MATRIX_USER_URL = "https://matrix.to/#/$UNKNOWN_MATRIX_USER_ID"
+        const val UNKNOWN_MATRIX_USER_URL = "https://quali.chat/#/$UNKNOWN_MATRIX_USER_ID"
         const val KNOWN_MATRIX_USER_ID = "@known:matrix.org"
-        const val KNOWN_MATRIX_USER_URL = "https://matrix.to/#/$KNOWN_MATRIX_USER_ID"
+        const val KNOWN_MATRIX_USER_URL = "https://quali.chat/#/$KNOWN_MATRIX_USER_ID"
         const val KNOWN_MATRIX_USER_AVATAR = "https://example.com/avatar.png"
         const val KNOWN_MATRIX_USER_NAME = "known user"
         const val CUSTOM_DOMAIN_MATRIX_ROOM_URL = "https://customdomain/#/room/$KNOWN_MATRIX_ROOM_ID"
         const val CUSTOM_DOMAIN_MATRIX_USER_URL = "https://customdomain.com/#/user/$KNOWN_MATRIX_USER_ID"
         const val KNOWN_MATRIX_ROOM_ALIAS = "#known-alias:matrix.org"
-        const val KNOWN_MATRIX_ROOM_ALIAS_URL = "https://matrix.to/#/$KNOWN_MATRIX_ROOM_ALIAS"
+        const val KNOWN_MATRIX_ROOM_ALIAS_URL = "https://quali.chat/#/$KNOWN_MATRIX_ROOM_ALIAS"
     }
 
     @Before

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -54,7 +55,8 @@ class CallTransferPagerAdapter(
                     singleSelection = true,
                     showInviteActions = false,
                     showToolbar = false,
-                    showContactBookAction = false
+                    showContactBookAction = false,
+                    directRoomMembersLimit = Int.MAX_VALUE
             ).toMvRxBundle()
         } else {
             fragment = fragmentActivity.supportFragmentManager.fragmentFactory.instantiate(fragmentActivity.classLoader, DialPadFragment::class.java.name)

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2023 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,6 +22,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.RestrictionsManager
+import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import dagger.hilt.android.qualifiers.ApplicationContext
 import timber.log.Timber
@@ -44,7 +46,12 @@ class DefaultMdmService @Inject constructor(
     override fun registerListener(context: Context, onChangedListener: () -> Unit) {
         val restrictionsFilter = IntentFilter(Intent.ACTION_APPLICATION_RESTRICTIONS_CHANGED)
         this.onChangedListener = onChangedListener
-        context.registerReceiver(restrictionsReceiver, restrictionsFilter)
+        ContextCompat.registerReceiver(
+                context,
+                restrictionsReceiver,
+                restrictionsFilter,
+                ContextCompat.RECEIVER_NOT_EXPORTED
+        )
     }
 
     override fun unregisterListener(context: Context) {

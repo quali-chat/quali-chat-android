@@ -83,7 +83,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Kan inte avkryptera: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Avsändarens enhet har inte gett oss nycklarna för det här meddelandet.</string>
     <string name="unable_to_send_message">Kunde inte skicka meddelandet</string>
-    <string name="matrix_error">Matrixfel</string>
+    <string name="matrix_error">quali.chatfel</string>
     <string name="medium_email">E-postadress</string>
     <string name="medium_phone_number">Telefonnummer</string>
     <string name="room_displayname_room_invite">Rumsinbjudan</string>
@@ -289,7 +289,7 @@
     <string name="low_priority_header">Låg prioritet</string>
     <string name="system_alerts_header">Systemvarningar</string>
     <string name="direct_chats_header">Konversationer</string>
-    <string name="matrix_only_filter">Bara Matrix-kontakter</string>
+    <string name="matrix_only_filter">Bara quali.chat-kontakter</string>
     <string name="no_result_placeholder">Inga resultat</string>
     <string name="rooms_header">Rum</string>
     <string name="send_bug_report_include_logs">Skicka loggar</string>
@@ -336,7 +336,7 @@
     <string name="auth_reset_password_error_unauthorized">Misslyckades att verifiera e-postadressen: se till att du klickade på länken i e-brevet</string>
     <string name="auth_accept_policies">Vänligen granska och acceptera villkoren för denna hemserver:</string>
     <string name="login_error_invalid_home_server">Vänligen skriv in en giltig URL</string>
-    <string name="login_error_no_homeserver_found">Det här är inte en giltig Matrixserveradress</string>
+    <string name="login_error_no_homeserver_found">Det här är inte en giltig quali.chatserveradress</string>
     <string name="login_error_homeserver_not_found">Kan inte nå en hemserver på den här URLen, vänligen kolla den</string>
     <string name="login_error_bad_json">Felformaterad JSON</string>
     <string name="login_error_not_json">Innehöll inte giltig JSON</string>
@@ -402,7 +402,7 @@
 \n
 \nAtt inaktivera ditt konto <b>får oss normalt inte att glömma meddelanden du har skickat</b>. Om du skulle vilja att vi glömmer dina meddelanden, markera rutan nedan.
 \n
-\nMeddelandesynlighet I Matrix är likt e-post. Att vi glömmer dina meddelanden betyder att meddelanden du har skickat inte kommer delas med nya eller oregistrerade användare, men registrerade användare som redan har tillgång till dessa meddelanden kommer fortfarande ha tillgång till deras exemplar.</string>
+\nMeddelandesynlighet I quali.chat är likt e-post. Att vi glömmer dina meddelanden betyder att meddelanden du har skickat inte kommer delas med nya eller oregistrerade användare, men registrerade användare som redan har tillgång till dessa meddelanden kommer fortfarande ha tillgång till deras exemplar.</string>
     <string name="room_list_catchup_empty_title">Du är ikapp!</string>
     <string name="room_list_catchup_empty_body">Du har inga olästa meddelanden kvar</string>
     <string name="room_list_rooms_empty_title">Rum</string>
@@ -452,7 +452,7 @@
     <string name="change_room_directory_network">Byt nätverk</string>
     <string name="settings_general_title">Allmänt</string>
     <string name="settings_preferences">Alternativ</string>
-    <string name="room_directory_search_hint">Namn eller ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Namn eller ID</string>
     <string name="verify_cancel_other">Du kommer inte att verifiera %1$s (%2$s) om du avbryter nu. Börja igen i hens användarprofil.</string>
     <string name="encryption_enabled_tile_description">Meddelanden i det här rummet är totalsträckskrypterade. Lär dig mer och verifiera användare i deras profiler.</string>
     <string name="room_participants_action_unignore">Avignorera</string>
@@ -554,7 +554,7 @@
     <string name="keys_backup_banner_recover_line1">Bli aldrig av med krypterade meddelanden</string>
     <string name="keys_backup_info_title_version">Version</string>
     <string name="identity_server_not_defined">Du använder ingen identitetsserver</string>
-    <string name="settings_sdk_version">Matrix-SDK-version</string>
+    <string name="settings_sdk_version">quali.chat-SDK-version</string>
     <string name="settings_security_and_privacy">Säkerhet och sekretess</string>
     <string name="preference_voice_and_video">Röst &amp; video</string>
     <string name="preference_root_help_about">Hjälp &amp; om</string>
@@ -740,7 +740,7 @@
     <string name="largest">Störst</string>
     <string name="huge">Enorm</string>
     <string name="room_widget_webview_access_camera">Använd kameran</string>
-    <string name="room_add_matrix_apps">Lägg till Matrix-appar</string>
+    <string name="room_add_matrix_apps">Lägg till quali.chat-appar</string>
     <string name="settings_labs_native_camera">Använd den inbyggda kameran</string>
     <string name="settings_labs_native_camera_summary">Starta systemets kamera istället för den inbyggda kameraskärmen.</string>
     <string name="encrypted_message">Krypterat meddelande</string>
@@ -992,7 +992,7 @@
     </plurals>
     <string name="no_ignored_users">Du ignorerar inga användare</string>
     <string name="login_server_other_title">Annan</string>
-    <string name="login_signin_matrix_id_notice">Om du har skapat ett konto på en hemserver så kan du använda ditt Matrix-ID (t.ex. @användare:domän.com) och lösenord nedan.</string>
+    <string name="login_signin_matrix_id_notice">Om du har skapat ett konto på en hemserver så kan du använda ditt quali.chat-ID (t.ex. @användare:domän.com) och lösenord nedan.</string>
     <string name="signed_out_notice">Detta kan bero på flera orsaker:
 \n
 \n• Du har bytt ditt lösenord från en annan session.
@@ -1070,8 +1070,8 @@
     <string name="bootstrap_migration_backup_recovery_key">Återställningsnyckel för säkerhetskopiering</string>
     <string name="settings_security_prevent_screenshots_title">Förhindra skärmdumpar av appen</string>
     <string name="settings_security_prevent_screenshots_summary">Att aktivera den här inställningen lägger till FLAG_SECURE till alla aktiviteter. Starta om appen för att inställningen ska få effekt.</string>
-    <string name="use_other_session_content_description">Använd senaste ${app_name} på dina andra enheter; ${app_name} Web, ${app_name} iOS, ${app_name} för Android, eller annan Matrixklient som stöder korssignering</string>
-    <string name="or_other_mx_capable_client">eller en annan Matrixklient som städer korssignering</string>
+    <string name="use_other_session_content_description">Använd senaste ${app_name} på dina andra enheter; ${app_name} Web, ${app_name} iOS, ${app_name} för Android, eller annan quali.chatklient som stöder korssignering</string>
+    <string name="or_other_mx_capable_client">eller en annan quali.chatklient som städer korssignering</string>
     <string name="use_latest_app">Använd senaste ${app_name} på dina andra enheter:</string>
     <string name="command_description_discard_session">Tvingar den nuvarande utgående gruppsessionen i ett krypterat rum att kasseras</string>
     <string name="bottom_sheet_setup_secure_backup_title">Säker säkerhetskopiering</string>
@@ -1207,7 +1207,7 @@
     <string name="command_description_topic">Sätt ett rumsämne</string>
     <string name="command_description_remove_user">Sparkar ut användaren med det angivna ID:t</string>
     <string name="command_description_nick">Byter ditt visningsnamn</string>
-    <string name="command_description_clear_scalar_token">För att fixa Matrixapphantering</string>
+    <string name="command_description_clear_scalar_token">För att fixa quali.chatapphantering</string>
     <string name="create">Skapa</string>
     <string name="group_details_home">Hem</string>
     <string name="invited">Bjöd in</string>
@@ -1372,16 +1372,16 @@
     <string name="login_server_modular_text">Premiumservervärd för organisationer</string>
     <string name="login_continue">Fortsätt</string>
     <string name="login_connect_to">Anslut till %1$s</string>
-    <string name="login_connect_to_modular">Anslut till Element Matrix Services</string>
+    <string name="login_connect_to_modular">Anslut till quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">Anslut till en annan server</string>
     <string name="login_signin_to">Logga in på %1$s</string>
     <string name="login_signup">Bli medlem</string>
     <string name="login_signin">Logga in</string>
-    <string name="login_signin_sso">Fortsätt med SSO</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services-adress</string>
+    <string name="login_signin_sso">Fortsätt med Ethereum</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services-adress</string>
     <string name="login_server_url_form_other_hint">Adress</string>
     <string name="login_server_url_form_modular_text">Premiumservervärd för organisationer</string>
-    <string name="login_server_url_form_modular_notice">Skriv in adressen för den Modular Element eller server du vill använda</string>
+    <string name="login_server_url_form_modular_notice">Skriv in adressen för den Modular quali.chat eller server du vill använda</string>
     <string name="login_server_url_form_common_notice">Skriv in adressen för servern du vill använda</string>
     <string name="login_sso_error_message">Ett fel inträffade vid laddning av sidan: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Appen kan inte logga in på den här hemservern. Hemservern stöder följande inloggningstyp(er): %1$s.
@@ -1424,7 +1424,7 @@
     <string name="login_signup_cancel_confirmation_title">Varning</string>
     <string name="login_signup_cancel_confirmation_content">Ditt konto är inte skapat än. Vill du avbryta registreringsprocessen\?</string>
     <string name="login_a11y_choose_matrix_org">Välj matrix.org</string>
-    <string name="login_a11y_choose_modular">Välj Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Välj quali.chat Services</string>
     <string name="login_a11y_choose_other">Välj en annan hemserver</string>
     <string name="login_a11y_captcha_container">Vänligen utför captchautmaningen</string>
     <string name="login_terms_title">Acceptera villkoren för att fortsätta</string>
@@ -1434,9 +1434,9 @@
         <item quantity="one">För många förfrågningar har skickats. Du kan försöka igen om %1$d sekund…</item>
         <item quantity="other">För många förfrågningar har skickats. Du kan försöka igen om %1$d sekunder…</item>
     </plurals>
-    <string name="login_connect_using_matrix_id_submit">Logga in med ditt Matrix-ID</string>
-    <string name="login_signin_matrix_id_title">Logga in med ditt Matrix-ID</string>
-    <string name="login_signin_matrix_id_hint">Matrix-ID</string>
+    <string name="login_connect_using_matrix_id_submit">Logga in med ditt quali.chat-ID</string>
+    <string name="login_signin_matrix_id_title">Logga in med ditt quali.chat-ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat-ID</string>
     <string name="login_signin_matrix_id_password_notice">Om du inte kan ditt lösenord, gå tillbaka för att återställa det.</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Det här är inte ett giltigt användar-ID. Förväntat format: \'@användare:hemserver.org\'</string>
     <string name="seen_by">Sett av</string>
@@ -1451,7 +1451,7 @@
     <string name="soft_logout_clear_data_submit">Rensa all data</string>
     <string name="soft_logout_clear_data_dialog_title">Rensa data</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Du kommer att bli av med åtkomsten till dina krypterade meddelanden om du inte loggar in igen för att återfå dina krypteringsnycklar.</string>
-    <string name="permalink_malformed">Din matrix.to-länk var felformaterad</string>
+    <string name="permalink_malformed">Din quali.chat-länk var felformaterad</string>
     <string name="bug_report_error_too_short">Beskrivningen är för kort</string>
     <string name="notification_initial_sync">Inledande synk…</string>
     <string name="rageshake_detected">Skakning upptäckt!</string>
@@ -1620,7 +1620,7 @@
     <string name="room_settings_topic_hint">Ämne</string>
     <string name="room_settings_save_success">Du ändrade rumsinställningarna framgångsrikt</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Väntar på krypteringshistorik</string>
-    <string name="disclaimer_title">Riot är nu Element!</string>
+    <string name="disclaimer_title">Riot är nu quali.chat!</string>
     <string name="disclaimer_content">Vi är glada att meddela att vi har bytt namn! Din app är uppdaterad och du är inloggad på ditt konto.</string>
     <string name="disclaimer_negative_button">UPPFATTAT</string>
     <string name="disclaimer_positive_button">LÄR DIG MER</string>
@@ -1657,7 +1657,7 @@
     <string name="settings_remove_three_pid_confirmation_content">Ta bort %s\?</string>
     <string name="error_threepid_auth_failed">Se till att du har klickat på länken i e-brevet vi skickade till dig.</string>
     <string name="settings_emails_and_phone_numbers_title">E-postadresser och telefonnummer</string>
-    <string name="settings_emails_and_phone_numbers_summary">Hantera e-postadresser och telefonnummer länkade till ditt Matrix-konto</string>
+    <string name="settings_emails_and_phone_numbers_summary">Hantera e-postadresser och telefonnummer länkade till ditt quali.chat-konto</string>
     <string name="settings_text_message_sent_hint">Kod</string>
     <string name="login_msisdn_notice">Vänligen använd internationellt format (telefonnumret måste börja med \'+\')</string>
     <string name="confirm_your_identity_quad_s">Bekräfta din identitet genom att verifiera den här inloggningen, och ge den åtkomst till dina krypterade meddelanden.</string>
@@ -1753,14 +1753,14 @@
     <string name="share_by_text">Dela med text</string>
     <string name="settings_security_pin_code_change_pin_summary">Byt din nuvarande PIN-kod</string>
     <string name="settings_security_pin_code_change_pin_title">Ändra PIN-kod</string>
-    <string name="phone_book_perform_lookup">Sök efter kontakter på Matrix</string>
+    <string name="phone_book_perform_lookup">Sök efter kontakter på quali.chat</string>
     <string name="room_settings_set_avatar">Sätt avatar</string>
     <string name="identity_server_user_consent_not_provided">Användarsamtycket har inte getts.</string>
     <string name="user_code_info_text">Dela den här koden med folk så att de kan skanna den för att lägga till dig och börja chatta.</string>
     <string name="user_code_my_code">Min kod</string>
     <string name="user_code_share">Dela min kod</string>
     <string name="user_code_scan">Skanna en QR-kod</string>
-    <string name="not_a_valid_qr_code">Det är inte en giltig Matrix-QR-kod</string>
+    <string name="not_a_valid_qr_code">Det är inte en giltig quali.chat-QR-kod</string>
     <string name="invite_friends_rich_title">🔐️ Gå med mig i ${app_name}</string>
     <string name="invite_friends_text">Hallå, prata med mig i ${app_name}: %s</string>
     <string name="invite_friends">Bjud in vänner</string>
@@ -2213,7 +2213,7 @@
     <string name="room_settings_space_access_title">Utrymmesåtkomst</string>
     <string name="room_settings_access_rules_pref_dialog_title">Vem kan komma åt\?</string>
     <string name="settings_notification_emails_enable_for_email">Aktivera e-postaviseringar för %s</string>
-    <string name="settings_notification_emails_no_emails">För att få e-post med aviseringar, vänligen associera en e-postadress med ditt Matrixkonto</string>
+    <string name="settings_notification_emails_no_emails">För att få e-post med aviseringar, vänligen associera en e-postadress med ditt quali.chatkonto</string>
     <string name="settings_notification_emails_category">E-postavisering</string>
     <string name="room_permissions_upgrade_the_space">Uppgradera utrymmet</string>
     <string name="room_permissions_change_space_name">Byta utrymmets namn</string>
@@ -2344,7 +2344,7 @@
     <string name="login_splash_create_account">Skapa konto</string>
     <string name="ftue_auth_carousel_workplace_title">Meddelanden för ditt team.</string>
     <string name="ftue_auth_carousel_encrypted_body">Totalsträckskrypterad och inget telefonnummer krävs. Ingen reklam eller datainsamling.</string>
-    <string name="ftue_auth_carousel_control_body">Välj var dina konversationer lagras, vilket ger dig kontroll och självständighet. Ansluts via Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Välj var dina konversationer lagras, vilket ger dig kontroll och självständighet. Ansluts via quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Säker och oberoende kommunikation som ger dig samma sekretessnivå som en personlig konversation i ditt eget hem.</string>
     <string name="attachment_type_location">Plats</string>
     <string name="room_unsupported_e2e_algorithm_as_admin">Kryptering har felkonfigurerats så du kan inte skicka meddelanden. Klicka för att öppna inställningar.</string>
@@ -2411,7 +2411,7 @@
 \n
 \nMedan vi förbereder den så behöver vi göra några ändringar: trådar skapade innan den här tidpunkten kommer att visas som vanliga svar.
 \n
-\nDet kommer att vara en engångshändelse, eftersom trådar nu är en del av Matrixspecifikationen.</string>
+\nDet kommer att vara en engångshändelse, eftersom trådar nu är en del av quali.chatspecifikationen.</string>
     <string name="live_location_sharing_notification_description">Platsdelning pågår</string>
     <string name="live_location_sharing_notification_title">${app_name} Realtidsplats</string>
     <string name="error_forbidden_digits_only_username">Hemservern accepterar inte användarnamn med bara siffror.</string>
@@ -2562,7 +2562,7 @@
     <string name="ftue_auth_terms_subtitle">Vänligen läs villkor och policyer för %s</string>
     <string name="ftue_auth_terms_title">Serverpolicyer</string>
     <string name="ftue_auth_choose_server_ems_cta">Kom i kontakt</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) är en robust och pålitlig värdtjänst för snabb och säker realtidskommunikation. Lär dig hur på <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) är en robust och pålitlig värdtjänst för snabb och säker realtidskommunikation. Lär dig hur på <a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Vill du driva din egen server\?</string>
     <string name="ftue_auth_choose_server_entry_hint">Server-URL</string>
     <string name="ftue_auth_choose_server_subtitle">Vad är adressen för din server\? Det är som ett hem för all din data</string>
@@ -2597,7 +2597,7 @@
     <string name="space_list_empty_title">Inga utrymmen än.</string>
     <string name="labs_enable_deferred_dm_summary">Skapa DM först när du skickar första meddelandet</string>
     <string name="labs_enable_deferred_dm_title">Aktivera avvaktade DM:er</string>
-    <string name="labs_enable_new_app_layout_summary">En förenklad Element med valfria flikar</string>
+    <string name="labs_enable_new_app_layout_summary">En förenklad quali.chat med valfria flikar</string>
     <string name="labs_enable_new_app_layout_title">Aktivera ny layout</string>
     <string name="home_layout_preferences_sort_name">A - Ö</string>
     <string name="home_layout_preferences_sort_activity">Aktivitet</string>
@@ -2623,8 +2623,8 @@
     <string name="a11y_device_manager_device_type_mobile">Mobil</string>
     <string name="device_manager_sessions_other_description">För bäst säkerhet, verifiera dina sessioner och logga ut från alla sessioner du inte känner igen eller använder längre.</string>
     <string name="device_manager_sessions_other_title">Andra sessioner</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Godkänn automatiskt Element Call-widgets och ge kamera-/mikrofonåtkomst</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Aktivera Element Call-behörighetsgenvägar</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Godkänn automatiskt quali.chat Call-widgets och ge kamera-/mikrofonåtkomst</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Aktivera quali.chat Call-behörighetsgenvägar</string>
     <string name="tooltip_attachment_voice_broadcast">Starta en röstsändning</string>
     <string name="live_location_description">Realtidsplats</string>
     <string name="location_share_loading_map_error">Kunde inte ladda kartan.
@@ -2868,7 +2868,7 @@
 \n
 \nDu kommer inte kunna delta i rum där kryptering är aktiverat när du använder den här sessionen.
 \n
-\nFör bäst säkerhet och sekretess så rekommenderas det att använda Matrix-klienter som stöder kryptering.</string>
+\nFör bäst säkerhet och sekretess så rekommenderas det att använda quali.chat-klienter som stöder kryptering.</string>
     <string name="device_manager_signout_all_other_sessions">Logga ut alla andra sessioner</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">Den här sessioner stöder inte kryptering och kan därför inte verifieras.</string>
     <string name="settings_nightly_build_update">Hämta det senaste bygget (obs: du kan ha problem med att logga in)</string>
@@ -2958,11 +2958,11 @@
     <string name="crosssigning_verify_after_update">App uppdaterad</string>
     <string name="sign_out_failed_dialog_message">Kan inte nå hemservern. Om du ändå loggar ut kommer den här enheten inte att raderas från din enhetslista, du kanske vill ta bort den med en annan klient.</string>
     <string name="sign_out_anyway">Logga ut ändå</string>
-    <string name="create_room_unknown_users_dialog_content">Kunde in hitta profiler för Matrix-ID:n nedan. Vill du starta en chatt ändå\?
+    <string name="create_room_unknown_users_dialog_content">Kunde in hitta profiler för quali.chat-ID:n nedan. Vill du starta en chatt ändå\?
 \n
 \n%s</string>
     <string name="create_room_unknown_users_dialog_submit">Starta chatt ändå</string>
-    <string name="invite_unknown_users_dialog_content">Kunde inte hitta profiler för Matrix-ID:n nedan. Vill du bjuda in dem ändå\?
+    <string name="invite_unknown_users_dialog_content">Kunde inte hitta profiler för quali.chat-ID:n nedan. Vill du bjuda in dem ändå\?
 \n
 \n%s</string>
     <string name="invite_unknown_users_dialog_submit">Bjud in ändå</string>

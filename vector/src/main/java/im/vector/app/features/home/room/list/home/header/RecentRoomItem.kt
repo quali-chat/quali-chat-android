@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,6 +29,7 @@ import im.vector.app.core.epoxy.ClickListener
 import im.vector.app.core.epoxy.VectorEpoxyHolder
 import im.vector.app.core.epoxy.VectorEpoxyModel
 import im.vector.app.core.epoxy.onClick
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.features.displayname.getBestName
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.home.room.list.UnreadCounterBadgeView
@@ -59,7 +61,7 @@ abstract class RecentRoomItem : VectorEpoxyModel<RecentRoomItem.Holder>(R.layout
         avatarRenderer.render(matrixItem, holder.avatarImageView)
         holder.avatarImageView.contentDescription = matrixItem.getBestName()
         holder.unreadCounterBadgeView.render(UnreadCounterBadgeView.State.Count(unreadNotificationCount, showHighlighted))
-        holder.title.text = matrixItem.getBestName()
+        holder.title.swapToEthereumDisplayName(matrixItem.getBestName())
     }
 
     override fun unbind(holder: Holder) {

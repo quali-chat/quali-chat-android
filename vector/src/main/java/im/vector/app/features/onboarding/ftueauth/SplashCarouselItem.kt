@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,6 +37,7 @@ abstract class SplashCarouselItem : VectorEpoxyModel<SplashCarouselItem.Holder>(
         holder.view.setBackgroundResource(item.pageBackground)
         holder.image.setImageResource(item.image)
         holder.title.text = item.title.charSequence
+        holder.title.setTextColor(item.titleColor)
         holder.body.setText(item.body)
     }
 

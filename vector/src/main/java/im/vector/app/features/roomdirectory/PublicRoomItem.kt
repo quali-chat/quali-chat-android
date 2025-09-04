@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,6 +29,7 @@ import im.vector.app.core.epoxy.VectorEpoxyModel
 import im.vector.app.core.epoxy.onClick
 import im.vector.app.core.extensions.setTextOrHide
 import im.vector.app.core.platform.ButtonStateView
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.features.home.AvatarRenderer
 import org.matrix.android.sdk.api.util.MatrixItem
 
@@ -63,8 +65,10 @@ abstract class PublicRoomItem : VectorEpoxyModel<PublicRoomItem.Holder>(R.layout
         holder.rootView.onClick(globalListener)
 
         avatarRenderer.render(matrixItem, holder.avatarView)
-        holder.nameView.text = matrixItem.displayName
+        holder.nameView.swapToEthereumDisplayName(matrixItem.displayName)
         holder.aliasView.setTextOrHide(roomAlias)
+        holder.aliasView.swapToEthereumDisplayName(roomAlias)
+
         holder.topicView.setTextOrHide(roomTopic)
         // TODO Use formatter for big numbers?
         holder.counterView.text = nbOfMembers.toString()

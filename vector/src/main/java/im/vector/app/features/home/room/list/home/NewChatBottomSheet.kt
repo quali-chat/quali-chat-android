@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,6 +26,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.core.platform.VectorBaseBottomSheetDialogFragment
 import im.vector.app.databinding.FragmentNewChatBottomSheetBinding
 import im.vector.app.features.navigation.Navigator
+import im.vector.app.features.userdirectory.directRoomMembersLimit
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -48,7 +50,7 @@ class NewChatBottomSheet : VectorBaseBottomSheetDialogFragment<FragmentNewChatBo
 
         views.createRoom.debouncedClicks {
             dismiss()
-            navigator.openCreateRoom(requireActivity())
+            navigator.openCreateRoom(requireActivity(), directRoomMembersLimit = directRoomMembersLimit)
         }
 
         views.exploreRooms.debouncedClicks {

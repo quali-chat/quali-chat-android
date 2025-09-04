@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Salauksen purku epäonnistui: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Lähettäjän laite ei ole lähettänyt avaimia tähän viestiin.</string>
     <string name="unable_to_send_message">Viestin lähetys epäonnistui</string>
-    <string name="matrix_error">Matrix-virhe</string>
+    <string name="matrix_error">quali.chat-virhe</string>
     <string name="medium_email">Sähköpostiosoite</string>
     <string name="medium_phone_number">Puhelinnumero</string>
     <string name="room_displayname_room_invite">Huonekutsu</string>
@@ -207,7 +207,7 @@
     <string name="invitations_header">Kutsut</string>
     <string name="low_priority_header">Matala prioriteetti</string>
     <string name="direct_chats_header">Keskustelut</string>
-    <string name="matrix_only_filter">Ainoastaan Matrix-yhteyshenkilöt</string>
+    <string name="matrix_only_filter">Ainoastaan quali.chat-yhteyshenkilöt</string>
     <string name="no_result_placeholder">Ei tuloksia</string>
     <string name="rooms_header">Huoneet</string>
     <string name="send_bug_report_include_logs">Lähetä lokit</string>
@@ -616,7 +616,7 @@
         <item quantity="other">%d aktiivista sovelmaa</item>
     </plurals>
     <string name="widget_integration_missing_parameter">Vaadittu parametri puuttuu.</string>
-    <string name="settings_labs_native_camera_summary">Käynnistä järjestelmän kamera Elementin kameraruudun sijaan.</string>
+    <string name="settings_labs_native_camera_summary">Käynnistä järjestelmän kamera quali.chatin kameraruudun sijaan.</string>
     <string name="command_problem_with_parameters">Komento ”%s” vaatii enemmän parametreja, tai jotkin parametrit ovat virheellisiä.</string>
     <string name="command_description_emote">Näyttää toiminnon</string>
     <string name="command_description_ban_user">Estää käyttäjän annetulla id:llä</string>
@@ -630,7 +630,7 @@
     <string name="command_description_remove_user">Potkaisee käyttäjän pois</string>
     <string name="command_description_nick">Vaihtaa näytettävän nimimerkkisi</string>
     <string name="command_description_markdown">Markdown päällä/pois</string>
-    <string name="command_description_clear_scalar_token">Matrix-sovellusten hallinnan korjaamiseen</string>
+    <string name="command_description_clear_scalar_token">quali.chat-sovellusten hallinnan korjaamiseen</string>
     <string name="notification_silent">Hiljainen</string>
     <string name="avatar">Hahmokuva</string>
     <string name="dialog_user_consent_content">Jatkaaksesi kotipalvelimen %1$s käyttöä, sinun täytyy hyväksyä palvelun käyttöehdot.</string>
@@ -639,7 +639,7 @@
 \n
 \nTilin poistaminen <b>ei oletuksena saa meitä unohtamaan lähettämiäsi viestejä</b>. Jos haluat meidän unohtavan viestisi, merkitse alapuolella oleva valintaruutu.
 \n
-\nViestien näkyvyys Matrixissa on samantapainen kuin sähköpostissa. Viestiesi unohtaminen tarkoittaa, että lähettämiäsi viestejä ei näytetä uusille tai rekisteröitymättömille käyttäjille. Ne rekisteröityneet käyttäjät, joilla viestisi jo on, pääsevät kuitenkin näkemään oman kopionsa niistä jatkossakin.</string>
+\nViestien näkyvyys quali.chatissa on samantapainen kuin sähköpostissa. Viestiesi unohtaminen tarkoittaa, että lähettämiäsi viestejä ei näytetä uusille tai rekisteröitymättömille käyttäjille. Ne rekisteröityneet käyttäjät, joilla viestisi jo on, pääsevät kuitenkin näkemään oman kopionsa niistä jatkossakin.</string>
     <string name="deactivate_account_delete_checkbox">Unohda kaikki viestit, jotka olen lähettänyt, kun tilini on poistettu (Varoitus: tästä seuraa, että tulevat käyttäjät näkevät vanhat keskustelut epätäydellisinä)</string>
     <string name="error_empty_field_enter_user_name">Syötä käyttäjätunnus.</string>
     <string name="room_tombstone_versioned_description">Tämä huone on korvattu toisella eikä ole enää aktiivinen.</string>
@@ -824,7 +824,7 @@
 \nLaitteen nimi: %1$s
 \nViimeksi nähty: %2$s
 \nJos et kirjautunut toisella laitteella, voit jättää tämän pyynnön huomiotta.</string>
-    <string name="settings_sdk_version">Matrix SDK:n versio</string>
+    <string name="settings_sdk_version">quali.chat SDK:n versio</string>
     <string name="settings_other_third_party_notices">Muut kolmansien osapuolten huomautukset</string>
     <string name="settings_preferences">Asetukset</string>
     <string name="settings_security_and_privacy">Tietoturva ja yksityisyys</string>
@@ -961,7 +961,7 @@
     <string name="settings_troubleshoot_test_token_registration_quick_fix">Rekisteröi tunniste</string>
     <string name="send_file_step_encrypting_thumbnail">Salataan pikkukuvaa…</string>
     <string name="send_file_step_sending_thumbnail">Lähetetään pikkukuvaa (%1$s / %2$s)</string>
-    <string name="room_directory_search_hint">Nimi tai tunniste (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Nimi tai tunniste </string>
     <string name="settings_discovery_emails_title">Etsittävät sähköpostiosoitteet</string>
     <string name="settings_discovery_no_mails">Vaihtoehdot ilmestyvät, kunhan olet lisännyt sähköpostiosoitteen.</string>
     <string name="settings_discovery_no_msisdn">Vaihtoehdot ilmestyvät, kunhan olet lisännyt puhelinnumeron.</string>
@@ -990,7 +990,7 @@
     <string name="content_reported_as_inappropriate_content">Tämä sisältö on ilmiannettu epäsopivana. 
 \n 
 \nJos et halua nähdä enempää sisältöä tältä käyttäjältä, voit estää hänet piilottaaksesi hänen viestit.</string>
-    <string name="login_error_no_homeserver_found">Tämä ei ole kelvollinen Matrix-palvelimen osoite</string>
+    <string name="login_error_no_homeserver_found">Tämä ei ole kelvollinen quali.chat-palvelimen osoite</string>
     <string name="message_ignore_user">Jätä käyttäjä huomiotta</string>
     <string name="room_list_quick_actions_notifications_all_noisy">Kaikki viestit (äänekäs)</string>
     <string name="room_list_quick_actions_notifications_all">Kaikki viestit</string>
@@ -1021,16 +1021,16 @@
     <string name="login_server_other_text">Mukautetut ja monimutkaiset asetukset</string>
     <string name="login_continue">Jatka</string>
     <string name="login_connect_to">Yhdistä palvelimeen %1$s</string>
-    <string name="login_connect_to_modular">Yhdistä Element Matrix Services</string>
+    <string name="login_connect_to_modular">Yhdistä quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">Yhdistä itse määritettyyn palvelimeen</string>
     <string name="login_signin_to">Kirjaudu sisään palvelimeen %1$s</string>
     <string name="login_signup">Rekisteröidy</string>
     <string name="login_signin">Kirjaudu sisään</string>
     <string name="login_signin_sso">Jatka kertakirjautumisella</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services in osoite</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services in osoite</string>
     <string name="login_server_url_form_other_hint">Osoite</string>
     <string name="login_server_url_form_modular_text">Korkealuokkaista isännöintiä organisaatioille</string>
-    <string name="login_server_url_form_modular_notice">Syötä Modular Elementin tai haluamasi palvelimen osoite</string>
+    <string name="login_server_url_form_modular_notice">Syötä Modular quali.chatin tai haluamasi palvelimen osoite</string>
     <string name="login_sso_error_message">Sivun lataamisessa tapahtui virhe: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Sovellus ei pysty kirjautumaan sisään tälle kotipalvelimelle. Tämä kotipalvelin tukee seuraavia kirjautumistyyppejä: %1$s.
 \n
@@ -1087,7 +1087,7 @@
     <string name="login_signup_cancel_confirmation_title">Varoitus</string>
     <string name="login_signup_cancel_confirmation_content">Tunnustasi ei ole vielä luotu. Peru rekisteröintiprosessi\?</string>
     <string name="login_a11y_choose_matrix_org">Valitse matrix.org</string>
-    <string name="login_a11y_choose_modular">Valitse Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Valitse quali.chat Services</string>
     <string name="login_a11y_choose_other">Valitse muu kotipalvelin</string>
     <string name="login_a11y_captcha_container">Ratkaise seuraava kuvavarmennushaaste</string>
     <string name="login_terms_title">Hyväksy ehdot jatkaaksesi</string>
@@ -1119,7 +1119,7 @@
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Menetät pääsyn salattuihin viesteihisi ellet kirjaudu sisään palauttaaksesi salausavaimesi.</string>
     <string name="soft_logout_sso_not_same_user_error">Nykyinen istunto on käyttäjälle %1$s, ja yritit kirjautuas isään käyttäjälle %2$s. ${app_name} ei tue tätä.
 \nPoista ensin tietosi ja kirjaudu sen jälkeen toisella tunnuksella. Voit vaihtoehtoisesti käyttää ${app_name}in selainversiota.</string>
-    <string name="permalink_malformed">matrix.to-linkkisi oli epämuodostunut</string>
+    <string name="permalink_malformed">quali.chat-linkkisi oli epämuodostunut</string>
     <string name="bug_report_error_too_short">Kuvaus on liian lyhyt</string>
     <string name="signed_out_notice">Se voi johtua monesta eri syystä:
 \n
@@ -1366,7 +1366,7 @@
     <string name="cannot_dm_self">Et voi lähettää yksityisviestiä itsellesi!</string>
     <string name="warning_unsaved_change_discard">Hylkää muutokset</string>
     <string name="invalid_qr_code_uri">Virheellinen QR-koodi (virheellinen URI)!</string>
-    <string name="not_a_valid_qr_code">Tämä ei ole kelvollinen Matrix QR-koodi</string>
+    <string name="not_a_valid_qr_code">Tämä ei ole kelvollinen quali.chat QR-koodi</string>
     <string name="qr_code_scanned_self_verif_notice">Melkein valmista! Näkyykö toisella laitteella sama kilpi\?</string>
     <string name="qr_code_scanned_verif_waiting_notice">Melkein valmista! Odottaa vahvistusta…</string>
     <string name="qr_code_scanned_verif_waiting">Odotetaan %s…</string>
@@ -1380,7 +1380,7 @@
     <string name="room_manage_integrations">Integraatioiden hallinta</string>
     <string name="login_msisdn_notice">Käytä kansainvälistä muotoa (puhelinnumeron on alettava merkillä \'+\')</string>
     <string name="settings_emails_and_phone_numbers_title">Sähköpostiosoitteet ja puhelinnumerot</string>
-    <string name="settings_emails_and_phone_numbers_summary">Hallitse Matrix-tiliisi linkitettyjä sähköpostiosoitteita ja puhelinnumeroita</string>
+    <string name="settings_emails_and_phone_numbers_summary">Hallitse quali.chat-tiliisi linkitettyjä sähköpostiosoitteita ja puhelinnumeroita</string>
     <string name="change_password_summary">Aseta tilille uusi salasana…</string>
     <string name="settings_troubleshoot_test_push_notification_content">Katselet ilmoitusta! Napsauta minua!</string>
     <string name="settings_troubleshoot_test_notification_notice">Napsauta ilmoitusta. Jos ilmoitusta ei näy, tarkasta järjestelmäasetukset.</string>
@@ -1459,7 +1459,7 @@
     <string name="add_members_to_room">Lisää jäseniä</string>
     <string name="settings_account_data">Tilitiedot</string>
     <string name="system_theme">Järjestelmän oletus</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
     <string name="event_redacted">Poistettu viesti</string>
     <string name="active_widgets_title">Aktiiviset sovelmat</string>
     <string name="room_participants_unban_title">Poista esto</string>
@@ -1688,11 +1688,11 @@
     </plurals>
     <string name="alert_push_are_disabled_description">Katselmoi asetukset ottaaksesi push-ilmoitukset käyttöön</string>
     <string name="alert_push_are_disabled_title">Push-ilmoitukset ovat pois käytöstä</string>
-    <string name="phone_book_perform_lookup">Etsi yhteystietojasi Matrixista</string>
+    <string name="phone_book_perform_lookup">Etsi yhteystietojasi quali.chatista</string>
     <string name="disclaimer_positive_button">LUE LISÄÄ</string>
     <string name="disclaimer_negative_button">SELVÄ</string>
     <string name="disclaimer_content">Olemme iloisia uuden nimen lanseerauksesta! Sovelluksesi on ajan tasalla ja olet kirjautunut tilillesi.</string>
-    <string name="disclaimer_title">Riot on nyt Element!</string>
+    <string name="disclaimer_title">Riot on nyt quali.chat!</string>
     <string name="room_settings_save_success">Muutit huoneen asetuksia onnistuneesti</string>
     <string name="a11y_start_camera">Käynnistä kamera</string>
     <string name="a11y_stop_camera">Pysäytä kamera</string>
@@ -1844,7 +1844,7 @@
     <string name="settings_notification_mentions_and_keywords">Maininnat ja avainsanat</string>
     <string name="settings_notification_default">Oletusilmoitukset</string>
     <string name="settings_notification_emails_enable_for_email">Lähetä sähköposti-ilmoituksia osoitteeseen %s</string>
-    <string name="settings_notification_emails_no_emails">Jotta voit vastaanottaa sähköposti-ilmoituksia, sido sähköpostiosoite Matrix-tiliisi</string>
+    <string name="settings_notification_emails_no_emails">Jotta voit vastaanottaa sähköposti-ilmoituksia, sido sähköpostiosoite quali.chat-tiliisi</string>
     <string name="settings_notification_emails_category">Sähköposti-ilmoitus</string>
     <string name="settings_remove_three_pid_confirmation_content">Poistetaanko %s\?</string>
     <string name="room_settings_none">Ei mitään</string>
@@ -1962,7 +1962,7 @@
     <string name="tooltip_attachment_location">Jaa sijainti</string>
     <string name="message_reaction_show_less">Näytä vähemmän</string>
     <string name="ftue_auth_carousel_encrypted_body">Läpisalattu, puhelinnumeroa ei vaadita. Ei mainoksia tai tiedonlouhintaa.</string>
-    <string name="ftue_auth_carousel_control_body">Valitse missä keskustelujasi säilytetään – sinä päätät ja olet riippumaton. Yhdistäjänä Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Valitse missä keskustelujasi säilytetään – sinä päätät ja olet riippumaton. Yhdistäjänä quali.chat.</string>
     <string name="ftue_auth_carousel_control_title">Sinä päätät.</string>
     <string name="ftue_auth_carousel_secure_body">Turvallista ja riippumatonta viestintää, joka on yhtä yksityistä kuin keskustelisit kasvokkain kotonasi.</string>
     <string name="ftue_auth_carousel_workplace_title">Viestintää tiimillesi.</string>
@@ -2288,7 +2288,7 @@
     <string name="onboarding_new_app_layout_feedback_title">Anna palautetta</string>
     <string name="onboarding_new_app_layout_welcome_message">${app_name}in yksinkertaistaminen asetti välilehdet valinnaiseksi. Hallitse välilehtiä oikean yläkulman valikosta.</string>
     <string name="onboarding_new_app_layout_welcome_title">Tervetuloa uuteen näkymään!</string>
-    <string name="labs_enable_new_app_layout_summary">Yksinkertaistettu Element valinnaisilla välilehdillä</string>
+    <string name="labs_enable_new_app_layout_summary">Yksinkertaistettu quali.chat valinnaisilla välilehdillä</string>
     <string name="labs_enable_new_app_layout_title">Ota uusi asettelu käyttöön</string>
     <string name="home_layout_preferences_sort_name">A - Ö</string>
     <string name="home_layout_preferences_sort_activity">Aktiivisuus</string>
