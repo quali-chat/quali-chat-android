@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -83,7 +84,7 @@ class ShareSpaceBottomSheet : VectorBaseBottomSheetDialogFragment<BottomSheetSpa
         viewModel.observeViewEvents { event ->
             when (event) {
                 is ShareSpaceViewEvents.NavigateToInviteUser -> {
-                    val intent = InviteUsersToRoomActivity.getIntent(requireContext(), event.spaceId)
+                    val intent = InviteUsersToRoomActivity.getIntent(requireContext(), event.spaceId, directRoomMembersLimit = Int.MAX_VALUE)
                     startActivity(intent)
                     dismissAllowingStateLoss()
                 }

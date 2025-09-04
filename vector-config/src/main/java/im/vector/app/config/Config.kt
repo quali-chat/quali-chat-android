@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -80,7 +81,7 @@ object Config {
             postHogHost = "https://posthog.element.dev",
             postHogApiKey = "phc_VtA1L35nw3aeAtHIx1ayrGdzGkss7k1xINeXcoIQzXN",
             policyLink = "https://element.io/cookie-policy",
-            sentryDSN = "https://f6acc9cfc2024641b28c87ad95e73e66@sentry.tools.element.io/49",
+            sentryDSN = "https://cefc9094a0ca005f35bef526d25d7260@sentry.quali.chat/2",
             sentryEnvironment = "DEBUG"
     )
 
@@ -89,10 +90,10 @@ object Config {
      * Can be disabled by providing Analytics.Disabled
      */
     val RELEASE_ANALYTICS_CONFIG = Analytics.Enabled(
-            postHogHost = "https://posthog.element.io",
-            postHogApiKey = "phc_Jzsm6DTm6V2705zeU5dcNvQDlonOR68XvX2sh1sEOHO",
-            policyLink = "https://element.io/cookie-policy",
-            sentryDSN = "https://f6acc9cfc2024641b28c87ad95e73e66@sentry.tools.element.io/49",
+            postHogHost = "https://posthog.quali.chat",
+            postHogApiKey = "phc_30ySRD1mbKWx6G3EOjno1qrbK09A5kxGW0xrX2vzkNV",
+            policyLink = "https://quali.chat/privacy",
+            sentryDSN = "https://cefc9094a0ca005f35bef526d25d7260@sentry.quali.chat/2",
             sentryEnvironment = "RELEASE"
     )
 

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,22 +19,9 @@ package org.matrix.android.sdk.internal.crypto.model
 import org.matrix.android.sdk.api.session.crypto.crosssigning.CryptoCrossSigningKey
 import org.matrix.android.sdk.api.session.crypto.model.CryptoDeviceInfo
 import org.matrix.android.sdk.internal.crypto.model.rest.DeviceKeys
-import org.matrix.android.sdk.internal.crypto.model.rest.DeviceKeysWithUnsigned
 import org.matrix.android.sdk.internal.crypto.model.rest.RestKeyInfo
 
 internal object CryptoInfoMapper {
-
-    fun map(deviceKeysWithUnsigned: DeviceKeysWithUnsigned): CryptoDeviceInfo {
-        return CryptoDeviceInfo(
-                deviceId = deviceKeysWithUnsigned.deviceId,
-                userId = deviceKeysWithUnsigned.userId,
-                algorithms = deviceKeysWithUnsigned.algorithms,
-                keys = deviceKeysWithUnsigned.keys,
-                signatures = deviceKeysWithUnsigned.signatures,
-                unsigned = deviceKeysWithUnsigned.unsigned,
-                trustLevel = null
-        )
-    }
 
     fun map(cryptoDeviceInfo: CryptoDeviceInfo): DeviceKeys {
         return DeviceKeys(

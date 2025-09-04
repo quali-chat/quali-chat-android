@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -919,8 +920,8 @@ internal class LocalEchoEventFactory @Inject constructor(
     companion object {
         // <mx-reply>
         //     <blockquote>
-        //         <a href="https://matrix.to/#/!somewhere:domain.com/$event:domain.com">In reply to</a>
-        //         <a href="https://matrix.to/#/@alice:example.org">@alice:example.org</a>
+        //         <a href="https://quali.chat/#/!somewhere:domain.com/$event:domain.com">In reply to</a>
+        //         <a href="https://quali.chat/#/@alice:example.org">@alice:example.org</a>
         //         <br />
         //         <!-- This is where the related event's HTML would be. -->
         //     </blockquote>

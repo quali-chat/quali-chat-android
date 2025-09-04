@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,5 +30,6 @@ data class UserListFragmentArgs(
         val single3pidSelection: Boolean = false,
         val showInviteActions: Boolean = true,
         val showContactBookAction: Boolean = true,
-        val showToolbar: Boolean = true
+        val showToolbar: Boolean = true,
+        val directRoomMembersLimit: Int
 ) : Parcelable

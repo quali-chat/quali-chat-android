@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,14 +22,12 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 
-@JsonClass(generateAdapter = true)
-@Parcelize
-data class SsoIdentityProvider(
+@JsonClass(generateAdapter = true) @Parcelize data class SsoIdentityProvider(
         /**
          * The id field would be opaque with the accepted characters matching unreserved URI characters as defined in RFC3986
          * - this was chosen to avoid having to encode special characters in the URL. Max length 128.
          */
-        @Json(name = "id") val id: String,
+        @Json(name = "id") var id: String,
         /**
          * The name field should be the human readable string intended for printing by the client.
          */
@@ -46,7 +45,7 @@ data class SsoIdentityProvider(
          * "Common namespaced identifier grammar" as defined in
          * [MSC2758](https://github.com/matrix-org/matrix-doc/pull/2758).
          */
-        @Json(name = "brand") val brand: String?
+        @Json(name = "brand") var brand: String?
 
 ) : Parcelable, Comparable<SsoIdentityProvider> {
 
@@ -57,6 +56,10 @@ data class SsoIdentityProvider(
         const val BRAND_FACEBOOK = "facebook"
         const val BRAND_TWITTER = "twitter"
         const val BRAND_GITLAB = "gitlab"
+        const val BRAND_ETHEREUM = "ethereum"
+        const val BRAND_SOLANA = "solana"
+        const val BRAND_BITCOIN = "bitcoin"
+        const val BRAND_AETERNITY = "aeternity"
     }
 
     override fun compareTo(other: SsoIdentityProvider): Int {
@@ -66,14 +69,17 @@ data class SsoIdentityProvider(
     private fun toPriority(): Int {
         return when (brand) {
             // We are on Android, so user is more likely to have a Google account
+            BRAND_AETERNITY -> 9
+            BRAND_BITCOIN -> 8
+            BRAND_SOLANA -> 7
+            BRAND_ETHEREUM -> 6
             BRAND_GOOGLE -> 5
             // Facebook is also an important SSO provider
             BRAND_FACEBOOK -> 4
             // Twitter is more for professionals
             BRAND_TWITTER -> 3
             // Here it's very for techie people
-            BRAND_GITHUB,
-            BRAND_GITLAB -> 2
+            BRAND_GITHUB, BRAND_GITLAB -> 2
             // And finally, if the account has been created with an iPhone...
             BRAND_APPLE -> 1
             else -> 0

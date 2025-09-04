@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +20,7 @@ package im.vector.app.features.home.room.list
 import android.view.HapticFeedbackConstants
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isInvisible
@@ -34,6 +36,7 @@ import im.vector.app.core.epoxy.onClick
 import im.vector.app.core.extensions.setTextOrHide
 import im.vector.app.core.ui.views.PresenceStateImageView
 import im.vector.app.core.ui.views.ShieldImageView
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.features.displayname.getBestName
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.home.RoomListDisplayMode
@@ -115,9 +118,12 @@ abstract class RoomSummaryItem : VectorEpoxyModel<RoomSummaryItem.Holder>(R.layo
             it.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
             itemLongClickListener?.onLongClick(it) ?: false
         }
-        holder.titleView.text = matrixItem.getBestName()
+        holder.titleView.swapToEthereumDisplayName(matrixItem.getBestName())
+        holder.titleView.invalidate()
+
         holder.unreadCounterBadgeView.render(UnreadCounterBadgeView.State.Count(unreadNotificationCount, showHighlighted))
         holder.unreadIndentIndicator.isVisible = hasUnreadMessage
+        holder.unreadGradientBackground.isVisible = hasUnreadMessage
         holder.draftView.isVisible = hasDraft
         avatarRenderer.render(matrixItem, holder.avatarImageView)
         holder.roomAvatarDecorationImageView.render(encryptionTrustLevel)
@@ -139,14 +145,15 @@ abstract class RoomSummaryItem : VectorEpoxyModel<RoomSummaryItem.Holder>(R.layo
     }
 
     private fun renderForDefaultDisplayMode(holder: Holder) {
-        holder.subtitleView.text = lastFormattedEvent.charSequence
+        holder.subtitleView.swapToEthereumDisplayName(lastFormattedEvent.charSequence.toString())
         holder.lastEventTimeView.text = lastEventTime
         holder.typingView.setTextOrHide(typingMessage)
         holder.subtitleView.isInvisible = holder.typingView.isVisible
+
     }
 
     private fun renderForFilteredDisplayMode(holder: Holder) {
-        holder.subtitleView.text = subtitle
+        holder.subtitleView.swapToEthereumDisplayName(subtitle)
     }
 
     override fun unbind(holder: Holder) {
@@ -172,6 +179,7 @@ abstract class RoomSummaryItem : VectorEpoxyModel<RoomSummaryItem.Holder>(R.layo
         val titleView by bind<TextView>(R.id.roomNameView)
         val unreadCounterBadgeView by bind<UnreadCounterBadgeView>(R.id.roomUnreadCounterBadgeView)
         val unreadIndentIndicator by bind<View>(R.id.roomUnreadIndicator)
+        val unreadGradientBackground by bind<LinearLayout>(R.id.unreadGradientBackground)
         val subtitleView by bind<TextView>(R.id.subtitleView)
         val typingView by bind<TextView>(R.id.roomTypingView)
         val draftView by bind<ImageView>(R.id.roomDraftBadge)

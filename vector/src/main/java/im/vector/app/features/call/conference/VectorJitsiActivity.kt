@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -206,6 +207,7 @@ class VectorJitsiActivity : VectorBaseActivity<ActivityJitsiBinding>(), JitsiMee
                     }
                 }
                 // https://github.com/jitsi/jitsi-meet/blob/master/react/features/base/flags/constants.ts
+                // TODO jitsi config for video calls
                 .setFeatureFlag("chat.enabled", false)
                 .setFeatureFlag("invite.enabled", false)
                 .setFeatureFlag("add-people.enabled", false)

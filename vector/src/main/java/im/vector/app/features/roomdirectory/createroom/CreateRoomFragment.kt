@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -58,7 +59,8 @@ data class CreateRoomArgs(
         val initialName: String,
         val parentSpaceId: String? = null,
         val isSpace: Boolean = false,
-        val openAfterCreate: Boolean = true
+        val openAfterCreate: Boolean = true,
+        val limit: Int
 ) : Parcelable
 
 @AndroidEntryPoint

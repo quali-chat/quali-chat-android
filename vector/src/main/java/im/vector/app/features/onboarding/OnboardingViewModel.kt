@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,6 +41,7 @@ import im.vector.app.features.VectorOverrides
 import im.vector.app.features.analytics.AnalyticsTracker
 import im.vector.app.features.analytics.extensions.toTrackingValue
 import im.vector.app.features.analytics.plan.UserProperties
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.login.HomeServerConnectionConfigFactory
 import im.vector.app.features.login.LoginConfig
 import im.vector.app.features.login.LoginMode
@@ -144,6 +146,8 @@ class OnboardingViewModel @AssistedInject constructor(
             }
         }
     }
+
+    private val SSO_REDIRECT_BLOCKCHAIN_PARAM = "blockchain"
 
     private val matrixOrgUrl = stringProvider.getString(R.string.matrix_org_server_url).ensureTrailingSlash()
     private val defaultHomeserverUrl = mdmService.getData(MdmData.DefaultHomeserverUrl, matrixOrgUrl)
@@ -269,6 +273,12 @@ class OnboardingViewModel @AssistedInject constructor(
     private fun continueToPageAfterSplash(onboardingFlow: OnboardingFlow) {
         when (onboardingFlow) {
             OnboardingFlow.SignUp -> {
+
+                if (ProductFlavour.isQualiChat()) {
+                    handle(OnboardingAction.UpdateUseCase(FtueUseCase.SKIP))
+                    return
+                }
+
                 _viewEvents.post(
                         if (vectorFeatures.isOnboardingUseCaseEnabled()) {
                             OnboardingViewEvents.OpenUseCaseSelection
@@ -794,8 +804,12 @@ class OnboardingViewModel @AssistedInject constructor(
                     }
                 }
                 OnboardingFlow.SignUp -> {
-                    updateSignMode(SignMode.SignUp)
-                    internalRegisterAction(RegisterAction.StartRegistration)
+                    if (!ProductFlavour.isQualiChat()) {
+                        updateSignMode(SignMode.SignUp)
+                        internalRegisterAction(RegisterAction.StartRegistration)
+                    } else {
+                        _viewEvents.post(OnboardingViewEvents.OnLoginFlowRetrieved)
+                    }
                 }
                 OnboardingFlow.SignInSignUp,
                 null -> {
@@ -853,7 +867,10 @@ class OnboardingViewModel @AssistedInject constructor(
             val authDescription = AuthenticationDescription.Register(provider.toAuthenticationType())
             copy(selectedAuthenticationState = SelectedAuthenticationState(authDescription))
         }
-        return authenticationService.getSsoUrl(redirectUrl, deviceId, provider?.id, action)
+
+        return buildString {
+            append(authenticationService.getSsoUrl(redirectUrl, deviceId, provider?.id, action))
+        }
     }
 
     fun getFallbackUrl(forSignIn: Boolean, deviceId: String?): String? {
@@ -951,6 +968,10 @@ class OnboardingViewModel @AssistedInject constructor(
 
     private fun cancelWaitForEmailValidation() {
         emailVerificationPollingJob = null
+    }
+
+    fun openBottomSheet() {
+        _viewEvents.post(OnboardingViewEvents.OnLoginFlowRetrieved)
     }
 }
 

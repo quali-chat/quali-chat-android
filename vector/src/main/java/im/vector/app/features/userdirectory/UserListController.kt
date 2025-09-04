@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,6 +32,7 @@ import im.vector.app.core.resources.ColorProvider
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.ui.list.genericPillItem
 import im.vector.app.features.displayname.getBestName
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.lib.core.utils.epoxy.charsequence.toEpoxyCharSequence
 import me.gujun.android.span.span
@@ -70,7 +72,7 @@ class UserListController @Inject constructor(
         }
 
         // Build generic items
-        if (currentState.searchTerm.isBlank()) {
+        if (currentState.searchTerm.isBlank() && !ProductFlavour.isQualiChat()) {
             if (currentState.showInviteActions()) {
                 actionItem {
                     id(R.drawable.ic_share)
@@ -81,7 +83,7 @@ class UserListController @Inject constructor(
                     }
                 }
             }
-            if (currentState.showContactBookAction) {
+            if (currentState.showContactBookAction && !ProductFlavour.isQualiChat()) {
                 actionItem {
                     id(R.drawable.ic_baseline_perm_contact_calendar_24)
                     title(host.stringProvider.getString(R.string.contacts_book_title))
@@ -91,7 +93,7 @@ class UserListController @Inject constructor(
                     }
                 }
             }
-            if (currentState.showInviteActions()) {
+            if (currentState.showInviteActions() && !ProductFlavour.isQualiChat()) {
                 actionItem {
                     id(R.drawable.ic_qr_code_add)
                     title(host.stringProvider.getString(R.string.qr_code))

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -86,7 +87,7 @@ abstract class CallTileTimelineItem : AbsBaseMessageItem<CallTileTimelineItem.Ho
         }
         holder.acceptRejectViewGroup.isVisible = true
         holder.acceptView.setText(R.string.call_tile_call_back)
-        holder.acceptView.setLeftDrawable(attributes.callKind.icon, R.attr.colorOnPrimary)
+        holder.acceptView.setLeftDrawable(attributes.callKind.icon)
         holder.acceptView.onClick {
             val callbackAction = RoomDetailAction.StartCall(attributes.callKind == CallKind.VIDEO)
             attributes.callback?.onTimelineItemAction(callbackAction)
@@ -114,7 +115,7 @@ abstract class CallTileTimelineItem : AbsBaseMessageItem<CallTileTimelineItem.Ho
     private fun renderRejectedStatus(holder: Holder) {
         holder.acceptRejectViewGroup.isVisible = true
         holder.acceptView.setText(R.string.call_tile_call_back)
-        holder.acceptView.setLeftDrawable(attributes.callKind.icon, R.attr.colorOnPrimary)
+        holder.acceptView.setLeftDrawable(attributes.callKind.icon)
         holder.acceptView.onClick {
             val callbackAction = RoomDetailAction.StartCall(attributes.callKind == CallKind.VIDEO)
             attributes.callback?.onTimelineItemAction(callbackAction)
@@ -143,7 +144,7 @@ abstract class CallTileTimelineItem : AbsBaseMessageItem<CallTileTimelineItem.Ho
             attributes.callKind == CallKind.CONFERENCE -> {
                 holder.rejectView.isVisible = true
                 holder.rejectView.setText(R.string.action_leave)
-                holder.rejectView.setLeftDrawable(R.drawable.ic_call_hangup, R.attr.colorOnPrimary)
+                holder.rejectView.setLeftDrawable(R.drawable.ic_call_hangup)
                 holder.rejectView.onClick {
                     attributes.callback?.onTimelineItemAction(RoomDetailAction.LeaveJitsiCall)
                 }
@@ -151,7 +152,7 @@ abstract class CallTileTimelineItem : AbsBaseMessageItem<CallTileTimelineItem.Ho
             attributes.isStillActive -> {
                 holder.rejectView.isVisible = true
                 holder.rejectView.setText(R.string.call_notification_hangup)
-                holder.rejectView.setLeftDrawable(R.drawable.ic_call_hangup, R.attr.colorOnPrimary)
+                holder.rejectView.setLeftDrawable(R.drawable.ic_call_hangup)
                 holder.rejectView.onClick {
                     attributes.callback?.onTimelineItemAction(RoomDetailAction.EndCall)
                 }
@@ -177,7 +178,7 @@ abstract class CallTileTimelineItem : AbsBaseMessageItem<CallTileTimelineItem.Ho
                 holder.acceptView.isVisible = true
                 holder.rejectView.isVisible = false
                 holder.acceptView.setText(R.string.action_join)
-                holder.acceptView.setLeftDrawable(R.drawable.ic_call_video_small, R.attr.colorOnPrimary)
+                holder.acceptView.setLeftDrawable(R.drawable.ic_call_video_small)
             }
             !attributes.informationData.sentByMe && attributes.isStillActive -> {
                 holder.acceptRejectViewGroup.isVisible = true
@@ -186,18 +187,18 @@ abstract class CallTileTimelineItem : AbsBaseMessageItem<CallTileTimelineItem.Ho
                 holder.acceptView.onClick {
                     attributes.callback?.onTimelineItemAction(RoomDetailAction.AcceptCall(callId = attributes.callId))
                 }
-                holder.rejectView.setLeftDrawable(R.drawable.ic_call_hangup, R.attr.colorOnPrimary)
+                holder.rejectView.setLeftDrawable(R.drawable.ic_call_hangup)
                 holder.rejectView.onClick {
                     attributes.callback?.onTimelineItemAction(RoomDetailAction.EndCall)
                 }
                 if (attributes.callKind == CallKind.AUDIO) {
                     holder.rejectView.setText(R.string.call_notification_reject)
                     holder.acceptView.setText(R.string.call_notification_answer)
-                    holder.acceptView.setLeftDrawable(R.drawable.ic_call_audio_small, R.attr.colorOnPrimary)
+                    holder.acceptView.setLeftDrawable(R.drawable.ic_call_audio_small)
                 } else if (attributes.callKind == CallKind.VIDEO) {
                     holder.rejectView.setText(R.string.call_notification_reject)
                     holder.acceptView.setText(R.string.call_notification_answer)
-                    holder.acceptView.setLeftDrawable(R.drawable.ic_call_video_small, R.attr.colorOnPrimary)
+                    holder.acceptView.setLeftDrawable(R.drawable.ic_call_video_small)
                 }
             }
             else -> {

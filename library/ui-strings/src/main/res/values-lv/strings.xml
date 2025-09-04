@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Neizdodas atšifrēt: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Sūtītāja ierīce mums nav nenosūtījusi atslēgas priekš šīs ziņas.</string>
     <string name="unable_to_send_message">Neizdodas nosūtīt ziņu</string>
-    <string name="matrix_error">Matrix kļūda</string>
+    <string name="matrix_error">quali.chat kļūda</string>
     <string name="medium_email">Epasta adrese</string>
     <string name="medium_phone_number">Telefona numurs</string>
     <string name="room_displayname_room_invite">Uzaicinājums uz istabu</string>
@@ -240,7 +240,7 @@
     <string name="invitations_header">Uzaicinājumi</string>
     <string name="low_priority_header">Zema prioritāte</string>
     <string name="direct_chats_header">Sarunas</string>
-    <string name="matrix_only_filter">Vienīgi Matrix kontakti</string>
+    <string name="matrix_only_filter">Vienīgi quali.chat kontakti</string>
     <string name="no_result_placeholder">Nav rezultātu</string>
     <string name="rooms_header">Istabas</string>
     <string name="send_bug_report_include_logs">Nosūtīt logfailus</string>
@@ -299,7 +299,7 @@
     <string name="incoming_voice_call">Ienākošs AUDIO zvans</string>
     <string name="call_in_progress">Notiek zvans…</string>
     <string name="call_error_user_not_responding">Adresāts neatbildēja uz zvanu.</string>
-    <string name="permissions_rationale_popup_title">Element informācija</string>
+    <string name="permissions_rationale_popup_title">quali.chat informācija</string>
     <string name="permissions_rationale_msg_record_audio">${app_name}-am nepieciešama atļauja piekļūt mikrofonam, lai nodrošinātu audio zvanus.</string>
     <string name="permissions_rationale_msg_camera_and_audio">${app_name} nepieciešama atļauja piekļūt kamerai un mikrofonam, lai veiktu videozvanus.
 \n
@@ -507,7 +507,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="widget_integration_missing_room_id">Pieprasījumā iztrūkst room_id.</string>
     <string name="widget_integration_missing_user_id">Pieprasījumā iztrūkst user_id.</string>
     <string name="widget_integration_room_not_visible">Istaba %s ir neredzama.</string>
-    <string name="room_add_matrix_apps">Pievienot Matrix lietotnes</string>
+    <string name="room_add_matrix_apps">Pievienot quali.chat lietotnes</string>
     <string name="settings_labs_native_camera">Lietot iebūvēto kameru</string>
     <string name="you_added_a_new_device">Tu pievienoji jaunu ierīci \'%s\', kura pieprasa šifrēšanas atslēgas.</string>
     <string name="your_unverified_device_requesting">Tava neverificētā ierīce \'%s\' pieprasa šifrēšanas atslēgas.</string>
@@ -538,7 +538,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="confirm_your_identity">Apstipriniet savu identitāti, verificējot šo pierakstīšanos no kādas citas savas sesijas, tādējādi ļaujot piekļūt šifrētajām ziņām.</string>
     <string name="cross_signing_verify_by_text">Manuāli verificēt ar tekstu</string>
     <string name="unencrypted">Nešifrēts</string>
-    <string name="or_other_mx_capable_client">vai kādu citu Matrix lietotni ar cross-signing atbalstu</string>
+    <string name="or_other_mx_capable_client">vai kādu citu quali.chat lietotni ar cross-signing atbalstu</string>
     <string name="auth_invalid_login_deactivated_account">Šis konts ir deaktivizēts.</string>
     <string name="settings_messages_in_e2e_group_chat">Šifrētas ziņas grupas tērzēšanās</string>
     <string name="settings_messages_in_e2e_one_to_one">Šifrētas ziņas tiešajās tērzēšanās</string>
@@ -605,7 +605,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="soft_logout_signin_password_hint">Parole</string>
     <string name="soft_logout_signin_submit">Pierakstīties</string>
     <string name="soft_logout_signin_title">Pierakstīties</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
     <string name="login_signup_cancel_confirmation_title">Brīdinājums</string>
     <string name="login_signup_error_user_in_use">Šāds lietotājvārds jau ir aizņemts</string>
     <string name="login_signup_submit">Tālāk</string>
@@ -831,7 +831,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="devices_other_devices">Citas sesijas</string>
     <string name="devices_current_device">Pašreizējā sesija</string>
     <string name="settings_advanced_settings">Papildu iestatījumi</string>
-    <string name="permalink_malformed">matrix.to saite ir nepareizi veidota</string>
+    <string name="permalink_malformed">quali.chat saite ir nepareizi veidota</string>
     <string name="soft_logout_clear_data_dialog_title">Dzēst datus</string>
     <string name="soft_logout_clear_data_submit">Dzēst visus datus</string>
     <string name="login_social_continue">Vai</string>
@@ -876,7 +876,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="settings_preferences">Preferences</string>
     <string name="navigate_to_room_when_already_in_the_room">Tu jau apskati šo istabu!</string>
     <string name="settings_other_third_party_notices">Citi trešo pušu paziņojumi</string>
-    <string name="settings_sdk_version">Matrix SDK versija</string>
+    <string name="settings_sdk_version">quali.chat SDK versija</string>
     <string name="room_preview_no_preview_join">Šīs istabas priekšskatījums nav pieejams. Vai vēlaties tai pievienoties\?</string>
     <string name="room_preview_not_found">Šī istaba šobrīd nav pieejama.
 \nMēģiniet vēlreiz vēlāk vai lūdziet istabas administratoru pārbaudīt, vai jums ir piekļuve.</string>
@@ -983,7 +983,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="bad_passphrase_key_reset_all_action">Aizmirstas vai pazaudētas visas atkopšanas iespējas\? Viss jāatiestata</string>
     <string name="enter_secret_storage_passphrase_or_key">Izmantojiet savu %1$s vai savu %2$s, lai turpinātu.</string>
     <string name="use_latest_app">Izmantojiet jaunāko ${app_name} citās savās ierīcēs:</string>
-    <string name="use_other_session_content_description">Izmantojiet jaunāko ${app_name} citās savās ierīcēs, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} Android, vai kādu citu Matrix lietotni ar cross-signing atbalstu</string>
+    <string name="use_other_session_content_description">Izmantojiet jaunāko ${app_name} citās savās ierīcēs, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} Android, vai kādu citu quali.chat lietotni ar cross-signing atbalstu</string>
     <string name="change_password_summary">Iestatiet jaunu konta paroli…</string>
     <string name="this_is_the_beginning_of_dm">Šis ir sākums tiešo ziņu vēsturei ar %s.</string>
     <string name="this_is_the_beginning_of_room_no_name">Šis ir šīs sarakstes pats sākums.</string>
@@ -1037,9 +1037,9 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="autodiscover_well_known_error">Neizdevās atrast derīgu mājasserveri. Lūgums pārbaudīt savu identifikatoru</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Šis nav derīgs identifikators. Sagaidāmais pieraksts: \'@user:homeserver.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Ja sava parole nav zināma, jādodas atpakaļ, lai to atiestatītu.</string>
-    <string name="login_signin_matrix_id_notice">Ja izveido kontu mājasserverī, zemāk jāizmanto savs Matrix Id (piemēram, @user:domain.com) un parole.</string>
-    <string name="login_signin_matrix_id_title">Pierakstīties ar Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">Pierakstīties ar Matrix ID</string>
+    <string name="login_signin_matrix_id_notice">Ja izveido kontu mājasserverī, zemāk jāizmanto savs quali.chat Id (piemēram, @user:domain.com) un parole.</string>
+    <string name="login_signin_matrix_id_title">Pierakstīties ar quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">Pierakstīties ar quali.chat ID</string>
     <string name="login_error_outdated_homeserver_warning_content">Šajā mājasserverī darbojas pārāk vecs laidiens. Jāvaicā mājasservera pārvaldītājam veikt atjauninājumus. Var turpināt, tomēr atsevišķas iespējas var nedarboties pareizi.</string>
     <string name="login_error_outdated_homeserver_title">Novecojis mājasserveris</string>
     <string name="login_validation_code_is_not_correct">Ievadītais kods nav pareizs. Lūdzu, pārbaudiet.</string>
@@ -1049,7 +1049,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="login_terms_title">Pieņemt noteikumus, lai turpinātu</string>
     <string name="login_a11y_captcha_container">Lūdzu, veiciet CAPTCHA izaicinājumu</string>
     <string name="login_a11y_choose_other">Izvēlēties pielāgotu mājasserveri</string>
-    <string name="login_a11y_choose_modular">Izvēlēties Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Izvēlēties quali.chat Services</string>
     <string name="login_a11y_choose_matrix_org">Izvēlēties matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">Konts vēl nav izveidots. Vai pārtraukt reģistrēšanos\?</string>
     <string name="login_set_msisdn_notice2">Lūdzu, izmantojiet starptautisko formātu.</string>
@@ -1078,15 +1078,15 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
 \nVai pieteikties tīmekļa klientā\?</string>
     <string name="login_sso_error_message">Radās kļūda, ielādējot lapu: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Ievadiet servera adresi, kuru vēlaties izmantot</string>
-    <string name="login_server_url_form_modular_notice">Ievadiet Modular Element vai servera adresi, kuru vēlaties izmantot</string>
+    <string name="login_server_url_form_modular_notice">Ievadiet Modular quali.chat vai servera adresi, kuru vēlaties izmantot</string>
     <string name="login_server_url_form_modular_text">Premium hostings organizācijām</string>
     <string name="login_server_url_form_other_hint">Adrese</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services adrese</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services adrese</string>
     <string name="login_clear_homeserver_history">Attīrīt vēsturi</string>
-    <string name="login_signin_sso">Turpināt, izmantojot SSO</string>
+    <string name="login_signin_sso">Turpināt, izmantojot Ethereum</string>
     <string name="login_signin_to">Pierakstīties uz %1$s</string>
     <string name="login_connect_to_a_custom_server">Pieslēgšanās pielāgotam serverim</string>
-    <string name="login_connect_to_modular">Pieslēgšanās Element Matrix Services</string>
+    <string name="login_connect_to_modular">Pieslēgšanās quali.chat Services</string>
     <string name="login_connect_to">Pieslēgšanās %1$s</string>
     <string name="login_social_sso">vienotā pierakstīšanās</string>
     <string name="login_social_signin_with">Pierakstīties ar %s</string>
@@ -1163,12 +1163,12 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="wrong_pin_message_last_remaining_attempt">Brīdinājums! Pēdējais atlikušais mēģinājums pirms izrakstīšanās!</string>
     <string name="three_pid_revoke_invite_dialog_content">Atsaukt uzaicinājumu uz %1$s\?</string>
     <string name="three_pid_revoke_invite_dialog_title">Atsaukt uzaicinājumu</string>
-    <string name="phone_book_perform_lookup">Meklēt kontaktus Matrix</string>
+    <string name="phone_book_perform_lookup">Meklēt kontaktus quali.chat</string>
     <string name="loading_contact_book">Iegūst Tavus kontaktus…</string>
     <string name="disclaimer_positive_button">UZZINĀT VAIRĀK</string>
     <string name="disclaimer_negative_button">SAPRATU</string>
     <string name="disclaimer_content">Esam priecīgi paziņot, ka mēs esam mainījuši nosaukumu. Lietotne ir atjaunināta, un Tu esi pierakstījies savā kontā.</string>
-    <string name="disclaimer_title">Riot tagad saucas Element!</string>
+    <string name="disclaimer_title">Riot tagad saucas quali.chat!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Gaida šifrēšanas vēsturi</string>
     <string name="room_settings_save_success">Tu veiksmīgi nomainīji istabas iestatījumus</string>
     <string name="power_level_title">Loma</string>
@@ -1225,7 +1225,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="passphrase_empty_error_message">Lūgums ievadīt paroles vārdkopu</string>
     <string name="passphrase_passphrase_does_not_match">Paroles vārdkopa nesakrīt</string>
     <string name="room_settings_room_access_title">Piekļuve istabai</string>
-    <string name="settings_emails_and_phone_numbers_summary">Pārvaldīt ar Matrix kontu saistītās e-pasta adreses un tālruņa numurus</string>
+    <string name="settings_emails_and_phone_numbers_summary">Pārvaldīt ar quali.chat kontu saistītās e-pasta adreses un tālruņa numurus</string>
     <string name="settings_emails_and_phone_numbers_title">Epasti un tālruņa numuri</string>
     <string name="settings_fail_to_update_password_invalid_current_password">Parole nav derīga</string>
     <string name="settings_integration_manager">Integrācija pārvaldnieks</string>
@@ -1389,7 +1389,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
 \n
 \nKonta deaktivēšana <b> pēc noklusējuma neliek mums aizmirst nosūtītās ziņas </b>. Ja vēlme, lai mēs aizmirstu ziņas, lūgums atzīmēt zemāk esošo lodziņu.
 \n
-\nZiņu redzamība Matrix ir līdzīga e-pastam. Ziņu aizmiršana nozīmē, ka nosūtītās ziņas netiks rādītas jauniem vai nereģistrētiem lietotājiem, bet reģistrētiem lietotājiem, kuriem jau ir piekļuve šīm ziņām, joprojām būs piekļuve to kopijai.</string>
+\nZiņu redzamība quali.chat ir līdzīga e-pastam. Ziņu aizmiršana nozīmē, ka nosūtītās ziņas netiks rādītas jauniem vai nereģistrētiem lietotājiem, bet reģistrētiem lietotājiem, kuriem jau ir piekļuve šīm ziņām, joprojām būs piekļuve to kopijai.</string>
     <string name="key_share_request">Atslēgas Dalīšanās Pieprasījums</string>
     <string name="room_no_active_widgets">Nav aktīvu logrīku</string>
     <string name="room_widget_webview_access_microphone">Izmantot mikrofonu</string>
@@ -1492,7 +1492,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="login_error_ssl_peer_unverified">SSL kļūda: Peer identitāte nav pārbaudīta.</string>
     <string name="login_error_ssl_other">SSL kļūda.</string>
     <string name="login_error_homeserver_not_found">Ar šo URL mājasserveris nav sasniedzams, lūgums pārbaudīt to</string>
-    <string name="login_error_no_homeserver_found">Šī nav derīga Matrix servera adrese</string>
+    <string name="login_error_no_homeserver_found">Šī nav derīga quali.chat servera adrese</string>
     <string name="auth_accept_policies">Lūgums pārskatīt un pieņemt šī mājasservera nosacījumus:</string>
     <string name="call_format_turn_hd_on">Ieslēgt HD</string>
     <string name="call_format_turn_hd_off">Izslēgt HD</string>
@@ -1979,7 +1979,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="markdown_has_been_disabled">Marķēšana ir izslēgta.</string>
     <string name="markdown_has_been_enabled">Marķēšana ir ieslēgta.</string>
     <string name="command_description_whois">Parāda informāciju par lietotāju</string>
-    <string name="command_description_clear_scalar_token">Lai salabotu Matrix Apps vadību</string>
+    <string name="command_description_clear_scalar_token">Lai salabotu quali.chat Apps vadību</string>
     <string name="command_description_avatar_for_room">Maina Tavu iemiesojumu tikai šajā istabā</string>
     <string name="command_description_room_avatar">Nomaina šīs istabas avatāru</string>
     <string name="settings_when_rooms_are_upgraded">Kad istabas ir jauninātas</string>
@@ -2008,7 +2008,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="settings_notification_mentions_and_keywords">Atsauces un Atslēgvārdi</string>
     <string name="settings_notification_default">Noklusējuma Paziņojumi</string>
     <string name="settings_notification_emails_enable_for_email">Ieslēgt e-pasta paziņojumus priekš %s</string>
-    <string name="settings_notification_emails_no_emails">Lai saņemtu e-pasta paziņojumu, lūgums piesaistīt e-pasta adresi Matrix kontam</string>
+    <string name="settings_notification_emails_no_emails">Lai saņemtu e-pasta paziņojumu, lūgums piesaistīt e-pasta adresi quali.chat kontam</string>
     <string name="settings_notification_emails_category">E-pasta paziņojumi</string>
     <string name="room_settings_none">Nekas</string>
     <string name="room_settings_mention_and_keyword_only">Tikai Atsauces un Atslēgvārdi</string>
@@ -2159,7 +2159,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
 \n
 \nTas nodrošina viņiem pārliecību, ka viņi tiešām runā ar Tevi, bet tas arī nozīmē, ka viņi var redzēt šeit ievadītās sesijas nosaukumu.</string>
     <string name="threads_notice_migration_title">Pavedieni tuvojas Beta 🎉</string>
-    <string name="labs_enable_new_app_layout_summary">Vienkāršots Element ar cilnēm pēc izvēles</string>
+    <string name="labs_enable_new_app_layout_summary">Vienkāršots quali.chat ar cilnēm pēc izvēles</string>
     <string name="labs_enable_deferred_dm_title">Iespējot atliktās tiešās ziņas</string>
     <string name="space_list_empty_message">Vietas ir jauns veids, kā apkopot istabas un cilvēkus. Jāizveido vieta, lai sāktu.</string>
     <string name="room_unsupported_e2e_algorithm">Šifrēšanas konfigurācijā ir kļūmes, tādēļ nevar nosūtīt ziņas. Lūgums sazināties ar pārvaldītāju, lai atjaunotu šifrēšanu derīgā stāvoklī.</string>
@@ -2184,7 +2184,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
 \n
 \nTā kā mēs tam gatavojamies, mums ir jāveic dažas izmaiņas: pirms šī brīža izveidoti pavedieni tiks attēloti kā parastas atbildes.
 \n
-\nŠī būs tikai vienreizēja pāreja, jo pavedieni tagad ir Matrix specifikācijā.</string>
+\nŠī būs tikai vienreizēja pāreja, jo pavedieni tagad ir quali.chat specifikācijā.</string>
     <string name="space_add_child_title">Pievienot istabas</string>
     <string name="space_manage_rooms_and_spaces">Pārvaldīt istabas un vietas</string>
     <string name="preference_show_all_rooms_in_home">Sākumsadaļā rādīt visas istabas</string>
@@ -2194,7 +2194,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
 \n
 \nNebūs iespējams piedalīties istabās, kurās ir iespējota šifrēšana, kad tiks izmantota šī sesija.
 \n
-\nVislabākajai drošībai un privātumam ir ieteicams izmantot Matrix klientus, kas atbalsta šifrēšanu.</string>
+\nVislabākajai drošībai un privātumam ir ieteicams izmantot quali.chat klientus, kas atbalsta šifrēšanu.</string>
     <string name="home_empty_space_no_rooms_message">Vietas ir jauns veids, kā apkopot istabas un cilvēkus. Pievienot esošu istabu vai izveidot jaunu var ar apakšējā labajā stūrī esošo pogu.</string>
     <string name="threads_beta_enable_notice_message">Pavedieni palīdz uzturēt sarunas par tēmu un ir viegli izsekojami. %sPavedienu iespējošana atsvaidzinās lietotni. Dažiem kontiem tas var aizņemt vairāk laika.</string>
     <string name="threads_labs_enable_notice_title">Pavedieni Beta</string>
@@ -2289,7 +2289,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="ftue_auth_use_case_connect_to_server">Savienoties ar serveri</string>
     <string name="ftue_auth_create_account_username_entry_footer">Citi var atrast Tevi ar %s</string>
     <string name="ftue_auth_choose_server_sign_in_subtitle">Kāda ir servera adrese\?</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) ir noturīgs un uzticams izvietošanas pakalpojums ātrai, drošai un reāllaika saziņai. Vairāk var uzzināt &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) ir noturīgs un uzticams izvietošanas pakalpojums ātrai, drošai un reāllaika saziņai. Vairāk var uzzināt &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
     <string name="ftue_auth_email_title">Ievadīt e-pasta adresi</string>
     <string name="ftue_auth_email_verification_subtitle">Jāseko norādēm, kas tika nosūtītas uz %s</string>
     <string name="ftue_auth_password_reset_confirmation">Paroles atiestatīšana</string>
@@ -2346,7 +2346,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="verification_request_waiting_for_recovery">Apliecina ar drošo atslēgu vai vārdkopu…</string>
     <string name="encryption_has_been_misconfigured">Šifrēšana ir kļūdaini uzstādīta.</string>
     <string name="preference_help">Palīdzība</string>
-    <string name="ftue_auth_carousel_control_body">Izvēlies, kur tiks glabātas sarunas, sniedzot vadību un neatkarību. Savienots ar Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Izvēlies, kur tiks glabātas sarunas, sniedzot vadību un neatkarību. Savienots ar quali.chat.</string>
     <string name="ftue_personalize_skip_this_step">Izlaist šo soli</string>
     <string name="ftue_account_created_personalize">Pielāgot profilu</string>
     <string name="ftue_auth_choose_server_ems_cta">Sazināties</string>
@@ -2823,7 +2823,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
     <string name="device_manager_session_details_device_operating_system">Operētājsistēma</string>
     <string name="device_manager_learn_more_sessions_verified_title">Apliecinātas sesijas</string>
     <string name="screen_sharing_notification_description">Notiek ekrāna kopīgošana</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Automātiski apstiprināt Element zvanu logrīkus un piešķirt piekļuvi kamerai/mikrofonam</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Automātiski apstiprināt quali.chat zvanu logrīkus un piešķirt piekļuvi kamerai/mikrofonam</string>
     <string name="device_manager_filter_bottom_sheet_title">Atlase</string>
     <string name="device_manager_other_sessions_recommendation_title_unverified">Neapliecinātas</string>
     <string name="device_manager_session_details_application">Lietotne</string>
@@ -2915,7 +2915,7 @@ Nākotnē šī pārbaudes procedūra plānota sarežģītāka.</string>
         <item quantity="one">Jāapsver atteikšanās no vecajām sesijām (%1$d diena vai vairāk), kas vairs netiek izmantotas.</item>
         <item quantity="other">Jāapsver atteikšanās no vecajām sesijām (%1$d dienas vai vairāk), kas vairs netiek izmantotas.</item>
     </plurals>
-    <string name="labs_enable_element_call_permission_shortcuts">Iespējot Element zvanu atļauju īsceļus</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Iespējot quali.chat zvanu atļauju īsceļus</string>
     <string name="device_manager_session_last_activity">Pēdējā darbība %1$s</string>
     <string name="device_manager_sessions_other_description">Vislielākajai drošībai jāapliecina savas sesijas un jāatsakās no jebkuras neatpazītas vai neizmantotas sesijas.</string>
     <string name="device_manager_filter_option_unverified">Neapliecinātas</string>

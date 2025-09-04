@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -52,6 +53,7 @@ import im.vector.app.features.call.webrtc.WebRtcCallManager
 import im.vector.app.features.createdirect.DirectRoomHelper
 import im.vector.app.features.crypto.keysrequest.OutboundSessionKeySharingStrategy
 import im.vector.app.features.crypto.verification.SupportedVerificationMethodsProvider
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.room.detail.RoomDetailAction.VoiceBroadcastAction
 import im.vector.app.features.home.room.detail.error.RoomNotFound
 import im.vector.app.features.home.room.detail.location.RedactLiveLocationShareEventUseCase
@@ -827,6 +829,13 @@ class TimelineViewModel @AssistedInject constructor(
     private fun isIntegrationEnabled() = session.integrationManagerService().isIntegrationEnabled()
 
     fun isMenuItemVisible(@IdRes itemId: Int): Boolean = com.airbnb.mvrx.withState(this) { state ->
+        if (ProductFlavour.isQualiChat() && itemId == R.id.invite) {
+            return@withState false
+        }
+
+        if (ProductFlavour.isQualiChat() && itemId == R.id.video_call) {
+            return@withState false
+        }
 
         if (state.asyncRoomSummary()?.membership != Membership.JOIN) {
             return@withState false
@@ -846,8 +855,8 @@ class TimelineViewModel @AssistedInject constructor(
                 when (itemId) {
                     R.id.timeline_setting -> true
                     R.id.invite -> state.canInvite
-                    R.id.open_matrix_apps -> true
-                    R.id.voice_call -> state.isCallOptionAvailable() || state.hasActiveElementCallWidget()
+                    R.id.open_matrix_apps -> !ProductFlavour.isQualiChat()
+                    R.id.voice_call -> state.asyncRoomSummary()?.isDirect == true && (state.isCallOptionAvailable() || state.hasActiveElementCallWidget())
                     R.id.video_call -> state.isCallOptionAvailable() || state.jitsiState.confId == null || state.jitsiState.hasJoined
                     // Show Join conference button only if there is an active conf id not joined. Otherwise fallback to default video disabled. ^
                     R.id.join_conference -> !state.isCallOptionAvailable() && state.jitsiState.confId != null && !state.jitsiState.hasJoined

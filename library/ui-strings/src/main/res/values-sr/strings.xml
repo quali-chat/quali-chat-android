@@ -368,7 +368,7 @@
     <string name="compression_opt_list_original">Оригинално</string>
     <string name="login_error_ssl_other">SSL грешка.</string>
     <string name="login_error_ssl_peer_unverified">SSL грешка: Вршњачки идентитет није верификован.</string>
-    <string name="login_error_no_homeserver_found">Ово није валидна адреса Matrix сервера</string>
+    <string name="login_error_no_homeserver_found">Ово није валидна адреса quali.chat сервера</string>
     <string name="login_error_invalid_home_server">Унети важећи URL</string>
     <string name="auth_accept_policies">Прегледајте и прихватите политику овог сервера:</string>
 

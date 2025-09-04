@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,6 +25,7 @@ import im.vector.app.core.epoxy.profiles.buildProfileSection
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.ui.list.verticalMarginItem
 import im.vector.app.core.utils.DimensionConverter
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.form.formEditTextItem
 import im.vector.app.features.form.formEditableAvatarItem
 import im.vector.app.features.form.formSwitchItem
@@ -120,14 +122,16 @@ class RoomSettingsController @Inject constructor(
                 action = { if (data.actionPermissions.canChangeHistoryVisibility) callback?.onHistoryVisibilityClicked() }
         )
 
-        buildProfileAction(
-                id = "joinRule",
-                title = stringProvider.getString(R.string.room_settings_room_access_title),
-                subtitle = data.getJoinRuleWording(stringProvider),
-                divider = true,
-                editable = data.actionPermissions.canChangeJoinRule,
-                action = { if (data.actionPermissions.canChangeJoinRule) callback?.onJoinRuleClicked() }
-        )
+        if (!ProductFlavour.isQualiChat()) {
+            buildProfileAction(
+                    id = "joinRule",
+                    title = stringProvider.getString(R.string.room_settings_room_access_title),
+                    subtitle = data.getJoinRuleWording(stringProvider),
+                    divider = true,
+                    editable = data.actionPermissions.canChangeJoinRule,
+                    action = { if (data.actionPermissions.canChangeJoinRule) callback?.onJoinRuleClicked() }
+            )
+        }
 
         val isPublic = (data.newRoomJoinRules.newJoinRules ?: data.currentRoomJoinRules) == RoomJoinRules.PUBLIC
         if (vectorPreferences.developerMode() && isPublic) {

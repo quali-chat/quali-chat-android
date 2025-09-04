@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="notice_room_invite_no_invitee">%s 的邀请</string>
     <string name="notice_room_invite">%1$s 邀请了 %2$s</string>
     <string name="notice_room_invite_you">%1$s 邀请了你</string>
@@ -29,7 +29,7 @@
     <string name="notice_crypto_unable_to_decrypt">** 无法解密：%s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">发送者的设备没有向我们发送此消息的密钥。</string>
     <string name="unable_to_send_message">无法发送消息</string>
-    <string name="matrix_error">Matrix 错误</string>
+    <string name="matrix_error">quali.chat 错误</string>
     <string name="medium_email">电子邮件地址</string>
     <string name="medium_phone_number">手机号码</string>
     <string name="notice_room_withdraw">%1$s 撤回了对 %2$s 的邀请</string>
@@ -381,7 +381,7 @@
     <string name="invitations_header">邀请</string>
     <string name="low_priority_header">低优先级</string>
     <string name="direct_chats_header">对话</string>
-    <string name="matrix_only_filter">只显示 Matrix 联系人</string>
+    <string name="matrix_only_filter">只显示 quali.chat 联系人</string>
     <string name="no_result_placeholder">没有结果</string>
     <string name="rooms_header">房间</string>
     <string name="select_room_directory">选择一个房间目录</string>
@@ -426,7 +426,7 @@
     <string name="widget_integration_missing_room_id">请求中缺失 room_id。</string>
     <string name="widget_integration_missing_user_id">请求中缺失 user_id。</string>
     <string name="widget_integration_room_not_visible">房间 %s 不可见。</string>
-    <string name="room_add_matrix_apps">添加 Matrix 应用</string>
+    <string name="room_add_matrix_apps">添加 quali.chat 应用</string>
     <string name="notification_listening_for_events">监听事件</string>
     <string name="call">通话</string>
     <string name="settings_containing_my_display_name">包含我显示名称的消息</string>
@@ -492,7 +492,7 @@
 \n
 \n停用你的账户&lt;b&gt;不会默认忘记你已发送的消息&lt;/b&gt;。如果你希望我们忘记你发送的消息，请勾选下面的选择框。
 \n
-\nMatrix 中的消息可见性类似于电子邮件。我们忘记你的消息意味着你发送的消息不会被发给新注册或未注册的用户，但是已收到你的消息的注册用户依旧可以看到这些消息的副本。</string>
+\nquali.chat 中的消息可见性类似于电子邮件。我们忘记你的消息意味着你发送的消息不会被发给新注册或未注册的用户，但是已收到你的消息的注册用户依旧可以看到这些消息的副本。</string>
     <string name="deactivate_account_delete_checkbox">请在我停用账户的同时忘记我发送的所有消息（警告：这将导致未来的用户看到残缺的对话）</string>
     <string name="deactivate_account_submit">停用账户</string>
     <string name="title_activity_choose_sticker">发送贴纸</string>
@@ -523,7 +523,7 @@
     <string name="command_description_remove_user">从此房间移除指定ID的用户</string>
     <string name="command_description_nick">更改你显示的显示名称</string>
     <string name="command_description_markdown">打开/关闭 markdown</string>
-    <string name="command_description_clear_scalar_token">修复 Matrix Apps 管理</string>
+    <string name="command_description_clear_scalar_token">修复 quali.chat Apps 管理</string>
     <string name="room_tombstone_versioned_description">此房间已被替换，不再处于活动状态。</string>
     <string name="room_tombstone_continuation_link">对话在此继续</string>
     <string name="room_tombstone_continuation_description">这个房间是另一个对话的延续</string>
@@ -808,7 +808,7 @@
     <string name="fab_menu_create_room">房间</string>
     <string name="create_room_action_create">创建</string>
     <string name="create_room_name_hint">名称</string>
-    <string name="settings_sdk_version">Matrix SDK 版本</string>
+    <string name="settings_sdk_version">quali.chat SDK 版本</string>
     <string name="settings_general_title">通用</string>
     <string name="settings_preferences">偏好</string>
     <string name="settings_security_and_privacy">安全与隐私</string>
@@ -828,7 +828,7 @@
     <string name="action_revoke">撤销</string>
     <string name="action_disconnect">断开连接</string>
     <string name="action_decline">拒绝</string>
-    <string name="login_error_no_homeserver_found">这不是有效的 Matrix 服务器地址</string>
+    <string name="login_error_no_homeserver_found">这不是有效的 quali.chat 服务器地址</string>
     <string name="login_error_homeserver_not_found">无法在此 URL 找到家服务器，请检查</string>
     <string name="action_play">播放</string>
     <string name="action_dismiss">忽略</string>
@@ -975,7 +975,7 @@
     <string name="room_filtering_footer_create_new_room">创建新房间</string>
     <string name="room_filtering_footer_create_new_direct_message">发送新私聊消息</string>
     <string name="room_filtering_footer_open_room_directory">查看房间目录</string>
-    <string name="room_directory_search_hint">名称或 ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">名称或 ID</string>
     <string name="labs_swipe_to_reply_in_timeline">启用在时间线中滑动回复</string>
     <string name="labs_show_unread_notifications_as_tab">在主屏幕上添加未读通知选项卡。</string>
     <string name="link_copied_to_clipboard">链接已复制到剪贴板</string>
@@ -1086,16 +1086,16 @@
     <string name="login_server_other_text">自定义 &amp; 高级设置</string>
     <string name="login_continue">继续</string>
     <string name="login_connect_to">连接到 %1$s</string>
-    <string name="login_connect_to_modular">连接到 Element Matrix 服务</string>
+    <string name="login_connect_to_modular">连接到 quali.chat 服务</string>
     <string name="login_connect_to_a_custom_server">连接到自定义服务器</string>
     <string name="login_signin_to">登录 %1$s</string>
     <string name="login_signup">注册</string>
     <string name="login_signin">登录</string>
     <string name="login_signin_sso">使用单点登录继续</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix 服务地址</string>
+    <string name="login_server_url_form_modular_hint">quali.chat 服务地址</string>
     <string name="login_server_url_form_other_hint">地址</string>
     <string name="login_server_url_form_modular_text">面向组织的高级托管</string>
-    <string name="login_server_url_form_modular_notice">输入 Modular Element 或你想使用的服务器地址</string>
+    <string name="login_server_url_form_modular_notice">输入 Modular quali.chat 或你想使用的服务器地址</string>
     <string name="login_server_url_form_common_notice">输入你想使用的服务器的地址</string>
     <string name="login_sso_error_message">载入页面时出错：%1$s (%2$d)</string>
     <string name="login_mode_not_supported">应用无法登录到此家服务器。家服务器支持以下登录类型：%1$s。
@@ -1154,7 +1154,7 @@
     <string name="login_signup_cancel_confirmation_title">警告</string>
     <string name="login_signup_cancel_confirmation_content">你的账户尚未创建。是否中止注册过程？</string>
     <string name="login_a11y_choose_matrix_org">选择 matrix.org</string>
-    <string name="login_a11y_choose_modular">选择 Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">选择 quali.chat Services</string>
     <string name="login_a11y_choose_other">选择自定义家服务器</string>
     <string name="login_a11y_captcha_container">请进行人机验证</string>
     <string name="login_terms_title">接受条款以继续</string>
@@ -1166,10 +1166,10 @@
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="other">发送了太多请求。你可以在 %1$d 秒后重试…</item>
     </plurals>
-    <string name="login_connect_using_matrix_id_submit">使用 Matrix ID 登录</string>
-    <string name="login_signin_matrix_id_title">使用 Matrix ID 登录</string>
-    <string name="login_signin_matrix_id_notice">如果你在家服务器上设置了账户，在下方使用你的 Matrix ID（例 @user:domain.com）和密码。</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_connect_using_matrix_id_submit">使用 quali.chat ID 登录</string>
+    <string name="login_signin_matrix_id_title">使用 quali.chat ID 登录</string>
+    <string name="login_signin_matrix_id_notice">如果你在家服务器上设置了账户，在下方使用你的 quali.chat ID（例 @user:domain.com）和密码。</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
     <string name="login_signin_matrix_id_password_notice">如果你不知道你的密码，返回并重置。</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">这不是有效的用户标识符。预期格式：\'@user:homeserver.org\'</string>
     <string name="autodiscover_well_known_error">无法找到有效的家服务器。请检查你的标识符</string>
@@ -1199,7 +1199,7 @@
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">除非你登录以恢复加密密钥，否则你将无法访问安全消息。</string>
     <string name="soft_logout_sso_not_same_user_error">当前会话用于用户 %1$s 而你提供了用户 %2$s 的凭证。${app_name} 不支持此功能。
 \n请先清除数据，然后重新登录另一个账户。</string>
-    <string name="permalink_malformed">你的 matrix.to 链接格式错误</string>
+    <string name="permalink_malformed">你的 quali.chat 链接格式错误</string>
     <string name="bug_report_error_too_short">描述太短</string>
     <string name="notification_initial_sync">初始同步…</string>
     <string name="settings_advanced_settings">高级设置</string>
@@ -1444,12 +1444,12 @@
     <string name="settings_security_prevent_screenshots_summary">启用此设置会将 FLAG_SECURE 添加到所有活动项。重新启动应用程序以使更改生效。</string>
     <string name="error_saving_media_file">无法保存媒体文件</string>
     <string name="change_password_summary">设置新账户密码……</string>
-    <string name="use_other_session_content_description">在你的其它设备上使用最新的 ${app_name}、${app_name} Web、${app_name} Desktop、${app_name} iOS、${app_name} for Android 或其他支持交叉签名的 Matrix 客户端</string>
+    <string name="use_other_session_content_description">在你的其它设备上使用最新的 ${app_name}、${app_name} Web、${app_name} Desktop、${app_name} iOS、${app_name} for Android 或其他支持交叉签名的 quali.chat 客户端</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
-    <string name="or_other_mx_capable_client">或其它支持交叉签名的 Matrix 客户端</string>
+    <string name="or_other_mx_capable_client">或其它支持交叉签名的 quali.chat 客户端</string>
     <string name="use_latest_app">在你的其它设备上使用最新的 ${app_name}：</string>
     <string name="command_description_discard_session">强制丢弃加密房间中的当前出站群组会话</string>
     <string name="command_description_discard_session_not_handled">仅在加密房间中支持</string>
@@ -1528,7 +1528,7 @@
     <string name="crypto_error_withheld_unverified">你无法访问此消息，因为你的会话不被发送者信任</string>
     <string name="crypto_error_withheld_generic">你无法访问此消息因为发送者有意不发送密钥</string>
     <string name="notice_crypto_unable_to_decrypt_merged">正在等待加密历史</string>
-    <string name="disclaimer_title">Riot 现已成为 Element！</string>
+    <string name="disclaimer_title">Riot 现已成为 quali.chat！</string>
     <string name="disclaimer_content">我们很高兴地宣布我们已经更名了！你的应用程序是最新的，并且你已登录到你的账户。</string>
     <string name="disclaimer_negative_button">明白了</string>
     <string name="disclaimer_positive_button">了解更多</string>
@@ -1586,7 +1586,7 @@
     <string name="settings_remove_three_pid_confirmation_content">移除 %s？</string>
     <string name="error_threepid_auth_failed">请确认你已点击我们向你发送的电子邮件中的链接。</string>
     <string name="settings_emails_and_phone_numbers_title">电子邮件和电话号码</string>
-    <string name="settings_emails_and_phone_numbers_summary">管理与你的 Matrix 账户链接的电子邮件地址和电话号码</string>
+    <string name="settings_emails_and_phone_numbers_summary">管理与你的 quali.chat 账户链接的电子邮件地址和电话号码</string>
     <string name="settings_text_message_sent_hint">代码</string>
     <string name="login_msisdn_notice">请使用国际格式（电话号码必须以“+”开头）</string>
     <string name="confirm_your_identity_quad_s">验证此登录来确认你的身份，授权其访问加密消息。</string>
@@ -1802,7 +1802,7 @@
     <plurals name="entries">
         <item quantity="other">%d 个条目</item>
     </plurals>
-    <string name="not_a_valid_qr_code">这不是有效的 Matrix QR码</string>
+    <string name="not_a_valid_qr_code">这不是有效的 quali.chat QR码</string>
     <string name="user_code_scan">扫描QR码</string>
     <string name="add_people">添加人员</string>
     <string name="invite_friends">邀请朋友</string>
@@ -1838,7 +1838,7 @@
     <string name="notice_room_server_acl_updated_title">%s 修改了此房间的服务器访问控制列表。</string>
     <string name="notice_room_server_acl_set_title">%s 为此房间设置了服务器访问控制列表。</string>
     <string name="notice_room_server_acl_set_title_by_you">你为此房间设置了服务器访问控制列表。</string>
-    <string name="phone_book_perform_lookup">在 Matrix 上查找联系人</string>
+    <string name="phone_book_perform_lookup">在 quali.chat 上查找联系人</string>
     <string name="identity_server_user_consent_not_provided">用户尚未同意条款。</string>
     <string name="user_code_info_text">共享此二维码，其他人扫描后即可添加你，并开始聊天。</string>
     <string name="user_code_my_code">我的二维码</string>
@@ -2169,7 +2169,7 @@
     <string name="room_settings_space_access_title">空间访问</string>
     <string name="room_settings_access_rules_pref_dialog_title">谁可以访问？</string>
     <string name="settings_notification_emails_enable_for_email">为 %s 启用电子邮件通知</string>
-    <string name="settings_notification_emails_no_emails">要接收带有通知的电子邮件，请将电子邮件地址链接到你的 Matrix 账户</string>
+    <string name="settings_notification_emails_no_emails">要接收带有通知的电子邮件，请将电子邮件地址链接到你的 quali.chat 账户</string>
     <string name="settings_notification_emails_category">电子邮件通知</string>
     <string name="room_permissions_upgrade_the_space">升级空间</string>
     <string name="room_permissions_change_space_name">更改空间名称</string>
@@ -2279,7 +2279,7 @@
 \n
 \n在我们为此做准备时，我们需要进行一些更改：在此之前创建的消息列将显示为常规回复。
 \n
-\n这将是一次性的过渡，因为消息列现在是 Matrix 规范的一部分。</string>
+\n这将是一次性的过渡，因为消息列现在是 quali.chat 规范的一部分。</string>
     <plurals name="message_reaction_show_more">
         <item quantity="other">%1$d 更多</item>
     </plurals>
@@ -2406,7 +2406,7 @@
     <string name="tooltip_attachment_gallery">发送图片和视频</string>
     <string name="tooltip_attachment_photo">打开相机</string>
     <string name="ftue_auth_terms_title">服务器政策</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) 是一种强大且可靠的托管服务，可实现快速、安全和实时的通信。 了解如何在 &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) 是一种强大且可靠的托管服务，可实现快速、安全和实时的通信。 了解如何在 &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
     <string name="ftue_auth_choose_server_ems_title">想架设自己的服务器？</string>
     <string name="ftue_auth_choose_server_entry_hint">服务器URL</string>
     <string name="ftue_auth_choose_server_title">选择你的服务器</string>
@@ -2416,7 +2416,7 @@
     <string name="ftue_auth_use_case_subtitle">我们会帮你建立连接</string>
     <string name="ftue_auth_use_case_title">你会与谁聊最多？</string>
     <string name="ftue_auth_carousel_workplace_body">${app_name}也非常适合工作场所。受到世界上最安全的组织信任。</string>
-    <string name="ftue_auth_carousel_control_body">选择保存你的对话的位置，给予你控制权和独立性。通过 Matrix 连接。</string>
+    <string name="ftue_auth_carousel_control_body">选择保存你的对话的位置，给予你控制权和独立性。通过 quali.chat 连接。</string>
     <string name="ftue_auth_carousel_secure_body">安全且独立的通信，为你提供和在家中面对面对话同样等级的隐私。</string>
     <string name="ftue_auth_carousel_encrypted_title">安全传送消息。</string>
     <string name="settings_troubleshoot_test_endpoint_registration_failed">向家服务器注册端点token失败：
@@ -2533,8 +2533,8 @@
         <item quantity="other">%1$s 与其他 %2$d人</item>
     </plurals>
     <string name="updating_your_data">正在更新你的数据……</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">自动允许 Element 通话小部件并授予相机/麦克风访问权限</string>
-    <string name="labs_enable_element_call_permission_shortcuts">启用 Element 通话权限快捷方式</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">自动允许 quali.chat 通话小部件并授予相机/麦克风访问权限</string>
+    <string name="labs_enable_element_call_permission_shortcuts">启用 quali.chat 通话权限快捷方式</string>
     <string name="live_location_description">实时位置</string>
     <string name="verify_invalid_qr_notice">此QR码看起来格式不正确。请尝试使用其它方法进行验证。</string>
     <string name="crosssigning_cannot_verify_this_session_desc">你无法访问加密消息历史。重置你的安全消息备份和验证密钥以重新开始。</string>
@@ -2619,7 +2619,7 @@
     <string name="device_manager_verification_status_detail_current_session_verified">你当前的会话已准备好安全地收发消息。</string>
     <string name="labs_enable_deferred_dm_summary">仅在首条消息创建私聊消息</string>
     <string name="labs_enable_deferred_dm_title">启用延迟的私聊消息</string>
-    <string name="labs_enable_new_app_layout_summary">简化的 Element，带有可选的标签</string>
+    <string name="labs_enable_new_app_layout_summary">简化的 quali.chat，带有可选的标签</string>
     <string name="settings_security_incognito_keyboard_title">无痕键盘</string>
     <string name="settings_security_incognito_keyboard_summary">请求键盘不要根据你在对话中输入的内容更新任何个性化数据，例如输入历史记录和字典。 请注意，某些键盘可能不遵守此设置。</string>
     <string name="permissions_rationale_msg_notification">${app_name}需要权限来显示通知。通知可以显示消息、邀请等。

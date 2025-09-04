@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,6 +31,7 @@ import im.vector.app.core.extensions.toggle
 import im.vector.app.core.platform.VectorViewModel
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.features.discovery.fetchIdentityServerWithTerms
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.raw.wellknown.getElementWellknown
 import im.vector.app.features.raw.wellknown.isE2EByDefault
 import kotlinx.coroutines.Dispatchers
@@ -51,26 +53,22 @@ import org.matrix.android.sdk.api.session.identity.IdentityServiceListener
 import org.matrix.android.sdk.api.session.identity.ThreePid
 import org.matrix.android.sdk.api.session.user.model.User
 import org.matrix.android.sdk.api.util.toMatrixItem
+import timber.log.Timber
 import kotlin.random.Random
 
 data class ThreePidUser(
-        val email: String,
-        val user: User?
+        val email: String, val user: User?
 )
 
 class UserListViewModel @AssistedInject constructor(
-        @Assisted initialState: UserListViewState,
-        private val stringProvider: StringProvider,
-        private val rawService: RawService,
-        private val session: Session
+        @Assisted initialState: UserListViewState, private val stringProvider: StringProvider, private val rawService: RawService, private val session: Session
 ) : VectorViewModel<UserListViewState, UserListAction, UserListViewEvents>(initialState) {
 
     private val knownUsersSearch = MutableStateFlow("")
     private val directoryUsersSearch = MutableStateFlow("")
     private val identityServerUsersSearch = MutableStateFlow(UserSearch(searchTerm = ""))
 
-    @AssistedFactory
-    interface Factory : MavericksAssistedViewModelFactory<UserListViewModel, UserListViewState> {
+    @AssistedFactory interface Factory : MavericksAssistedViewModelFactory<UserListViewModel, UserListViewState> {
         override fun create(initialState: UserListViewState): UserListViewModel
     }
 
@@ -102,9 +100,7 @@ class UserListViewModel @AssistedInject constructor(
     private fun initAdminE2eByDefault() {
         viewModelScope.launch(Dispatchers.IO) {
             val adminE2EByDefault = tryOrNull {
-                rawService.getElementWellknown(session.sessionParams)
-                        ?.isE2EByDefault()
-                        ?: true
+                rawService.getElementWellknown(session.sessionParams)?.isE2EByDefault() ?: true
             } ?: true
 
             setState {
@@ -174,7 +170,8 @@ class UserListViewModel @AssistedInject constructor(
                     searchTerm = searchTerm
             )
         }
-        if (searchTerm.isEmail().not()) {
+
+        if (ProductFlavour.isQualiChat() || searchTerm.isEmail().not()) {
             // if it's not an email reset to uninitialized
             // because the flow won't be triggered and result would stay
             setState {
@@ -204,27 +201,19 @@ class UserListViewModel @AssistedInject constructor(
     }
 
     private fun observeUsers() = withState { state ->
-        identityServerUsersSearch
-                .filter { it.searchTerm.isEmail() }
-                .sample(300)
-                .onEach { search ->
-                    executeSearchEmail(search.searchTerm)
-                }.launchIn(viewModelScope)
+        identityServerUsersSearch.filter { it.searchTerm.isEmail() }.sample(300).onEach { search ->
+            executeSearchEmail(search.searchTerm)
+        }.launchIn(viewModelScope)
 
-        knownUsersSearch
-                .sample(300)
-                .flatMapLatest { search ->
-                    session.userService().getPagedUsersLive(search, state.excludedUserIds).asFlow()
-                }
-                .execute {
-                    copy(knownUsers = it)
-                }
+        knownUsersSearch.sample(300).flatMapLatest { search ->
+            session.userService().getPagedUsersLive(search, state.excludedUserIds).asFlow()
+        }.execute {
+            copy(knownUsers = it)
+        }
 
-        directoryUsersSearch
-                .debounce(300)
-                .onEach { search ->
-                    executeSearchDirectory(state, search)
-                }.launchIn(viewModelScope)
+        directoryUsersSearch.debounce(300).onEach { search ->
+            executeSearchDirectory(state, search)
+        }.launchIn(viewModelScope)
     }
 
     private suspend fun executeSearchEmail(search: String) {
@@ -237,8 +226,7 @@ class UserListViewModel @AssistedInject constructor(
                 try {
                     val user = tryOrNull { session.profileService().getProfileAsUser(foundThreePid.matrixId) } ?: User(foundThreePid.matrixId)
                     ThreePidUser(
-                            email = search,
-                            user = user
+                            email = search, user = user
                     )
                 } catch (failure: Throwable) {
                     ThreePidUser(email = search, user = User(foundThreePid.matrixId))
@@ -254,17 +242,16 @@ class UserListViewModel @AssistedInject constructor(
             if (search.isBlank()) {
                 emptyList()
             } else {
-                val searchResult = session
-                        .userService()
-                        .searchUsersDirectory(search, 50, state.excludedUserIds.orEmpty())
-                        .sortedBy { it.toMatrixItem().firstLetterOfDisplayName() }
+                val searchResult = session.userService().searchUsersDirectory(
+                        search,
+                        50,
+                        state.excludedUserIds.orEmpty()
+                ).sortedBy { it.toMatrixItem().firstLetterOfDisplayName() }
                 val userProfile = if (MatrixPatterns.isUserId(search)) {
                     val user = tryOrNull { session.profileService().getProfileAsUser(search) }
                     setState { copy(unknownUserId = search.takeIf { user == null }) }
                     User(
-                            userId = search,
-                            displayName = user?.displayName,
-                            avatarUrl = user?.avatarUrl
+                            userId = search, displayName = user?.displayName, avatarUrl = user?.avatarUrl
                     )
                 } else {
                     null
@@ -281,15 +268,17 @@ class UserListViewModel @AssistedInject constructor(
     }
 
     private fun handleSelectUser(action: UserListAction.AddPendingSelection) = withState { state ->
-        val canSelectUser = !state.isE2EByDefault || state.pendingSelections.isEmpty() || !state.single3pidSelection ||
-                (action.pendingSelection is PendingSelection.UserPendingSelection &&
-                        state.pendingSelections.last() is PendingSelection.UserPendingSelection)
+        val canSelectUser =
+                !state.isE2EByDefault || state.pendingSelections.isEmpty() || !state.single3pidSelection || (action.pendingSelection is PendingSelection.UserPendingSelection && state.pendingSelections.last() is PendingSelection.UserPendingSelection)
         if (canSelectUser) {
             if (action.pendingSelection is PendingSelection.UserPendingSelection) {
                 action.pendingSelection.isUnknownUser = action.pendingSelection.getMxId() == state.unknownUserId
             }
             val selections = state.pendingSelections.toggle(action.pendingSelection, singleElement = state.singleSelection)
-            setState { copy(pendingSelections = selections) }
+            Timber.d("user list limit: ${state.directRoomMembersLimit}")
+            if (selections.size <= state.directRoomMembersLimit) {
+                setState { copy(pendingSelections = selections) }
+            }
         }
     }
 

@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** 無法解密：%s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">傳送者的裝置並未將此訊息的金鑰傳給我們。</string>
     <string name="unable_to_send_message">無法傳送訊息</string>
-    <string name="matrix_error">Matrix 錯誤</string>
+    <string name="matrix_error">quali.chat 錯誤</string>
     <string name="medium_email">電子郵件地址</string>
     <string name="medium_phone_number">電話號碼</string>
     <string name="room_displayname_room_invite">聊天室邀請</string>
@@ -259,7 +259,7 @@
     <string name="invitations_header">邀請</string>
     <string name="low_priority_header">低優先度</string>
     <string name="direct_chats_header">對話</string>
-    <string name="matrix_only_filter">僅 Matrix 聯絡人</string>
+    <string name="matrix_only_filter">僅 quali.chat 聯絡人</string>
     <string name="no_result_placeholder">沒有結果</string>
     <string name="rooms_header">聊天室</string>
     <string name="send_bug_report_include_logs">傳送紀錄檔</string>
@@ -520,7 +520,7 @@
     <string name="widget_integration_missing_user_id">請求中缺少 user_id。</string>
     <string name="widget_integration_room_not_visible">聊天室 %s 不可見。</string>
     <string name="widget_integration_missing_parameter">缺少必需的參數。</string>
-    <string name="room_add_matrix_apps">新增 Matrix 應用程式</string>
+    <string name="room_add_matrix_apps">新增 quali.chat 應用程式</string>
     <string name="settings_labs_native_camera">使用原生相機</string>
     <string name="you_added_a_new_device">您新增的工作階段「%s」正在請求加密金鑰。</string>
     <string name="your_unverified_device_requesting">您未驗證的工作階段「%s」正在請求加密金鑰。</string>
@@ -545,7 +545,7 @@
 \n
 \n單純停用帳號<b>不會讓我們移除您傳送過的訊息</b>。如果您希望同步刪除您的訊息，請勾選下面的選取盒。
 \n
-\nMatrix 中的訊息可見度類似電子郵件。刪除您的訊息只是代表您發送的訊息不會再顯示給任何新的或未註冊的使用者，但是已註冊並曾經取得訊息的使用者，仍然可以存取他們收到的訊息。</string>
+\nquali.chat 中的訊息可見度類似電子郵件。刪除您的訊息只是代表您發送的訊息不會再顯示給任何新的或未註冊的使用者，但是已註冊並曾經取得訊息的使用者，仍然可以存取他們收到的訊息。</string>
     <string name="deactivate_account_delete_checkbox">請在停用我的帳號時刪除我傳送過的所有訊息（<b>警告：</b>未來的使用者將無法看見完整對話紀錄）</string>
     <string name="deactivate_account_submit">停用帳號</string>
     <string name="error_empty_field_your_password">請輸入您的密碼。</string>
@@ -563,7 +563,7 @@
     <string name="command_description_remove_user">移除指定 ID 的使用者</string>
     <string name="command_description_nick">變更您的顯示暱稱</string>
     <string name="command_description_markdown">開啟／關閉 markdown</string>
-    <string name="command_description_clear_scalar_token">為了修復 Matrix 應用程式管理</string>
+    <string name="command_description_clear_scalar_token">為了修復 quali.chat 應用程式管理</string>
     <string name="room_tombstone_versioned_description">這個聊天室已被取代，且不再使用。</string>
     <string name="room_tombstone_continuation_link">對話在此繼續</string>
     <string name="room_tombstone_continuation_description">此聊天室是另一個對話的延續</string>
@@ -864,7 +864,7 @@
     <string name="keys_backup_unable_to_get_trust_info">取得信任資訊時發生錯誤</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">取得金鑰備份資料時發生錯誤</string>
     <string name="import_e2e_keys_from_file">從檔案「%1$s」匯入 e2e 金鑰。</string>
-    <string name="settings_sdk_version">Matrix SDK 版本</string>
+    <string name="settings_sdk_version">quali.chat SDK 版本</string>
     <string name="settings_other_third_party_notices">其他第三方程式庫授權資訊</string>
     <string name="navigate_to_room_when_already_in_the_room">您已在檢視此聊天室了！</string>
     <string name="settings_general_title">一般</string>
@@ -903,7 +903,7 @@
     <string name="room_filtering_footer_create_new_room">建立一間新聊天室</string>
     <string name="room_filtering_footer_create_new_direct_message">傳送新的私人訊息</string>
     <string name="room_filtering_footer_open_room_directory">檢視聊天室目錄</string>
-    <string name="room_directory_search_hint">名稱或 ID（#example:matrix.org）</string>
+    <string name="room_directory_search_hint">名稱或 ID</string>
     <string name="labs_swipe_to_reply_in_timeline">啟用滑動以在時間軸上回覆</string>
     <string name="link_copied_to_clipboard">已將連結複製到剪貼簿</string>
     <string name="settings_integration_manager">整合管理員</string>
@@ -1020,7 +1020,7 @@
     <string name="room_widget_webview_access_camera">使用相機</string>
     <string name="room_widget_webview_access_microphone">使用麥克風</string>
     <string name="room_widget_webview_read_protected_media">讀取 DRM 保護的媒體</string>
-    <string name="login_error_no_homeserver_found">這不是有效的 Matrix 伺服器位址</string>
+    <string name="login_error_no_homeserver_found">這不是有效的 quali.chat 伺服器位址</string>
     <string name="message_ignore_user">忽略使用者</string>
     <string name="room_list_quick_actions_notifications_all_noisy">所有訊息（吵雜）</string>
     <string name="room_list_quick_actions_notifications_all">所有訊息</string>
@@ -1051,16 +1051,16 @@
     <string name="login_server_other_text">自訂與進階設定</string>
     <string name="login_continue">繼續</string>
     <string name="login_connect_to">連線到 %1$s</string>
-    <string name="login_connect_to_modular">連線到 Element Matrix Services</string>
+    <string name="login_connect_to_modular">連線到 quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">連線到自訂伺服器</string>
     <string name="login_signin_to">登入到 %1$s</string>
     <string name="login_signup">註冊</string>
     <string name="login_signin">登入</string>
-    <string name="login_signin_sso">使用 SSO 繼續</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services 位址</string>
+    <string name="login_signin_sso">使用 Ethereum 繼續</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services 位址</string>
     <string name="login_server_url_form_other_hint">位址</string>
     <string name="login_server_url_form_modular_text">組織用的收費代管服務</string>
-    <string name="login_server_url_form_modular_notice">輸入 Modular Element 或您想要使用的伺服器位址</string>
+    <string name="login_server_url_form_modular_notice">輸入 Modular quali.chat 或您想要使用的伺服器位址</string>
     <string name="login_sso_error_message">載入頁面時發生錯誤：%1$s（%2$d）</string>
     <string name="login_mode_not_supported">應用程式無法登入此家伺服器。家伺服器支援以下登入類型：%1$s。
 \n
@@ -1117,7 +1117,7 @@
     <string name="login_signup_cancel_confirmation_title">警告</string>
     <string name="login_signup_cancel_confirmation_content">尚未建立您的帳號。停止註冊流程？</string>
     <string name="login_a11y_choose_matrix_org">選取 matrix.org</string>
-    <string name="login_a11y_choose_modular">選取 Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">選取 quali.chat Services</string>
     <string name="login_a11y_choose_other">選取自訂的家伺服器</string>
     <string name="login_a11y_captcha_container">請執行 captcha 驗證</string>
     <string name="login_terms_title">接受條款以繼續</string>
@@ -1156,7 +1156,7 @@
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">除非您登入並復原加密金鑰，否則將失去對安全訊息的存取權。</string>
     <string name="soft_logout_sso_not_same_user_error">目前工作階段登入的使用者 %1$s 與您提供的使用者 %2$s 的登入資訊不同。${app_name} 不支援此差異。
 \n請先清除資料，然後再以其他帳號登入。</string>
-    <string name="permalink_malformed">您的 matrix.to 連結格式錯誤</string>
+    <string name="permalink_malformed">您的 quali.chat 連結格式錯誤</string>
     <string name="bug_report_error_too_short">描述太短了</string>
     <string name="notification_initial_sync">初始化同步…</string>
     <string name="settings_advanced_settings">進階設定</string>
@@ -1386,12 +1386,12 @@
     <string name="settings_security_prevent_screenshots_title">避免對應用程式進行螢幕截圖</string>
     <string name="settings_security_prevent_screenshots_summary">開啟此設定後，會新增 FLAG_SECURE 到所有畫面。請重新啟動應用程式以讓變動生效。</string>
     <string name="change_password_summary">設定新的帳號密碼…</string>
-    <string name="use_other_session_content_description">在您的其他裝置上使用最新的 ${app_name}、${app_name} 網頁版、${app_name} 桌面版、${app_name} iOS、${app_name} for Android 或其他有交叉簽署功能的 Matrix 客戶端</string>
+    <string name="use_other_session_content_description">在您的其他裝置上使用最新的 ${app_name}、${app_name} 網頁版、${app_name} 桌面版、${app_name} iOS、${app_name} for Android 或其他有交叉簽署功能的 quali.chat 客戶端</string>
     <string name="app_desktop_web">${app_name} 網頁版
 \n${app_name} 桌面版</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
-    <string name="or_other_mx_capable_client">或其他有交叉簽署功能的 Matrix 客戶端</string>
+    <string name="or_other_mx_capable_client">或其他有交叉簽署功能的 quali.chat 客戶端</string>
     <string name="use_latest_app">在您的其他裝置上使用最新的 ${app_name}：</string>
     <string name="command_description_discard_session">強制丟棄目前在加密聊天室中的外發群組工作階段</string>
     <string name="command_description_discard_session_not_handled">僅在加密聊天室中支援</string>
@@ -1435,10 +1435,10 @@
     <string name="uploads_files_title">檔案</string>
     <string name="uploads_files_subtitle">由 %1$s 於 %2$s 上傳</string>
     <string name="uploads_files_no_result">此聊天室中沒有檔案</string>
-    <string name="login_connect_using_matrix_id_submit">使用 Matrix ID 登入</string>
-    <string name="login_signin_matrix_id_title">使用 Matrix ID 登入</string>
-    <string name="login_signin_matrix_id_notice">如果您在家伺服器上建立了帳號，請在下方輸入您的 Matrix ID（例如 @user:domain.com）與密碼。</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_connect_using_matrix_id_submit">使用 quali.chat ID 登入</string>
+    <string name="login_signin_matrix_id_title">使用 quali.chat ID 登入</string>
+    <string name="login_signin_matrix_id_notice">如果您在家伺服器上建立了帳號，請在下方輸入您的 quali.chat ID（例如 @user:domain.com）與密碼。</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">這不是有效的使用者 ID。預期的格式：「@user:homeserver.org」</string>
     <string name="autodiscover_well_known_error">找不到有效的家伺服器。請確認您的 ID</string>
     <string name="no_connectivity_to_the_server_indicator_airplane">飛航模式開啟</string>
@@ -1568,8 +1568,8 @@
     <string name="crypto_error_withheld_unverified">您無法存取此訊息，因為您的工作階段未被傳送者所信任</string>
     <string name="crypto_error_withheld_generic">您無法存取此訊息，因為傳送者刻意不傳送金鑰</string>
     <string name="notice_crypto_unable_to_decrypt_merged">正在等待加密紀錄</string>
-    <string name="disclaimer_title">Riot 改名為 Element 了！</string>
-    <string name="disclaimer_content">很高興宣布，我們已更名為 Element！您的應用程式已更新到最新版，您也已經成功登入帳號。</string>
+    <string name="disclaimer_title">Riot 改名為 quali.chat 了！</string>
+    <string name="disclaimer_content">很高興宣布，我們已更名為 quali.chat！您的應用程式已更新到最新版，您也已經成功登入帳號。</string>
     <string name="disclaimer_negative_button">了解</string>
     <string name="disclaimer_positive_button">取得更多資訊</string>
     <string name="save_recovery_key_chooser_hint">儲存復原金鑰於</string>
@@ -1626,7 +1626,7 @@
     <string name="settings_remove_three_pid_confirmation_content">移除 %s？</string>
     <string name="error_threepid_auth_failed">確保您已經點擊我們傳送給您的電子郵件中的連結。</string>
     <string name="settings_emails_and_phone_numbers_title">電子郵件與電話號碼</string>
-    <string name="settings_emails_and_phone_numbers_summary">管理連結到您 Matrix 帳號的電子郵件地址與電話號碼</string>
+    <string name="settings_emails_and_phone_numbers_summary">管理連結到您 quali.chat 帳號的電子郵件地址與電話號碼</string>
     <string name="settings_text_message_sent_hint">代碼</string>
     <string name="login_msisdn_notice">請使用國際格式（以「+」開頭的電話號碼）</string>
     <string name="confirm_your_identity_quad_s">驗證此登入來確認您的身分，以及授予存取加密訊息的權限。</string>
@@ -1712,14 +1712,14 @@
     <string name="invalid_qr_code_uri">無效的 QR Code（無效的 URI）！</string>
     <string name="cannot_dm_self">無法傳送私訊給您自己！</string>
     <string name="share_by_text">透過文字分享</string>
-    <string name="phone_book_perform_lookup">在 Matrix 上搜尋聯絡人</string>
+    <string name="phone_book_perform_lookup">在 quali.chat 上搜尋聯絡人</string>
     <string name="room_settings_set_avatar">設定大頭照</string>
     <string name="identity_server_user_consent_not_provided">使用者尚未同意。</string>
     <string name="user_code_info_text">與夥伴們分享此邀請碼，這樣他們就可以掃描它來加入您並開始聊天。</string>
     <string name="user_code_my_code">我的邀請碼</string>
     <string name="user_code_share">分享我的邀請碼</string>
     <string name="user_code_scan">掃描 QR Code</string>
-    <string name="not_a_valid_qr_code">不是有效的 Matrix QR Code</string>
+    <string name="not_a_valid_qr_code">不是有效的 quali.chat QR Code</string>
     <string name="invite_friends_rich_title">🔐️ 在 ${app_name} 上加入我</string>
     <string name="invite_friends_text">嗨，和我在 ${app_name} 上聊天吧：%s</string>
     <string name="invite_friends">邀請朋友</string>
@@ -2169,7 +2169,7 @@
     <string name="room_settings_space_access_title">存取聊天空間</string>
     <string name="room_settings_access_rules_pref_dialog_title">誰可以存取？</string>
     <string name="settings_notification_emails_enable_for_email">啟用 %s 的電子郵件通知</string>
-    <string name="settings_notification_emails_no_emails">要收到通知用的電子郵件，請將電子郵件地址連結至您的 Matrix 帳號</string>
+    <string name="settings_notification_emails_no_emails">要收到通知用的電子郵件，請將電子郵件地址連結至您的 quali.chat 帳號</string>
     <string name="settings_notification_emails_category">電子郵件通知</string>
     <string name="room_permissions_upgrade_the_space">升級聊天空間</string>
     <string name="room_permissions_change_space_name">變更聊天空間名稱</string>
@@ -2299,7 +2299,7 @@
     <string name="login_splash_create_account">建立帳號</string>
     <string name="ftue_auth_carousel_workplace_title">傳訊息給您的團隊。</string>
     <string name="ftue_auth_carousel_encrypted_body">端對端加密且無須電話號碼。沒有廣告也不探勘您的個資。</string>
-    <string name="ftue_auth_carousel_control_body">選擇儲存對話的位置，讓您擁有控制權與獨立性。透過 Matrix 連結。</string>
+    <string name="ftue_auth_carousel_control_body">選擇儲存對話的位置，讓您擁有控制權與獨立性。透過 quali.chat 連結。</string>
     <string name="ftue_auth_carousel_secure_body">安全且獨立的通訊，為您提供與在家中進行面對面對話相同的隱私等級。</string>
     <string name="attachment_type_location">位置</string>
     <string name="room_unsupported_e2e_algorithm_as_admin">加密設定錯誤，因此您無法傳送訊息。點擊以開啟設定。</string>
@@ -2363,7 +2363,7 @@
 \n
 \n正當我們為此做準備時，需要做一些變動：先前建立的討論串將會顯示為一般回覆。
 \n
-\n這只會發生一次，因為「討論串」功能現在已經進入 Matrix 規格了。</string>
+\n這只會發生一次，因為「討論串」功能現在已經進入 quali.chat 規格了。</string>
     <string name="threads_notice_migration_title">「討論串」快要有 Beta 測試版了 🎉</string>
     <string name="live_location_sharing_notification_description">正在分享位置</string>
     <string name="live_location_sharing_notification_title">${app_name} 即時位置</string>
@@ -2513,7 +2513,7 @@
     <string name="ftue_auth_terms_subtitle">請閱讀 %s 的服務條款與政策</string>
     <string name="ftue_auth_terms_title">伺服器政策</string>
     <string name="ftue_auth_choose_server_ems_cta">保持聯絡</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services（EMS）是一套強大且可靠的代管服務，可進行快速、安全且即時的通訊。可到 <a href="${ftue_ems_url}">element.io/ems</a> 了解如何使用</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services（EMS）是一套強大且可靠的代管服務，可進行快速、安全且即時的通訊。可到 <a href="${ftue_ems_url}">element.io/ems</a> 了解如何使用</string>
     <string name="ftue_auth_choose_server_ems_title">想要架設自己的伺服器？</string>
     <string name="ftue_auth_choose_server_entry_hint">伺服器網址</string>
     <string name="ftue_auth_choose_server_subtitle">您的伺服器位址是什麼？這就像您所有資料的家</string>
@@ -2529,8 +2529,8 @@
     <string name="font_size_section_manually">手動選擇</string>
     <string name="font_size_section_auto">自動設定</string>
     <string name="font_size_title">選擇字型大小</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">自動批准 Element Call 小工具並授予相機／麥克風存取權限</string>
-    <string name="labs_enable_element_call_permission_shortcuts">啟用 Element Call 權限捷徑</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">自動批准 quali.chat Call 小工具並授予相機／麥克風存取權限</string>
+    <string name="labs_enable_element_call_permission_shortcuts">啟用 quali.chat Call 權限捷徑</string>
     <string name="live_location_description">即時位置</string>
     <string name="verify_invalid_qr_notice">這個 QR Code 格式似乎不正確。請使用其他方法進行驗證。</string>
     <string name="crosssigning_cannot_verify_this_session_desc">您將無法存取加密訊息紀錄。重設您的安全訊息備份與驗證金鑰以重新開始。</string>
@@ -2650,7 +2650,7 @@
     <string name="device_manager_verification_status_detail_current_session_verified">您目前的工作階段已準備好安全通訊。</string>
     <string name="labs_enable_deferred_dm_summary">僅在第一則訊息上建立私密訊息</string>
     <string name="labs_enable_deferred_dm_title">啟用延期的私密訊息</string>
-    <string name="labs_enable_new_app_layout_summary">包含選擇性分頁的簡潔 Element</string>
+    <string name="labs_enable_new_app_layout_summary">包含選擇性分頁的簡潔 quali.chat</string>
     <string name="labs_enable_new_app_layout_title">啟用新佈局</string>
     <string name="device_manager_learn_more_session_rename">私人訊息與您加入的聊天室當中的其他使用者，可以檢視您有哪些工作階段。
 \n
@@ -2812,7 +2812,7 @@
 \n
 \n使用此工作階段時無法進入加密聊天室。
 \n
-\n為了安全與隱私，建議使用支援加密的 Matrix 客戶端。</string>
+\n為了安全與隱私，建議使用支援加密的 quali.chat 客戶端。</string>
     <string name="device_manager_signout_all_other_sessions">登出所有其他的工作階段</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">此工作階段無法被加密，因此無法被驗證。</string>
     <string name="settings_nightly_build_update">取得最新建構版本（注意：可能會無法登入）</string>

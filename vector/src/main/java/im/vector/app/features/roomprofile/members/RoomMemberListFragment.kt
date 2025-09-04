@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,6 +34,7 @@ import im.vector.app.R
 import im.vector.app.core.extensions.cleanup
 import im.vector.app.core.extensions.configureWith
 import im.vector.app.core.platform.VectorBaseFragment
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.databinding.FragmentRoomMemberListBinding
 import im.vector.app.features.analytics.plan.MobileScreen
 import im.vector.app.features.home.AvatarRenderer
@@ -76,7 +78,10 @@ class RoomMemberListFragment :
 
     private fun setupInviteUsersButton() {
         views.inviteUsersButton.debouncedClicks {
-            navigator.openInviteUsersToRoom(requireActivity(), roomProfileArgs.roomId)
+            withState(viewModel) { viewState ->
+                val membersSize = viewState.roomSummary()?.joinedMembersCount ?: 0
+                navigator.openInviteUsersToRoom(requireActivity(), roomProfileArgs.roomId, viewModel.countDirectRoomMembersLimit(membersSize))
+            }
         }
         // Hide FAB when list is scrolling
         views.roomSettingGeneric.roomSettingsRecyclerView.addOnScrollListener(
@@ -148,7 +153,7 @@ class RoomMemberListFragment :
 
     private fun renderRoomSummary(state: RoomMemberListViewState) {
         state.roomSummary()?.let {
-            views.roomSettingGeneric.roomSettingsToolbarTitleView.text = it.displayName
+            views.roomSettingGeneric.roomSettingsToolbarTitleView.swapToEthereumDisplayName(it.displayName)
             avatarRenderer.render(it.toMatrixItem(), views.roomSettingGeneric.roomSettingsToolbarAvatarImageView)
             views.roomSettingGeneric.roomSettingsDecorationToolbarAvatarImageView.render(it.roomEncryptionTrustLevel)
         }

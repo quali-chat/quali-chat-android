@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Kan niet ontsleutelen: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Het apparaat van de afzender heeft geen sleutels voor dit bericht gestuurd.</string>
     <string name="unable_to_send_message">Kan bericht niet versturen</string>
-    <string name="matrix_error">Matrix-fout</string>
+    <string name="matrix_error">quali.chat-fout</string>
     <string name="medium_email">E-mailadres</string>
     <string name="medium_phone_number">Telefoonnummer</string>
     <string name="room_displayname_room_invite">Kameruitnodiging</string>
@@ -117,7 +117,7 @@
     <string name="invitations_header">Uitnodigingen</string>
     <string name="low_priority_header">Lage prioriteit</string>
     <string name="direct_chats_header">Gesprekken</string>
-    <string name="matrix_only_filter">Alleen Matrix-contacten</string>
+    <string name="matrix_only_filter">Alleen quali.chat-contacten</string>
     <string name="no_result_placeholder">Geen resultaten</string>
     <string name="rooms_header">Gesprekken</string>
     <string name="send_bug_report_include_logs">Logboek versturen</string>
@@ -333,7 +333,7 @@
     <string name="widget_integration_missing_room_id">room_id ontbreekt in het verzoek.</string>
     <string name="widget_integration_missing_user_id">user_id ontbreekt in het verzoek.</string>
     <string name="widget_integration_room_not_visible">Gesprek %s is niet zichtbaar.</string>
-    <string name="room_add_matrix_apps">Matrix-apps toevoegen</string>
+    <string name="room_add_matrix_apps">quali.chat-apps toevoegen</string>
     <string name="notification_noisy_notifications">Belangrijke meldingen</string>
     <string name="notification_silent_notifications">Stille meldingen</string>
     <string name="title_activity_bug_report">Foutmelding</string>
@@ -412,7 +412,7 @@
 \n
 \nHet deactiveren van je account <b>zal er niet standaard voor zorgen dat de berichten die je hebt verzonden worden vergeten.</b> Indien je wil dat wij de berichten vergeten, vink je het vakje hieronder aan.
 \n
-\nDe zichtbaarheid van berichten in Matrix is gelijkaardig aan e-mails. Het vergeten van jouw berichten betekent dat berichten die je verstuurd hebt niet meer gedeeld worden met nieuwe of ongeregistreerde gebruikers, maar geregistreerde gebruikers die al toegang hebben tot deze berichten zullen alsnog toegang hebben tot hun eigen kopie ervan.</string>
+\nDe zichtbaarheid van berichten in quali.chat is gelijkaardig aan e-mails. Het vergeten van jouw berichten betekent dat berichten die je verstuurd hebt niet meer gedeeld worden met nieuwe of ongeregistreerde gebruikers, maar geregistreerde gebruikers die al toegang hebben tot deze berichten zullen alsnog toegang hebben tot hun eigen kopie ervan.</string>
     <string name="deactivate_account_delete_checkbox">Vergeet alle berichten die ik heb verstuurd wanneer mijn account gedeactiveerd is (<b>Let op:</b> dit zal er voor zorgen dat toekomstige personen een onvolledig beeld krijgen van gesprekken)</string>
     <string name="deactivate_account_submit">Account deactiveren</string>
     <string name="action_download">Downloaden</string>
@@ -444,7 +444,7 @@
         <item quantity="one">%d geselecteerd</item>
         <item quantity="other">%d geselecteerd</item>
     </plurals>
-    <string name="command_description_clear_scalar_token">Om Matrix-appbeheer te herstellen</string>
+    <string name="command_description_clear_scalar_token">Om quali.chat-appbeheer te herstellen</string>
     <string name="resource_limit_contact_admin">contact op te nemen met je dienstbeheerder</string>
     <string name="resource_limit_soft_default">Deze server heeft een van zijn bronlimieten overschreden, dus <b>sommige personen zullen zich niet kunnen aanmelden</b>.</string>
     <string name="resource_limit_hard_default">Deze server heeft een van zijn bronlimieten overschreden.</string>
@@ -707,7 +707,7 @@
     <string name="action_revoke">Intrekken</string>
     <string name="action_disconnect">Verbinding verbreken</string>
     <string name="action_decline">Weigeren</string>
-    <string name="login_error_no_homeserver_found">Dit is geen geldig Matrix-serveradres</string>
+    <string name="login_error_no_homeserver_found">Dit is geen geldig quali.chat-serveradres</string>
     <string name="login_error_homeserver_not_found">Kan geen verbinding maken met een server op deze URL, controleer de URL</string>
     <string name="settings_background_fdroid_sync_mode">Synchroniseren op de achtergrond</string>
     <string name="settings_background_fdroid_sync_mode_battery">Geoptimaliseerd voor batterij</string>
@@ -1003,7 +1003,7 @@
     <string name="soft_logout_signin_submit">Inloggen</string>
     <string name="soft_logout_signin_title">Inloggen</string>
     <string name="seen_by">Gezien door</string>
-    <string name="login_signin_matrix_id_hint">Matrix-ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat-ID</string>
     <string name="login_error_outdated_homeserver_title">Verouderde server</string>
     <string name="login_a11y_choose_matrix_org">Selecteer matrix.org</string>
     <string name="login_msisdn_confirm_send_again">Opnieuw versturen</string>
@@ -1313,15 +1313,15 @@
 \nWil je inloggen met een webclient\?</string>
     <string name="login_sso_error_message">Er is een fout opgetreden bij het laden van de pagina: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Voer het adres in van de server die je wil gebruiken</string>
-    <string name="login_server_url_form_modular_notice">Voer het adres in van de Modular Element of de server die je wil gebruiken</string>
+    <string name="login_server_url_form_modular_notice">Voer het adres in van de Modular quali.chat of de server die je wil gebruiken</string>
     <string name="login_server_url_form_modular_text">Premium hosting voor organisaties</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services-adres</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services-adres</string>
     <string name="login_clear_homeserver_history">Geschiedenis wissen</string>
     <string name="login_signin_sso">Doorgaan met eenmalig inloggen</string>
     <string name="login_social_signin_with">Log in met %s</string>
     <string name="login_signin_to">Log in bij %1$s</string>
     <string name="login_connect_to_a_custom_server">Verbinding maken met een aangepaste server</string>
-    <string name="login_connect_to_modular">Verbinding maken met Element Matrix Services</string>
+    <string name="login_connect_to_modular">Verbinding maken met quali.chat Services</string>
     <string name="login_connect_to">Maak verbinding met %1$s</string>
     <string name="login_social_sso">eenmalig inloggen</string>
     <string name="login_social_signup_with">Meld je aan met %s</string>
@@ -1492,7 +1492,7 @@
     <string name="settings_push_rules_no_rules">Geen push-regels gedefinieerd</string>
     <string name="settings_security_and_privacy">Beveiliging en privacy</string>
     <string name="settings_other_third_party_notices">Andere kennisgevingen van derden</string>
-    <string name="settings_sdk_version">Matrix SDK Versie</string>
+    <string name="settings_sdk_version">quali.chat SDK Versie</string>
     <string name="import_e2e_keys_from_file">Importeer e2e-sleutels uit bestand \"%1$s\".</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Er is een fout opgetreden bij het ophalen van back-upgegevens van sleutels</string>
     <string name="keys_backup_unable_to_get_trust_info">Er is een fout opgetreden bij het ophalen van vertrouwensinformatie</string>
@@ -1577,7 +1577,7 @@
     <string name="room_settings_room_notifications_manage_notifications">Je kan meldingen beheren in %1$s.</string>
     <string name="room_settings_room_notifications_encryption_notice">Houd er rekening mee dat vermeldingen en trefwoordmeldingen niet beschikbaar zijn in versleutelde kamers op mobiel.</string>
     <string name="room_settings_room_notifications_notify_me">Informeer mij voor</string>
-    <string name="settings_emails_and_phone_numbers_summary">Beheer e-mailadressen en telefoonnummers die aan je Matrix-account zijn gekoppeld</string>
+    <string name="settings_emails_and_phone_numbers_summary">Beheer e-mailadressen en telefoonnummers die aan je quali.chat-account zijn gekoppeld</string>
     <string name="settings_emails_and_phone_numbers_title">E-mailadressen en telefoonnummers</string>
     <string name="disabled_integration_dialog_content">Schakel hiervoor \'Integraties toestaan\' in bij Instellingen.</string>
     <string name="disabled_integration_dialog_title">Integraties zijn uitgeschakeld</string>
@@ -1629,7 +1629,7 @@
     <string name="settings_notification_mentions_and_keywords">Vermeldingen en trefwoorden</string>
     <string name="settings_notification_default">Standaardmeldingen</string>
     <string name="settings_notification_emails_enable_for_email">E-mailmeldingen inschakelen voor %s</string>
-    <string name="settings_notification_emails_no_emails">Om e-mail met melding te ontvangen, koppel je een e-mailadres aan je Matrix-account</string>
+    <string name="settings_notification_emails_no_emails">Om e-mail met melding te ontvangen, koppel je een e-mailadres aan je quali.chat-account</string>
     <string name="settings_notification_emails_category">E-mail notificatie</string>
     <string name="settings_emails_empty">Er is geen e-mailadres toegevoegd aan je account</string>
     <string name="settings_phone_number_empty">Er is geen telefoonnummer toegevoegd aan je account</string>
@@ -1783,14 +1783,14 @@
     <string name="failed_to_unban">Kan persoon verbanning niet opheffen</string>
     <string name="member_banned_by">Verbannen door %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">Uitnodiging voor %1$s intrekken\?</string>
-    <string name="phone_book_perform_lookup">Zoeken naar contacten op Matrix</string>
+    <string name="phone_book_perform_lookup">Zoeken naar contacten op quali.chat</string>
     <string name="empty_contact_book">Jouw contactenboek is leeg</string>
     <string name="loading_contact_book">Jouw contacten ophalen…</string>
     <string name="save_recovery_key_chooser_hint">Herstelsleutel opslaan in</string>
     <string name="disclaimer_positive_button">LEER MEER</string>
     <string name="disclaimer_negative_button">BEGREPEN</string>
     <string name="disclaimer_content">We zijn verheugd om aan te kondigen dat we van naam zijn veranderd! Jouw app is up-to-date en je bent ingelogd op jouw account.</string>
-    <string name="disclaimer_title">Riot is nu Element!</string>
+    <string name="disclaimer_title">Riot is nu quali.chat!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Wachten op versleutelingsgeschiedenis</string>
     <string name="crypto_error_withheld_generic">Je hebt geen toegang tot dit bericht omdat de afzender de sleutels met opzet niet heeft verzonden</string>
     <string name="crypto_error_withheld_blacklisted">Je hebt geen toegang tot dit bericht omdat je bent geblokkeerd door de afzender</string>
@@ -1878,12 +1878,12 @@
     <string name="command_description_discard_session_not_handled">Alleen ondersteund in versleutelde kamers</string>
     <string name="command_description_discard_session">Dwingt dat de huidige uitgaande groepssessie in een versleutelde kamer wordt weggegooid</string>
     <string name="use_latest_app">Gebruik de nieuwste ${app_name} op je andere apparaten:</string>
-    <string name="or_other_mx_capable_client">of een andere Matrix client die kruislingsondetekenen ondersteunt</string>
+    <string name="or_other_mx_capable_client">of een andere quali.chat client die kruislingsondetekenen ondersteunt</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
-    <string name="use_other_session_content_description">Gebruik de nieuwste ${app_name} op je andere apparaten, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} voor Android of een andere Matrix-client die geschikt is voor kruislings ondertekenen</string>
+    <string name="use_other_session_content_description">Gebruik de nieuwste ${app_name} op je andere apparaten, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} voor Android of een andere quali.chat-client die geschikt is voor kruislings ondertekenen</string>
     <string name="change_password_summary">Stel een nieuw accountwachtwoord in…</string>
     <string name="error_saving_media_file">Kan mediabestand niet opslaan</string>
     <string name="settings_security_prevent_screenshots_summary">Als je deze instelling inschakelt, wordt de FLAG_SECURE aan alle activiteiten toegevoegd. Start de applicatie opnieuw om de wijziging door te voeren.</string>
@@ -2088,7 +2088,7 @@
     <string name="settings_rageshake_detection_threshold_summary">Schud je telefoon om de detectiedrempel te testen</string>
     <string name="settings_developer_mode_summary">De ontwikkelaarsmodus activeert verborgen functies en kan de applicatie ook minder stabiel maken. Alleen voor ontwikkelaars!</string>
     <string name="bug_report_error_too_short">De beschrijving is te kort</string>
-    <string name="permalink_malformed">Jouw matrix.to link is onjuist opgemaakt</string>
+    <string name="permalink_malformed">Jouw quali.chat link is onjuist opgemaakt</string>
     <string name="soft_logout_sso_not_same_user_error">De huidige sessie is voor gebruiker %1$s en je geeft inloggegevens op voor persoon %2$s. Dit wordt niet ondersteund door ${app_name}.
 \nWis eerst de gegevens en meld je vervolgens opnieuw aan met een ander account.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Je raakt de toegang tot beveiligde berichten kwijt, tenzij je jezelf aanmeldt om jouw versleutelingssleutels te herstellen.</string>
@@ -2114,9 +2114,9 @@
     <string name="autodiscover_well_known_error">Kan geen geldige server vinden. Controleer je ID</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Dit is geen geldige persoon-ID. Verwacht formaat: \'@persoon:server.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Als je jouw wachtwoord niet weet, ga je terug om het opnieuw in te stellen.</string>
-    <string name="login_signin_matrix_id_notice">Als je een account aanmaakt op een server, gebruik dan je Matrix ID (bijv. @persoon:domein.nl) en wachtwoord hieronder.</string>
-    <string name="login_signin_matrix_id_title">Aanmelden met Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">Aanmelden met Matrix ID</string>
+    <string name="login_signin_matrix_id_notice">Als je een account aanmaakt op een server, gebruik dan je quali.chat ID (bijv. @persoon:domein.nl) en wachtwoord hieronder.</string>
+    <string name="login_signin_matrix_id_title">Aanmelden met quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">Aanmelden met quali.chat ID</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="one">Er zijn te veel verzoeken verzonden. Je kan het over %1$d seconde opnieuw proberen…</item>
         <item quantity="other">Er zijn te veel verzoeken verzonden. Je kan het over %1$d seconden opnieuw proberen…</item>
@@ -2129,7 +2129,7 @@
     <string name="login_terms_title">Accepteer de voorwaarden om door te gaan</string>
     <string name="login_a11y_captcha_container">Voer de captcha uitdaging uit</string>
     <string name="login_a11y_choose_other">Selecteer een aangepaste server</string>
-    <string name="login_a11y_choose_modular">Selecteer Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Selecteer quali.chat Services</string>
     <string name="login_signup_cancel_confirmation_content">Jouw account is nog niet aangemaakt. Het registratieproces stoppen\?</string>
     <string name="login_signup_error_user_in_use">Deze inlognaam is in gebruik</string>
     <string name="login_signin_username_hint">Inlognaam of e-mailadres</string>
@@ -2344,7 +2344,7 @@
     <string name="login_splash_create_account">Account aanmaken</string>
     <string name="ftue_auth_carousel_workplace_title">Berichten voor jouw team.</string>
     <string name="ftue_auth_carousel_encrypted_body">Eind-tot-eind versleuteld en geen telefoonnummer vereist. Geen advertenties of dataverzameling.</string>
-    <string name="ftue_auth_carousel_control_body">Kies waar je gesprekken worden bewaard, zodat je controle en onafhankelijkheid hebt. Verbonden via Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Kies waar je gesprekken worden bewaard, zodat je controle en onafhankelijkheid hebt. Verbonden via quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Veilige en onafhankelijke communicatie die je dezelfde mate van privacy geeft als een persoonlijk gesprek in je eigen huis.</string>
     <string name="attachment_type_location">Locatie</string>
     <string name="room_unsupported_e2e_algorithm_as_admin">De versleuteling is verkeerd geconfigureerd, zodat je geen berichten kunt versturen. Klik om instellingen te openen.</string>
@@ -2421,7 +2421,7 @@
 \n
 \nTerwijl we ons erop voorbereiden, moeten we enkele wijzigingen aanbrengen: discussies die vóór dit punt zijn gemaakt, worden weergegeven als gewone antwoorden.
 \n
-\nDit zal een eenmalige overgang zijn, aangezien Threads nu deel uitmaken van de Matrix-specificatie.</string>
+\nDit zal een eenmalige overgang zijn, aangezien Threads nu deel uitmaken van de quali.chat-specificatie.</string>
     <string name="threads_notice_migration_title">Threads benaderen bèta 🎉</string>
     <string name="room_notification_more_than_two_users_are_typing">%1$s, %2$s en anderen</string>
     <string name="room_notification_two_users_are_typing">%1$s en %2$s</string>
@@ -2562,7 +2562,7 @@
     <string name="ftue_auth_terms_subtitle">Lees de voorwaarden en het beleid van %s door</string>
     <string name="ftue_auth_terms_title">Serverbeleiden</string>
     <string name="ftue_auth_choose_server_ems_cta">Neem contact op</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) is een robuuste en betrouwbare hostingservice voor snelle, veilige en realtime communicatie. Ontdek hoe op <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) is een robuuste en betrouwbare hostingservice voor snelle, veilige en realtime communicatie. Ontdek hoe op <a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Wil je jouw eigen server hosten\?</string>
     <string name="ftue_auth_choose_server_entry_hint">Server URL</string>
     <string name="ftue_auth_choose_server_subtitle">Wat is het adres van jouw server\? Dit is als een huis voor al jouw data</string>
@@ -2578,8 +2578,8 @@
     <string name="font_size_section_manually">Handmatig kiezen</string>
     <string name="font_size_section_auto">Automatisch instellen</string>
     <string name="font_size_title">Kies lettergrootte</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Keur automatisch Element Oproep widgets goed en verleen camera-/microfoontoegang</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Snelkoppelingen voor Element Oproep machtigingen inschakelen</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Keur automatisch quali.chat Oproep widgets goed en verleen camera-/microfoontoegang</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Snelkoppelingen voor quali.chat Oproep machtigingen inschakelen</string>
     <string name="live_location_description">Live locatie</string>
     <string name="verify_invalid_qr_notice">Deze QR-code lijkt misvormd. Probeer te verifiëren met een andere methode.</string>
     <string name="crosssigning_cannot_verify_this_session_desc">Je hebt geen toegang tot de gecodeerde berichtgeschiedenis. Reset je Veilige Berichten Back-up en verificatiesleutels om opnieuw te beginnen.</string>
@@ -2671,7 +2671,7 @@
     <string name="labs_enable_rich_text_editor_summary">Probeer de rich-text-editor (platte tekst-modus binnenkort beschikbaar)</string>
     <string name="labs_enable_rich_text_editor_title">Rich-text-editor inschakelen</string>
     <string name="labs_enable_deferred_dm_title">Uitgestelde privéberichten inschakelen</string>
-    <string name="labs_enable_new_app_layout_summary">Een vereenvoudigde Element met optionele tabs</string>
+    <string name="labs_enable_new_app_layout_summary">Een vereenvoudigde quali.chat met optionele tabs</string>
     <string name="labs_enable_new_app_layout_title">Nieuwe layout inschakelen</string>
     <string name="qr_code_login_confirm_security_code">Bevestigen</string>
     <string name="qr_code_login_try_again">Opnieuw proberen</string>

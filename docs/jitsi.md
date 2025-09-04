@@ -1,4 +1,4 @@
-# Jitsi in Element Android
+# Jitsi in quali.chat Android
 
 <!--- TOC -->
 
@@ -12,15 +12,15 @@
 
 <!--- END -->
 
-Native Jitsi support has been added to Element Android by the PR [#1914](https://github.com/element-hq/element-android/pull/1914). The description of the PR contains some documentation about the behaviour in each possible room configuration.
+Native Jitsi support has been added to quali.chat Android by the PR [#1914](https://github.com/element-hq/element-android/pull/1914). The description of the PR contains some documentation about the behaviour in each possible room configuration.
 
-Also, ensure to have a look on [the documentation from Element Web](https://github.com/element-hq/element-web/blob/develop/docs/jitsi.md)
+Also, ensure to have a look on [the documentation from quali.chat Web](https://github.com/quali-chat/quali-chat-web/blob/develop/docs/jitsi.md)
 
 The official documentation about how to integrate the Jitsi SDK in an Android app is available here: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk.
 
 ## Native Jitsi SDK
 
-The Jitsi SDK is built by ourselves with the flag LIBRE_BUILD, to be able to be integrated on the F-Droid version of Element Android.
+The Jitsi SDK is built by ourselves with the flag LIBRE_BUILD, to be able to be integrated on the F-Droid version of quali.chat Android.
 
 The generated maven repository is then host in the project https://github.com/element-hq/jitsi_libre_maven
 
@@ -36,7 +36,7 @@ Currently we are building the version with the tag `android-sdk-8.1.1`.
 
 #### Run the build script
 
-At the root of the Element Android, run the following script:
+At the root of the quali.chat Android, run the following script:
 
 ```shell script
 ./tools/jitsi/build_jisti_libs.sh
@@ -93,4 +93,4 @@ url "https://github.com/element-hq/jitsi_libre_maven/raw/main/android-sdk-8.1.1"
 
 - Build the project and perform the sanity tests again.
 
-- Create a PR for project Element Android and add a changelog file `<PR_NUMBER>.misc` to notify about the library upgrade.
+- Create a PR for project quali.chat Android and add a changelog file `<PR_NUMBER>.misc` to notify about the library upgrade.

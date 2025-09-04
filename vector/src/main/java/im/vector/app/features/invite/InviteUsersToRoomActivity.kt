@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,7 +50,7 @@ import org.matrix.android.sdk.api.failure.Failure
 import java.net.HttpURLConnection
 
 @Parcelize
-data class InviteUsersToRoomArgs(val roomId: String) : Parcelable
+data class InviteUsersToRoomArgs(val roomId: String, val directRoomMembersLimit: Int) : Parcelable
 
 @AndroidEntryPoint
 class InviteUsersToRoomActivity : SimpleFragmentActivity() {
@@ -86,7 +87,8 @@ class InviteUsersToRoomActivity : SimpleFragmentActivity() {
                             menuResId = R.menu.vector_invite_users_to_room,
                             submitMenuItemId = R.id.action_invite_users_to_room_invite,
                             excludedUserIds = viewModel.getUserIdsOfRoomMembers(),
-                            showInviteActions = false
+                            showInviteActions = false,
+                            directRoomMembersLimit = viewModel.getDirectRoomMembersLimit()
                     )
             )
         }
@@ -158,9 +160,9 @@ class InviteUsersToRoomActivity : SimpleFragmentActivity() {
 
     companion object {
 
-        fun getIntent(context: Context, roomId: String): Intent {
+        fun getIntent(context: Context, roomId: String, directRoomMembersLimit: Int): Intent {
             return Intent(context, InviteUsersToRoomActivity::class.java).also {
-                it.putExtra(Mavericks.KEY_ARG, InviteUsersToRoomArgs(roomId))
+                it.putExtra(Mavericks.KEY_ARG, InviteUsersToRoomArgs(roomId, directRoomMembersLimit))
             }
         }
     }

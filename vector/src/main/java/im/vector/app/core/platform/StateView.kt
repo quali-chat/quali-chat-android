@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,6 +25,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.core.view.isVisible
 import im.vector.app.R
+import im.vector.app.core.extensions.setTextOrHide
 import im.vector.app.core.extensions.updateConstraintSet
 import im.vector.app.databinding.ViewStateBinding
 
@@ -35,6 +37,7 @@ class StateView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         object Loading : State()
         data class Empty(
                 val title: CharSequence? = null,
+                val userName: CharSequence? = null,
                 val image: Drawable? = null,
                 val isBigImage: Boolean = false,
                 val message: CharSequence? = null,
@@ -88,6 +91,7 @@ class StateView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
                 }
                 views.emptyMessageView.text = newState.message
                 views.emptyTitleView.text = newState.title
+                views.userName.setTextOrHide(newState.userName)
             }
             is State.Error -> {
                 views.errorMessageView.text = newState.message

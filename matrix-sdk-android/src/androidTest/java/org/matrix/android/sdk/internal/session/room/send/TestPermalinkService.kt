@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,8 +45,8 @@ class TestPermalinkService : PermalinkService {
 
     override fun createMentionSpanTemplate(type: PermalinkService.SpanTemplateType, forceMatrixTo: Boolean): String {
         return when (type) {
-            HTML -> "<a href=\"https://matrix.to/#/%1\$s\">%2\$s</a>"
-            MARKDOWN -> "[%2\$s](https://matrix.to/#/%1\$s)"
+            HTML -> "<a href=\"https://quali.chat/#/%1\$s\">%2\$s</a>"
+            MARKDOWN -> "[%2\$s](https://quali.chat/#/%1\$s)"
         }
     }
 

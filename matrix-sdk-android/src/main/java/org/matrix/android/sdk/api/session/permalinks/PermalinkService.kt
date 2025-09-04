@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +26,7 @@ import org.matrix.android.sdk.api.session.events.model.Event
 interface PermalinkService {
 
     companion object {
-        const val MATRIX_TO_URL_BASE = "https://matrix.to/#/"
+        const val MATRIX_TO_URL_BASE = "https://matrix.quali.chat/#/"
     }
 
     enum class SpanTemplateType {

@@ -45,7 +45,7 @@
     <string name="invitations_header">Davetler</string>
     <string name="low_priority_header">Düşük öncelik</string>
     <string name="direct_chats_header">Konuşmalar</string>
-    <string name="matrix_only_filter">Sadece Matrix kullanıcıları</string>
+    <string name="matrix_only_filter">Sadece quali.chat kullanıcıları</string>
     <string name="no_result_placeholder">Sonuç bulunamadı</string>
     <string name="rooms_header">Odalar</string>
     <string name="send_bug_report_include_logs">Sistem günlüğünü (log) gönder</string>
@@ -431,7 +431,7 @@
     <string name="widget_integration_missing_user_id">user_id istekte eksik.</string>
     <string name="widget_integration_room_not_visible">%s adlı oda görünür değil.</string>
     <string name="widget_integration_missing_parameter">Gerekli değerler eksik.</string>
-    <string name="room_add_matrix_apps">Matrix uygulamaları ekle</string>
+    <string name="room_add_matrix_apps">quali.chat uygulamaları ekle</string>
     <string name="settings_labs_native_camera">Yerel kamerayı kullan</string>
     <string name="settings_labs_native_camera_summary">Özel kamera ekranı açmak yerine sistem kamerasını kullan.</string>
     <string name="you_added_a_new_device">%s adlı şifreleme anahatarlarını isteyebilen yeni bir oturum eklediniz.</string>
@@ -452,7 +452,7 @@
     <string name="command_description_remove_user">Verilen id ile kullanıcıları atar</string>
     <string name="command_description_nick">Görünür ismini değiştirir</string>
     <string name="command_description_markdown">Markdown Aç/Kapat</string>
-    <string name="command_description_clear_scalar_token">Matrix uygulamaları yönetmeyi düzeltmek için</string>
+    <string name="command_description_clear_scalar_token">quali.chat uygulamaları yönetmeyi düzeltmek için</string>
     <string name="markdown_has_been_enabled">Markdown etkinleştirilmiş.</string>
     <string name="markdown_has_been_disabled">Markdown etkin değil.</string>
     <string name="notification_off">Kapalı</string>
@@ -474,7 +474,7 @@
 \n
 \nHesabınızı devre dışı bırakmak <b>varsayılan olarak gönderdiğiniz mesajlarınızın silinmesini sağlamaz</b>. Eğer mesajlarınızın silinmesini istiyorsanız lütfen alttaki kutuyu işaretleyin.
 \n
-\nMatrixdeki mesaj görünürlüğü e-posta ile benzerdir. Silinen mesajlarınız yeni ya da kayıtsız kullanıcılarla paylaşılmaz ama kayıtlı ve zaten mesajlarınıza erişebilen kullanıcılar halen mesajlarınızın bir kopyasına sahip olurlar.</string>
+\nquali.chatdeki mesaj görünürlüğü e-posta ile benzerdir. Silinen mesajlarınız yeni ya da kayıtsız kullanıcılarla paylaşılmaz ama kayıtlı ve zaten mesajlarınıza erişebilen kullanıcılar halen mesajlarınızın bir kopyasına sahip olurlar.</string>
     <string name="deactivate_account_delete_checkbox">Lütfen hesabım devre dışı olunca gönderdiğim tüm mesajları sil (Uyarı: bu gelecekteki kullanıcıların bitmemiş yarım tartışma görmelerine sebep olur)</string>
     <string name="deactivate_account_submit">Hesabı devre dışı bırak</string>
     <string name="error_empty_field_enter_user_name">Lütfen kullanıcı adı girin.</string>
@@ -702,7 +702,7 @@
     <string name="create_room_public_description">Herkes bu odaya katılabilir</string>
     <string name="keys_backup_unable_to_get_trust_info">Güven bilgisi alınırken hata oluştu</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Anahtar yedek verileri alınırken hata oluştu</string>
-    <string name="login_error_no_homeserver_found">Bu geçerli bir Matrix sunucu adresi değil</string>
+    <string name="login_error_no_homeserver_found">Bu geçerli bir quali.chat sunucu adresi değil</string>
     <string name="login_error_homeserver_not_found">Bu URL ile ev-sunucusuna erişilemiyor, lütfen kontrol edin</string>
     <string name="settings_background_fdroid_sync_mode">Arka plan Senkronizasyon Modu (Deneysel)</string>
     <string name="settings_background_fdroid_sync_mode_battery">Batarya için optimize edildi</string>
@@ -895,7 +895,7 @@
     <string name="room_settings_alias_subtitle">Bu odanın adreslerini ve oda dizinindeki görünürlüğünü inceleyin.</string>
     <string name="room_settings_room_read_history_dialog_subtitle">Geçmişi okuyabilenlerle ilgili değişiklikler, yalnızca bu odadaki gelecekteki mesajlar için geçerli olacaktır. Mevcut geçmişin görünürlüğü değişmeyecek.</string>
     <string name="room_settings_alias_title">Oda ayarları</string>
-    <string name="settings_emails_and_phone_numbers_summary">Matrix hesabınıza bağlanan e-postaları ve telefon numaralarını yönetin</string>
+    <string name="settings_emails_and_phone_numbers_summary">quali.chat hesabınıza bağlanan e-postaları ve telefon numaralarını yönetin</string>
     <string name="settings_emails_and_phone_numbers_title">E-postalar ve telefon numaraları</string>
     <string name="settings_show_emoji_keyboard_summary">Emoji klavyesini açmak için mesaj oluşturucuya bir düğme ekleyin</string>
     <string name="settings_chat_effects_description">/confetti komutunu kullanın veya ❄️ veya 🎉 içeren bir mesaj gönderin</string>
@@ -949,7 +949,7 @@
     <string name="settings_general_title">Genel</string>
     <string name="navigate_to_room_when_already_in_the_room">Zaten bu odayı görüntülüyorsunuz!</string>
     <string name="settings_other_third_party_notices">Diğer üçüncü taraf bildirimleri</string>
-    <string name="settings_sdk_version">Matrix SDK Sürümü</string>
+    <string name="settings_sdk_version">quali.chat SDK Sürümü</string>
     <string name="settings_show_redacted_summary">Silinen mesajlar için bir yer tutucu göster</string>
     <string name="settings_show_redacted">Silinen mesajları göster</string>
     <string name="event_redacted">Mesaj silindi</string>
@@ -966,7 +966,7 @@
     <string name="login_signin_to">%1$s sunucusuna giriş yap</string>
     <string name="login_connect_to_a_custom_server">Özel bir sunucuya bağlan</string>
     <string name="login_connect_to">%1$s sunucusuna bağlan</string>
-    <string name="login_connect_to_modular">Element Matrix Hizmetlerine bağlan</string>
+    <string name="login_connect_to_modular">quali.chat Hizmetlerine bağlan</string>
     <string name="login_social_sso">tek seferlik giriş</string>
     <string name="login_social_signup_with">%s ile kayıt ol</string>
     <string name="login_social_signin_with">%s ile giriş yap</string>
@@ -1032,10 +1032,10 @@
     <string name="autodiscover_well_known_error">Geçerli bir ana sunucu bulunamıyor. Lütfen tanımlayıcınızı kontrol edin</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Bu geçerli bir kullanıcı tanımlayıcı değil. Beklenen biçim: \'@kullanıcı:anasunucu.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Şifrenizi bilmiyorsanız sıfırlamak için geri dönün.</string>
-    <string name="login_signin_matrix_id_notice">Bir ana sunucuda hesap oluşturursanız, aşağıdan Matrix Kimliğinizi-IDnizi (ör. @kullanıcı:alanadı.com) ve şifrenizi kullanın.</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
-    <string name="login_signin_matrix_id_title">Matrix ID ile oturum açın</string>
-    <string name="login_connect_using_matrix_id_submit">Matrix ID ile oturum açın</string>
+    <string name="login_signin_matrix_id_notice">Bir ana sunucuda hesap oluşturursanız, aşağıdan quali.chat Kimliğinizi-IDnizi (ör. @kullanıcı:alanadı.com) ve şifrenizi kullanın.</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
+    <string name="login_signin_matrix_id_title">quali.chat ID ile oturum açın</string>
+    <string name="login_connect_using_matrix_id_submit">quali.chat ID ile oturum açın</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="one">Çok fazla istek gönderildi. %1$d saniye sonra tekrar deneyebilirsiniz…</item>
         <item quantity="other">Çok fazla istek gönderildi. %1$d saniye sonra tekrar deneyebilirsiniz…</item>
@@ -1049,8 +1049,8 @@
     <string name="login_terms_title">Devam etmek için koşulları kabul edin</string>
     <string name="login_a11y_captcha_container">Lütfen aşağıdaki doğrulamayı tamamlayın</string>
     <string name="login_a11y_choose_other">Özel bir ana sunucu seçin</string>
-    <string name="login_a11y_choose_modular">Element Matric Hizmetleri\'ni seç</string>
-    <string name="login_a11y_choose_matrix_org">Matrix.org sunucusunu seç</string>
+    <string name="login_a11y_choose_modular">quali.chat Matric Hizmetleri\'ni seç</string>
+    <string name="login_a11y_choose_matrix_org">quali.chat.org sunucusunu seç</string>
     <string name="login_signup_cancel_confirmation_content">Hesabınız henüz oluşturulmadı. Kayıt işlemini durdurmak istiyor musunuz\?</string>
     <string name="login_signup_cancel_confirmation_title">Uyarı</string>
     <string name="login_signup_error_user_in_use">Bu kullanıcı adı alınmış</string>
@@ -1092,7 +1092,7 @@
 \nİnternet istemcisi ile kayıt olmak ister misiniz\?</string>
     <string name="login_registration_disabled">Üzgünüm, bu sunucu artık yeni hesap kabul etmiyor.</string>
     <string name="login_login_with_email_error">Bu e-posta herhangi bir hesapla ilişkili değil.</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Hizmetleri Adresi</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Hizmetleri Adresi</string>
     <string name="login_server_url_form_other_hint">Adres</string>
     <string name="login_clear_homeserver_history">Geçmişi temizle</string>
     <string name="login_signin">Giriş yap</string>
@@ -1183,7 +1183,7 @@
     <string name="room_displayname_room_invite">Oda daveti</string>
     <string name="medium_phone_number">Telefon numarası</string>
     <string name="medium_email">E-posta adresi</string>
-    <string name="matrix_error">Matrix hatası</string>
+    <string name="matrix_error">quali.chat hatası</string>
     <string name="unable_to_send_message">Mesaj gönderilemedi</string>
     <string name="power_level_default">Varsayılan</string>
     <string name="notice_room_third_party_registered_invite_by_you">%1$s kişisinin davetini kabul ettiniz</string>
@@ -1478,7 +1478,7 @@
     <string name="settings_notification_mentions_and_keywords">Bahsedilenler ve Anahtar Sözcükler</string>
     <string name="settings_notification_default">Varsayılan bildirimler</string>
     <string name="settings_notification_emails_enable_for_email">%s için e-posta bildirimlerini etkinleştir</string>
-    <string name="settings_notification_emails_no_emails">Bildirim içeren e-posta almak için lütfen bir e-postayı Matrix hesabınızla ilişkilendirin</string>
+    <string name="settings_notification_emails_no_emails">Bildirim içeren e-posta almak için lütfen bir e-postayı quali.chat hesabınızla ilişkilendirin</string>
     <string name="settings_notification_emails_category">Eposta bildirimi</string>
     <string name="settings_remove_three_pid_confirmation_content">%s kaldırılsın mı\?</string>
     <string name="shortcut_disabled_reason_sign_out">Oturum kapatıldı!</string>
@@ -1550,7 +1550,7 @@
     <string name="settings_advanced_settings">Gelişmiş Ayarlar</string>
     <string name="notification_initial_sync">İlk Senkronizasyon…</string>
     <string name="bug_report_error_too_short">Açıklama çok kısa</string>
-    <string name="permalink_malformed">matrix.to bağlantınız hatalı biçimlendirilmiş</string>
+    <string name="permalink_malformed">quali.chat bağlantınız hatalı biçimlendirilmiş</string>
     <string name="soft_logout_sso_not_same_user_error">Geçerli oturum %1$s kullanıcısı içindir ve %2$s kullanıcısı için kimlik bilgileri sağlarsınız. Bu, ${app_name} tarafından desteklenmez.
 \nLütfen önce verileri temizleyin, sonra başka bir hesapta tekrar oturum açın.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Şifreleme anahtarlarınızı kurtarmak için oturum açmadığınız sürece güvenli mesajlara erişiminizi kaybedersiniz.</string>
@@ -1581,13 +1581,13 @@
     <string name="login_server_url_form_common_notice">Kullanmak istediğiniz sunucunun adresini girin</string>
     <string name="login_server_url_form_modular_notice">Kullanmak istediğiniz Modüler Öğe veya Sunucunun adresini girin</string>
     <string name="login_server_url_form_modular_text">Kuruluşlar için premium barındırma</string>
-    <string name="login_signin_sso">SSO ile devam et</string>
+    <string name="login_signin_sso">Ethereum ile devam et</string>
     <string name="login_social_continue_with">%s ile devam et</string>
     <string name="login_splash_already_have_account">zaten bir hesabım var</string>
     <string name="login_splash_create_account">Hesap oluştur</string>
     <string name="ftue_auth_carousel_workplace_title">Ekibiniz için mesajlaşma.</string>
     <string name="ftue_auth_carousel_encrypted_body">Uçtan uca şifrelenir ve telefon numarası gerekmez. Reklam veya veri madenciliği yok.</string>
-    <string name="ftue_auth_carousel_control_body">Size kontrol ve bağımsızlık vererek konuşmalarınızın nerede tutulacağını seçin. Matrix ile bağlandı.</string>
+    <string name="ftue_auth_carousel_control_body">Size kontrol ve bağımsızlık vererek konuşmalarınızın nerede tutulacağını seçin. quali.chat ile bağlandı.</string>
     <string name="ftue_auth_carousel_secure_body">Size kendi evinizde yüz yüze görüşmeyle aynı düzeyde mahremiyet sağlayan güvenli ve bağımsız iletişim.</string>
     <string name="ftue_auth_carousel_encrypted_title">Güvenli mesajlaşma.</string>
     <string name="ftue_auth_carousel_control_title">Kontrol sende.</string>

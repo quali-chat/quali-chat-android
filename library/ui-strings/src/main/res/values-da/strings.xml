@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Kunne ikke dekryptere: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Afsenderens enhed har ikke sendt os nøglerne til denne besked.</string>
     <string name="unable_to_send_message">Kunne ikke sende besked</string>
-    <string name="matrix_error">Matrix fejl</string>
+    <string name="matrix_error">quali.chat fejl</string>
     <string name="encrypted_message">Krypteret besked</string>
     <string name="medium_email">mailadresse</string>
     <string name="medium_phone_number">Telefonnummer</string>
@@ -78,7 +78,7 @@
     <string name="invitations_header">Invitationer</string>
     <string name="low_priority_header">Lav prioritet</string>
     <string name="direct_chats_header">Samtaler</string>
-    <string name="matrix_only_filter">Kun Matrix kontakter</string>
+    <string name="matrix_only_filter">Kun quali.chat kontakter</string>
     <string name="no_result_placeholder">Ingen resultater</string>
     <string name="rooms_header">Rum</string>
     <string name="send_bug_report_include_logs">Send logfiler</string>

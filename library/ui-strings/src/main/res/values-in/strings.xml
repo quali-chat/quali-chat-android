@@ -44,7 +44,7 @@
     <string name="invitations_header">Undangan</string>
     <string name="direct_chats_header">Percakapan</string>
     <string name="low_priority_header">Prioritas rendah</string>
-    <string name="matrix_only_filter">Hanya kontak Matrix</string>
+    <string name="matrix_only_filter">Hanya kontak quali.chat</string>
     <string name="rooms_header">Ruangan</string>
     <string name="send_bug_report">Laporan kutu</string>
     <string name="send_bug_report_app_crashed">Aplikasi mogok saat terakhir digunakan. Apakah Anda ingin membuka halaman laporan kemogokan\?</string>
@@ -216,7 +216,7 @@
     <string name="widget_integration_missing_user_id">Tidak ada user_id dalam permohonan.</string>
     <string name="widget_integration_room_not_visible">Ruang %s tidak terlihat.</string>
     <string name="widget_integration_missing_parameter">Ada parameter penting yang hilang.</string>
-    <string name="room_add_matrix_apps">Tambahkan aplikasi Matrix</string>
+    <string name="room_add_matrix_apps">Tambahkan aplikasi quali.chat</string>
     <string name="settings_labs_native_camera">Gunakan kamera bawaan</string>
     <string name="you_added_a_new_device">Anda menambahkan perangkat baru \'%s\', yang sedang meminta kunci enkripsi.</string>
     <string name="your_unverified_device_requesting">Perangkat Anda yang belum terverifikasi \'%s\' sedang meminta kunci enkripsi.</string>
@@ -234,7 +234,7 @@
     <string name="command_description_remove_user">Keluarkan pengguna dengan id berikut</string>
     <string name="command_description_nick">Ubah nama panggilan layar Anda</string>
     <string name="command_description_markdown">Mati/Nyalakan markdown</string>
-    <string name="command_description_clear_scalar_token">Untuk memperbaiki kepengurusan Aplikasi Matrix</string>
+    <string name="command_description_clear_scalar_token">Untuk memperbaiki kepengurusan Aplikasi quali.chat</string>
     <string name="notification_off">Mati</string>
     <string name="notification_noisy">Berisik</string>
     <string name="encrypted_message">Pesan terenkripsi</string>
@@ -253,7 +253,7 @@
 \n
 \nMenonaktifkan akun Anda <b>tidak membuat kami melupakan pesan-pesan yang Anda kirim secara bawaan</b>. Jika Anda ingin kami melupakan pesan-pesan Anda, mohon centang kotak berikut.
 \n
-\nKeterbacaan pesan di Matrix serupa dengan email. Dengan kami melupakan pesan-pesan Anda berarti pesan-pesan yang Anda kirim tidak akan dibagikan kepada pengguna baru ataupun yang belum terdaftar, tetapi pengguna yang terdaftar yang mempunyai mengakses pesan-pesan tersebut masih dapat mengakses salinan mereka.</string>
+\nKeterbacaan pesan di quali.chat serupa dengan email. Dengan kami melupakan pesan-pesan Anda berarti pesan-pesan yang Anda kirim tidak akan dibagikan kepada pengguna baru ataupun yang belum terdaftar, tetapi pengguna yang terdaftar yang mempunyai mengakses pesan-pesan tersebut masih dapat mengakses salinan mereka.</string>
     <string name="deactivate_account_delete_checkbox">Mohon lupakan semua pesan yang telah saya kirim ketika akun saya dinonaktifkan (Peringatan: ini akan mengakibatkan pengguna di masa depan melihat percakapan yang tidak lengkap)</string>
     <string name="deactivate_account_submit">Nonaktifkan Akun</string>
     <string name="error_empty_field_your_password">Mohon masukkan kata sandi Anda.</string>
@@ -614,7 +614,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="login_error_ssl_other">Kesalahan SSL.</string>
     <string name="login_error_ssl_peer_unverified">Kesalahan SSL: identitas peer belum diverifikasi.</string>
     <string name="login_error_homeserver_not_found">Tidak dapat mencapai homeserver pada URL ini, silakan periksa</string>
-    <string name="login_error_no_homeserver_found">Ini bukan alamat server Matrix yang absah</string>
+    <string name="login_error_no_homeserver_found">Ini bukan alamat server quali.chat yang absah</string>
     <string name="auth_msisdn_already_defined">Nomor telepon ini sudah ditentukan.</string>
     <string name="auth_login_sso">Masuk dengan single sign-on</string>
     <string name="use_as_default_and_do_not_ask_again">Gunakan sebagai bawaan dan jangan tanya lagi</string>
@@ -779,7 +779,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="room_displayname_3_members">%1$s, %2$s, dan %3$s</string>
     <string name="medium_phone_number">Nomor telepon</string>
     <string name="medium_email">Surel</string>
-    <string name="matrix_error">Kesalahan Matrix</string>
+    <string name="matrix_error">Kesalahan quali.chat</string>
     <string name="unable_to_send_message">Tidak dapat mengirim pesan</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Perangkat pengirim belum mengirimi kami kunci untuk pesan ini.</string>
     <string name="notice_crypto_unable_to_decrypt">** Tidak dapat mendekripsi: %s **</string>
@@ -969,7 +969,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="compression_opt_list_choose">Pilih</string>
     <string name="settings_default_compression">Kompresi bawaan</string>
     <string name="settings_media">Media</string>
-    <string name="settings_emails_and_phone_numbers_summary">Kelola alamat email dan nomor telepon yang ditautkan ke akun Matrix Anda</string>
+    <string name="settings_emails_and_phone_numbers_summary">Kelola alamat email dan nomor telepon yang ditautkan ke akun quali.chat Anda</string>
     <string name="settings_emails_and_phone_numbers_title">Email dan nomor telepon</string>
     <string name="settings_fail_to_update_password_invalid_current_password">Kata sandi tidak absah</string>
     <string name="settings_password">Sandi</string>
@@ -1054,17 +1054,17 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
 \nApakah Anda ingin masuk menggunakan klien web\?</string>
     <string name="login_sso_error_message">Ada kesalahan terjadi saat memuat halaman: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Masukkan alamat server yang ingin Anda gunakan</string>
-    <string name="login_server_url_form_modular_notice">Masukkan alamat Modular Element atau Server yang ingin Anda gunakan</string>
+    <string name="login_server_url_form_modular_notice">Masukkan alamat Modular quali.chat atau Server yang ingin Anda gunakan</string>
     <string name="login_server_url_form_modular_text">Hosting premium untuk organisasi</string>
     <string name="login_server_url_form_other_hint">Alamat</string>
-    <string name="login_server_url_form_modular_hint">Alamat Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Alamat quali.chat Services</string>
     <string name="login_clear_homeserver_history">Hapus riwayat</string>
     <string name="login_signin_sso">Lanjutkan dengan login masuk-tunggal</string>
     <string name="login_signin">Masuk</string>
     <string name="login_signup">Daftar</string>
     <string name="login_signin_to">Masuk ke %1$s</string>
     <string name="login_connect_to_a_custom_server">Hubungkan ke server kustom</string>
-    <string name="login_connect_to_modular">Hubungkan ke Element Matrix Services</string>
+    <string name="login_connect_to_modular">Hubungkan ke quali.chat Services</string>
     <string name="login_connect_to">Hubungkan ke %1$s</string>
     <string name="login_continue">Lanjutkan</string>
     <string name="login_social_sso">login masuk-tunggal</string>
@@ -1357,7 +1357,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="settings_general_title">Umum</string>
     <string name="navigate_to_room_when_already_in_the_room">Anda telah menampilkan ruangan ini!</string>
     <string name="settings_other_third_party_notices">Pemberitahuan pihak ketiga lainnya</string>
-    <string name="settings_sdk_version">Versi SDK Matrix</string>
+    <string name="settings_sdk_version">Versi SDK quali.chat</string>
     <string name="import_e2e_keys_from_file">Impor kunci E2E dari file \"%1$s\".</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Sebuah kesalahan terjadi mendapatkan data cadangan kunci</string>
     <string name="keys_backup_unable_to_get_trust_info">Sebuah kesalahan terjadi mendapatkan info kepercyaan</string>
@@ -1560,7 +1560,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="settings_advanced_settings">Pengaturan Lanjutan</string>
     <string name="notification_initial_sync">Sinkronisasi Awal…</string>
     <string name="bug_report_error_too_short">Deskripsi terlalu pendek</string>
-    <string name="permalink_malformed">Tautan matrix.to Anda tidak benar</string>
+    <string name="permalink_malformed">Tautan quali.chat Anda tidak benar</string>
     <string name="soft_logout_sso_not_same_user_error">Sesi saat ini hanya untuk pengguna %1$s dan Anda memberikan kredensial untuk pengguna %2$s. Ini tidak didukung oleh ${app_name}.
 \nMohon bersihkan data, terus masuk lagi ke akun lainnya.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Anda akan kehilangan akses ke pesan yang aman kecuali jika Anda masuk untuk memulihkan kunci enkripsi Anda.</string>
@@ -1590,10 +1590,10 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="autodiscover_well_known_error">Tidak dapat menemukan homeserver yang absah. Mohon cek pengenal Anda</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Ini bukan pengenal pengguna yang absah. Format yang diharapkan: \'@pengguna:homeserver.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Jika Anda tidak tahu kata sandi Anda, kembali untuk mengatur ulang.</string>
-    <string name="login_signin_matrix_id_hint">ID Matrix</string>
-    <string name="login_signin_matrix_id_notice">Jika Anda membuat akun di sebuah homeserver, gunakan ID Matrix Anda (mis. @pengguna:domain.com) dan kata sandi dibawah.</string>
-    <string name="login_signin_matrix_id_title">Masuk dengan ID Matrix</string>
-    <string name="login_connect_using_matrix_id_submit">Masuk dengan ID Matrix</string>
+    <string name="login_signin_matrix_id_hint">ID quali.chat</string>
+    <string name="login_signin_matrix_id_notice">Jika Anda membuat akun di sebuah homeserver, gunakan ID quali.chat Anda (mis. @pengguna:domain.com) dan kata sandi dibawah.</string>
+    <string name="login_signin_matrix_id_title">Masuk dengan ID quali.chat</string>
+    <string name="login_connect_using_matrix_id_submit">Masuk dengan ID quali.chat</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="other">Terlalu banyak permintaan. Anda dapat mencoba lagi dalam %1$d detik…</item>
     </plurals>
@@ -1607,7 +1607,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="login_terms_title">Terima ketentuan untuk melanjutkan</string>
     <string name="login_a11y_captcha_container">Mohon melakukan tantangan captcha</string>
     <string name="login_a11y_choose_other">Pilih homeserver kustom</string>
-    <string name="login_a11y_choose_modular">Pilih Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Pilih quali.chat Services</string>
     <string name="login_a11y_choose_matrix_org">Pilih matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">Akun Anda belum dibuat. Batalkan proses pendaftaran\?</string>
     <string name="login_signup_cancel_confirmation_title">Peringatan</string>
@@ -1856,7 +1856,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="member_banned_by">Dicekal oleh %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">Batalkan undangan ke %1$s\?</string>
     <string name="three_pid_revoke_invite_dialog_title">Batalkan undangan</string>
-    <string name="phone_book_perform_lookup">Cari kontak di Matrix</string>
+    <string name="phone_book_perform_lookup">Cari kontak di quali.chat</string>
     <string name="contacts_book_title">Kontak</string>
     <string name="empty_contact_book">Kontak Anda kosong</string>
     <string name="loading_contact_book">Mendapatkan kontak Anda…</string>
@@ -1870,7 +1870,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="disclaimer_positive_button">PELAJARI LEBIH LANJUT</string>
     <string name="disclaimer_negative_button">MENGERTI</string>
     <string name="disclaimer_content">Kami senang mengumumkan kami telah mengubah nama! Aplikasi Anda mutakhir dan Anda telah masuk ke akun Anda.</string>
-    <string name="disclaimer_title">Riot sekarang telah menjadi Element!</string>
+    <string name="disclaimer_title">Riot sekarang telah menjadi quali.chat!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Menunggu untuk riwayat enkripsi</string>
     <string name="crypto_error_withheld_generic">Anda tidak dapat mengakses pesan ini karena pengirim telah sengaja tidak mengirim kuncinya</string>
     <string name="crypto_error_withheld_unverified">Anda tidak dapat mengakses pesan ini karena sesi Anda tidak dipercayai oleh pengirim</string>
@@ -1927,7 +1927,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <plurals name="invitations_sent_to_one_and_more_users">
         <item quantity="other">Undangan terkirim ke %1$s dan %2$d lagi</item>
     </plurals>
-    <string name="not_a_valid_qr_code">Bukan kode QR Matrix yang valid</string>
+    <string name="not_a_valid_qr_code">Bukan kode QR quali.chat yang valid</string>
     <string name="invitations_sent_to_two_users">Undangan terkirim ke %1$s dan %2$s</string>
     <string name="invitation_sent_to_one_user">Undangan terkirim ke %1$s</string>
     <string name="invite_friends_rich_title">🔐️ Bergabung dengan saya di ${app_name}</string>
@@ -1977,8 +1977,8 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="command_description_discard_session_not_handled">Hanya didukung di ruangan terenkripsi</string>
     <string name="command_description_discard_session">Memaksa sesi kelompok outbound saat ini di ruangan terenkripsi untuk dihapus</string>
     <string name="use_latest_app">Gunakan ${app_name} di perangkat Anda yang lain:</string>
-    <string name="use_other_session_content_description">Gunakan ${app_name} di perangkat Anda yang lain, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} untuk Android, atau client Matrix lainnya yang mendukung tanda tangan silang</string>
-    <string name="or_other_mx_capable_client">atau client Matrix lainnya yang mendukung tanda tangan silang</string>
+    <string name="use_other_session_content_description">Gunakan ${app_name} di perangkat Anda yang lain, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} untuk Android, atau client quali.chat lainnya yang mendukung tanda tangan silang</string>
+    <string name="or_other_mx_capable_client">atau client quali.chat lainnya yang mendukung tanda tangan silang</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
@@ -2171,7 +2171,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="room_settings_space_access_title">Akses space</string>
     <string name="room_settings_access_rules_pref_dialog_title">Siapa yang dapat akses\?</string>
     <string name="settings_notification_emails_enable_for_email">Aktifkan notifikasi email untuk %s</string>
-    <string name="settings_notification_emails_no_emails">Untuk menerima email dengan notifikasi, mohon tautkan sebuah alamat email ke akun Matrix Anda</string>
+    <string name="settings_notification_emails_no_emails">Untuk menerima email dengan notifikasi, mohon tautkan sebuah alamat email ke akun quali.chat Anda</string>
     <string name="settings_notification_emails_category">Notifikasi email</string>
     <string name="room_permissions_upgrade_the_space">Tingkatkan space ini</string>
     <string name="room_permissions_change_space_name">Ubah nama space</string>
@@ -2301,7 +2301,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="login_splash_create_account">Buat akun</string>
     <string name="ftue_auth_carousel_workplace_title">Perpesanan untuk tim Anda.</string>
     <string name="ftue_auth_carousel_encrypted_body">Terenkripsi secara ujung ke ujung dan tidak memerlukan nomor telepon. Tanpa iklan atau penambangan data.</string>
-    <string name="ftue_auth_carousel_control_body">Anda pilih di mana percakapan Anda disimpan, memberikan Anda kendali dan kebebasan. Terhubung via Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Anda pilih di mana percakapan Anda disimpan, memberikan Anda kendali dan kebebasan. Terhubung via quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Komunikasi aman dan independen yang memberikan tingkat privasi yang sama seperti percakapan wajah-ke-wajah di dalam rumah Anda sendiri.</string>
     <string name="attachment_type_location">Lokasi</string>
     <string name="room_unsupported_e2e_algorithm_as_admin">Enkripsi telah dikonfigurasi dengan salah sehingga Anda tidak dapat mengirim pesan. Klik untuk membuka pengaturan.</string>
@@ -2365,7 +2365,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
 \n
 \nSaat kami mempersiapkan, kami harus membuat beberapa perubahan: utasan dibuat sebelum titik ini akan <strong>ditampilkan sebagai balasan biasa</strong>.
 \n
-\nIni hanya transisi sekali, utasan sekarang sebagai bagian dari spesifikasi Matrix.</string>
+\nIni hanya transisi sekali, utasan sekarang sebagai bagian dari spesifikasi quali.chat.</string>
     <string name="threads_notice_migration_title">Utasan Mencapai Beta 🎉</string>
     <string name="live_location_sharing_notification_description">Penbagian lokasi sedang dilakukan</string>
     <string name="live_location_sharing_notification_title">${app_name} Lokasi langsung</string>
@@ -2515,7 +2515,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="ftue_auth_terms_subtitle">Mohon baca ketentuan dan kebijakan %s</string>
     <string name="ftue_auth_terms_title">Kebijakan server</string>
     <string name="ftue_auth_choose_server_ems_cta">Hubungi kami</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) adalah layanan kokoh dan dapat diandalkan untuk komunikasi waktu nyata aman dan cepat. Pelajari lebih lanjut di <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) adalah layanan kokoh dan dapat diandalkan untuk komunikasi waktu nyata aman dan cepat. Pelajari lebih lanjut di <a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Ingin menghost server Anda sendiri\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL Server</string>
     <string name="ftue_auth_choose_server_subtitle">Apa alamat server Anda\? Ini seperti rumah untuk semua data Anda</string>
@@ -2531,8 +2531,8 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="font_size_section_manually">Pilih secara manual</string>
     <string name="font_size_section_auto">Atur secara otomatis</string>
     <string name="font_size_title">Pilih ukuran font</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Terima akses kamera / mikrofon widget Element Call secara otomatis</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Aktifkan pintasan izin Element Call</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Terima akses kamera / mikrofon widget quali.chat Call secara otomatis</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Aktifkan pintasan izin quali.chat Call</string>
     <string name="live_location_description">Lokasi langsung</string>
     <string name="location_share_loading_map_error">Tidak dapat memuat peta
 \nHomeserver ini mungkin tidak diatur untuk menampilkan peta.</string>
@@ -2652,7 +2652,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="device_manager_verification_status_detail_current_session_verified">Sesi Anda saat ini siap untuk perpesanan aman.</string>
     <string name="labs_enable_deferred_dm_summary">Buat pesan langsung hanya pada pesan pertama</string>
     <string name="labs_enable_deferred_dm_title">Aktifkan pesan langsung tangguhan</string>
-    <string name="labs_enable_new_app_layout_summary">Sebuah Element yang sederhana dengan fitur tab opsional</string>
+    <string name="labs_enable_new_app_layout_summary">Sebuah quali.chat yang sederhana dengan fitur tab opsional</string>
     <string name="labs_enable_new_app_layout_title">Aktifkan tata letak baru</string>
     <string name="device_manager_learn_more_session_rename">Pengguna lain dalam pesan langsung dan ruangan yang Anda bergabung dapat melihat daftar sesi Anda yang lengkap.
 \n
@@ -2785,7 +2785,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="error_voice_broadcast_unauthorized_title">Tidak dapat memulai siaran suara baru</string>
     <string name="a11y_voice_broadcast_fast_forward">Maju cepat 30 detik</string>
     <string name="a11y_voice_broadcast_fast_backward">Mundur cepat 30 detik</string>
-    <string name="device_manager_learn_more_sessions_verified_description">Sesi terverifikasi ada di mana pun Anda menggunakan Element setelah memasukkan frasa sandi atau mengonfirmasi identitas Anda dengan sesi terverifikasi lainnya.
+    <string name="device_manager_learn_more_sessions_verified_description">Sesi terverifikasi ada di mana pun Anda menggunakan quali.chat setelah memasukkan frasa sandi atau mengonfirmasi identitas Anda dengan sesi terverifikasi lainnya.
 \n
 \nIni berarti Anda memiliki semua kunci yang diperlukan untuk membuka kunci pesan terenkripsi dan mengonfirmasi kepada pengguna lain bahwa Anda memercayai sesi ini.</string>
     <plurals name="device_manager_other_sessions_multi_signout_all">
@@ -2814,7 +2814,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
 \n
 \nAnda tidak akan dapat berpartisipasi dalam ruangan di mana enkripsi diaktifkan ketika menggunakan sesi ini.
 \n
-\nUntuk keamanan dan privasi yang terbaik, kami menyarankan untuk menggunakan klien Matrix yang mendukung enkripsi.</string>
+\nUntuk keamanan dan privasi yang terbaik, kami menyarankan untuk menggunakan klien quali.chat yang mendukung enkripsi.</string>
     <string name="device_manager_signout_all_other_sessions">Keluarkan semua sesi lain</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">Sesi ini tidak mendukung enkripsi dan tidak dapat diverifikasi.</string>
     <string name="settings_nightly_build_update">Dapatkan bangunan terkini (catatan: Anda mungkin memiliki masalah saat masuk)</string>

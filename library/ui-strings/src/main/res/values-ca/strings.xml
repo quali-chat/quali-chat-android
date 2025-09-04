@@ -32,7 +32,7 @@
     <string name="notice_crypto_unable_to_decrypt">** No s\'ha pogut desxifrar: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">El dispositiu del remitent no ens ha enviat les claus per aquest missatge.</string>
     <string name="unable_to_send_message">No s\'ha pogut enviar el missatge</string>
-    <string name="matrix_error">Error de Matrix</string>
+    <string name="matrix_error">Error de quali.chat</string>
     <string name="notice_display_name_set">%1$s a canviat el seu àlies a %2$s</string>
     <string name="notice_placed_video_call">%s ha realitzat una videotrucada.</string>
     <string name="notice_placed_voice_call">%s ha realitzat una trucada de veu.</string>
@@ -264,7 +264,7 @@
     <string name="invitations_header">Invitacions</string>
     <string name="low_priority_header">Prioritat baixa</string>
     <string name="direct_chats_header">Xats personals</string>
-    <string name="matrix_only_filter">Només contactes de Matrix</string>
+    <string name="matrix_only_filter">Només contactes de quali.chat</string>
     <string name="no_result_placeholder">Sense resultats</string>
     <string name="rooms_header">Sales</string>
     <string name="send_bug_report_include_logs">Envia els registres</string>
@@ -488,7 +488,7 @@
     <string name="widget_integration_missing_room_id">Falta l\'ID de la sala en la sol·licitud.</string>
     <string name="widget_integration_missing_user_id">Falta l\'ID d\'usuari en la sol·licitud.</string>
     <string name="widget_integration_room_not_visible">La sala %s no és visible.</string>
-    <string name="room_add_matrix_apps">Afegeix aplicacions de Matrix</string>
+    <string name="room_add_matrix_apps">Afegeix aplicacions de quali.chat</string>
     <string name="settings_labs_native_camera">Utilitza la càmera nativa</string>
     <string name="you_added_a_new_device">Has afegit una nova sessió \'%s\' que està sol·licitant les claus de xifrat.</string>
     <string name="your_unverified_device_requesting">La teva sessió no verificada \'%s\' està sol·licitant les claus de xifrat.</string>
@@ -572,7 +572,7 @@
     <string name="command_description_remove_user">Expulsa l\'usuari amb l\'ID proporcionat</string>
     <string name="command_description_nick">Canvia l\'àlies</string>
     <string name="command_description_markdown">Activa/Desactiva el markdown</string>
-    <string name="command_description_clear_scalar_token">Arreglar la gestió de les Apps de Matrix</string>
+    <string name="command_description_clear_scalar_token">Arreglar la gestió de les Apps de quali.chat</string>
     <string name="avatar">Foto</string>
     <string name="dialog_user_consent_content">Per poder continuar utilitzant el servidor local %1$s has de revisar i acceptar els termes i condicions.</string>
     <string name="dialog_user_consent_submit">Revisa ara</string>
@@ -581,7 +581,7 @@
 \n
 \nDesactivar el compte <b>no implica que s\'oblidin els missatges que has enviat</b>. Si vols que ens n\'oblidem, marca la casella a continuació.
 \n
-\nLa visibilitat dels missatges a Matrix és similar a la del correu electrònic. Que oblidem els teus missatges vol dir que els missatges que hagis enviat no seran accessibles per a nous usuaris o usuaris no registrats, però els usuaris registrats que ja hi tinguin accés, en conservaran una còpia.</string>
+\nLa visibilitat dels missatges a quali.chat és similar a la del correu electrònic. Que oblidem els teus missatges vol dir que els missatges que hagis enviat no seran accessibles per a nous usuaris o usuaris no registrats, però els usuaris registrats que ja hi tinguin accés, en conservaran una còpia.</string>
     <string name="deactivate_account_delete_checkbox">Elimina tots els missatges que he enviat quan es desactivi el meu compte (Avís: això farà que els futurs usuaris vegin una vista incompleta dels xats)</string>
     <string name="deactivate_account_submit">Desactivar el compte</string>
     <string name="error_empty_field_your_password">Si us plau escriviu la vostra contrasenya.</string>
@@ -800,7 +800,7 @@
     <string name="keys_backup_restoring_importing_keys_waiting_message">S\'estan important les claus…</string>
     <string name="keys_backup_settings_untrusted_backup">Per utilitzar la còpia de seguretat de clau en aquesta sessió, recupera amb la frase o la clau de recuperació, ara.</string>
     <string name="action_ignore">Ignora</string>
-    <string name="auth_login_sso">Inicia sessió amb la inscripció única (SSO)</string>
+    <string name="auth_login_sso">Inicia sessió amb la inscripció única (Ethereum)</string>
     <string name="settings_send_message_with_enter">Envia missatges amb retorn</string>
     <string name="settings_send_message_with_enter_summary">La tecla retorn (enter) del teclat virtual enviarà el missatge en comptes d\'afegir un salt de línia</string>
     <string name="settings_fail_to_update_password_invalid_current_password">La contrasenya no és vàlida</string>
@@ -883,14 +883,14 @@
     <string name="keys_backup_unable_to_get_trust_info">S\'ha produït un error en obtenir la informació de confiança</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Hi ha hagut un error rebent dades de la còpia de seguretat de les claus</string>
     <string name="import_e2e_keys_from_file">Importa claus E2E des del fitxer \"%1$s\".</string>
-    <string name="settings_sdk_version">Versió de l\'SDK de Matrix</string>
+    <string name="settings_sdk_version">Versió de l\'SDK de quali.chat</string>
     <string name="navigate_to_room_when_already_in_the_room">Ja estàs veient aquesta sala!</string>
     <string name="settings_general_title">General</string>
     <string name="settings_preferences">Preferències</string>
     <string name="settings_security_and_privacy">Seguretat i privadesa</string>
     <string name="room_participants_remove_reason">Motiu de l\'expulsió</string>
     <string name="room_participants_remove_title">Expulsa usuari</string>
-    <string name="login_signin_sso">Continua amb SSO</string>
+    <string name="login_signin_sso">Continua amb Ethereum</string>
     <string name="identity_server_error_bulk_sha256_not_supported">Per a la teva pròpia privadesa, ${app_name} només admet l\'enviament del \'hash\' d\'adreces de correu electrònic i números de telèfon.</string>
     <string name="command_description_discard_session_not_handled">Només admès en sales xifrades</string>
     <string name="encryption_unknown_algorithm_tile_description">El xifrat que utilitza aquesta sala no és compatible</string>
@@ -1100,7 +1100,7 @@
     <string name="room_settings_alias_subtitle">Revisa i gestiona les adreces d\'aquesta sala i la seva visibilitat al directori de sales.</string>
     <string name="room_settings_alias_title">Adreces de la sala</string>
     <string name="room_settings_room_access_title">Accés a la sala</string>
-    <string name="settings_emails_and_phone_numbers_summary">Gestiona les adreces de correu electrònic i els números de telèfon vinculats amb el teu compte de Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Gestiona les adreces de correu electrònic i els números de telèfon vinculats amb el teu compte de quali.chat</string>
     <string name="settings_emails_and_phone_numbers_title">Correus i números de telèfon</string>
     <string name="disabled_integration_dialog_content">Activa \'Permet integracions\' a la configuració per poder fer això.</string>
     <string name="disabled_integration_dialog_title">Les integracions estan desactivades</string>
@@ -1206,15 +1206,15 @@
     <string name="member_banned_by">Vetat per %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">Revoca la invitació a %1$s\?</string>
     <string name="three_pid_revoke_invite_dialog_title">Revoca la invitació</string>
-    <string name="login_server_url_form_modular_notice">Introdueix l\'adreça d\'Element Modular o del servidor que vulguis utilitzar</string>
+    <string name="login_server_url_form_modular_notice">Introdueix l\'adreça d\'quali.chat Modular o del servidor que vulguis utilitzar</string>
     <string name="login_server_url_form_modular_text">Allotjament de primera classe per a organitzacions</string>
     <string name="login_server_url_form_other_hint">Adreça</string>
-    <string name="login_server_url_form_modular_hint">Adreça dels Serveis Matrix d\'Element</string>
+    <string name="login_server_url_form_modular_hint">Adreça dels Serveis quali.chat d\'quali.chat</string>
     <string name="login_signin">Inicia sessió</string>
     <string name="login_signup">Registra\'t</string>
     <string name="login_signin_to">Inicia sessió a %1$s</string>
     <string name="login_connect_to_a_custom_server">Connecta\'t a un servidor personalitzat</string>
-    <string name="login_connect_to_modular">Connecta\'t als Serveis Matrix d\'Element</string>
+    <string name="login_connect_to_modular">Connecta\'t als Serveis quali.chat d\'quali.chat</string>
     <string name="login_connect_to">Connecta\'t a %1$s</string>
     <string name="login_continue">Continua</string>
     <string name="login_social_sso">inici de sessió únic</string>
@@ -1315,7 +1315,7 @@
     <string name="a11y_open_chat">Obre el xat</string>
     <string name="a11y_mute_microphone">Silencia el micròfon</string>
     <string name="settings_security_pin_code_use_biometrics_summary_off">El codi PIN és l\'única manera de desbloquejar ${app_name}.</string>
-    <string name="or_other_mx_capable_client">o un altre client Matrix compatible amb la signatura creuada</string>
+    <string name="or_other_mx_capable_client">o un altre client quali.chat compatible amb la signatura creuada</string>
     <string name="encryption_information_dg_xsigning_disabled">La signatura creuada no està activada</string>
     <string name="encryption_information_dg_xsigning_not_trusted">La signatura creuada està activada
 \nClaus no fiables</string>
@@ -1436,7 +1436,7 @@
     <string name="permissions_denied_qr_code">Per poder escanejar un codi QR has de donar permís d\'accés a la càmera.</string>
     <string name="login_error_ssl_peer_unverified">Error SSL: la identitat del subjecte no ha estat verificada.</string>
     <string name="login_error_homeserver_not_found">No es pot accedir el servidor local en aquest URL, revisa\'l</string>
-    <string name="login_error_no_homeserver_found">Aquesta no és una adreça de servidor Matrix vàlida</string>
+    <string name="login_error_no_homeserver_found">Aquesta no és una adreça de servidor quali.chat vàlida</string>
     <string name="auth_msisdn_already_defined">Aquest número de telèfon ja està definit.</string>
     <string name="action_unpublish">Anul·la la publicació</string>
     <string name="action_add">Afegeix</string>
@@ -1548,7 +1548,7 @@
     <string name="settings_developer_mode_summary">El mode desenvolupador activa altres funcionalitats ocultes i també pot ser que faci l\'aplicació menys estable. Només per a desenvolupadors!</string>
     <string name="settings_developer_mode">Mode desenvolupador</string>
     <string name="notification_initial_sync">Sincronització inicial…</string>
-    <string name="permalink_malformed">L\'enllaç de matrix.to no s\'ha format correctament</string>
+    <string name="permalink_malformed">L\'enllaç de quali.chat no s\'ha format correctament</string>
     <string name="soft_logout_clear_data_dialog_content">Vols esborrar totes les dades emmagatzemades en aquest dispositiu\?
 \nTorna a iniciar sessió per accedir a les dades i missatges del teu compte.</string>
     <string name="soft_logout_clear_data_dialog_title">Esborra les dades</string>
@@ -1563,9 +1563,9 @@
     <string name="seen_by">Vist per</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Identificador d\'usuari invàlid. Format esperat: \'@usuari:servidorlocal.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Si no saps la teva contrasenya, vés enrere i restableix-la.</string>
-    <string name="login_signin_matrix_id_hint">ID de Matrix</string>
-    <string name="login_signin_matrix_id_title">Inicia sessió amb l\'ID de Matrix</string>
-    <string name="login_connect_using_matrix_id_submit">Inicia sessió amb l\'ID de Matrix</string>
+    <string name="login_signin_matrix_id_hint">ID de quali.chat</string>
+    <string name="login_signin_matrix_id_title">Inicia sessió amb l\'ID de quali.chat</string>
+    <string name="login_connect_using_matrix_id_submit">Inicia sessió amb l\'ID de quali.chat</string>
     <string name="login_signup_submit">Següent</string>
     <string name="login_signup_password_hint">Contrasenya</string>
     <string name="login_signup_username_hint">Nom d\'usuari</string>
@@ -1594,7 +1594,7 @@
     <string name="login_wait_for_email_title">Comprova el teu correu</string>
     <string name="login_a11y_captcha_container">Resol el repte captcha</string>
     <string name="login_a11y_choose_other">Selecciona un servidor local personalitzat</string>
-    <string name="login_a11y_choose_modular">Selecciona Serveis Matrix d\'Element</string>
+    <string name="login_a11y_choose_modular">Selecciona Serveis quali.chat d\'quali.chat</string>
     <string name="login_a11y_choose_matrix_org">Selecciona matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">El teu compte encara s\'ha creat. Vols aturar el procés de registre\?</string>
     <string name="login_signup_cancel_confirmation_title">Atenció</string>
@@ -1631,7 +1631,7 @@
     <string name="user_code_my_code">El meu codi</string>
     <string name="user_code_share">Comparteix el meu codi</string>
     <string name="user_code_scan">Escaneja codi QR</string>
-    <string name="not_a_valid_qr_code">No és un codi QR de Matrix vàlid</string>
+    <string name="not_a_valid_qr_code">No és un codi QR de quali.chat vàlid</string>
     <string name="settings_failed_to_get_crypto_device_info">No hi ha informació criptogràfica disponible</string>
     <string name="verification_conclusion_ok_self_notice">La nova sessió s\'ha verificat. Tindrà accés als teus missatges xifrats i es mostrarà de confiança per als altres usuaris.</string>
     <string name="verification_conclusion_ok_notice">Els missatges amb aquest usuari estan xifrats d\'extrem a extrem i no podran ser llegits per tercers.</string>
@@ -1652,7 +1652,7 @@
 \n• Has eliminat aquesta sessió des d\'una altra sessió.
 \n
 \n• L\'administrador del servidor t\'ha invalidat l\'accés per motius de seguretat.</string>
-    <string name="login_signin_matrix_id_notice">Si configures un compte a un servidor local, utilitza el teu ID de Matrix (ex. @usuari:domini.com) i la contrasenya a sota.</string>
+    <string name="login_signin_matrix_id_notice">Si configures un compte a un servidor local, utilitza el teu ID de quali.chat (ex. @usuari:domini.com) i la contrasenya a sota.</string>
     <string name="login_server_text">Com els correus electrònics, els comptes pertanyen a una entitat però els pots fer servir per parlar amb tothom</string>
     <string name="create_room_disable_federation_description">Potser ho hauries d\'activar si la sala només s\'utilitzarà per la interacció de grups interns dins el teu servidor local. Això no es podrà canviar més tard.</string>
     <string name="create_room_disable_federation_title">Bloqueja qualsevol persona que no formi part de %s perquè mai pugui unir-se a la sala</string>
@@ -1697,9 +1697,9 @@
         <item quantity="one">Codi incorrecte, %d intent restant</item>
         <item quantity="other">Codi incorrecte, %d intents restants</item>
     </plurals>
-    <string name="phone_book_perform_lookup">Busca contactes a Matrix</string>
+    <string name="phone_book_perform_lookup">Busca contactes a quali.chat</string>
     <string name="disclaimer_positive_button">MÉS INFORMACIÓ</string>
-    <string name="disclaimer_title">Riot ara és Element!</string>
+    <string name="disclaimer_title">Riot ara és quali.chat!</string>
     <string name="crypto_error_withheld_generic">No pots accedir al missatge perquè el remitent, intencionadament, no ha enviat les claus</string>
     <string name="crypto_error_withheld_unverified">No pots accedir al missatge perquè la teva sessió no és de confiança pel remitent</string>
     <string name="crypto_error_withheld_blacklisted">No pots accedir al missatge perquè el remitent t\'ha bloquejat</string>
@@ -1797,7 +1797,7 @@
 \n
 \nSegur que vols continuar\?</string>
     <string name="external_link_confirmation_title">Comprova aquest enllaç</string>
-    <string name="use_other_session_content_description">Utilitza l\'última versió d\'${app_name} als teus altres dispositius, ${app_name} Web, ${app_name} per escriptori, ${app_name} iOS, ${app_name} per Android, o algun altre client de Matrix que admeti signatura creuada</string>
+    <string name="use_other_session_content_description">Utilitza l\'última versió d\'${app_name} als teus altres dispositius, ${app_name} Web, ${app_name} per escriptori, ${app_name} iOS, ${app_name} per Android, o algun altre client de quali.chat que admeti signatura creuada</string>
     <string name="bootstrap_progress_storing_in_sss">Desant secret de clau de còpia de seguretat a SSSS</string>
     <string name="security_prompt_text">Verifica\'t a tu i als altres per mantenir els teus xats segurs</string>
     <string name="command_description_plain">Envia un missatge com a text pla, sense tenir en compte la formatació markdown</string>
@@ -2220,7 +2220,7 @@
     <string name="error_file_too_big_simple">El fitxer és massa gran per carregar-lo.</string>
     <string name="attachment_type_location">Ubicació</string>
     <string name="ftue_auth_carousel_encrypted_body">Xifrat d\'extrem a extrem i sense haver de donar cap número de telèfon. Sense anuncis ni extracció de dades.</string>
-    <string name="ftue_auth_carousel_control_body">Tria on es desen les teves converses, et dona control i independència. Connectat a través de Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Tria on es desen les teves converses, et dona control i independència. Connectat a través de quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Comunicació segura i independent que t\'ofereix el mateix nivell de privadesa que una conversa cara a cara a casa teva.</string>
     <string name="ftue_auth_carousel_workplace_title">Missatgeria pel teu equip.</string>
     <string name="ftue_auth_carousel_encrypted_title">Missatges segurs.</string>
@@ -2435,7 +2435,7 @@
     <string name="settings_notification_other">Altres</string>
     <string name="settings_notification_mentions_and_keywords">Mencions i paraules clau</string>
     <string name="settings_notification_default">Notificacions per defecte</string>
-    <string name="settings_notification_emails_no_emails">Per rebre notificacions per correu, has d\'associar una adreça de correu electrònic al teu compte de Matrix</string>
+    <string name="settings_notification_emails_no_emails">Per rebre notificacions per correu, has d\'associar una adreça de correu electrònic al teu compte de quali.chat</string>
     <string name="shortcut_disabled_reason_sign_out">S\'ha tancat la sessió!</string>
     <string name="shortcut_disabled_reason_room_left">La sala ha estat abandonada!</string>
     <string name="room_settings_none">Cap</string>
@@ -2451,7 +2451,7 @@
 \n
 \nMentre ens preparem, hem de fer alguns canvis: els fils creats abans d\'aquest punt es mostraran com a respostes regulars.
 \n
-\nSerà una transició única, ja que els fils ara formen part de l\'especificació de Matrix.</string>
+\nSerà una transició única, ja que els fils ara formen part de l\'especificació de quali.chat.</string>
     <string name="search_thread_from_a_thread">D\'un fil</string>
     <string name="thread_list_empty_notice">Consell: manté premut un missatge i utilitza “%s”.</string>
     <string name="thread_list_empty_subtitle">Els fils ajuden a mantenir el tema de les converses i fer-les més fàcils de seguir.</string>
@@ -2577,10 +2577,10 @@
     <string name="live_location_not_enough_permission_dialog_description">No tens els permisos adequats per poder compartir la ubicació en directe en aquesta sala.</string>
     <string name="ftue_auth_password_reset_confirmation">Restabliment de contrasenya</string>
     <string name="ftue_auth_forgot_password">Contrasenya oblidada</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) és un servei robust i fiable d\'allotjament (servidors) per comunicacions ràpides, segures i en temps real. Descobreix-ho a &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) és un servei robust i fiable d\'allotjament (servidors) per comunicacions ràpides, segures i en temps real. Descobreix-ho a &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
     <string name="crosssigning_cannot_verify_this_session_desc">No podràs accedir a l\'històric de missatges xifrats. Restableix la còpia de seguretat de missatges i les claus de verificació per començar de nou.</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Aprova automàticament els ginys d\'Element Call i permet l\'accés a la càmera i el micròfon</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Activa els permisos d\'accés directe d\'Element Call</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Aprova automàticament els ginys d\'quali.chat Call i permet l\'accés a la càmera i el micròfon</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Activa els permisos d\'accés directe d\'quali.chat Call</string>
     <string name="live_location_description">Ubicació en directe</string>
     <string name="verify_invalid_qr_notice">Aquest codi QR sembla incorrecte. Prova de fer la verificació amb un altre mètode.</string>
     <string name="crosssigning_cannot_verify_this_session">No s\'ha pogut verificar aquest dispositiu</string>
@@ -2704,7 +2704,7 @@
     <string name="device_manager_device_title">Dispositiu</string>
     <string name="device_manager_session_title">Sessió</string>
     <string name="device_manager_current_session_title">Sessió actual</string>
-    <string name="labs_enable_new_app_layout_summary">Element simplificat amb pestanyes opcionals</string>
+    <string name="labs_enable_new_app_layout_summary">quali.chat simplificat amb pestanyes opcionals</string>
     <string name="labs_enable_new_app_layout_title">Activa la nova visualització</string>
     <string name="device_manager_learn_more_sessions_inactive">Les sessions inactives son sessions que no has utilitzat durant un temps, però continuen rebent claus de xifrat.
 \n

@@ -32,7 +32,7 @@
     <string name="notice_room_third_party_registered_invite">%1$s прие поканата за %2$s</string>
     <string name="notice_crypto_unable_to_decrypt">** Неуспешно разшифроване: %s **</string>
     <string name="unable_to_send_message">Неуспешно изпращане на съобщението</string>
-    <string name="matrix_error">Matrix грешка</string>
+    <string name="matrix_error">quali.chat грешка</string>
     <string name="medium_email">Имейл адрес</string>
     <string name="medium_phone_number">Телефонен номер</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Устройството на подателя не изпрати ключовете за това съобщение.</string>
@@ -241,7 +241,7 @@
     <string name="invitations_header">Покани</string>
     <string name="low_priority_header">Нисък приоритет</string>
     <string name="direct_chats_header">Разговори</string>
-    <string name="matrix_only_filter">Само потребители на Matrix</string>
+    <string name="matrix_only_filter">Само потребители на quali.chat</string>
     <string name="no_result_placeholder">Няма резултати</string>
     <string name="rooms_header">Стаи</string>
     <string name="send_bug_report_include_logs">Изпращане на логове</string>
@@ -436,7 +436,7 @@
     <string name="widget_integration_missing_room_id">Липсва room_id в заявката.</string>
     <string name="widget_integration_missing_user_id">Липсва user_id в заявката.</string>
     <string name="widget_integration_room_not_visible">Стая %s не е видима.</string>
-    <string name="room_add_matrix_apps">Добави Matrix приложения</string>
+    <string name="room_add_matrix_apps">Добави quali.chat приложения</string>
     <string name="permissions_rationale_msg_record_audio">${app_name} иска разшерение за достъп до Вашия микрофон, за да се извърши звуков разговор.</string>
     <string name="permissions_rationale_msg_camera_and_audio">${app_name} иска разширение за достъп до микрофона и камерата Ви, за да извърши видео разговор.
 \n
@@ -509,7 +509,7 @@
 \n
 \nДеактивирането на акаунта Ви <b>по подразбиране не прави така, че изпратените съобщения да бъдат забравени.</b> Ако искате да забравим съобщенията Ви, моля отбележете с отметка по-долу.
 \n
-\nВидимостта на съобщенията в Matrix е подобно на имейл системата. Нашето забравяне означава, че: изпратените от Вас съобщения няма да бъдат споделяни с нови или нерегистрирани потребители, но регистрираните потребители имащи достъп до тях ще продължат да имат достъп до своето копие.</string>
+\nВидимостта на съобщенията в quali.chat е подобно на имейл системата. Нашето забравяне означава, че: изпратените от Вас съобщения няма да бъдат споделяни с нови или нерегистрирани потребители, но регистрираните потребители имащи достъп до тях ще продължат да имат достъп до своето копие.</string>
     <string name="deactivate_account_delete_checkbox">Моля, забравете всички изпратени от мен съобщения, когато акаунта ми се деактивира (Внимание: това ще направи бъдещите потребители да имат само частичен поглед върху кореспонденцията)</string>
     <string name="deactivate_account_submit">Деактивирай акаунта</string>
     <string name="action_download">Изтегли</string>
@@ -532,7 +532,7 @@
     <string name="command_description_remove_user">Изгонва потребител с даден идентификатор</string>
     <string name="command_description_nick">Променя името Ви</string>
     <string name="command_description_markdown">Включва/изключва markdown</string>
-    <string name="command_description_clear_scalar_token">Поправя управлението на Matrix приспособленията</string>
+    <string name="command_description_clear_scalar_token">Поправя управлението на quali.chat приспособленията</string>
     <string name="room_tombstone_versioned_description">Тази стая е била заменена с нова и вече не е активна</string>
     <string name="room_tombstone_continuation_link">Кореспонденцията продължава тук</string>
     <string name="room_tombstone_continuation_description">Тази стая е продължение от предишна кореспонденция</string>
@@ -839,7 +839,7 @@
     <string name="keys_backup_unable_to_get_trust_info">Случи се грешка при извличане на информацията за довереността</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Случи се грешка при извличане на резервните данни за ключовете</string>
     <string name="import_e2e_keys_from_file">Импортирай e2e ключове от файл \"%1$s\".</string>
-    <string name="settings_sdk_version">Matrix SDK версия</string>
+    <string name="settings_sdk_version">quali.chat SDK версия</string>
     <string name="navigate_to_room_when_already_in_the_room">Вече гледате тази стая!</string>
     <string name="settings_general_title">Основни</string>
     <string name="settings_preferences">Настройки</string>
@@ -878,7 +878,7 @@
     <string name="room_filtering_footer_create_new_room">Създай нова стая</string>
     <string name="room_filtering_footer_create_new_direct_message">Изпрати ново директно съобщение</string>
     <string name="room_filtering_footer_open_room_directory">Виж директорията със стаи</string>
-    <string name="room_directory_search_hint">Име или ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Име или ID</string>
     <string name="labs_swipe_to_reply_in_timeline">Активирай отговаряне от списъка с чатове при приплъзване</string>
     <string name="link_copied_to_clipboard">Връзката беше копирана</string>
     <string name="settings_integration_manager">Мениджър на интеграции</string>
@@ -970,7 +970,7 @@
     <string name="content_reported_as_inappropriate_content">Съдържанието беше докладвано като неподходящо. 
 \n 
 \nАко не искате да виждате повече съдържание от този потребител, може да ги игнорирате за да скриете съобщенията им.</string>
-    <string name="login_error_no_homeserver_found">Това не е валиден адрес на Matrix сървър</string>
+    <string name="login_error_no_homeserver_found">Това не е валиден адрес на quali.chat сървър</string>
     <string name="settings_integrations">Интеграции</string>
     <string name="settings_integrations_summary">Използвайте мениджър на интеграции за да управлявате ботове, връзки с други мрежи, приспособления и стикери.
 \nМениджърите на интеграции получават конфигурационни данни, могат да променят приспособления, да изпращат покани за стаи и да настройват нива на достъп от ваше име.</string>
@@ -1027,16 +1027,16 @@
     <string name="login_server_other_text">Собствени и разширени настройки</string>
     <string name="login_continue">Продължи</string>
     <string name="login_connect_to">Свържи се с %1$s</string>
-    <string name="login_connect_to_modular">Свърже се с Element Matrix Services</string>
+    <string name="login_connect_to_modular">Свърже се с quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">Свържи се със собствен сървър</string>
     <string name="login_signin_to">Влез в %1$s</string>
     <string name="login_signup">Регистрация</string>
     <string name="login_signin">Вход</string>
-    <string name="login_signin_sso">Продължи със SSO</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services адрес</string>
+    <string name="login_signin_sso">Продължи със Ethereum</string>
+    <string name="login_server_url_form_modular_hint">quali.chat Services адрес</string>
     <string name="login_server_url_form_other_hint">Адрес</string>
     <string name="login_server_url_form_modular_text">Премиум хостинг за организации</string>
-    <string name="login_server_url_form_modular_notice">Въведете адреса на Modular Element или на сървър, който искате да използвате</string>
+    <string name="login_server_url_form_modular_notice">Въведете адреса на Modular quali.chat или на сървър, който искате да използвате</string>
     <string name="login_sso_error_message">Възникна грешка при зареждане на страницата: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Приложението не може да влезе в този сървър. Сървъра поддържа следните методи за вход: %1$s.
 \n
@@ -1093,7 +1093,7 @@
     <string name="login_signup_cancel_confirmation_title">Внимание</string>
     <string name="login_signup_cancel_confirmation_content">Профила ви все още не е създаден. Прекратяване на процеса на регистрация\?</string>
     <string name="login_a11y_choose_matrix_org">Избери matrix.org</string>
-    <string name="login_a11y_choose_modular">Избери Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Избери quali.chat Services</string>
     <string name="login_a11y_choose_other">Избери собствен сървър</string>
     <string name="login_a11y_captcha_container">Моля извършете captcha проверката</string>
     <string name="login_terms_title">Приемете условията за да продължите</string>
@@ -1133,7 +1133,7 @@
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Ще загубите достъпа до защитените съобщения, освен ако не влезете за да възстановите ключовете за шифроване.</string>
     <string name="soft_logout_sso_not_same_user_error">Текущата сесия е за потребител %1$s, а вие сте въвели данни за вход за %2$s. ${app_name} не поддържа това.
 \nПърво изчистете данните, след това влезте отново с друг профил.</string>
-    <string name="permalink_malformed">matrix.to връзката ви беше невалидна</string>
+    <string name="permalink_malformed">quali.chat връзката ви беше невалидна</string>
     <string name="bug_report_error_too_short">Описанието е прекалено кратко</string>
     <string name="notification_initial_sync">Начална синхронизация…</string>
     <string name="settings_advanced_settings">Разширени настройки</string>
@@ -1300,10 +1300,10 @@
     <string name="autodiscover_well_known_error">Неуспешно откриване на валиден сървър. Проверете идентификатора си</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Това не е валиден потребителски идентификатор. Очакван формат: \'@user:homeserver.org\'</string>
     <string name="login_signin_matrix_id_password_notice">Ако не знаете паролата си, върнете се обратно и я възстановете.</string>
-    <string name="login_signin_matrix_id_hint">Matrix идентификатор</string>
-    <string name="login_signin_matrix_id_notice">Ако сте настроили профил на някой сървър, използвайте Matrix идентификаторът (напр. @user:domain.com) и паролата по-долу.</string>
-    <string name="login_signin_matrix_id_title">Вход с Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">Вход с Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat идентификатор</string>
+    <string name="login_signin_matrix_id_notice">Ако сте настроили профил на някой сървър, използвайте quali.chat идентификаторът (напр. @user:domain.com) и паролата по-долу.</string>
+    <string name="login_signin_matrix_id_title">Вход с quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">Вход с quali.chat ID</string>
     <string name="login_error_outdated_homeserver_warning_content">Този сървър работи със стара версия. Помолете администратора да го обнови. Може да продължите, но някои функции може да не работят коректно.</string>
     <string name="login_signup_username_hint">Потребителско име</string>
     <string name="login_msisdn_notice">Използвайте международния формат (телефонните номера трябва да започват с \'+\')</string>
@@ -1355,7 +1355,7 @@
         <item quantity="one">%d блокиран потребител</item>
         <item quantity="other">%d блокирани потребителя</item>
     </plurals>
-    <string name="settings_emails_and_phone_numbers_summary">Управлявайте имейлите и телефонните номера свързани с Matrix профила ви</string>
+    <string name="settings_emails_and_phone_numbers_summary">Управлявайте имейлите и телефонните номера свързани с quali.chat профила ви</string>
     <string name="settings_emails_and_phone_numbers_title">Имейли и телефонни номера</string>
     <string name="disabled_integration_dialog_content">Включете \'разрешаване на интеграции\' в Настройки за да направите това.</string>
     <string name="disabled_integration_dialog_title">Интеграциите са изключени</string>
@@ -1501,12 +1501,12 @@
     <string name="command_description_discard_session_not_handled">Поддържа се само в шифровани стаи</string>
     <string name="command_description_discard_session">Принудително премахва текущата изходяща групова сесия от шифрованата стая</string>
     <string name="use_latest_app">Използвайте последната версия на ${app_name} за устройствата си:</string>
-    <string name="or_other_mx_capable_client">или друг Matrix клиент поддържаш кръстосано-подписване</string>
+    <string name="or_other_mx_capable_client">или друг quali.chat клиент поддържаш кръстосано-подписване</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
-    <string name="use_other_session_content_description">Използвайте последната версия на ${app_name} за устройствата си (${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} за Android) или друг Matrix клиент поддържаш кръстосано-подписване</string>
+    <string name="use_other_session_content_description">Използвайте последната версия на ${app_name} за устройствата си (${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} за Android) или друг quali.chat клиент поддържаш кръстосано-подписване</string>
     <string name="change_password_summary">Промяна на паролата за профила…</string>
     <string name="error_saving_media_file">Неуспешно съхраняване на медиен файл</string>
     <string name="settings_security_prevent_screenshots_summary">Включването на тази настройка добавя FLAG_SECURE към всички активности на приложението. Рестартирайте приложението за да влезе промяната в действие.</string>
@@ -1643,7 +1643,7 @@
     <string name="disclaimer_positive_button">НАУЧИ ПОВЕЧЕ</string>
     <string name="disclaimer_negative_button">РАЗБРАХ</string>
     <string name="disclaimer_content">Развълнувани сме да съобщим, че променихме името! Приложението ви е обновено и сте вписани в профила си.</string>
-    <string name="disclaimer_title">Riot вече е Element!</string>
+    <string name="disclaimer_title">Riot вече е quali.chat!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Изчакване на история на шифроването</string>
     <string name="crypto_error_withheld_generic">Не можете да достъпите това съобщение, защото изпращача нарочно не е изпратил ключовете за него</string>
     <string name="crypto_error_withheld_unverified">Не можете да достъпите това съобщение, защото изпращача не се доверява на сесията ви</string>

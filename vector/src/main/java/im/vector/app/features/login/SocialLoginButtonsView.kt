@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,28 +21,35 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import com.google.android.material.button.MaterialButton
 import im.vector.app.R
 import org.matrix.android.sdk.api.auth.data.SsoIdentityProvider
+import timber.log.Timber
 
-class SocialLoginButtonsView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :
-        LinearLayout(context, attrs, defStyle) {
+class SocialLoginButtonsView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : LinearLayout(
+        context,
+        attrs,
+        defStyle
+) {
 
     fun interface InteractionListener {
         fun onProviderSelected(provider: SsoIdentityProvider?)
     }
 
     enum class Mode {
-        MODE_SIGN_IN,
-        MODE_SIGN_UP,
-        MODE_CONTINUE,
+        MODE_SIGN_IN, MODE_SIGN_UP, MODE_CONTINUE,
     }
 
     var ssoIdentityProviders: List<SsoIdentityProvider>? = null
         set(newProviders) {
+            Timber.d("new providers: $newProviders")
             if (newProviders != ssoIdentityProviders) {
                 field = newProviders
                 update()
@@ -79,52 +87,69 @@ class SocialLoginButtonsView @JvmOverloads constructor(context: Context, attrs: 
                 textAlignment = View.TEXT_ALIGNMENT_CENTER
             }.let {
                 it.text = if (hasOidcCompatibilityFlow) context.getString(R.string.login_continue)
-                    else getButtonTitle(context.getString(R.string.login_social_sso))
+                else getButtonTitle(context.getString(R.string.login_social_sso))
                 it.textAlignment = View.TEXT_ALIGNMENT_CENTER
                 it.setOnClickListener {
                     listener?.onProviderSelected(null)
                 }
                 addView(it)
             }
+            Timber.d("ssoIdentityProviders size: ${ssoIdentityProviders?.size}")
             return
         }
 
+        Timber.d("ssoIdentityProviders size: ${ssoIdentityProviders?.size}")
         ssoIdentityProviders?.forEach { identityProvider ->
+            Timber.d("ssoIdentityProviders: ${identityProvider.brand}")
             // Use some heuristic to render buttons according to branding guidelines
-            val button: MaterialButton = cachedViews[identityProvider.id]
-                    ?: when (identityProvider.brand) {
-                        SsoIdentityProvider.BRAND_GOOGLE -> {
-                            MaterialButton(context, null, R.attr.vctr_social_login_button_google_style)
-                        }
-                        SsoIdentityProvider.BRAND_GITHUB -> {
-                            MaterialButton(context, null, R.attr.vctr_social_login_button_github_style)
-                        }
-                        SsoIdentityProvider.BRAND_APPLE -> {
-                            MaterialButton(context, null, R.attr.vctr_social_login_button_apple_style)
-                        }
-                        SsoIdentityProvider.BRAND_FACEBOOK -> {
-                            MaterialButton(context, null, R.attr.vctr_social_login_button_facebook_style)
-                        }
-                        SsoIdentityProvider.BRAND_TWITTER -> {
-                            MaterialButton(context, null, R.attr.vctr_social_login_button_twitter_style)
-                        }
-                        SsoIdentityProvider.BRAND_GITLAB -> {
-                            MaterialButton(context, null, R.attr.vctr_social_login_button_gitlab_style)
-                        }
-                        else -> {
-                            // TODO Use iconUrl
-                            MaterialButton(context, null, R.attr.materialButtonOutlinedStyle).apply {
-                                transformationMethod = null
-                                textAlignment = View.TEXT_ALIGNMENT_CENTER
-                            }
-                        }
+            /*val button: MaterialButton = cachedViews[identityProvider.id] ?: when (identityProvider.brand) {
+                SsoIdentityProvider.BRAND_GOOGLE -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_google_style)
+                }
+                SsoIdentityProvider.BRAND_GITHUB -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_github_style)
+                }
+                SsoIdentityProvider.BRAND_APPLE -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_apple_style)
+                }
+                SsoIdentityProvider.BRAND_FACEBOOK -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_facebook_style)
+                }
+                SsoIdentityProvider.BRAND_TWITTER -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_twitter_style)
+                }
+                SsoIdentityProvider.BRAND_GITLAB -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_gitlab_style)
+                }
+                SsoIdentityProvider.BRAND_ETHEREUM, SsoIdentityProvider.BRAND_SOLANA, SsoIdentityProvider.BRAND_BITCOIN -> {
+                    MaterialButton(context, null, R.attr.vctr_social_login_button_blockchain_style)
+                }
+                else -> {
+                    // TODO Use iconUrl
+                    MaterialButton(context, null, R.attr.materialButtonOutlinedStyle).apply {
+                        transformationMethod = null
+                        textAlignment = View.TEXT_ALIGNMENT_CENTER
                     }
-            button.text = getButtonTitle(identityProvider.name)
-            button.setTag(R.id.loginSignupSigninSocialLoginButtons, identityProvider.id)
-            button.setOnClickListener {
+                }
+            }
+*/
+            val inflater = LayoutInflater.from(context)
+            val customButtonLayout = inflater.inflate(R.layout.item_blockchain, this, false)
+            customButtonLayout.findViewById<TextView>(R.id.blockchainName).text = identityProvider.name?.replace(" Wallet", "")
+            customButtonLayout.setTag(R.id.loginSignupSigninSocialLoginButtons, identityProvider.id)
+            customButtonLayout.setOnClickListener {
                 listener?.onProviderSelected(identityProvider)
             }
-            addView(button)
+
+            //TODO Use iconUrl
+            val icon = if (identityProvider.id == "oidc-aeternity") {
+                R.drawable.ic_aeternity
+            } else {
+                R.drawable.ic_ethereum
+            }
+
+            customButtonLayout.findViewById<ImageView>(R.id.icon).setImageDrawable(ContextCompat.getDrawable(context, icon))
+            addView(customButtonLayout)
         }
     }
 
@@ -149,6 +174,11 @@ class SocialLoginButtonsView @JvmOverloads constructor(context: Context, attrs: 
                     SsoIdentityProvider("GitHub", "GitHub", null, SsoIdentityProvider.BRAND_GITHUB),
                     SsoIdentityProvider("Twitter", "Twitter", null, SsoIdentityProvider.BRAND_TWITTER),
                     SsoIdentityProvider("Gitlab", "Gitlab", null, SsoIdentityProvider.BRAND_GITLAB),
+                    SsoIdentityProvider("Gitlab", "Gitlab", null, SsoIdentityProvider.BRAND_GITLAB),
+                    SsoIdentityProvider("Ethereum", "Ethereum", null, SsoIdentityProvider.BRAND_ETHEREUM),
+                    SsoIdentityProvider("Bitcoin", "Bitcoin", null, SsoIdentityProvider.BRAND_BITCOIN),
+                    SsoIdentityProvider("Solana", "Solana", null, SsoIdentityProvider.BRAND_SOLANA),
+                    SsoIdentityProvider("Aeternity", "Aeternity", null, SsoIdentityProvider.BRAND_AETERNITY),
                     SsoIdentityProvider("Custom_pro", "SSO", null, null)
             )
         }

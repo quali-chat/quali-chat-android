@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -298,7 +299,7 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
 
     private fun launchSsoFlow() = withState(loginViewModel) { state ->
         loginViewModel.getSsoUrl(
-                redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(applicationContext.packageName),
                 deviceId = state.deviceId,
                 providerId = null,
                 action = SSOAction.LOGIN

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -87,7 +88,8 @@ class CreateRoomActivity : VectorBaseActivity<ActivitySimpleBinding>() {
                 initialName: String = "",
                 isSpace: Boolean = false,
                 openAfterCreate: Boolean = true,
-                currentSpaceId: String? = null
+                currentSpaceId: String? = null,
+                limit: Int
         ): Intent {
             return Intent(context, CreateRoomActivity::class.java).apply {
                 putExtra(
@@ -95,7 +97,8 @@ class CreateRoomActivity : VectorBaseActivity<ActivitySimpleBinding>() {
                         initialName = initialName,
                         isSpace = isSpace,
                         openAfterCreate = openAfterCreate,
-                        parentSpaceId = currentSpaceId
+                        parentSpaceId = currentSpaceId,
+                        limit = limit
                 )
                 )
             }

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,12 +22,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import com.airbnb.mvrx.activityViewModel
 import com.airbnb.mvrx.withState
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
 import im.vector.app.core.extensions.toReducedUrl
 import im.vector.app.databinding.FragmentLoginSignupSigninSelectionBinding
 import im.vector.app.features.login.SocialLoginButtonsView.Mode
+import im.vector.app.features.onboarding.OnboardingViewModel
 import org.matrix.android.sdk.api.auth.SSOAction
 
 /**
@@ -45,6 +48,8 @@ class LoginSignUpSignInSelectionFragment :
 
         setupViews()
     }
+
+    val viewModel: OnboardingViewModel by activityViewModel()
 
     private fun setupViews() {
         views.loginSignupSigninSubmit.debouncedClicks { submit() }
@@ -78,7 +83,7 @@ class LoginSignUpSignInSelectionFragment :
                 views.loginSignupSigninSignInSocialLoginContainer.isVisible = true
                 views.loginSignupSigninSocialLoginButtons.render(state.loginMode, Mode.MODE_CONTINUE) { provider ->
                     loginViewModel.getSsoUrl(
-                            redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                            redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                             deviceId = state.deviceId,
                             providerId = provider?.id,
                             action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
@@ -111,7 +116,7 @@ class LoginSignUpSignInSelectionFragment :
     private fun submit() = withState(loginViewModel) { state ->
         if (state.loginMode is LoginMode.Sso) {
             loginViewModel.getSsoUrl(
-                    redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                    redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                     deviceId = state.deviceId,
                     providerId = null,
                     action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN

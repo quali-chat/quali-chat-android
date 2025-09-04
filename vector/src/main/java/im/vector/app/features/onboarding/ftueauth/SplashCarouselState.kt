@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +17,7 @@
 
 package im.vector.app.features.onboarding.ftueauth
 
+import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import im.vector.lib.core.utils.epoxy.charsequence.EpoxyCharSequence
@@ -27,6 +29,7 @@ data class SplashCarouselState(
             val title: EpoxyCharSequence,
             @StringRes val body: Int,
             @DrawableRes val image: Int,
-            @DrawableRes val pageBackground: Int
+            @DrawableRes val pageBackground: Int,
+            @ColorInt val titleColor: Int
     )
 }

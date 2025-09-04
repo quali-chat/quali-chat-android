@@ -34,7 +34,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Imposíbel descifrar: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">O dispositivo do que envía non enviou as chaves desta mensaxe.</string>
     <string name="unable_to_send_message">Non foi posíbel enviar a mensaxe</string>
-    <string name="matrix_error">Erro de Matrix</string>
+    <string name="matrix_error">Erro de quali.chat</string>
     <string name="medium_phone_number">Número de teléfono</string>
     <string name="room_displayname_two_members">%1$s e %2$s</string>
     <string name="notice_placed_voice_call_by_you">Fixeches unha chamada de audio.</string>
@@ -266,7 +266,7 @@
     <string name="invitations_header">Convites</string>
     <string name="low_priority_header">Baixa prioridade</string>
     <string name="direct_chats_header">Conversas</string>
-    <string name="matrix_only_filter">Só contactos Matrix</string>
+    <string name="matrix_only_filter">Só contactos quali.chat</string>
     <string name="no_result_placeholder">Sen resultados</string>
     <string name="rooms_header">Salas</string>
     <string name="title_activity_choose_sticker">Enviar unha icona</string>
@@ -429,7 +429,7 @@
     <string name="widget_integration_missing_user_id">Falta o user_id na petición.</string>
     <string name="widget_integration_room_not_visible">A sala %s non é visible.</string>
     <string name="widget_integration_missing_parameter">Falta un parámetro.</string>
-    <string name="room_add_matrix_apps">Engadir aplicacións de Matrix</string>
+    <string name="room_add_matrix_apps">Engadir aplicacións de quali.chat</string>
     <string name="settings_labs_native_camera">Usar a cámara nativa</string>
     <string name="start_verification">Iniciar verificación</string>
     <string name="command_error">Erro na orde</string>

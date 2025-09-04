@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -97,7 +98,12 @@ class FtueAuthCombinedLoginFragment :
         }
     }
 
+    @Suppress("DEPRECATION")
     private fun setupSubmitButton() {
+        views.connectYourWallet.setOnClickListener {
+            viewModel.openBottomSheet()
+            activity?.onBackPressed()
+        }
         views.loginSubmit.setOnClickListener { submit() }
         views.loginInput.clearErrorOnChange(viewLifecycleOwner)
         views.loginPasswordInput.clearErrorOnChange(viewLifecycleOwner)
@@ -171,7 +177,7 @@ class FtueAuthCombinedLoginFragment :
         views.ssoButtonsHeader.isVisible = isUsernameAndPasswordVisible()
         views.ssoButtons.render(loginMode, SocialLoginButtonsView.Mode.MODE_CONTINUE) { id ->
             viewModel.fetchSsoUrl(
-                    redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                    redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                     deviceId = deviceId,
                     provider = id,
                     action = SSOAction.LOGIN

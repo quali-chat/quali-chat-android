@@ -31,7 +31,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Αδυναμία αποκρυπτογράφησης: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Η συσκευή του/της αποστολέα δεν μας έχει στείλει τα κλειδιά για αυτό το μήνυμα.</string>
     <string name="unable_to_send_message">Αποτυχία αποστολής μηνύματος</string>
-    <string name="matrix_error">Σφάλμα του Matrix</string>
+    <string name="matrix_error">Σφάλμα του quali.chat</string>
     <string name="notice_room_join">Ο/Η %1$s εισήλθε στο δωμάτιο</string>
     <string name="room_displayname_room_invite">Πρόσκληση στο δωμάτιο</string>
     <string name="room_displayname_two_members">%1$s και %2$s</string>
@@ -89,7 +89,7 @@
     <string name="low_priority_header">Χαμηλής προτεραιότητας</string>
     <string name="system_alerts_header">Ειδοποιήσεις συστήματος</string>
     <string name="direct_chats_header">Συζητήσεις</string>
-    <string name="matrix_only_filter">Μόνο οι επαφές Matrix</string>
+    <string name="matrix_only_filter">Μόνο οι επαφές quali.chat</string>
     <string name="no_result_placeholder">Δεν βρέθηκαν αποτελέσματα</string>
     <string name="rooms_header">Δωμάτια</string>
     <string name="send_bug_report_include_crash_logs">Αποστολή καταγραφών σφαλμάτων</string>
@@ -294,7 +294,7 @@
     <string name="room_participants_action_ignore">Παράβλεψη</string>
     <string name="room_participants_action_unignore_title">Κατάργηση παράβλεψης χρήστη</string>
     <string name="room_participants_power_level_demote">Υποβίβαση</string>
-    <string name="login_error_no_homeserver_found">Αυτή δεν είναι έγκυρη διεύθυνση διακομιστή Matrix</string>
+    <string name="login_error_no_homeserver_found">Αυτή δεν είναι έγκυρη διεύθυνση διακομιστή quali.chat</string>
     <string name="login_error_invalid_home_server">Παρακαλω εισάξετε έγκυρη διεύθυνση</string>
     <string name="auth_submit">Υποβολή</string>
     <string name="room_settings_labs_warning_message">Αυτά είναι πειραματικά χαρακτηριστικά τα οποία μπορούν να παρουσιάσουν μη αναμενόμενα σφάλματα. Χρησιμοποιήστε με προσοχή.</string>

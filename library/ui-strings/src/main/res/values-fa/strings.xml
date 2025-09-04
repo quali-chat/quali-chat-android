@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="notice_room_invite_no_invitee">دعوت %s</string>
     <string name="notice_room_invite">‫%1$s، %2$s را دعوت کرد</string>
     <string name="notice_room_invite_you">%1$s دعوتتان کرد</string>
@@ -465,7 +465,7 @@
     <string name="room_filtering_filter_hint">پالایش گفت‌وگوها…</string>
     <string name="room_filtering_footer_create_new_room">ایجاد اتاقی جدید</string>
     <string name="room_filtering_footer_create_new_direct_message">فرستادن یک پیام مستقیم جدید</string>
-    <string name="room_directory_search_hint">نام یا شناسه (‪#example:matrix.org‬)</string>
+    <string name="room_directory_search_hint">نام یا شناسه</string>
     <string name="labs_swipe_to_reply_in_timeline">به کار انداختن کشیدن برای پاسخ در خط زمانی</string>
     <string name="a11y_create_direct_message">ایجاد یک گفت‌وگوی مستقیم جدید</string>
     <string name="a11y_create_room">ایجاد اتاقی جدید</string>
@@ -1353,7 +1353,7 @@
 \n- افزارهٔ شما یا دیگر کاربران</string>
     <string name="login_error_threepid_denied">دامنهٔ رایانامه‌تان مجاز به ثبت‌نام روی این کارساز نیست</string>
     <string name="command_description_shrug">¯\\\\_(ツ)_/¯ را به یک پیام متنی ساده تغییر می دهد</string>
-    <string name="permalink_malformed">پیوند ‪matrix.to‬تان بدریخت است</string>
+    <string name="permalink_malformed">پیوند ‪quali.chat‬تان بدریخت است</string>
     <string name="soft_logout_sso_not_same_user_error">نشست فعلی مربوط به کاربر %1$s است و شما اطلاعات حساب کاربر %2$s را ارائه داده‌اید. این مورد توسط المنت پشتیبانی نمی‌شود .
 \nلطفا ابتدا داده ها را پاک کنید، سپس با یک حساب دیگر وارد برنامه شوید.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">دسترسی به پیام‌های رمزشده را از دست خواهید داد مگر اینکه برای بازیابی کلیدهای رمزگذاری خود، به حساب خود وارد شوید.</string>

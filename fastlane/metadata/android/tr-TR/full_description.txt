@@ -36,7 +36,7 @@ Element, hem güvenli bir haberci hem de uzaktan çalışırken grup sohbetleri 
  Mesajlaşma, sesli ve görüntülü aramalar, dosya paylaşımı, ekran paylaşımı ve bir sürü entegrasyon, bot ve widget. Odalar, topluluklar oluşturun, iletişimde kalın ve işlerinizi halledin.
 
  <b>Kaldığınız yerden devam edin</b>
- https://app.element.io adresinde tüm cihazlarınızda ve web'de tamamen senkronize edilmiş mesaj geçmişiyle nerede olursanız olun bağlantıda kalın
+ https://app.quali.chatadresinde tüm cihazlarınızda ve web'de tamamen senkronize edilmiş mesaj geçmişiyle nerede olursanız olun bağlantıda kalın
 
  <b>Açık kaynak</b>
  Element Android, GitHub tarafından barındırılan açık kaynaklı bir projedir. Lütfen https://github.com/element-hq/element-android adresinde hataları bildirin ve/veya gelişimine katkıda bulunun.

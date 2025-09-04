@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,6 +22,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -30,10 +32,12 @@ import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
 import im.vector.app.core.extensions.incrementByOneAndWrap
+import im.vector.app.core.extensions.setClickableTermsAndPrivacy
 import im.vector.app.core.extensions.setCurrentItem
 import im.vector.app.core.resources.BuildMeta
 import im.vector.app.databinding.FragmentFtueSplashCarouselBinding
 import im.vector.app.features.VectorFeatures
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.onboarding.OnboardingAction
 import im.vector.app.features.onboarding.OnboardingFlow
 import im.vector.app.features.settings.VectorPreferences
@@ -79,19 +83,30 @@ class FtueAuthSplashCarouselFragment :
         tabLayoutMediator = TabLayoutMediator(views.carouselIndicator, views.splashCarousel) { _, _ -> }
                 .also { it.attach() }
 
+
         carouselController.setData(carouselStateFactory.create())
 
         val isAlreadyHaveAccountEnabled = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
         views.loginSplashSubmit.apply {
-            setText(if (isAlreadyHaveAccountEnabled) R.string.login_splash_create_account else R.string.login_splash_submit)
-            debouncedClicks { splashSubmit(isAlreadyHaveAccountEnabled) }
-        }
-        views.loginSplashAlreadyHaveAccount.apply {
-            isVisible = isAlreadyHaveAccountEnabled
-            debouncedClicks { alreadyHaveAnAccount() }
+            setText(if (ProductFlavour.isQualiChat()) R.string.login_signin_sso else if (isAlreadyHaveAccountEnabled) R.string.login_splash_create_account else R.string.login_splash_submit)
+
+            debouncedClicks {
+                splashSubmit(isAlreadyHaveAccountEnabled)
+            }
         }
 
-        if (buildMeta.isDebug || vectorPreferences.developerMode()) {
+        views.loginSplashTerms.apply {
+            text = getString(R.string.terms_privacy_text)
+            setClickableTermsAndPrivacy(
+                    termsText = getString(R.string.terms_text),
+                    privacyText = getString(R.string.privacy_policy_text),
+                    termsUrl = getString(R.string.terms_url),
+                    privacyUrl = getString(R.string.privacy_policy_url),
+                    linkColor = ContextCompat.getColor(requireContext(), R.color.element_accent_light) // Assuming you have a color resource defined
+            )
+        }
+
+        if ((buildMeta.isDebug || vectorPreferences.developerMode()) && !ProductFlavour.isQualiChat()) {
             views.loginSplashVersion.isVisible = true
             @SuppressLint("SetTextI18n")
             views.loginSplashVersion.text = "Version : ${buildMeta.versionName}\n" +

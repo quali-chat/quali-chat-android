@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +28,7 @@ import im.vector.app.core.resources.DrawableProvider
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.ui.list.genericFooterItem
 import im.vector.app.core.ui.list.genericPositiveButtonItem
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.form.formSwitchItem
 import im.vector.app.features.home.ShortcutCreator
 import im.vector.app.features.home.room.detail.timeline.TimelineEventController
@@ -306,14 +308,16 @@ class RoomProfileController @Inject constructor(
         // Advanced
         buildProfileSection(stringProvider.getString(R.string.room_settings_category_advanced_title))
 
-        buildProfileAction(
-                id = "alias",
-                title = stringProvider.getString(R.string.room_settings_alias_title),
-                subtitle = stringProvider.getString(R.string.room_settings_alias_subtitle),
-                divider = true,
-                editable = true,
-                action = { callback?.onRoomAliasesClicked() }
-        )
+        if (!ProductFlavour.isQualiChat()) {
+            buildProfileAction(
+                    id = "alias",
+                    title = stringProvider.getString(R.string.room_settings_alias_title),
+                    subtitle = stringProvider.getString(R.string.room_settings_alias_subtitle),
+                    divider = true,
+                    editable = true,
+                    action = { callback?.onRoomAliasesClicked() }
+            )
+        }
 
         buildProfileAction(
                 id = "permissions",

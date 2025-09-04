@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +18,10 @@
 package im.vector.app.features.settings
 
 object VectorSettingsUrls {
-    const val HELP = "https://element.io/help"
-    const val COPYRIGHT = "https://element.io/copyright"
-    const val ACCEPTABLE_USE_POLICY = "https://element.io/acceptable-use-policy-terms"
-    const val PRIVACY_POLICY = "https://element.io/privacy"
-    const val THIRD_PARTY_LICENSES = "file:///android_asset/open_source_licenses.html"
+    const val HELP = "https://quali.chat/help"
+    const val COPYRIGHT = "https://quali.chat/copyright"
+    const val TERMS = "https://quali.chat/terms"
+    const val ACCEPTABLE_USE_POLICY = "https://quali.chat/acceptable-use-policy"
+    const val PRIVACY_POLICY = "https://quali.chat/privacy"
+    const val THIRD_PARTY_LICENSES = "https://quali.chat/android-third-party-notices"
 }

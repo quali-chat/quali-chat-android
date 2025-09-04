@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -51,6 +52,7 @@ import im.vector.app.core.utils.requestDisablingBatteryOptimization
 import im.vector.app.core.utils.startNotificationSettingsIntent
 import im.vector.app.features.VectorFeatures
 import im.vector.app.features.analytics.plan.MobileScreen
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.NotificationPermissionManager
 import im.vector.app.features.notifications.NotificationUtils
 import im.vector.app.features.settings.BackgroundSyncMode
@@ -202,7 +204,9 @@ class VectorSettingsNotificationFragment :
             }
         }
 
-        bindEmailNotifications()
+        if (!ProductFlavour.isQualiChat()) {
+            bindEmailNotifications()
+        }
         refreshBackgroundSyncPrefs()
 
         handleSystemPreference()

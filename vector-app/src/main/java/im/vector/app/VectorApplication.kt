@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +28,7 @@ import android.os.HandlerThread
 import android.os.StrictMode
 import android.util.Log
 import android.view.Gravity
+import androidx.core.content.ContextCompat
 import androidx.core.provider.FontRequest
 import androidx.core.provider.FontsContractCompat
 import androidx.lifecycle.DefaultLifecycleObserver
@@ -217,13 +219,16 @@ class VectorApplication :
         ProcessLifecycleOwner.get().lifecycle.addObserver(callManager)
         // This should be done as early as possible
         // initKnownEmojiHashSet(appContext)
-
-        applicationContext.registerReceiver(powerKeyReceiver, IntentFilter().apply {
-            // Looks like i cannot receive OFF, if i don't have both ON and OFF
-            addAction(Intent.ACTION_SCREEN_OFF)
-            addAction(Intent.ACTION_SCREEN_ON)
-        })
-
+        ContextCompat.registerReceiver(
+                applicationContext,
+                powerKeyReceiver,
+                IntentFilter().apply {
+                    // Looks like i cannot receive OFF, if i don't have both ON and OFF
+                    addAction(Intent.ACTION_SCREEN_OFF)
+                    addAction(Intent.ACTION_SCREEN_ON)
+                },
+                ContextCompat.RECEIVER_NOT_EXPORTED,
+        )
         EmojiManager.install(GoogleEmojiProvider())
 
         // Initialize Mapbox before inflating mapViews

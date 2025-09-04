@@ -1,6 +1,6 @@
 ## Overview
 
-Until the final migration to [rust crypto sdk](https://github.com/matrix-org/matrix-rust-components-kotlin), the Element Android project will support two
+Until the final migration to [rust crypto sdk](https://github.com/matrix-org/matrix-rust-components-kotlin), the quali.chat Android project will support two
 different SDK as a product flavor.
 
 The `matrix-sdk-android` module is defining a new flavor dimension `crypto`, with two flavors `kotlinCrypto` and `rustCrypto`.
@@ -44,7 +44,7 @@ So building the unsigned release kotlin crypto apk is now:
 
 `> ./gradlew assembleGplayKotlinCryptoRelease`
 
-An additional workflow has been added to build the `rustCrypto` flavor (elementr.yml, ` Build debug APKs ER`).
+An additional workflow has been added to build the `rustCrypto` flavor (quali.chatr.yml, ` Build debug APKs ER`).
 
 
 ## Database migration from kotlin to rust

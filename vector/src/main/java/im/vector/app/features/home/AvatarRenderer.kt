@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -147,7 +148,7 @@ class AvatarRenderer @Inject constructor(
         val matrixItem = MatrixItem.UserItem(
                 // Need an id starting with @
                 id = profileInfo.matrixId,
-                displayName = profileInfo.displayName,
+                displayName = profileInfo.displayName
         )
 
         val placeholder = getPlaceholderDrawable(matrixItem)

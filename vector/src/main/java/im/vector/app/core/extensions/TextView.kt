@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +17,13 @@
 
 package im.vector.app.core.extensions
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableString
+import android.text.Spanned
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
@@ -151,3 +156,58 @@ fun TextView.copyOnLongClick() {
         true
     }
 }
+
+fun TextView.setClickableTermsAndPrivacy(
+        termsText: String,
+        privacyText: String,
+        termsUrl: String,
+        privacyUrl: String,
+        linkColor: Int
+) {
+    val fullText = text.toString()
+    val spannableString = SpannableString(fullText)
+    val termsStart = fullText.indexOf(termsText)
+    val termsEnd = termsStart + termsText.length
+    val privacyStart = fullText.indexOf(privacyText)
+    val privacyEnd = privacyStart + privacyText.length
+
+    val termsClickableSpan = object : ClickableSpan() {
+        override fun onClick(widget: View) {
+            context.openWebPage(termsUrl)
+        }
+
+        override fun updateDrawState(paint: TextPaint) {
+            super.updateDrawState(paint)
+            paint.isUnderlineText = false
+            paint.color = linkColor
+        }
+    }
+
+    val privacyClickableSpan = object : ClickableSpan() {
+        override fun onClick(widget: View) {
+            context.openWebPage(privacyUrl)
+        }
+
+        override fun updateDrawState(paint: TextPaint) {
+            super.updateDrawState(paint)
+            paint.isUnderlineText = false
+            paint.color = linkColor
+        }
+    }
+
+    spannableString.apply {
+        setSpan(termsClickableSpan, termsStart, termsEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        setSpan(ForegroundColorSpan(linkColor), termsStart, termsEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        setSpan(privacyClickableSpan, privacyStart, privacyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        setSpan(ForegroundColorSpan(linkColor), privacyStart, privacyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+    }
+
+    text = spannableString
+    movementMethod = LinkMovementMethod.getInstance()
+}
+
+fun Context.openWebPage(url: String) {
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    startActivity(intent)
+}
+

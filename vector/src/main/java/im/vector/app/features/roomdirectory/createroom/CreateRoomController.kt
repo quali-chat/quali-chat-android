@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,6 +89,7 @@ class CreateRoomController @Inject constructor(
                 host.listener?.onTopicChange(text)
             }
         }
+
 
         settingsSectionTitleItem {
             id("visibility")

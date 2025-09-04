@@ -33,7 +33,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Impossibile decriptare: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Il dispositivo del mittente non ha inviato le chiavi per questo messaggio.</string>
     <string name="unable_to_send_message">Impossibile inviare il messaggio</string>
-    <string name="matrix_error">Errore di Matrix</string>
+    <string name="matrix_error">Errore di quali.chat</string>
     <string name="medium_email">Indirizzo email</string>
     <string name="medium_phone_number">Numero di telefono</string>
     <string name="room_displayname_room_invite">Invito nella stanza</string>
@@ -257,7 +257,7 @@
     <string name="invitations_header">Inviti</string>
     <string name="low_priority_header">Bassa priorità</string>
     <string name="direct_chats_header">Conversazioni</string>
-    <string name="matrix_only_filter">Mostra solo i contatti Matrix</string>
+    <string name="matrix_only_filter">Mostra solo i contatti quali.chat</string>
     <string name="no_result_placeholder">Nessun risultato</string>
     <string name="rooms_header">Stanze</string>
     <string name="send_bug_report_include_logs">Invia i registri</string>
@@ -555,7 +555,7 @@
 \n
 \nDisattivare il tuo account <b>non eliminerà i messaggi che hai inviato</b>. Se vuoi che i tuoi messaggi siano dimenticati seleziona la casella qua sotto.
 \n
-\nLa visibilità dei messaggi in Matrix è simile alle email. Questo vuol dire che se chiedi di \"dimenticare i tuoi messaggi\", quelli che hai inviato finora non verranno mai più condivisi con nuovi utenti, ma gli utenti che hanno già avuto accesso ai tuoi messaggi continueranno a poterli leggere.</string>
+\nLa visibilità dei messaggi in quali.chat è simile alle email. Questo vuol dire che se chiedi di \"dimenticare i tuoi messaggi\", quelli che hai inviato finora non verranno mai più condivisi con nuovi utenti, ma gli utenti che hanno già avuto accesso ai tuoi messaggi continueranno a poterli leggere.</string>
     <string name="deactivate_account_delete_checkbox">Per favore dimenticate tutti i messaggi che ho inviato fino al momento della disattivazione del mio account (Attenzione: in questo modo i nuovi utenti potrebbero vedere delle conversazioni incomplete)</string>
     <string name="deactivate_account_submit">Disattiva l\'account</string>
     <string name="action_download">Scarica</string>
@@ -617,7 +617,7 @@
     <string name="settings_show_avatar_display_name_changes_messages">Mostra i cambiamenti degli account</string>
     <string name="settings_show_avatar_display_name_changes_messages_summary">Includi cambiamenti dell\'avatar e del nome visualizzato.</string>
     <string name="settings_password">Password</string>
-    <string name="settings_labs_native_camera_summary">Avvia la fotocamera di sistema invece della fotocamera di Element.</string>
+    <string name="settings_labs_native_camera_summary">Avvia la fotocamera di sistema invece della fotocamera di quali.chat.</string>
     <string name="command_problem_with_parameters">Il comando \"%s\" necessita di più parametri, oppure alcuni parametri non sono corretti.</string>
     <string name="markdown_has_been_enabled">Markdown è stato abilitato.</string>
     <string name="markdown_has_been_disabled">Markdown è stato disabilitato.</string>
@@ -666,7 +666,7 @@
     <string name="settings_troubleshoot_test_service_boot_success">Il servizio inizierà quando il dispositivo sarà riavviato.</string>
     <string name="settings_troubleshoot_test_service_boot_failed">Il servizio non partirà al riavvio del dispositivo. Non riceverai notifiche finché ${app_name} non verrà aperto almeno una volta.</string>
     <string name="settings_troubleshoot_test_service_boot_quickfix">Abilita l\'esecuzione all\'avvio</string>
-    <string name="settings_troubleshoot_test_bg_restricted_title">Verifica se Element sia stato configurato per funzionare in modo limitato quando lavora in background</string>
+    <string name="settings_troubleshoot_test_bg_restricted_title">Verifica se quali.chat sia stato configurato per funzionare in modo limitato quando lavora in background</string>
     <string name="settings_troubleshoot_test_bg_restricted_success">${app_name} non funziona senza alcuna restrizione anche quando è eseguito in background. Questo test andrebbe eseguito usando dati mobili (non WIFI).
 \n%1$s</string>
     <string name="settings_troubleshoot_test_bg_restricted_failed">Ci sono restrizioni attive quando ${app_name} è in secondo piano.
@@ -880,7 +880,7 @@
     <string name="keys_backup_unable_to_get_trust_info">Si è verificato un errore nell\'ottenere informazioni sulla fiducia</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Si è verificato un errore nell\'ottenere i dati dal Backup delle chiavi</string>
     <string name="import_e2e_keys_from_file">Importa le chiavi di crittografia dal file \"%1$s\".</string>
-    <string name="settings_sdk_version">Versione SDK Matrix</string>
+    <string name="settings_sdk_version">Versione SDK quali.chat</string>
     <string name="settings_other_third_party_notices">Altre note di terze parti</string>
     <string name="navigate_to_room_when_already_in_the_room">Stai già visualizzando questa stanza!</string>
     <string name="settings_general_title">Generali</string>
@@ -969,7 +969,7 @@
     <string name="settings_discovery_disconnect_with_bound_pid">Attualmente stai condividendo i tuoi indirizzi email o numeri di telefono sul server d\'identità %1$s. Dovrai riconnetterti a %2$s per interromperne la condivisione.</string>
     <string name="settings_agree_to_terms">Accetta i termini di servizio del server d\'identità (%s) per permettere ad altri utenti di trovarti tramite la tua email o numero di telefono.</string>
     <string name="labs_allow_extended_logging">Attiva i log dettagliati.</string>
-    <string name="labs_allow_extended_logging_summary">I log dettagliati aiuteranno gli sviluppatori fornendo loro molte più informazioni nelle segnalazioni che invii scuotendo il dispositivo. Anche se attivi i log dettagliati, Element non registra mai i contenuti dei messaggi o altri dati personali.</string>
+    <string name="labs_allow_extended_logging_summary">I log dettagliati aiuteranno gli sviluppatori fornendo loro molte più informazioni nelle segnalazioni che invii scuotendo il dispositivo. Anche se attivi i log dettagliati, quali.chat non registra mai i contenuti dei messaggi o altri dati personali.</string>
     <string name="error_terms_not_accepted">Riprova dopo avere accettato i termini di servizio del tuo Home Server.</string>
     <string name="error_network_timeout">Sembra che il server stia impiegando troppo tempo a rispondere. Ciò può essere causato da una cattiva connessione o da un errore del server. Riprova fra qualche minuto.</string>
     <string name="send_attachment">Invia allegato</string>
@@ -1038,7 +1038,7 @@
     <string name="room_widget_webview_access_camera">Usa la fotocamera</string>
     <string name="room_widget_webview_access_microphone">Usa il microfono</string>
     <string name="room_widget_webview_read_protected_media">Leggi media protetti da DRM</string>
-    <string name="login_error_no_homeserver_found">Questo non è un indirizzo di server Matrix valido</string>
+    <string name="login_error_no_homeserver_found">Questo non è un indirizzo di server quali.chat valido</string>
     <string name="message_ignore_user">Ignora utente</string>
     <string name="room_list_quick_actions_notifications_all_noisy">Tutti i messaggi (rumoroso)</string>
     <string name="room_list_quick_actions_notifications_all">Tutti i messaggi</string>
@@ -1069,16 +1069,16 @@
     <string name="login_server_other_text">Impostazioni personalizzate ed avanzate</string>
     <string name="login_continue">Continua</string>
     <string name="login_connect_to">Connetti a %1$s</string>
-    <string name="login_connect_to_modular">Connettiti a Element Matrix Services</string>
+    <string name="login_connect_to_modular">Connettiti a quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">Connettiti a un server personalizzato</string>
     <string name="login_signin_to">Accedi a %1$s</string>
     <string name="login_signup">Registrati</string>
     <string name="login_signin">Accedi</string>
-    <string name="login_signin_sso">Continua con l\'autenticazione (SSO)</string>
-    <string name="login_server_url_form_modular_hint">Indirizzo Element Matrix Services</string>
+    <string name="login_signin_sso">Continua con l\'autenticazione (Ethereum)</string>
+    <string name="login_server_url_form_modular_hint">Indirizzo quali.chat Services</string>
     <string name="login_server_url_form_other_hint">Indirizzo</string>
     <string name="login_server_url_form_modular_text">Hosting premium per organizzazioni</string>
-    <string name="login_server_url_form_modular_notice">Inserisci l\'indirizzo Element Modular o del server che vuoi usare</string>
+    <string name="login_server_url_form_modular_notice">Inserisci l\'indirizzo quali.chat Modular o del server che vuoi usare</string>
     <string name="login_sso_error_message">Si è verificato un errore caricando la pagina: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">L\'applicazione non riesce ad accedere a questo Home Server. L\'Home Server supporta i seguenti tipi di accesso: %1$s.
 \n
@@ -1135,7 +1135,7 @@
     <string name="login_signup_cancel_confirmation_title">Attenzione</string>
     <string name="login_signup_cancel_confirmation_content">Il tuo account non è ancora stato creato. Fermare il processo di registrazione\?</string>
     <string name="login_a11y_choose_matrix_org">Seleziona matrix.org</string>
-    <string name="login_a11y_choose_modular">Seleziona Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Seleziona quali.chat Services</string>
     <string name="login_a11y_choose_other">Seleziona un server personalizzato</string>
     <string name="login_a11y_captcha_container">Completa il Captcha</string>
     <string name="login_terms_title">Per continuare accetta le condizioni</string>
@@ -1175,7 +1175,7 @@
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Se non accedi per recuperare le tue chiavi crittografiche perderai l\'accesso ai messaggi criptati.</string>
     <string name="soft_logout_sso_not_same_user_error">La sessione attuale è per l\'utente %1$s e hai fornito le credenziali per l\'utente %2$s. Ciò non è supportato da ${app_name}.
 \nPrima elimina i dati, poi accedi di nuovo con un altro account.</string>
-    <string name="permalink_malformed">Il tuo link matrix.to non è corretto</string>
+    <string name="permalink_malformed">Il tuo link quali.chat non è corretto</string>
     <string name="bug_report_error_too_short">La descrizione è troppo breve</string>
     <string name="notification_initial_sync">Sincronizzazione iniziale…</string>
     <string name="settings_advanced_settings">Impostazioni avanzate</string>
@@ -1403,12 +1403,12 @@
     <string name="settings_security_prevent_screenshots_title">Impedisci la cattura di schermate dell\'app</string>
     <string name="settings_security_prevent_screenshots_summary">Attivandolo verrà aggiunto FLAG_SECURE a tutte le attività. Riavvia l\'applicazione per applicare le modifiche.</string>
     <string name="change_password_summary">Imposta una nuova password dell\'account…</string>
-    <string name="use_other_session_content_description">Usa l\'ultima versione di ${app_name} sui tuoi altri dispositivi, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} Android o un altro client Matrix che supporti la firma incrociata</string>
+    <string name="use_other_session_content_description">Usa l\'ultima versione di ${app_name} sui tuoi altri dispositivi, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} Android o un altro client quali.chat che supporti la firma incrociata</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
-    <string name="or_other_mx_capable_client">o un altro client Matrix che supporti la firma incrociata</string>
+    <string name="or_other_mx_capable_client">o un altro client quali.chat che supporti la firma incrociata</string>
     <string name="use_latest_app">Usa l\'ultima versione di ${app_name} anche sui tuoi altri dispositivi:</string>
     <string name="command_description_discard_session">Forza l\'attuale sessione di gruppo in uscita in una stanza cifrata ad essere scartata</string>
     <string name="command_description_discard_session_not_handled">Supportato solo nelle stanze criptate</string>
@@ -1587,7 +1587,7 @@
     <string name="crypto_error_withheld_unverified">Non puoi accedere a questo messaggio perché il mittente non ha verificato la tua sessione</string>
     <string name="crypto_error_withheld_generic">Non puoi accedere a questo messaggio perché il mittente non ha inviato le chiavi di proposito</string>
     <string name="notice_crypto_unable_to_decrypt_merged">In attesa che la cronologia venga crittografata</string>
-    <string name="disclaimer_title">Riot ora si chiama Element!</string>
+    <string name="disclaimer_title">Riot ora si chiama quali.chat!</string>
     <string name="disclaimer_content">Siamo entusiasti di annunciare che abbiamo cambiato nome! La tua app è aggiornata e hai fatto l\'accesso al tuo account.</string>
     <string name="disclaimer_negative_button">CAPITO</string>
     <string name="disclaimer_positive_button">MAGGIORI INFO</string>
@@ -1648,7 +1648,7 @@
     <string name="settings_remove_three_pid_confirmation_content">Rimuovere %s\?</string>
     <string name="error_threepid_auth_failed">Assicurati di avere cliccato il link nell\'email che ti abbiamo inviato.</string>
     <string name="settings_emails_and_phone_numbers_title">Email e numeri di telefono</string>
-    <string name="settings_emails_and_phone_numbers_summary">Gestisci gli indirizzi email e i numeri di telefono collegati al tuo account Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Gestisci gli indirizzi email e i numeri di telefono collegati al tuo account quali.chat</string>
     <string name="settings_text_message_sent_hint">Codice</string>
     <string name="login_msisdn_notice">Si prega di usare il formato internazionale (il numero deve iniziare con \'+\')</string>
     <string name="confirm_your_identity_quad_s">Conferma la tua identità verificando questo accesso, dandogli l\'accesso ai messaggi cifrati.</string>
@@ -1737,14 +1737,14 @@
     <string name="invalid_qr_code_uri">Codice QR non valido (URI non valido)!</string>
     <string name="cannot_dm_self">Non puoi messaggiare te stesso!</string>
     <string name="share_by_text">Condividi via testo</string>
-    <string name="phone_book_perform_lookup">Cerca contatti su Matrix</string>
+    <string name="phone_book_perform_lookup">Cerca contatti su quali.chat</string>
     <string name="room_settings_set_avatar">Imposta l\'immagine della stanza</string>
     <string name="identity_server_user_consent_not_provided">Non è stato fornito il consenso dell\'utente.</string>
     <string name="user_code_info_text">Condividi questo codice con i tuoi contatti! Basta una scansione per aggiungerti ed iniziare a chattare.</string>
     <string name="user_code_my_code">Il mio codice</string>
     <string name="user_code_share">Condividi il mio codice</string>
     <string name="user_code_scan">Scansiona un codice QR</string>
-    <string name="not_a_valid_qr_code">Non è un codice QR Matrix valido</string>
+    <string name="not_a_valid_qr_code">Non è un codice QR quali.chat valido</string>
     <string name="invite_friends_rich_title">🔐️ Puoi trovarmi su ${app_name}</string>
     <string name="invite_friends_text">Ehy, chattiamo su ${app_name}: %s</string>
     <string name="invite_friends">Invita amici</string>
@@ -1811,7 +1811,7 @@
     <string name="command_snow">Invia il messaggio con neve</string>
     <string name="command_confetti">Invia il messaggio con coriandoli</string>
     <string name="login_clear_homeserver_history">Svuota cronologia</string>
-    <string name="login_social_sso">Autenticazione unica (SSO)</string>
+    <string name="login_social_sso">Autenticazione unica (Ethereum)</string>
     <string name="login_social_signin_with">Accedi con %s</string>
     <string name="login_social_signup_with">Registrati con %s</string>
     <string name="login_social_continue_with">Continua con %s</string>
@@ -2200,7 +2200,7 @@
     <string name="room_settings_space_access_title">Accesso allo spazio</string>
     <string name="room_settings_access_rules_pref_dialog_title">Chi può accedervi\?</string>
     <string name="settings_notification_emails_enable_for_email">Attiva notifiche email per %s</string>
-    <string name="settings_notification_emails_no_emails">Per ricevere email con le notifiche, associa un indirizzo di posta al tuo profilo Matrix</string>
+    <string name="settings_notification_emails_no_emails">Per ricevere email con le notifiche, associa un indirizzo di posta al tuo profilo quali.chat</string>
     <string name="settings_notification_emails_category">Notifica email</string>
     <string name="room_permissions_upgrade_the_space">Aggiorna lo spazio</string>
     <string name="room_permissions_change_space_name">Cambia il nome dello spazio</string>
@@ -2335,7 +2335,7 @@
     <string name="login_splash_create_account">Crea account</string>
     <string name="ftue_auth_carousel_workplace_title">Messaggistica per la tua squadra.</string>
     <string name="ftue_auth_carousel_encrypted_body">Crittografia end-to-end e nessun numero di telefono richiesto. Niente pubblicità o raccolta di dati.</string>
-    <string name="ftue_auth_carousel_control_body">Scegli dove vengono tenute le tue conversazioni, dandoti controllo e indipendenza. Connesso via Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Scegli dove vengono tenute le tue conversazioni, dandoti controllo e indipendenza. Connesso via quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Comunicazioni sicure e indipendenti che ti danno lo stesso livello di riservatezza di una conversazione faccia a faccia in casa tua.</string>
     <string name="attachment_type_location">Posizione</string>
     <string name="room_unsupported_e2e_algorithm_as_admin">La crittografia è stata configurata male, perciò non puoi inviare messaggi. Clicca per aprire le impostazioni.</string>
@@ -2401,7 +2401,7 @@
 \n
 \nMentre ci prepariamo, dobbiamo fare alcune modifiche: le conversazioni create prima di questo momento saranno mostrate come normali risposte.
 \n
-\nSarà una transizione una-tantum, dato che le conversazioni ora sono parte delle specifiche di Matrix.</string>
+\nSarà una transizione una-tantum, dato che le conversazioni ora sono parte delle specifiche di quali.chat.</string>
     <string name="threads_notice_migration_title">I messaggi in conversazioni entrano in beta 🎉</string>
     <string name="ftue_account_created_take_me_home">Portami a casa</string>
     <string name="live_location_sharing_notification_description">Stai condividendo la posizione</string>
@@ -2553,7 +2553,7 @@
     <string name="ftue_auth_terms_subtitle">Leggi i termini e le condizioni di %s</string>
     <string name="ftue_auth_terms_title">Politiche del server</string>
     <string name="ftue_auth_choose_server_ems_cta">Mettiti in contatto</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) è un servizio di hosting robusto e affidabile per comunicazioni veloci, sicure e in tempo reale. Scopri come su <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) è un servizio di hosting robusto e affidabile per comunicazioni veloci, sicure e in tempo reale. Scopri come su <a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Vuoi ospitare un tuo server\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL server</string>
     <string name="ftue_auth_choose_server_subtitle">Qual è l\'indirizzo del tuo server\? È come una casa per tutti i tuoi dati</string>
@@ -2569,8 +2569,8 @@
     <string name="font_size_section_manually">Scegli manualmente</string>
     <string name="font_size_section_auto">Imposta automaticamente</string>
     <string name="font_size_title">Scegli dimensione caratteri</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Auto-approva i widget di Element Call e consenti accesso a fotocamera / microfono</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Attiva scorciatoie di autorizzazione di Element Call</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Auto-approva i widget di quali.chat Call e consenti accesso a fotocamera / microfono</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Attiva scorciatoie di autorizzazione di quali.chat Call</string>
     <string name="live_location_description">Posizione in tempo reale</string>
     <string name="verify_invalid_qr_notice">Questo codice QR sembra sbagliato. Prova la verifica con un altro metodo.</string>
     <string name="crosssigning_cannot_verify_this_session_desc">Non potrai accedere alla cronologia dei messaggi cifrati. Reimposta il backup dei messaggi sicuri e le chiavi di verifica per ricominciare.</string>
@@ -2695,7 +2695,7 @@
     <string name="device_manager_verification_status_detail_current_session_verified">La tua sessione attuale è pronta per i messaggi sicuri.</string>
     <string name="labs_enable_deferred_dm_title">Attiva messaggi diretti differiti</string>
     <string name="labs_enable_deferred_dm_summary">Crea messaggio diretto solo al primo messaggio</string>
-    <string name="labs_enable_new_app_layout_summary">Un Element semplificato con schede opzionali</string>
+    <string name="labs_enable_new_app_layout_summary">Un quali.chat semplificato con schede opzionali</string>
     <string name="labs_enable_new_app_layout_title">Attiva nuova disposizione</string>
     <string name="device_manager_learn_more_session_rename">Gli altri utenti nei messaggi diretti e nelle stanze in cui entri, possono vedere una lista completa delle tue sessioni.
 \n
@@ -2859,7 +2859,7 @@
 \n
 \nNon potrai partecipare in stanze dove la crittografia è attiva mentre usi questa sessione.
 \n
-\nPer maggiore sicurezza e privacy, è consigliabile usare i client di Matrix che supportano la crittografia.</string>
+\nPer maggiore sicurezza e privacy, è consigliabile usare i client di quali.chat che supportano la crittografia.</string>
     <string name="device_manager_signout_all_other_sessions">Disconnetti da tutte le altre sessioni</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">Questa sessione non supporta la crittografia, perciò non può essere verificata.</string>
     <string name="voice_broadcast_live_broadcast">Trasmissione in diretta</string>

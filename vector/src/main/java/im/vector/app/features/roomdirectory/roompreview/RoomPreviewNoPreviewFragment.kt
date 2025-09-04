@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,6 +37,7 @@ import im.vector.app.core.extensions.setTextOrHide
 import im.vector.app.core.platform.ButtonStateView
 import im.vector.app.core.platform.VectorBaseFragment
 import im.vector.app.core.utils.styleMatchingText
+import im.vector.app.core.utils.swapToEthereumDisplayName
 import im.vector.app.core.utils.tappableMatchingText
 import im.vector.app.databinding.FragmentRoomPreviewNoPreviewBinding
 import im.vector.app.features.analytics.plan.MobileScreen
@@ -189,6 +191,9 @@ class RoomPreviewNoPreviewFragment :
 
     private fun renderState(roomName: String, matrixItem: MatrixItem?, topic: String?) {
         // Toolbar
+        views.roomPreviewNoPreviewToolbarTitle.swapToEthereumDisplayName(roomName)
+        views.roomPreviewNoPreviewName.swapToEthereumDisplayName(roomName)
+
         if (matrixItem != null) {
             views.roomPreviewNoPreviewToolbarAvatar.isVisible = true
             views.roomPreviewNoPreviewAvatar.isVisible = true
@@ -198,10 +203,8 @@ class RoomPreviewNoPreviewFragment :
             views.roomPreviewNoPreviewToolbarAvatar.isVisible = false
             views.roomPreviewNoPreviewAvatar.isVisible = false
         }
-        views.roomPreviewNoPreviewToolbarTitle.text = roomName
 
         // Screen
-        views.roomPreviewNoPreviewName.text = roomName
         views.roomPreviewNoPreviewTopic.setTextOrHide(topic)
     }
 }

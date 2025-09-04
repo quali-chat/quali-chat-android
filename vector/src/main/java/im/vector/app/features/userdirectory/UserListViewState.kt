@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +24,8 @@ import com.airbnb.mvrx.Uninitialized
 import im.vector.app.core.contacts.MappedContact
 import org.matrix.android.sdk.api.session.user.model.User
 
+const val directRoomMembersLimit = 2
+
 data class UserListViewState(
         val excludedUserIds: Set<String>? = null,
         val knownUsers: Async<PagedList<User>> = Uninitialized,
@@ -37,7 +40,8 @@ data class UserListViewState(
         val isE2EByDefault: Boolean = false,
         val configuredIdentityServer: String? = null,
         private val showInviteActions: Boolean,
-        val showContactBookAction: Boolean
+        val showContactBookAction: Boolean,
+        val directRoomMembersLimit: Int
 ) : MavericksState {
 
     constructor(args: UserListFragmentArgs) : this(
@@ -45,7 +49,8 @@ data class UserListViewState(
             singleSelection = args.singleSelection,
             single3pidSelection = args.single3pidSelection,
             showInviteActions = args.showInviteActions,
-            showContactBookAction = args.showContactBookAction
+            showContactBookAction = args.showContactBookAction,
+            directRoomMembersLimit = args.directRoomMembersLimit
     )
 
     fun getSelectedMatrixId(): List<String> {

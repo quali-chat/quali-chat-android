@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2023 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,6 +37,21 @@ class PollOptionViewStateFactory @Inject constructor() {
             )
         } ?: emptyList()
     }
+
+    fun createPollDisabledOptions(pollCreationInfo: PollCreationInfo?, pollResponseData: PollResponseData?): List<PollOptionViewState.PollDisabled> {
+        val winnerVoteCount = pollResponseData?.winnerVoteCount
+        return pollCreationInfo?.answers?.map { answer ->
+            val voteSummary = pollResponseData?.getVoteSummaryOfAnOption(answer.id ?: "")
+            PollOptionViewState.PollDisabled(
+                    optionId = answer.id.orEmpty(),
+                    optionAnswer = answer.getBestAnswer().orEmpty(),
+                    voteCount = voteSummary?.total ?: 0,
+                    votePercentage = voteSummary?.percentage ?: 0.0,
+                    isWinner = winnerVoteCount != 0 && voteSummary?.total == winnerVoteCount
+            )
+        } ?: emptyList()
+    }
+
 
     fun createPollSendingOptions(pollCreationInfo: PollCreationInfo?): List<PollOptionViewState.PollSending> {
         return pollCreationInfo?.answers?.map { answer ->

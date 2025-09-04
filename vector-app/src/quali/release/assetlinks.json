@@ -1,0 +1,58 @@
+[
+  {
+    "relation" : [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target" : {
+      "namespace" : "android_app",
+      "package_name" : "chat.quali.android.debug",
+      "sha256_cert_fingerprints" : [
+        "AF:37:21:AB:DF:4E:CB:4B:61:62:0F:88:99:1B:E1:97:A9:7F:90:5B:79:7E:17:A0:DD:3A:7E:EC:05:C9:20:3B",
+        "B1:D3:97:D7:80:D1:68:48:D7:A9:AE:0F:F6:25:8B:B2:32:E0:30:3E:45:6A:46:2B:12:4B:2C:2E:0F:64:99:28",
+        "18:02:F2:24:80:EB:60:24:D7:DB:F8:49:F6:72:1E:03:62:79:AC:33:D8:8A:53:E8:CC:BB:1A:43:C0:98:53:11"
+      ]
+    }
+  },
+  {
+    "relation" : [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target" : {
+      "namespace" : "android_app",
+      "package_name" : "chat.quali.android",
+      "sha256_cert_fingerprints" : [
+        "AF:37:21:AB:DF:4E:CB:4B:61:62:0F:88:99:1B:E1:97:A9:7F:90:5B:79:7E:17:A0:DD:3A:7E:EC:05:C9:20:3B",
+        "B1:D3:97:D7:80:D1:68:48:D7:A9:AE:0F:F6:25:8B:B2:32:E0:30:3E:45:6A:46:2B:12:4B:2C:2E:0F:64:99:28",
+        "18:02:F2:24:80:EB:60:24:D7:DB:F8:49:F6:72:1E:03:62:79:AC:33:D8:8A:53:E8:CC:BB:1A:43:C0:98:53:11"
+      ]
+    }
+  },
+  {
+    "relation" : [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target" : {
+      "namespace" : "android_app",
+      "package_name" : "chat.quali.android.staging.debug",
+      "sha256_cert_fingerprints" : [
+        "AF:37:21:AB:DF:4E:CB:4B:61:62:0F:88:99:1B:E1:97:A9:7F:90:5B:79:7E:17:A0:DD:3A:7E:EC:05:C9:20:3B",
+        "B1:D3:97:D7:80:D1:68:48:D7:A9:AE:0F:F6:25:8B:B2:32:E0:30:3E:45:6A:46:2B:12:4B:2C:2E:0F:64:99:28",
+        "18:02:F2:24:80:EB:60:24:D7:DB:F8:49:F6:72:1E:03:62:79:AC:33:D8:8A:53:E8:CC:BB:1A:43:C0:98:53:11"
+      ]
+    }
+  },
+  {
+    "relation" : [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target" : {
+      "namespace" : "android_app",
+      "package_name" : "chat.quali.android.staging",
+      "sha256_cert_fingerprints" : [
+        "AF:37:21:AB:DF:4E:CB:4B:61:62:0F:88:99:1B:E1:97:A9:7F:90:5B:79:7E:17:A0:DD:3A:7E:EC:05:C9:20:3B",
+        "B1:D3:97:D7:80:D1:68:48:D7:A9:AE:0F:F6:25:8B:B2:32:E0:30:3E:45:6A:46:2B:12:4B:2C:2E:0F:64:99:28",
+        "18:02:F2:24:80:EB:60:24:D7:DB:F8:49:F6:72:1E:03:62:79:AC:33:D8:8A:53:E8:CC:BB:1A:43:C0:98:53:11"
+      ]
+    }
+  }
+]

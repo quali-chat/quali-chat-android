@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,6 +23,7 @@ import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.net.Network
 import android.os.Build
+import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import timber.log.Timber
 import javax.inject.Inject
@@ -43,7 +45,12 @@ internal class FallbackNetworkCallbackStrategy @Inject constructor(
         networkInfoReceiver.isConnectedCallback = {
             hasChanged()
         }
-        context.registerReceiver(networkInfoReceiver, filter)
+        ContextCompat.registerReceiver(
+                context,
+                networkInfoReceiver,
+                filter,
+                ContextCompat.RECEIVER_NOT_EXPORTED,
+        )
     }
 
     override fun unregister() {

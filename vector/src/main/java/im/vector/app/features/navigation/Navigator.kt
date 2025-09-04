@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -96,11 +97,11 @@ interface Navigator {
 
     fun openMatrixToBottomSheet(fragmentActivity: FragmentActivity, link: String, origin: OriginOfMatrixTo)
 
-    fun openCreateRoom(context: Context, initialName: String = "", openAfterCreate: Boolean = true)
+    fun openCreateRoom(context: Context, initialName: String = "", openAfterCreate: Boolean = true, directRoomMembersLimit: Int)
 
     fun openCreateDirectRoom(context: Context)
 
-    fun openInviteUsersToRoom(fragmentActivity: FragmentActivity, roomId: String)
+    fun openInviteUsersToRoom(fragmentActivity: FragmentActivity, roomId: String, directRoomMembersLimit: Int)
 
     fun openRoomDirectory(context: Context, initialFilter: String = "")
 

@@ -5,9 +5,13 @@ apply plugin: 'kotlin-parcelize'
 apply plugin: 'realm-android'
 apply plugin: "org.jetbrains.dokka"
 
+apply from: '../flavor.gradle'
+
 if (project.hasProperty("coverage")) {
     apply plugin: 'jacoco'
 }
+
+apply from: '../flavor.gradle'
 
 buildscript {
     repositories {
@@ -124,7 +128,6 @@ android {
             java.srcDirs += "src/sharedTest/java"
         }
     }
-
 }
 
 static def gitRevision() {
@@ -154,7 +157,7 @@ dependencies {
 //    implementation(name: 'crypto-android-release', ext: 'aar')
     implementation 'net.java.dev.jna:jna:5.13.0@aar'
 
- //   implementation libs.androidx.appCompat
+    //   implementation libs.androidx.appCompat
     implementation libs.androidx.core
 
     implementation libs.androidx.lifecycleLivedata

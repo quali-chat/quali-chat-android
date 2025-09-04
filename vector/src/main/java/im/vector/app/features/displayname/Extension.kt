@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,8 +25,6 @@ fun MatrixItem.getBestName(): String {
         // Best name is the id, and we keep the displayName of the room for the case we need the first letter
         id
     } else {
-        displayName
-                ?.takeIf { it.isNotBlank() }
-                ?: VectorMatrixItemDisplayNameFallbackProvider.getDefaultName(this)
+        displayName?.takeIf { it.isNotBlank() } ?: VectorMatrixItemDisplayNameFallbackProvider.getDefaultName(this)
     }
 }

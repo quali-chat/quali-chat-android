@@ -1,7 +1,7 @@
 ext.versions = [
-        'minSdk'            : 21,
-        'compileSdk'        : 33,
-        'targetSdk'         : 33,
+        'minSdk': 26,
+        'compileSdk': 34,
+        'targetSdk' : 34,
         'sourceCompat'      : JavaVersion.VERSION_11,
         'targetCompat'      : JavaVersion.VERSION_11,
 ]
@@ -101,7 +101,7 @@ ext.libs = [
         ],
         element     : [
                 'opusencoder'             : "io.element.android:opusencoder:1.1.0",
-                'wysiwyg'                 : "io.element.android:wysiwyg:2.35.0"
+                'wysiwyg'                 : "io.element.android:wysiwyg:2.37.3"
         ],
         squareup    : [
                 'moshi'                  : "com.squareup.moshi:moshi:$moshi",

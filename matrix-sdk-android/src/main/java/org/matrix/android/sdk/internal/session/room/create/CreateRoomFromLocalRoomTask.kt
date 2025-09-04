@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2022 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,6 +33,7 @@ import org.matrix.android.sdk.internal.database.model.RoomSummaryEntityFields
 import org.matrix.android.sdk.internal.database.query.where
 import org.matrix.android.sdk.internal.database.query.whereRoomId
 import org.matrix.android.sdk.internal.di.SessionDatabase
+import org.matrix.android.sdk.internal.flavour.ProductFlavour
 import org.matrix.android.sdk.internal.session.room.summary.RoomSummaryDataSource
 import org.matrix.android.sdk.internal.task.Task
 import java.util.concurrent.TimeUnit
@@ -92,7 +94,9 @@ internal class DefaultCreateRoomFromLocalRoomTask @Inject constructor(
                 }
         )
         updateReplacementRoomId(localRoomId, replacementRoomId)
-        waitForRoomEvents(replacementRoomId, localRoomSummary)
+        if (!ProductFlavour.isQualiChat()) {
+            waitForRoomEvents(replacementRoomId, localRoomSummary)
+        }
         updateCreationState(localRoomId, LocalRoomCreationState.CREATED)
         return replacementRoomId
     }

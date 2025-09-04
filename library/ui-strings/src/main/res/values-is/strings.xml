@@ -17,7 +17,7 @@
     <string name="notice_avatar_changed_too">(einnig var skipt um auðkennismynd)</string>
     <string name="notice_crypto_unable_to_decrypt">** Mistókst að afkóða: %s **</string>
     <string name="unable_to_send_message">Gat ekki sent skilaboð</string>
-    <string name="matrix_error">Villa í Matrix</string>
+    <string name="matrix_error">Villa í quali.chat</string>
     <string name="medium_email">Tölvupóstfang</string>
     <string name="medium_phone_number">Símanúmer</string>
     <string name="notice_room_withdraw">%1$s tók til baka boð til %2$s</string>
@@ -235,7 +235,7 @@
     <string name="view_decrypted_source">Skoða afkóðaða upprunaskrá</string>
     <string name="action_quick_reply">Snöggt svar</string>
     <string name="home_filter_placeholder_home">Leita að spjallrásum</string>
-    <string name="matrix_only_filter">Einungis tengiliðir í Matrix</string>
+    <string name="matrix_only_filter">Einungis tengiliðir í quali.chat</string>
     <string name="send_bug_report_progress">Framvinda (%s%%)</string>
     <string name="auth_invalid_email">Þetta lítur ekki út eins og gilt tölvupóstfang</string>
     <string name="auth_email_already_defined">Þetta tölvupóstfang er nú þegar skráð.</string>
@@ -257,7 +257,7 @@
     <string name="encryption_import_room_keys_summary">Flytja lykla inn úr skrá á tæki</string>
     <string name="encryption_information_not_verified">Ekki sannreynt</string>
     <string name="encryption_information_verified">Sannreynt</string>
-    <string name="room_add_matrix_apps">Bæta við Matrix-forritum</string>
+    <string name="room_add_matrix_apps">Bæta við quali.chat-forritum</string>
     <string name="start_verification">Hefja sannvottun</string>
     <string name="has_been_removed">Þér hefur verið sparkað úr %1$s af %2$s</string>
     <string name="has_been_banned">Þú hefur verið settur í bann á %1$s af %2$s</string>
@@ -365,7 +365,7 @@
     <string name="room_settings_room_notifications_manage_notifications">Þú getur sýsla- með tilkynningar í %1$s.</string>
     <string name="settings_default_media_source">Sjálfgefinn uppruni myndefnis</string>
     <string name="settings_default_compression">Sjálfgefin þjöppun</string>
-    <string name="settings_emails_and_phone_numbers_summary">Sýslaðu með tölvupóstföng og símanúmer sem tengd eru við Matrix-aðganginn þinn</string>
+    <string name="settings_emails_and_phone_numbers_summary">Sýslaðu með tölvupóstföng og símanúmer sem tengd eru við quali.chat-aðganginn þinn</string>
     <string name="settings_emails_and_phone_numbers_title">Tölvupóstföng og símanúmer</string>
     <string name="settings_fail_to_update_password_invalid_current_password">Lykilorðið er ekki gilt</string>
     <string name="legals_third_party_notices">Utanaðkomandi aðgerðasöfn</string>
@@ -400,7 +400,7 @@
     <string name="settings_notification_your_keywords">Stikkorðin þín</string>
     <string name="settings_notification_mentions_and_keywords">Minnst á og stikkorð</string>
     <string name="settings_notification_emails_enable_for_email">Virkja tilkynningar í tölvupósti fyrir %s</string>
-    <string name="settings_notification_emails_no_emails">Til að fá tilkynningar í tölvupósti, þarf að tengja tölvupóstfang við Matrix-aðganginn þinn</string>
+    <string name="settings_notification_emails_no_emails">Til að fá tilkynningar í tölvupósti, þarf að tengja tölvupóstfang við quali.chat-aðganginn þinn</string>
     <string name="settings_notification_emails_category">Tilkynning í tölvupósti</string>
     <string name="settings_notification_by_event">Mikilvægi tilkynninga eftir atburðum</string>
     <string name="shortcut_disabled_reason_sign_out">Skráð út úr setunni!</string>
@@ -775,8 +775,8 @@
     <string name="does_not_look_like_valid_email">Þetta lítur ekki út eins og gilt tölvupóstfang</string>
     <string name="login_set_email_title">Skrá tölvupóstfang</string>
     <string name="login_server_url_form_common_notice">Sláðu inn vistfang netþjónsins sem þú vilt nota</string>
-    <string name="login_server_url_form_modular_notice">Sláðu inn vistfang Modular Element-þjóns eða netþjónsins sem þú vilt nota</string>
-    <string name="login_server_url_form_modular_hint">Vistfang fyrir Element Matrix þjónustur</string>
+    <string name="login_server_url_form_modular_notice">Sláðu inn vistfang Modular quali.chat-þjóns eða netþjónsins sem þú vilt nota</string>
+    <string name="login_server_url_form_modular_hint">Vistfang fyrir quali.chat þjónustur</string>
     <string name="login_signin_to">Skrá inn í %1$s</string>
     <string name="login_connect_to">Tengjast við %1$s</string>
     <string name="login_social_signup_with">Skrá inn með %s</string>
@@ -810,7 +810,7 @@
     <string name="room_member_open_or_create_dm">Bein skilaboð</string>
     <string name="search_hint_room_name">Leita að heiti</string>
     <string name="user_directory_search_hint_2">Leita eftir heiti, auðkenni eða tölvupóstfangi</string>
-    <string name="room_directory_search_hint">Nafn eða auðkenni (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Nafn eða auðkenni </string>
     <string name="room_filtering_footer_open_room_directory">Skoða spjallrásalistann</string>
     <string name="room_filtering_footer_create_new_direct_message">Senda ný bein skilaboð</string>
     <string name="message_edits">Breytingar á skilaboðum</string>
@@ -926,7 +926,7 @@
     <string name="room_tombstone_continuation_link">Samtalið heldur áfram hér</string>
     <string name="room_tombstone_versioned_description">Þessari spjallrás hefur verið skipt út og er hún ekki lengur virk.</string>
     <string name="dialog_user_consent_content">Til að halda áfram að nota %1$s heimaþjóninn þarftu að yfirfara og samþykkja skilmálana og kvaðir.</string>
-    <string name="command_description_clear_scalar_token">Til að laga umsýslu Matrix-forrita</string>
+    <string name="command_description_clear_scalar_token">Til að laga umsýslu quali.chat-forrita</string>
     <string name="key_share_request">Beiðni um deilingu dulritunarlykils</string>
     <string name="widget_integration_review_terms">Þú verður að samþykkja þjónustuskilmálana til að geta haldið áfram.</string>
     <string name="settings_labs_native_camera_summary">Ræstu myndavél kerfisins í stað sérsniðna myndavélaskjásins.</string>
@@ -1165,7 +1165,7 @@
     <string name="soft_logout_signin_password_hint">Lykilorð</string>
     <string name="soft_logout_signin_submit">Skrá inn</string>
     <string name="soft_logout_signin_title">Skrá inn</string>
-    <string name="login_signin_matrix_id_hint">Matrix-auðkenni</string>
+    <string name="login_signin_matrix_id_hint">quali.chat-auðkenni</string>
     <string name="login_signup_cancel_confirmation_title">Aðvörun</string>
     <string name="login_signup_submit">Næsta</string>
     <string name="login_signup_password_hint">Lykilorð</string>
@@ -1444,7 +1444,7 @@
     <string name="room_participants_action_remove">Fjarlægja úr spjalli</string>
     <string name="room_participants_action_cancel_invite">Hætta við boð</string>
     <string name="call_ended_user_busy_description">Notandinn sem þú hringdir í er upptekinn.</string>
-    <string name="login_error_no_homeserver_found">Þetta er ekki gilt vistfang á Matrix-þjóni</string>
+    <string name="login_error_no_homeserver_found">Þetta er ekki gilt vistfang á quali.chat-þjóni</string>
     <string name="suggested_header">Tillögur að spjallrásum</string>
     <string name="action_thread_view_in_room">Skoða á spjallrás</string>
     <string name="notice_room_canonical_alias_no_change_by_you">Þú breyttir vistföngum fyrir þessa spjallrás.</string>
@@ -1541,11 +1541,11 @@
     <string name="verification_conclusion_ok_notice">Skilaboð við þennan notanda eru enda-í-enda dulrituð þannig að enginn annar getur lesið þau.</string>
     <string name="verification_scan_with_this_device">Skanna með þessu tæki</string>
     <string name="verification_scan_their_code">Skannaðu kóðann hinna</string>
-    <string name="login_signin_matrix_id_title">Skrá inn með Matrix-auðkenni</string>
-    <string name="login_connect_using_matrix_id_submit">Skrá inn með Matrix-auðkenni</string>
+    <string name="login_signin_matrix_id_title">Skrá inn með quali.chat-auðkenni</string>
+    <string name="login_connect_using_matrix_id_submit">Skrá inn með quali.chat-auðkenni</string>
     <string name="login_terms_title">Samþykktu skilmálana til að halda áfram</string>
     <string name="login_a11y_choose_other">Velja sérsniðinn heimaþjón</string>
-    <string name="login_a11y_choose_modular">Velja Element Matrix þjónustur</string>
+    <string name="login_a11y_choose_modular">Velja quali.chat þjónustur</string>
     <string name="login_a11y_choose_matrix_org">Velja matrix.org</string>
     <string name="direct_room_join_rules_invite_by_you">Þú gerðir þetta einungis aðgengilegt gegn boði.</string>
     <string name="direct_room_join_rules_invite">%1$s gerði þetta einungis aðgengilegt gegn boði.</string>
@@ -1597,7 +1597,7 @@
     <string name="three_pid_revoke_invite_dialog_content">Afturkalla boð til %1$s\?</string>
     <string name="three_pid_revoke_invite_dialog_title">Afturkalla boð</string>
     <string name="save_recovery_key_chooser_hint">Vista endurheimtulykil í</string>
-    <string name="disclaimer_title">Riot heitir núna Element!</string>
+    <string name="disclaimer_title">Riot heitir núna quali.chat!</string>
     <string name="bottom_sheet_setup_secure_backup_title">Varið öryggisafrit</string>
     <string name="change_password_summary">Setja upp nýtt lykilorð notandaaðgangs…</string>
     <string name="encryption_information_cross_signing_state">Kross-undirritun</string>
@@ -1616,9 +1616,9 @@
     <string name="login_reset_password_on">Endurstilla lykilorð á %1$s</string>
     <string name="login_login_with_email_error">Þetta tölvupóstfang er ekki tengt við neinn notandaaðgang.</string>
     <string name="login_server_url_form_modular_text">Premium-hýsing fyrir samtök/fyrirtæki</string>
-    <string name="login_signin_sso">Halda áfram með SSO</string>
+    <string name="login_signin_sso">Halda áfram með Ethereum</string>
     <string name="login_connect_to_a_custom_server">Tengjast sérsniðnum þjóni</string>
-    <string name="login_connect_to_modular">Tengjast Element Matrix þjónustum</string>
+    <string name="login_connect_to_modular">Tengjast quali.chat þjónustum</string>
     <string name="login_server_other_text">Sérsniðnar og ítarlegar stillingar</string>
     <string name="login_server_modular_text">Premium-hýsing fyrir samtök/fyrirtæki</string>
     <string name="login_server_title">Veldu netþjón</string>
@@ -1677,7 +1677,7 @@
     <string name="push_gateway_item_app_id">Auðkenni forrits:</string>
     <string name="navigate_to_thread_when_already_in_the_thread">Þú ert nú þegar að skoða þennan spjallþráð!</string>
     <string name="navigate_to_room_when_already_in_the_room">Þú ert nú þegar að skoða þessa spjallrás!</string>
-    <string name="settings_sdk_version">Útgáfa Matrix SDK</string>
+    <string name="settings_sdk_version">Útgáfa quali.chat SDK</string>
     <string name="identity_server_not_defined">Þú ert ekki að nota neinn auðkennisþjón</string>
     <string name="sas_incoming_request_notif_content">%s vill sannreyna setuna þína</string>
     <string name="sas_incoming_request_notif_title">Beiðni um sannvottun</string>
@@ -1808,7 +1808,7 @@
         <item quantity="other">Rangur kóði, %d tilraunir eftir</item>
     </plurals>
     <string name="alert_push_are_disabled_description">Yfirfarðu stillingarnar þínar til að virkja ýtitilkynningar</string>
-    <string name="phone_book_perform_lookup">Leita að tengiliðum á Matrix</string>
+    <string name="phone_book_perform_lookup">Leita að tengiliðum á quali.chat</string>
     <string name="empty_contact_book">Tengiliðaskráin þín er tóm</string>
     <string name="loading_contact_book">Næ í tengiliðina þína…</string>
     <string name="disclaimer_content">Við iðum í skinninu eftir að tilkynbna að við höfum skipt um nafn! Forritið er að fullu uppfært og þú ert skráð/ur aftur inn á aðganginn þinn.</string>
@@ -1831,7 +1831,7 @@
         <item quantity="one">Boð voru send til %1$s og eins til viðbótar</item>
         <item quantity="other">Boð voru send til %1$s og %2$d til viðbótar</item>
     </plurals>
-    <string name="not_a_valid_qr_code">Þetta er ekki gildur QR-kóði á Matrix</string>
+    <string name="not_a_valid_qr_code">Þetta er ekki gildur QR-kóði á quali.chat</string>
     <string name="invitations_sent_to_two_users">Boð voru send til %1$s og %2$s</string>
     <string name="invitation_sent_to_one_user">Boð var sent til %1$s</string>
     <string name="invite_friends_text">Halló, talaðu við mig á ${app_name}: %s</string>
@@ -2080,7 +2080,7 @@
     <string name="ftue_auth_use_case_title">Við hverja muntu helst spjalla\?</string>
     <string name="ftue_auth_carousel_workplace_body">${app_name} er líka frábært fyrir vinnustaðinn. Heimsins öruggustu samtök treysta því.</string>
     <string name="ftue_auth_carousel_encrypted_body">Enda-í-enda dulritað og ekkert símanúmer nauðsynlegt. Engar auglýsingar eða gagnasöfnun.</string>
-    <string name="ftue_auth_carousel_control_body">Veldu hvar á að geyma samtölin þín, sem gefur þér stjórnina og algert sjálfstæði. Tengt í gegnum Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Veldu hvar á að geyma samtölin þín, sem gefur þér stjórnina og algert sjálfstæði. Tengt í gegnum quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Örugg og óháð samskipti sem gefa þér færi á að ræða málin í friði rétt eins og þetta sé maður á mann í heimahúsi.</string>
     <string name="ftue_auth_carousel_workplace_title">Skilaboð fyrir teymið þitt.</string>
     <string name="reaction_search_type_hint">Skrifaðu stikkorð til að finna viðbrögð.</string>
@@ -2108,7 +2108,7 @@
     <string name="auth_reset_password_error_unverified">Tölvupóstfang ekki staðfest, athugaðu pósthólfið þitt</string>
     <string name="invites_empty_title">Ekkert nýtt.</string>
     <string name="space_list_empty_title">Engin svæði ennþá.</string>
-    <string name="labs_enable_new_app_layout_summary">Einfaldað Element með valkvæðum flipum</string>
+    <string name="labs_enable_new_app_layout_summary">Einfaldað quali.chat með valkvæðum flipum</string>
     <string name="labs_enable_new_app_layout_title">Virkja nýja framsetningu</string>
     <string name="home_layout_preferences">Kjörstillingar framsetningar</string>
     <string name="change_space">Skipta um svæði</string>
@@ -2260,7 +2260,7 @@
     <string name="ftue_auth_email_subtitle">%s þarf að sannreyna notandaaðganginn þinn</string>
     <string name="ftue_auth_terms_subtitle">Endilega lestu í gegnum stefnur og skilmála fyrir %s</string>
     <string name="ftue_auth_terms_title">Stefnur netþjónsins</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) er afkastamikil og áreiðanleg hýsingarþjónusta fyrir hraðvirk og örugg samskipti í rauntíma. Skoðaðu hvernig við förum að því á <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) er afkastamikil og áreiðanleg hýsingarþjónusta fyrir hraðvirk og örugg samskipti í rauntíma. Skoðaðu hvernig við förum að því á <a href="${ftue_ems_url}">element.io/ems</a></string>
     <plurals name="x_selected">
         <item quantity="one">%1$d valið</item>
         <item quantity="other">%1$d valið</item>

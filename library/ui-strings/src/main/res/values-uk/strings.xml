@@ -36,7 +36,7 @@
     <string name="notice_crypto_unable_to_decrypt">** Неможливо розшифрувати: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Пристрій відправника не надіслав нам ключ для цього повідомлення.</string>
     <string name="unable_to_send_message">Не вдалося надіслати повідомлення</string>
-    <string name="matrix_error">Помилка Matrix</string>
+    <string name="matrix_error">Помилка quali.chat</string>
     <string name="medium_email">Адреса електронної пошти</string>
     <string name="medium_phone_number">Номер телефону</string>
     <string name="notice_room_update">%s оновлює цю кімнату.</string>
@@ -180,7 +180,7 @@
     <string name="invitations_header">Запрошення</string>
     <string name="low_priority_header">Неважливі</string>
     <string name="direct_chats_header">Бесіди</string>
-    <string name="matrix_only_filter">Лише Matrix-контакти</string>
+    <string name="matrix_only_filter">Лише quali.chat-контакти</string>
     <string name="no_result_placeholder">Немає результатів</string>
     <string name="rooms_header">Кімнати</string>
     <string name="send_bug_report_include_logs">Надіслати журнали</string>
@@ -394,7 +394,7 @@
     <string name="widget_integration_missing_room_id">У запиті відсутній room_id.</string>
     <string name="widget_integration_missing_user_id">У запиті відсутній user_id.</string>
     <string name="widget_integration_room_not_visible">Кімната %s невидима.</string>
-    <string name="room_add_matrix_apps">Додати застосунки Matrix</string>
+    <string name="room_add_matrix_apps">Додати застосунки quali.chat</string>
     <string name="notification_noisy_notifications">Гучні повідомлення</string>
     <string name="notification_silent_notifications">Тихі сповіщення</string>
     <string name="option_take_photo">Зробити фото</string>
@@ -497,7 +497,7 @@
     <string name="command_description_remove_user">Вилучити користувача із вказаним ID</string>
     <string name="command_description_nick">Змінити псевдонім</string>
     <string name="command_description_markdown">Увімкнути/Вимкнути розмітку Markdown</string>
-    <string name="command_description_clear_scalar_token">Для виправлення керування застосунками Matrix</string>
+    <string name="command_description_clear_scalar_token">Для виправлення керування застосунками quali.chat</string>
     <string name="create">Створити</string>
     <string name="group_details_home">Домівка</string>
     <string name="rooms">Кімнати</string>
@@ -513,7 +513,7 @@
 \n
 \nДеактивація вашого облікового запису <b>типово не спричинить видалення надісланих вами повідомлень</b>. Якщо ви бажаєте позбавитись цих повідомлень, залиште позначку під цим текстом.
 \n
-\nПоказ повідомлень у Matrix подібне до електронної пошти. Таке видалення означає, що ваші надіслані повідомлення не будуть поширюватись серед нових або незареєстрованих користувачів, проте зареєстрованим користувачам, які мали доступ до цих повідомлень й надалі будуть доступні їхні копії.</string>
+\nПоказ повідомлень у quali.chat подібне до електронної пошти. Таке видалення означає, що ваші надіслані повідомлення не будуть поширюватись серед нових або незареєстрованих користувачів, проте зареєстрованим користувачам, які мали доступ до цих повідомлень й надалі будуть доступні їхні копії.</string>
     <string name="deactivate_account_delete_checkbox">Будь ласка, після деактивації мого облікового запису видаліть усі надіслані мною повідомлення (Увага: це спричинить неповне відображення розмов для нових користувачів)</string>
     <string name="deactivate_account_submit">Деактивувати обліковий запис</string>
     <string name="error_empty_field_your_password">Будь ласка, введіть Ваш пароль.</string>
@@ -572,7 +572,7 @@
     <string name="notice_crypto_unable_to_decrypt_final">Ви не маєте доступу до цього повідомлення</string>
     <string name="notice_crypto_unable_to_decrypt_friendly">Очікуємо повідомлення, це може тривати певний час</string>
     <string name="login_error_homeserver_not_found">Не вдається отримати домашній сервер за цією URL-адресою, перевірте його</string>
-    <string name="login_error_no_homeserver_found">Це недійсна адреса сервера Matrix</string>
+    <string name="login_error_no_homeserver_found">Це недійсна адреса сервера quali.chat</string>
     <string name="auth_msisdn_already_defined">Цей номер телефону вже використовується.</string>
     <string name="auth_login_sso">Увійдіть за допомогою єдиного входу</string>
     <string name="call_format_turn_hd_on">Увімкнути HD</string>
@@ -679,7 +679,7 @@
     <string name="identity_server_error_bulk_sha256_not_supported">Для вашої приватності ${app_name} підтримує лише надсилання хешованих електронних адрес користувачів та номерів телефону.</string>
     <string name="settings_discovery_consent_notice_on">Ви погодилися надіслати електронні адреси та телефонні номери на цей сервер ідентифікації для виявлення інших користувачів із ваших контактів.</string>
     <string name="settings_discovery_consent_title">Надіслати електронні адреси та номери телефонів</string>
-    <string name="settings_emails_and_phone_numbers_summary">Керування електронними адресами та номерами телефонів, пов’язаними з вашим обліковим записом Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Керування електронними адресами та номерами телефонів, пов’язаними з вашим обліковим записом quali.chat</string>
     <string name="settings_emails_and_phone_numbers_title">Електронні адреси та номери телефонів</string>
     <string name="send_bug_report_include_key_share_history">Надіслати історію запитів спільного доступу до ключів</string>
     <string name="settings_category_timeline">Стрічка подій</string>
@@ -1074,7 +1074,7 @@
     <string name="direct_room_encryption_enabled_tile_description">Повідомлення в цій бесіді захищені наскрізним шифруванням.</string>
     <string name="verification_verify_device">Звірити цей сеанс</string>
     <string name="settings_active_sessions_unverified_device_desc">Звірте цей сеанс, щоб позначити його надійним та надати йому доступ до зашифрованих повідомлень. Якщо ви не входили в цей сеанс, ваш обліковий запис може бути зламано:</string>
-    <string name="room_directory_search_hint">Назва або ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Назва або ID</string>
     <string name="create_room_name_hint">Назва</string>
     <string name="this_is_the_beginning_of_room_no_name">Це початок цієї розмови.</string>
     <string name="room_settings_name_hint">Назва кімнати</string>
@@ -1195,7 +1195,7 @@
     <string name="use_file">Використати файл</string>
     <string name="verification_cannot_access_other_session">Скористатись парольною фразою відновлення або ключем</string>
     <string name="keys_backup_restore_with_passphrase">Скористатись відновлювальними парольною фразою або ключем</string>
-    <string name="use_other_session_content_description">Використовуйте найостаннішій ${app_name} на ваших інших пристроях, ${app_name} браузері, ${app_name} комп\'ютерах, ${app_name} iOS, ${app_name} Android, або будь-який інший, здатний до перехресного підписування, Matrix-клієнт</string>
+    <string name="use_other_session_content_description">Використовуйте найостаннішій ${app_name} на ваших інших пристроях, ${app_name} браузері, ${app_name} комп\'ютерах, ${app_name} iOS, ${app_name} Android, або будь-який інший, здатний до перехресного підписування, quali.chat-клієнт</string>
     <string name="use_latest_app">Використовуйте найостаннішій ${app_name} на ваших інших пристроях:</string>
     <string name="verification_use_passphrase">Якщо ви не можете доступитись до чинного сеансу</string>
     <string name="verification_open_other_to_verify">Використайте чинний сеанс, щоб звірити цей сеанс, таким чином надавши йому доступ до зашифрованих повідомлень.</string>
@@ -1206,7 +1206,7 @@
     <string name="new_session">Новий вхід. Це були ви\?</string>
     <string name="refresh">Оновити</string>
     <string name="reset_cross_signing">Скинути ключі</string>
-    <string name="or_other_mx_capable_client">або будь-який інший, здатний до перехресного підписування, Matrix-клієнт</string>
+    <string name="or_other_mx_capable_client">або будь-який інший, здатний до перехресного підписування, quali.chat-клієнт</string>
     <string name="encryption_information_dg_xsigning_disabled">Перехресне підписування не ввімкнене</string>
     <string name="encryption_information_dg_xsigning_not_trusted">Перехресне підписування увімкнено.
 \nКлючі не є довіреними</string>
@@ -1274,7 +1274,7 @@
     <string name="invite_users_to_room_action_invite">ЗАПРОСИТИ</string>
     <string name="direct_room_user_list_known_title">Відомі користувачі</string>
     <string name="direct_room_user_list_suggestions_title">Пропозиції</string>
-    <string name="phone_book_perform_lookup">Пошук контактів у Matrix</string>
+    <string name="phone_book_perform_lookup">Пошук контактів у quali.chat</string>
     <string name="contacts_book_title">Контакти</string>
     <string name="loading_contact_book">Отримання контактів…</string>
     <string name="qr_code_not_scanned">QR-код не зіскановано!</string>
@@ -1326,7 +1326,7 @@
     <string name="reply">Відповісти</string>
     <string name="edit">Редагувати</string>
     <string name="disclaimer_negative_button">Зрозуміло</string>
-    <string name="disclaimer_title">Riot тепер називається Element!</string>
+    <string name="disclaimer_title">Riot тепер називається quali.chat!</string>
     <string name="downloaded_file">Файл %1$s було звантажено!</string>
     <string name="send_file_step_sending_file">Надсилання файлу (%1$s / %2$s)</string>
     <string name="send_file_step_encrypting_file">Шифрування файлу…</string>
@@ -1364,8 +1364,8 @@
     <string name="soft_logout_signin_submit">Увійти</string>
     <string name="soft_logout_signin_title">Увійти</string>
     <string name="signed_out_submit">Увійти знову</string>
-    <string name="login_signin_matrix_id_title">Увійти з Matrix ID</string>
-    <string name="login_connect_using_matrix_id_submit">Увійти з Matrix ID</string>
+    <string name="login_signin_matrix_id_title">Увійти з quali.chat ID</string>
+    <string name="login_connect_using_matrix_id_submit">Увійти з quali.chat ID</string>
     <string name="login_reset_password_success_submit">Увійти знову</string>
     <string name="login_signin">Увійти</string>
     <string name="login_signin_to">Увійти до %1$s</string>
@@ -1743,7 +1743,7 @@
     <string name="push_gateway_item_app_display_name">Показувана назва застосунку:</string>
     <string name="push_gateway_item_push_key">Ключ Push:</string>
     <string name="push_gateway_item_app_id">ID застосунку:</string>
-    <string name="settings_sdk_version">Версія Matrix SDK</string>
+    <string name="settings_sdk_version">Версія quali.chat SDK</string>
     <string name="create_room_federation_error">Кімнату створено, але деякі запрошення не надіслано з такої причини:
 \n
 \n%s</string>
@@ -1834,14 +1834,14 @@
     <string name="soft_logout_clear_data_submit">Очистити всі дані</string>
     <string name="soft_logout_title">Ви вийшли</string>
     <string name="seen_by">Переглянуто</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_signin_matrix_id_hint">quali.chat ID</string>
     <string name="login_error_outdated_homeserver_title">Застарілий домашній сервер</string>
     <string name="login_validation_code_is_not_correct">Введений код неправильний. Перевірте його.</string>
     <string name="login_wait_for_email_title">Перевірте свою е-пошту</string>
     <string name="login_terms_title">Погодьтеся з усіма умовами, щоб продовжити</string>
     <string name="login_a11y_captcha_container">Пройдіть перевірку Captcha</string>
     <string name="login_a11y_choose_other">Вибрати власний домашній сервер</string>
-    <string name="login_a11y_choose_modular">Вибрати Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Вибрати quali.chat Services</string>
     <string name="login_a11y_choose_matrix_org">Вибрати matrix.org</string>
     <string name="soft_logout_clear_data_title">Очистити особисті дані</string>
     <string name="soft_logout_signin_password_hint">Пароль</string>
@@ -1880,18 +1880,18 @@
     <string name="login_registration_disabled">Перепрошуємо, сервер не приймає нових облікових записів.</string>
     <string name="login_sso_error_message">Сталася помилка під час завантаження сторінки: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Введіть адресу сервера, який ви хочете використовувати</string>
-    <string name="login_server_url_form_modular_notice">Введіть адресу Modular Element або сервера, який ви хочете використовувати</string>
+    <string name="login_server_url_form_modular_notice">Введіть адресу Modular quali.chat або сервера, який ви хочете використовувати</string>
     <string name="login_reset_password_success_title">Успіх!</string>
     <string name="login_reset_password_success_notice">Ваш пароль скинуто.</string>
     <string name="login_reset_password_mail_confirmation_submit">Мною перевірено адресу е-пошти</string>
     <string name="login_reset_password_mail_confirmation_notice_2">Торкніться посилання, щоб підтвердити новий пароль. Перейшовши за посиланням, яке він містить, натисніть внизу.</string>
     <string name="login_reset_password_mail_confirmation_notice">Лист для підтвердження е-пошти надіслано на %1$s.</string>
-    <string name="login_server_url_form_modular_hint">Адреса Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Адреса quali.chat Services</string>
     <string name="login_clear_homeserver_history">Очистити історію</string>
-    <string name="login_signin_sso">Продовжити за допомогою єдиного входу</string>
+    <string name="login_signin_sso">Продовжуйте з Ethereum</string>
     <string name="login_signup">Зареєструватися</string>
     <string name="login_connect_to_a_custom_server">Під\'єднатися до власного сервера</string>
-    <string name="login_connect_to_modular">Під\'єднатися до Element Matrix Services</string>
+    <string name="login_connect_to_modular">Під\'єднатися до quali.chat Services</string>
     <string name="login_connect_to">Під\'єднатися до %1$s</string>
     <string name="login_reset_password_mail_confirmation_title">Перевірти вхідні</string>
     <string name="login_reset_password_error_not_found">Ця адреса е-пошти не пов\'язана з жодним обліковим записом</string>
@@ -1955,7 +1955,7 @@
     <string name="room_settings_space_access_title">Доступ до простору</string>
     <string name="room_settings_access_rules_pref_dialog_title">Хто може мати доступ\?</string>
     <string name="settings_notification_emails_enable_for_email">Увімкнути сповіщення е-поштою для %s</string>
-    <string name="settings_notification_emails_no_emails">Щоб отримувати сповіщення е-поштою, пов’яжіть її адресу зі своїм обліковим записом Matrix</string>
+    <string name="settings_notification_emails_no_emails">Щоб отримувати сповіщення е-поштою, пов’яжіть її адресу зі своїм обліковим записом quali.chat</string>
     <string name="settings_notification_emails_category">Сповіщення е-поштою</string>
     <string name="room_permissions_upgrade_the_space">Оновити простір</string>
     <string name="room_permissions_change_space_name">Змінити назву простору</string>
@@ -1994,7 +1994,7 @@
     <string name="settings_developer_mode_fail_fast_summary">${app_name} може частіше виходити з ладу, коли виникає несподівана помилка</string>
     <string name="settings_developer_mode_fail_fast_title">Швидкий збій</string>
     <string name="autocomplete_limited_results">Показано лише перші результати, введіть більше букв…</string>
-    <string name="permalink_malformed">Ваше посилання matrix.to неправильне</string>
+    <string name="permalink_malformed">Ваше посилання quali.chat неправильне</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Ви втратите доступ до захищених повідомлень, якщо ви не увійдете, щоб відновити ключі шифрування.</string>
     <string name="autodiscover_well_known_error">Не вдалося знайти чинний домашній сервер. Перевірте свій ідентифікатор</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Це хибний ідентифікатор користувача. Очікуваний формат: «@user:homeserver.org»</string>
@@ -2224,7 +2224,7 @@
 \n• Ви видалили цей сеанс за допомогою іншого.
 \n
 \n• Адміністратор сервера скасував ваш вхід із міркувань безпеки.</string>
-    <string name="login_signin_matrix_id_notice">Вже маєте обліковий запис на домашньому сервері\? Введіть ідентифікатор Matrix (наприклад @user:domain.com) і пароль нижче.</string>
+    <string name="login_signin_matrix_id_notice">Вже маєте обліковий запис на домашньому сервері\? Введіть ідентифікатор quali.chat (наприклад @user:domain.com) і пароль нижче.</string>
     <plurals name="login_error_limit_exceeded_retry_after">
         <item quantity="one">Надіслано забагато запитів. Спробуйте знову за %1$d секунду…</item>
         <item quantity="few">Надіслано забагато запитів. Спробуйте знову за %1$d секунди…</item>
@@ -2434,7 +2434,7 @@
     <string name="login_splash_create_account">Створити обліковий запис</string>
     <string name="ftue_auth_carousel_workplace_title">Спілкування вашої команди.</string>
     <string name="ftue_auth_carousel_encrypted_body">З наскрізним шифруванням і без вимоги номера телефону. Без реклами чи аналізу даних.</string>
-    <string name="ftue_auth_carousel_control_body">Оберіть де спілкуватись, що дасть вам контроль і незалежність. Під\'єднано через Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Оберіть де спілкуватись, що дасть вам контроль і незалежність. Під\'єднано через quali.chat.</string>
     <string name="ftue_auth_carousel_secure_body">Захищене та незалежне спілкування, яке дає вам такий самий рівень приватності, як розмова віч-на-віч у вашому власному домі.</string>
     <string name="attachment_type_location">Місцеперебування</string>
     <string name="room_unsupported_e2e_algorithm_as_admin">Шифрування було налаштовано неправильно, тому ви не можете надсилати повідомлення. Торкніться, щоб відкрити налаштування.</string>
@@ -2504,7 +2504,7 @@
 \n
 \nГотуючись, маємо дещо змінити: раніше створені гілки буде показано звичайними відповідями.
 \n
-\nЦе буде одноразовий перехід, оскільки відтепер гілки — це частина специфікації Matrix.</string>
+\nЦе буде одноразовий перехід, оскільки відтепер гілки — це частина специфікації quali.chat.</string>
     <string name="threads_notice_migration_title">Незабаром бета-версія гілок 🎉</string>
     <string name="live_location_sharing_notification_description">Триває передавання місцеперебування</string>
     <string name="live_location_sharing_notification_title">${app_name} Місцеперебування наживо</string>
@@ -2660,7 +2660,7 @@
     <string name="ftue_auth_terms_subtitle">Ознайомтеся з умовами та правилами %s</string>
     <string name="ftue_auth_terms_title">Правила сервера</string>
     <string name="ftue_auth_choose_server_ems_cta">Будьте в курсі</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) — це надійна служба розміщення для швидкого, безпечного зв’язку в реальному часі. Дізнайтеся, як на <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) — це надійна служба розміщення для швидкого, безпечного зв’язку в реальному часі. Дізнайтеся, як на <a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Хочете розмістити власний сервер\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL-адреса сервера</string>
     <string name="ftue_auth_choose_server_subtitle">Яка адреса вашого сервера\? Це як домівка всіх ваших даних</string>
@@ -2676,7 +2676,7 @@
     <string name="font_size_section_manually">Вибрати вручну</string>
     <string name="font_size_section_auto">Установити автоматично</string>
     <string name="font_size_title">Виберіть розмір шрифту</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Віджети автосхвалення викликів Element і надання доступу до камери/мікрофона</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Віджети автосхвалення викликів quali.chat і надання доступу до камери/мікрофона</string>
     <string name="labs_enable_element_call_permission_shortcuts">Увімкнути ярлики дозволів на виклик елемента</string>
     <string name="live_location_description">Місце перебування наживо</string>
     <string name="verify_invalid_qr_notice">Цей QR-код має неправильний вигляд. Спробуйте звірити іншим методом.</string>
@@ -2812,7 +2812,7 @@
     <string name="device_manager_verification_status_detail_current_session_verified">Ваш поточний сеанс готовий до безпечного обміну повідомленнями.</string>
     <string name="labs_enable_deferred_dm_summary">Створюйте приватні повідомлення лише за надсилання першого повідомлення</string>
     <string name="labs_enable_deferred_dm_title">Увімкнути відкладені приватні повідомлення</string>
-    <string name="labs_enable_new_app_layout_summary">Спрощений Element з опціональними вкладками</string>
+    <string name="labs_enable_new_app_layout_summary">Спрощений quali.chat з опціональними вкладками</string>
     <string name="labs_enable_new_app_layout_title">Увімкнути новий вигляд</string>
     <string name="device_manager_learn_more_session_rename">Інші користувачі в особистих повідомленнях і кімнатах, до яких ви приєдналися, можуть переглядати повний список ваших сеансів.
 \n
@@ -2980,7 +2980,7 @@
 \n
 \nПід час користування цим сеансом ви не зможете брати участь у кімнатах, в яких увімкнено шифрування.
 \n
-\nДля кращої безпеки й приватності радимо використовувати клієнти Matrix, які підтримують шифрування.</string>
+\nДля кращої безпеки й приватності радимо використовувати клієнти quali.chat, які підтримують шифрування.</string>
     <string name="device_manager_signout_all_other_sessions">Вийти з усіх інших сеансів</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">Цей сеанс не підтримує шифрування і тому не може бути звірений.</string>
     <string name="settings_nightly_build_update">Отримати найновішу збірку (примітка: у вас можуть виникнути проблеми з входом в систему)</string>

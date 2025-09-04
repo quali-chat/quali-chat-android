@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,6 +40,7 @@ import im.vector.app.features.spaces.create.CreateSpaceViewModel
 import im.vector.app.features.spaces.create.SpaceTopology
 import im.vector.app.features.spaces.create.SpaceType
 
+@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class SpaceCreationActivity : SimpleFragmentActivity() {
 

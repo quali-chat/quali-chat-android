@@ -2,6 +2,7 @@
 
 #
 # Copyright (c) 2022 New Vector Ltd
+# Copyright (c) 2025 Keypair Establishment
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -66,7 +67,7 @@ if [ ${envError} == 1 ]; then
   exit 1
 fi
 
-buildToolsVersion="30.0.2"
+buildToolsVersion="35.0.0"
 buildToolsPath="${androidHome}/build-tools/${buildToolsVersion}"
 
 if [[ ! -d ${buildToolsPath} ]]; then

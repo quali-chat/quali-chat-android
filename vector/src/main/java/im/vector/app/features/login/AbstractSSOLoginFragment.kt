@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -89,7 +90,7 @@ abstract class AbstractSSOLoginFragment<VB : ViewBinding> : AbstractLoginFragmen
             if (state.loginMode.hasSso() && state.loginMode.ssoState().isFallback()) {
                 // in this case we can prefetch (not other cases for privacy concerns)
                 loginViewModel.getSsoUrl(
-                        redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+                        redirectUrl = SSORedirectRouterActivity.vectorRedirectUrl(requireContext().packageName),
                         deviceId = state.deviceId,
                         providerId = null,
                         action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN

@@ -66,7 +66,7 @@
     <string name="low_priority_header">Nizak prioritet</string>
     <string name="system_alerts_header">Upozorenja sustava</string>
     <string name="direct_chats_header">Razgovori</string>
-    <string name="matrix_only_filter">Samo kontakti u Matrixu</string>
+    <string name="matrix_only_filter">Samo kontakti u quali.chatu</string>
     <string name="no_result_placeholder">Nema rezultata</string>
     <string name="rooms_header">Sobe</string>
     <string name="send_bug_report_include_logs">Pošalji zapise</string>
@@ -112,7 +112,7 @@
     <string name="auth_reset_password_error_unauthorized">Neuspješna provjera adrese e-pošte: pobrinite se kliknuti na poveznicu u e-pošti</string>
     <string name="auth_accept_policies">Pročitajte i prihvatite pravila ovog poslužitelja:</string>
     <string name="login_error_invalid_home_server">Unesite ispravan URL</string>
-    <string name="login_error_no_homeserver_found">Ovo nije ispravna adresa poslužitelja Matrixa</string>
+    <string name="login_error_no_homeserver_found">Ovo nije ispravna adresa poslužitelja quali.chata</string>
     <string name="login_error_homeserver_not_found">Poslužitelj na ovom URL-u je nedostupan, provjerite ga</string>
     <string name="login_error_bad_json">Izobličen JSON</string>
     <string name="login_error_not_json">Ne sadrži ispravan JSON</string>
@@ -402,7 +402,7 @@
     <string name="widget_integration_missing_user_id">U zahtjevu nedostaje korisnički identitet.</string>
     <string name="widget_integration_room_not_visible">Soba %s nije vidljiva.</string>
     <string name="widget_integration_missing_parameter">Nedostaje obavezan parametar.</string>
-    <string name="room_add_matrix_apps">Dodaj aplikacije unutar Matrixa</string>
+    <string name="room_add_matrix_apps">Dodaj aplikacije unutar quali.chata</string>
     <string name="settings_labs_native_camera">Koristi izvornu kameru</string>
     <string name="settings_labs_native_camera_summary">Pokreni sistemsku kameru umjesto prilagođenog zaslona za kameru.</string>
     <string name="widget_integration_review_terms">Za nastavak trebate prihvatiti Uvjete korištenja ovog servisa.</string>
@@ -656,7 +656,7 @@
     <string name="room_widget_permission_widget_id">Identitet grafičkog elementa</string>
     <string name="room_widget_permission_room_id">Identitet sobe</string>
     <string name="error_jitsi_not_supported_on_old_device">Nažalost konferencijski pozivi kroz Jitsi nisu podržani na starim uređajima (uređaji s Androidom inačice manje od 6.0)</string>
-    <string name="command_description_clear_scalar_token">Za popravak upravljanja aplikacijama unutar Matrixa</string>
+    <string name="command_description_clear_scalar_token">Za popravak upravljanja aplikacijama unutar quali.chata</string>
     <string name="group_details_home">Početna</string>
     <string name="keys_backup_setup_step1_title">Nikada ne izgubite šifrirane poruke</string>
     <string name="keys_backup_setup_step1_description">Poruke u šifriranim sobama su osigurane šifriranjem s kraja na kraj. Samo Vi i primatelj(i) imate ključeve za čitanje ovih poruka.
@@ -696,16 +696,16 @@
     <string name="login_server_other_text">Prilagođene i napredne postavke</string>
     <string name="login_continue">Nastavi</string>
     <string name="login_connect_to">Spoji se na %1$s</string>
-    <string name="login_connect_to_modular">Spoji se na Element Matrix Services</string>
+    <string name="login_connect_to_modular">Spoji se na quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">Spoji se na prilagođenog poslužitelja</string>
     <string name="login_signin_to">Prijavi se na %1$s</string>
     <string name="login_signup">Otvori račun</string>
     <string name="login_signin">Prijavi se</string>
-    <string name="login_signin_sso">Nastavi sa SSO-om</string>
-    <string name="login_server_url_form_modular_hint">Adresa u Element Matrix Services u</string>
+    <string name="login_signin_sso">Nastavi sa Ethereum-om</string>
+    <string name="login_server_url_form_modular_hint">Adresa u quali.chat Services u</string>
     <string name="login_server_url_form_other_hint">Adresa</string>
     <string name="login_server_url_form_modular_text">Plaćeno gošćenje za organizacije</string>
-    <string name="login_server_url_form_modular_notice">Unesite adresu Modular Elementa ili poslužitelja koji želite koristiti</string>
+    <string name="login_server_url_form_modular_notice">Unesite adresu Modular quali.chata ili poslužitelja koji želite koristiti</string>
     <string name="login_sso_error_message">Došlo je do greške pri učitavanju stranice: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Aplikacija se ne može prijaviti na ovog poslužitelja. Poslužitelj podržava sljedeće vrste prijava: %1$s.
 \n
@@ -804,7 +804,7 @@
     <string name="create_room_public_description">Bilo tko moći će se pridružiti sobi</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Došlo je do greške pri dohvaćanju podataka iz sigurnosne kopije ključeva</string>
     <string name="import_e2e_keys_from_file">Uvezi ključeve za E2E iz datoteke \"%1$s\".</string>
-    <string name="settings_sdk_version">Inačica Matrix SDK-a</string>
+    <string name="settings_sdk_version">Inačica quali.chat SDK-a</string>
     <string name="settings_other_third_party_notices">Druge obavijesti trećih strana</string>
     <string name="navigate_to_room_when_already_in_the_room">Već se nalazite u toj sobi!</string>
     <string name="settings_general_title">Općenito</string>

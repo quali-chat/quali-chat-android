@@ -25,7 +25,7 @@
     <string name="notice_crypto_unable_to_decrypt">** S’arrihet të shfshehtëzohet: %s **</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">Pajisja e dërguesit nuk na ka dërguar kyçet për këtë mesazh.</string>
     <string name="unable_to_send_message">S’arrihet të dërgohet mesazh</string>
-    <string name="matrix_error">Gabim Matrix</string>
+    <string name="matrix_error">Gabim quali.chat</string>
     <string name="medium_email">Adresë email</string>
     <string name="medium_phone_number">Numër telefoni</string>
     <string name="room_displayname_room_invite">Ftesë Dhome</string>
@@ -261,7 +261,7 @@
     <string name="low_priority_header">Me përparësi të ulët</string>
     <string name="system_alerts_header">Sinjalizime Sistemi</string>
     <string name="direct_chats_header">Biseda</string>
-    <string name="matrix_only_filter">Vetëm kontakte të Matrix-it</string>
+    <string name="matrix_only_filter">Vetëm kontakte të quali.chat-it</string>
     <string name="no_result_placeholder">S’ka përfundime</string>
     <string name="rooms_header">Dhoma</string>
     <string name="send_bug_report_include_logs">Dërgo regjistra</string>
@@ -471,7 +471,7 @@
     <string name="widget_integration_missing_user_id">Mungon user_id te kërkesa.</string>
     <string name="widget_integration_room_not_visible">Dhoma %s s’është e dukshme.</string>
     <string name="widget_integration_missing_parameter">Mungon një parametër i domosdoshëm.</string>
-    <string name="room_add_matrix_apps">Shtoni aplikacione Matrix</string>
+    <string name="room_add_matrix_apps">Shtoni aplikacione quali.chat</string>
     <string name="start_verification">Fillo verifikimin</string>
     <string name="command_error">Gabim urdhri</string>
     <string name="unrecognized_command">Urdhër i papranuar: %s</string>
@@ -579,12 +579,12 @@
     </plurals>
     <string name="command_problem_with_parameters">Urdhri \"%s\" lyp më tepër parametra, ose disa parametra janë të pasaktë.</string>
     <string name="command_description_invite_user">Fton te dhoma e tanishme përdoruesin me ID-në e dhënë</string>
-    <string name="command_description_clear_scalar_token">Për ndreqje administrimi Aplikacionesh Matrix</string>
+    <string name="command_description_clear_scalar_token">Për ndreqje administrimi Aplikacionesh quali.chat</string>
     <string name="deactivate_account_content">Kjo do ta bëjë llogarinë tuaj përgjithmonë të papërdorshme. S’do të jeni në gjendje të hyni në llogarinë tuaj, dhe askush s’do të jetë në gjendje të riregjistrojë të njëjtën ID përdoruesi. Kjo do të shkaktojë daljen e llogarisë tuaj nga krejt dhomat ku merr pjesë, dhe do të heqë hollësitë e llogarisë tuaj nga shërbyesi juaj i identiteteve. <b>Ky veprim është i paprapakthyeshëm</b>.
 \n
 \nÇaktivizimi i llogarisë tuaj <b>nuk shkakton, si parazgjedhje, harrimin nga ne të mesazheve që keni dërguar</b>. Nëse do të donit të harrojmë mesazhet tuaja, ju lutemi, i vini shenjë kutizës më poshtë.
 \n
-\nDukshmëria e mesazheve në Matrix është e ngjashme me atë në email. Harrimi i mesazheve nga ana jonë do të thotë që mesazhet që keni dërguar nuk do të ndahen me çfarëdo përdoruesi të ri apo të paregjistruar, por përdoruesit e regjistruar, që kanë tashmë hyrje në këto mesazhe, do të kenë prapëseprapë hyrje te kopja e tyre.</string>
+\nDukshmëria e mesazheve në quali.chat është e ngjashme me atë në email. Harrimi i mesazheve nga ana jonë do të thotë që mesazhet që keni dërguar nuk do të ndahen me çfarëdo përdoruesi të ri apo të paregjistruar, por përdoruesit e regjistruar, që kanë tashmë hyrje në këto mesazhe, do të kenë prapëseprapë hyrje te kopja e tyre.</string>
     <string name="deactivate_account_delete_checkbox">Të lutem, harro krejt mesazhet që kam dërguar, kur të çaktivizohet llogaria ime (Kujdes: kjo do të bëjë që përdorues të ardhshëm të shohin një pamje jo të plotë të bisedave)</string>
     <string name="resource_limit_soft_default">Ky shërbyes home ka tejkaluar një nga kufijtë mbi burimet, ndaj <b>disa përdorues s’do të jenë në gjendje të bëjnë hyrjen</b>.</string>
     <string name="resource_limit_soft_mau"> Ky shërbyes home ka tejkaluar kufirin Përdorues Aktivë Mujorë, ndaj <b>disa përdorues s’do të jenë në gjendje të bëjnë hyrjen</b>.</string>
@@ -875,7 +875,7 @@
     <string name="keys_backup_unable_to_get_trust_info">Ndodhi një gabim gjatë marrjes së të dhënave të besueshmërisë</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Ndodhi një gabim teksa merreshin të dhëna kopjeruajtjeje kyçesh</string>
     <string name="import_e2e_keys_from_file">Importo kyçe e2e prej kartelës \"%1$s\".</string>
-    <string name="settings_sdk_version">Versioni Matrix SDK</string>
+    <string name="settings_sdk_version">Versioni quali.chat SDK</string>
     <string name="settings_other_third_party_notices">Shënime të tjera palësh të treta</string>
     <string name="navigate_to_room_when_already_in_the_room">Po e shihni tashmë këtë dhomë!</string>
     <string name="settings_general_title">Të përgjithshme</string>
@@ -914,7 +914,7 @@
     <string name="room_filtering_footer_create_new_room">Krijoni dhomë të re</string>
     <string name="room_filtering_footer_create_new_direct_message">Dërgoni një mesazh të drejtpërdrejtë</string>
     <string name="room_filtering_footer_open_room_directory">Shihni drejtori dhomash</string>
-    <string name="room_directory_search_hint">Emër ose ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Emër ose ID</string>
     <string name="link_copied_to_clipboard">Lidhja u kopjua në të papastër</string>
     <string name="creating_direct_room">Po krijohet dhomë…</string>
     <string name="message_view_edit_history">Shihni Historik Përpunimesh</string>
@@ -1030,7 +1030,7 @@
     <string name="room_widget_webview_access_microphone">Të përdorë mikrofonin</string>
     <string name="room_widget_webview_read_protected_media">Të lexojë Media të mbrojtur me DRM</string>
     <string name="a11y_close_keys_backup_banner">Mbyll banderolë kopjeruajtjeje kyçesh</string>
-    <string name="login_error_no_homeserver_found">Kjo s’është adresë e vlefshme shërbyesi Matrix</string>
+    <string name="login_error_no_homeserver_found">Kjo s’është adresë e vlefshme shërbyesi quali.chat</string>
     <string name="error_handling_incoming_share">S’trajtoi dot të dhëna ndarjeje</string>
     <string name="message_ignore_user">Shpërfille përdoruesin</string>
     <string name="room_list_quick_actions_notifications_all_noisy">Krejt mesazhet (e zhurmshme)</string>
@@ -1060,16 +1060,16 @@
     <string name="login_server_other_text">Rregullime vetjake &amp; të mëtejshme</string>
     <string name="login_continue">Vazhdo</string>
     <string name="login_connect_to">Lidhu me %1$s</string>
-    <string name="login_connect_to_modular">Lidhu me një shërbyes Element Matrix Services</string>
+    <string name="login_connect_to_modular">Lidhu me një shërbyes quali.chat Services</string>
     <string name="login_connect_to_a_custom_server">Lidhu me një shërbyes vetjak</string>
     <string name="login_signin_to">Hyni te %1$s</string>
     <string name="login_signup">Regjistrohuni</string>
     <string name="login_signin">Hyni</string>
-    <string name="login_signin_sso">Vazhdoni me SSO</string>
-    <string name="login_server_url_form_modular_hint">Adresë Element Matrix Services i</string>
+    <string name="login_signin_sso">Vazhdoni me Ethereum</string>
+    <string name="login_server_url_form_modular_hint">Adresë quali.chat Services i</string>
     <string name="login_server_url_form_other_hint">Adresë</string>
     <string name="login_server_url_form_modular_text">Strehim me pagesë për ente</string>
-    <string name="login_server_url_form_modular_notice">Jepni adresën e Modular Element-it ose Shërbyesit që doni të përdoret</string>
+    <string name="login_server_url_form_modular_notice">Jepni adresën e Modular quali.chat-it ose Shërbyesit që doni të përdoret</string>
     <string name="login_sso_error_message">Ndodhi një gabim kur ngarkohej faqja: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Aplikacioni s’është në gjendje të bëjë hyrje në llogari në këtë shërbyes Home. Shërbyesi Home mbulon llojet vijuese të hyrjes(ve): %1$s.
 \n
@@ -1126,7 +1126,7 @@
     <string name="login_signup_cancel_confirmation_title">Kujdes</string>
     <string name="login_signup_cancel_confirmation_content">Llogaria juaj s’është krijuar ende. Të ndalet procesi i regjistrimit\?</string>
     <string name="login_a11y_choose_matrix_org">Përzgjidhni matrix.org</string>
-    <string name="login_a11y_choose_modular">Përzgjidhni Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Përzgjidhni quali.chat Services</string>
     <string name="login_a11y_choose_other">Përzgjidhni një shërbyes Home vetjak</string>
     <string name="login_a11y_captcha_container">Ju lutemi, zgjidhni captcha-n</string>
     <string name="login_terms_title">Që të vazhdohet, pranoni terma</string>
@@ -1166,7 +1166,7 @@
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Do të humbni hyrje te mesazhe të sigurt, veç në hyfshi për të rimarrë kyçet tuaj të fshehtëzimit.</string>
     <string name="soft_logout_sso_not_same_user_error">Sesioni i tanishëm është për përdoruesin %1$s dhe ju jepni kredenciale për përdoruesin %2$s. Kjo nuk mbulohet nga ${app_name}.
 \nJu lutemi, së pari spastroni të dhëna, mandej hyni sërish në një tjetër llogari.</string>
-    <string name="permalink_malformed">Lidhja juaj matrix.to është e keqformuar</string>
+    <string name="permalink_malformed">Lidhja juaj quali.chat është e keqformuar</string>
     <string name="bug_report_error_too_short">Përshkrimi është shumë i shkurtër</string>
     <string name="room_settings_labs_pref_title">Labs</string>
     <string name="settings_troubleshoot_test_token_registration_quick_fix">Token regjistrimi</string>
@@ -1399,12 +1399,12 @@
     <string name="settings_security_prevent_screenshots_title">Pengo foto ekrani të aplikacionit</string>
     <string name="settings_security_prevent_screenshots_summary">Aktivizimi i këtij rregullimi shton FLAG_SECURE te krejt Veprimtaritë. Që ndryshimi të hyjë në fuqi, rinisni aplikacionin.</string>
     <string name="change_password_summary">Caktoni një fjalëkalim të ri llogarie…</string>
-    <string name="use_other_session_content_description">Përdorni ${app_name}-in më të ri në pajisjet tuaja të tjera, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} për Android, ose një tjetër klient Matrix të aftë për &lt;em&gt;cross-signing&lt;/em</string>
+    <string name="use_other_session_content_description">Përdorni ${app_name}-in më të ri në pajisjet tuaja të tjera, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} për Android, ose një tjetër klient quali.chat të aftë për &lt;em&gt;cross-signing&lt;/em</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} Desktop</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
-    <string name="or_other_mx_capable_client">ose një tjetër klient Matrix i aftë për &lt;em&gt;cross-signing&lt;/em</string>
+    <string name="or_other_mx_capable_client">ose një tjetër klient quali.chat i aftë për &lt;em&gt;cross-signing&lt;/em</string>
     <string name="use_latest_app">Përdorni ${app_name}-in më të ri në pajisjet tuaja të tjera:</string>
     <string name="command_description_discard_session_not_handled">Mbulohet vetëm për dhoma të fshehtëzuara</string>
     <string name="enter_secret_storage_passphrase_or_key">Përdorni %1$s tuaj ose përdorni %2$s tuaj që të vazhdohet.</string>
@@ -1448,9 +1448,9 @@
     <string name="uploads_files_title">KARTELA</string>
     <string name="uploads_files_subtitle">%1$s më %2$s</string>
     <string name="uploads_files_no_result">S’ka kartela në këtë dhomë</string>
-    <string name="login_connect_using_matrix_id_submit">Hyrje me identifikuesin tim Matrix</string>
+    <string name="login_connect_using_matrix_id_submit">Hyrje me identifikuesin tim quali.chat</string>
     <string name="login_signin_matrix_id_title">Hyni</string>
-    <string name="login_signin_matrix_id_notice">Nëse ujdisni një llogari në një shërbyes Home, përdorni më poshtë ID-në tuaj Matrix (p.sh., @përdorues:përkatësi.com) dhe fjalëkalimin.</string>
+    <string name="login_signin_matrix_id_notice">Nëse ujdisni një llogari në një shërbyes Home, përdorni më poshtë ID-në tuaj quali.chat (p.sh., @përdorues:përkatësi.com) dhe fjalëkalimin.</string>
     <string name="login_signin_matrix_id_hint">Identifikues përdoruesi</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">Ky s’është identifikues i vlefshëm përdoruesi. Formati i pritur: \'@user:homeserver.org\'</string>
     <string name="autodiscover_well_known_error">S’arrihet të gjendet një shërbyes Home i vlefshëm. Ju lutemi, kontrolloni identifikuesin tuaj</string>
@@ -1546,7 +1546,7 @@
     <string name="disabled_integration_dialog_title">Integrimet janë të çaktivizuara</string>
     <string name="disabled_integration_dialog_content">Që të bëhet kjo, aktivizoni “Lejo integrime”, te Rregullimet.</string>
     <string name="settings_emails_and_phone_numbers_title">Email-e dhe numra telefonash</string>
-    <string name="settings_emails_and_phone_numbers_summary">Administroni adresa email dhe numra telefonash të lidhur me llogarinë tuaj Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Administroni adresa email dhe numra telefonash të lidhur me llogarinë tuaj quali.chat</string>
     <plurals name="room_settings_banned_users_count">
         <item quantity="one">%d përdorues i dëbuar</item>
         <item quantity="other">%d përdorues të dëbuar</item>
@@ -1630,7 +1630,7 @@
     <string name="crypto_error_withheld_unverified">S’mund të hapni këtë mesazh, ngaqë sesionit tuaj nuk i zihet besë nga dërguesi</string>
     <string name="crypto_error_withheld_generic">S’mund ta hapni këtë mesazh, ngaqë dërguesi qëllimisht nuk ju dërgoi kyçet</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Po pritet për historik fshehtëzimesh</string>
-    <string name="disclaimer_title">Riot-i tanimë quhet Element!</string>
+    <string name="disclaimer_title">Riot-i tanimë quhet quali.chat!</string>
     <string name="disclaimer_content">Jemi të ngazëllyer t’ju njoftojmë se kemi ndërruar emër! Aplikacioni juaj është i përditësuar dhe jeni i futur në llogarinë tuaj.</string>
     <string name="disclaimer_negative_button">E MORA VESH</string>
     <string name="disclaimer_positive_button">MËSONI MË TEPËR</string>
@@ -1733,14 +1733,14 @@
     <string name="invalid_qr_code_uri">Kod QR i pavlefshëm (URI e pavlefshme)!</string>
     <string name="cannot_dm_self">S’mund t’i dërgoni mesazh të drejtpërdrejtë vetes!</string>
     <string name="share_by_text">Jepuani si tekst</string>
-    <string name="phone_book_perform_lookup">Kërkoni për kontakte në Matrix</string>
+    <string name="phone_book_perform_lookup">Kërkoni për kontakte në quali.chat</string>
     <string name="room_settings_set_avatar">Caktoni avatar</string>
     <string name="identity_server_user_consent_not_provided">S’është dhënë pranimi nga përdoruesi.</string>
     <string name="user_code_info_text">Jepuani këtë kod njerëzve, që të mund ta skanojnë për t’ju shtuar dhe për të filluar të bisedoni.</string>
     <string name="user_code_my_code">Kodi im</string>
     <string name="user_code_share">Ndaje kodin tim me të tjerët</string>
     <string name="user_code_scan">Skanoni një kod QR</string>
-    <string name="not_a_valid_qr_code">S’është kod QR Matrix i vlefshëm</string>
+    <string name="not_a_valid_qr_code">S’është kod QR quali.chat i vlefshëm</string>
     <string name="invite_friends_rich_title">Takohuni me mua në ${app_name}</string>
     <string name="invite_friends_text">Hej, bisedoni me mua në ${app_name}: %s</string>
     <string name="invite_friends">Ftoni shokë</string>
@@ -2197,7 +2197,7 @@
     <string name="room_settings_space_access_title">Hyrje në hapësirë</string>
     <string name="room_settings_access_rules_pref_dialog_title">Kush mund të hyjë\?</string>
     <string name="settings_notification_emails_enable_for_email">Aktivizo njoftime me email për %s</string>
-    <string name="settings_notification_emails_no_emails">Që të merrni email me njoftim, ju lutemi, përshoqërojini llogarisë tuaj Matrix një adresë email</string>
+    <string name="settings_notification_emails_no_emails">Që të merrni email me njoftim, ju lutemi, përshoqërojini llogarisë tuaj quali.chat një adresë email</string>
     <string name="settings_notification_emails_category">Njoftim me email</string>
     <string name="room_permissions_upgrade_the_space">Të përmirësojë hapësirën</string>
     <string name="room_permissions_change_space_name">Të ndryshojë emrin e hapësirës</string>
@@ -2322,7 +2322,7 @@
     <string name="login_splash_create_account">Krijoni llogari</string>
     <string name="ftue_auth_carousel_workplace_title">Shkëmbim mesazhesh për ekipin tuaj.</string>
     <string name="ftue_auth_carousel_encrypted_body">I fshehtëzuar skaj më skaj dhe pa u dashur numër telefoni. Pa reklama, apo shfrytëzim të dhënash.</string>
-    <string name="ftue_auth_carousel_control_body">Zgjidhni ku mbahen bisedat tuaja, duke ju dhënë kontroll dhe pavarësi. Të lidhur përmes Matrix-i.</string>
+    <string name="ftue_auth_carousel_control_body">Zgjidhni ku mbahen bisedat tuaja, duke ju dhënë kontroll dhe pavarësi. Të lidhur përmes quali.chat-i.</string>
     <string name="ftue_auth_carousel_secure_body">Komunikim i sigurt dhe i pavarur, që ju jep të njëjtën shkallë privatësie si biseda kokë më kokë, në shtëpinë tuaj.</string>
     <string name="location_share_external">Hape me</string>
     <string name="location_not_available_dialog_content">${app_name} s’njohu dot vendndodhjen tuaj. Ju lutemi, riprovoni më vonë.</string>
@@ -2397,7 +2397,7 @@
 \n
 \nTeksa përgatitemi për të, na duhet të bëjmë disa ndryshime: rrjedha të krijuara para kësaj pike do të shfaqen si përgjigje të rregullta.
 \n
-\nKy do të jetë tranzicion vetëm për një herë, meqë tanimë Rrjedhat janë pjesë e protokollit Matrix.</string>
+\nKy do të jetë tranzicion vetëm për një herë, meqë tanimë Rrjedhat janë pjesë e protokollit quali.chat.</string>
     <string name="threads_notice_migration_title">Rrjedhat Po i Afrohen Beta-s 🎉</string>
     <string name="live_location_sharing_notification_description">Tregimi i vendndodhjes është në punë e sipër</string>
     <string name="a11y_location_share_option_user_live_icon">Jepe vendndodhjen “live”</string>
@@ -2444,7 +2444,7 @@
     <string name="settings_presence">Prani</string>
     <string name="action_learn_more">Mësoni më tepër</string>
     <string name="action_try_it_out">Provojeni</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Aktivizo shkurtore lejesh për Thirrje Element</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Aktivizo shkurtore lejesh për Thirrje quali.chat</string>
     <string name="settings_troubleshoot_test_distributors_fdroid">S’u gjet metodë tjetër veç njëkohësimit në prapaskenë.</string>
     <string name="initial_sync_request_content">${app_name}-it i duhet një fshehtinë e pastër, për të qenë i përditësuar, për arsyen vijuese:
 \n%s
@@ -2711,7 +2711,7 @@
     <string name="ftue_auth_terms_subtitle">Ju lutemi, lexoni kushte dhe rregulla të %s</string>
     <string name="ftue_auth_terms_title">Rregulla shërbyesi</string>
     <string name="ftue_auth_choose_server_ems_cta">Lidhuni</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) është një shërbim strehimi i fuqishëm dhe i besueshëm, për komunikim të shpejtë, të sigurt dhe të atypëratyshëm. Shihni më tepër se si, te<a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">quali.chat Services (EMS) është një shërbim strehimi i fuqishëm dhe i besueshëm, për komunikim të shpejtë, të sigurt dhe të atypëratyshëm. Shihni më tepër se si, te<a href="${ftue_ems_url}">element.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Doni të strehoni shërbyesin tuaj\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL Shërbyesi</string>
     <string name="ftue_auth_choose_server_sign_in_subtitle">Cila është adresa e shërbyesit tuaj\?</string>
@@ -2776,7 +2776,7 @@
     <string name="labs_enable_rich_text_editor_summary">Provoni përpunuesin e teksteve të pasur (për tekst të thjeshtë vjen së shpejti)</string>
     <string name="labs_enable_rich_text_editor_title">Aktivizo përpunues teksti të pasur</string>
     <string name="labs_enable_deferred_dm_summary">Krijo MD vetëm për mesazhin e parë</string>
-    <string name="labs_enable_new_app_layout_summary">Një Element i thjeshtuar, me skeda opsionale</string>
+    <string name="labs_enable_new_app_layout_summary">Një quali.chat i thjeshtuar, me skeda opsionale</string>
     <string name="labs_enable_new_app_layout_title">Aktivizo skemë të re</string>
     <string name="home_layout_preferences_sort_name">A - Z</string>
     <string name="home_layout_preferences_sort_activity">Veprimtari</string>
@@ -2810,7 +2810,7 @@
     <string name="qr_code_login_header_show_qr_code_link_a_device_description">Skanoni kodin QR më poshtë me pajisjen tuaj prej nga është dalë nga llogaria.</string>
     <string name="qr_code_login_header_show_qr_code_new_device_description">Përdorni pajisjen tuaj ku jeni brenda llogarisë që të skanoni kodin QR më poshtë:</string>
     <string name="qr_code_login_header_scan_qr_code_description">Përdorni kamerën në këtë pajisje që të skanoni kodin QR të shfaqur në pajisjen tuaj tjetër:</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Mirato vetvetiu widget-e Thirrjesh Element Call dhe akordo përdorim kamere / mikfrofoni</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Mirato vetvetiu widget-e Thirrjesh quali.chat Call dhe akordo përdorim kamere / mikfrofoni</string>
     <string name="labs_enable_msc3061_share_history">MSC3061: Po jepen kyçe dhome për mesazhe të dikurshëm</string>
     <string name="settings_show_latest_profile_description">Shfaq hollësitë më të reja të profileve (avatar dhe emër në ekran) për krejt mesazhet.</string>
     <string name="settings_security_incognito_keyboard_summary">Kërko doemos që tastiera të mos përditësojë ndonjë të dhënë të personalizuar, bie fjala, historik shtypjeje në të dhe fjalor bazuar në ç’keni shtypur në biseda. Kini parasysh se disa tastiera mund të mos e respektojnë këtë rregullim.</string>
@@ -2854,7 +2854,7 @@
 \n
 \nS’do të jeni në gjendje të merrni pjesë në dhoma ku është i aktivizuar fshehtëzimi, kur përdorni këtë sesion.
 \n
-\nPër sigurinë dhe privatësinë më të mirë, rekomandohet të përdorni klientë Matrix që mbulojnë fshehtëzimin.</string>
+\nPër sigurinë dhe privatësinë më të mirë, rekomandohet të përdorni klientë quali.chat që mbulojnë fshehtëzimin.</string>
     <string name="device_manager_signout_all_other_sessions">Dilni nga krejt sesionet e tjerë</string>
     <string name="device_manager_verification_status_detail_session_encryption_not_supported">Ky sesion nuk mbulon fshehtëzim dhe ndaj s’mund të verifikohet.</string>
     <string name="voice_broadcast_live_broadcast">Transmetim i drejtpërdrejtë</string>
@@ -2945,12 +2945,12 @@
     <string name="crosssigning_verify_after_update">Aplikacioni u përditësua</string>
     <string name="sign_out_anyway">Dil, sido qoftë</string>
     <string name="sign_out_failed_dialog_message">S’kapet dot shërbyesi Home. Nëse keni dalë, sido qoftë, kjo pajisje s’do të fshihet te lista e pajisjeve tuaja, mund të doni ta hiqni duke përdorur klient tjetër.</string>
-    <string name="create_room_unknown_users_dialog_content">S’arrihet të gjenden profile për ID-rat Matrix të radhitura më poshtë. Do të donit të fillohej një fjalosje, sido që të jetë\?
+    <string name="create_room_unknown_users_dialog_content">S’arrihet të gjenden profile për ID-rat quali.chat të radhitura më poshtë. Do të donit të fillohej një fjalosje, sido që të jetë\?
 \n
 \n%s</string>
     <string name="settings_enable_direct_share_title">Aktivizo ndarje të drejtpërdrejtë me të tjerët</string>
     <string name="create_room_unknown_users_dialog_submit">Fillo fjalosje, sido që të jetë</string>
-    <string name="invite_unknown_users_dialog_content">S’arrihet të gjenden profile për ID-rat Matrix të radhitura më poshtë. Do të donit të ftohen, sido qoftë\?
+    <string name="invite_unknown_users_dialog_content">S’arrihet të gjenden profile për ID-rat quali.chat të radhitura më poshtë. Do të donit të ftohen, sido qoftë\?
 \n
 \n%s</string>
     <string name="invite_unknown_users_dialog_submit">Ftoji, sido qoftë</string>

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2018 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,6 +31,7 @@ import androidx.core.content.edit
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.preference.PreferenceManager
 import im.vector.app.R
+import im.vector.app.features.flavour.ProductFlavour
 import timber.log.Timber
 import java.util.concurrent.atomic.AtomicReference
 
@@ -55,6 +57,10 @@ object ThemeUtils {
 
     // init the theme
     fun init(context: Context) {
+        if (ProductFlavour.isQualiChat()) {
+            setApplicationTheme(context, THEME_BLACK_VALUE)
+            return
+        }
         val theme = getApplicationTheme(context)
         setApplicationTheme(context, theme)
     }

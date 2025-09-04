@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -61,6 +62,7 @@ import io.element.android.wysiwyg.view.models.LinkAction
 import uniffi.wysiwyg_composer.ActionState
 import uniffi.wysiwyg_composer.ComposerAction
 
+@Suppress("DEPRECATION")
 internal class RichTextComposerLayout @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,

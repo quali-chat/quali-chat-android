@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -109,7 +110,8 @@ class SpaceExploreActivity : VectorBaseActivity<ActivitySimpleBinding>(), Matrix
                             CreateRoomActivity.getIntent(
                                     this,
                                     openAfterCreate = false,
-                                    currentSpaceId = it.currentSpaceId
+                                    currentSpaceId = it.currentSpaceId,
+                                    limit = Int.MAX_VALUE
                             )
                     )
                 }

@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2022 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +19,7 @@ package im.vector.app.features.home.room.detail.timeline.factory
 
 import im.vector.app.R
 import im.vector.app.core.resources.StringProvider
+import im.vector.app.features.home.room.detail.poll.PollState
 import im.vector.app.features.home.room.detail.timeline.item.PollResponseData
 import im.vector.app.features.poll.PollItemViewState
 import org.matrix.android.sdk.api.extensions.orFalse
@@ -33,13 +35,16 @@ class PollItemViewStateFactory @Inject constructor(
     fun create(
             pollContent: MessagePollContent,
             pollResponseData: PollResponseData?,
-            isSent: Boolean,
+            isSent: Boolean
     ): PollItemViewState {
         val pollCreationInfo = pollContent.getBestPollCreationInfo()
         val question = pollCreationInfo?.question?.getBestQuestion().orEmpty()
         val totalVotes = pollResponseData?.totalVotes ?: 0
 
         return when {
+            !PollState.isPollVoteEnabled -> {
+                createDisabledPollViewState(question, pollCreationInfo, pollResponseData, totalVotes)
+            }
             !isSent -> {
                 createSendingPollViewState(question, pollCreationInfo)
             }
@@ -83,6 +88,25 @@ class PollItemViewStateFactory @Inject constructor(
                 votesStatus = totalVotesText,
                 canVote = false,
                 optionViewStates = pollOptionViewStateFactory.createPollEndedOptions(pollCreationInfo, pollResponseData),
+        )
+    }
+
+    private fun createDisabledPollViewState(
+            question: String,
+            pollCreationInfo: PollCreationInfo?,
+            pollResponseData: PollResponseData?,
+            totalVotes: Int,
+    ): PollItemViewState {
+        val totalVotesText = if (pollResponseData?.hasEncryptedRelatedEvents.orFalse()) {
+            stringProvider.getString(R.string.unable_to_decrypt_some_events_in_poll)
+        } else {
+            stringProvider.getQuantityString(R.plurals.poll_total_vote_count_after_ended, totalVotes, totalVotes)
+        }
+        return PollItemViewState(
+                question = question,
+                votesStatus = totalVotesText,
+                canVote = false,
+                optionViewStates = pollOptionViewStateFactory.createPollDisabledOptions(pollCreationInfo, pollResponseData),
         )
     }
 

@@ -6,7 +6,7 @@ apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'com.google.devtools.ksp'
+//apply plugin: 'com.google.devtools.ksp'
 apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlinx-knit'
 apply plugin: 'com.likethesalad.stem'
@@ -32,12 +32,13 @@ knit {
 }
 
 // Note: 2 digits max for each value
-ext.versionMajor = 1
-ext.versionMinor = 6
+ext.versionMajor = 0
+ext.versionMinor = 3
 // Note: even values are reserved for regular release, odd values for hotfix release.
 // When creating a hotfix, you should decrease the value, since the current value
 // is the value for the next regular release.
-ext.versionPatch = 18
+//appversion
+ext.versionPatch = 0
 
 static def getGitTimestamp() {
     def cmd = 'git show -s --format=%ct'
@@ -67,7 +68,7 @@ def getVersionCode() {
 
 def getNightlyUniversalApkPath() {
     def taskNames = gradle.getStartParameter().taskNames.toString()
-    if(taskNames.contains("Nightly")) {
+    if (taskNames.contains("Nightly")) {
         return "vector-app/build/outputs/apk/gplay/nightly/vector-gplay-universal-nightly.apk"
     } else {
         return ""
@@ -79,11 +80,12 @@ def getFirebaseAppId() {
 //    if(taskNames.contains("RustCryptoNightly")) {
 //        return "1:912726360885:android:94fb99347eaa36d100427c"
 //    } else if (taskNames.contains("KotlinCryptoNightly")) {
-        return "1:912726360885:android:efd8545af52a9f9300427c"
+    return "1:912726360885:android:efd8545af52a9f9300427c"
 //    } else {
 //        return ""
 //    }
 }
+
 static def gitRevision() {
     def cmd = "git rev-parse --short=8 HEAD"
     return cmd.execute().text.trim()
@@ -99,27 +101,10 @@ static def gitBranchName() {
     return cmd.execute().text.trim()
 }
 
-// For Google Play build, build on any other branch than main will have a "-dev" suffix
-static def getGplayVersionSuffix() {
-    if (gitBranchName() == "main") {
-        return ""
-    } else {
-        return "-dev"
-    }
-}
 
 static def gitTag() {
     def cmd = "git describe --exact-match --tags"
     return cmd.execute().text.trim()
-}
-
-// For F-Droid build, build on a not tagged commit will have a "-dev" suffix
-static def getFdroidVersionSuffix() {
-    if (gitTag() == "") {
-        return "-dev"
-    } else {
-        return ""
-    }
 }
 
 project.android.buildTypes.all { buildType ->
@@ -143,7 +128,8 @@ android {
     compileSdk versions.compileSdk
 
     defaultConfig {
-        applicationId "im.vector.app"
+
+        applicationId "chat.quali.android"
         // Set to API 21: see #405
         minSdk versions.minSdk
         targetSdk versions.targetSdk
@@ -151,6 +137,8 @@ android {
 
         renderscriptTargetApi 24
         renderscriptSupportModeEnabled true
+
+        resConfigs "en"
 
         // `develop` branch will have version code from timestamp, to ensure each build from CI has a incremented versionCode.
         // Other branches (main, features, etc.) will have version code based on application version.
@@ -229,12 +217,6 @@ android {
             storeFile file('./signature/debug.keystore')
             storePassword 'android'
         }
-        nightly {
-            keyAlias System.env.ELEMENT_ANDROID_NIGHTLY_KEYID ?: project.property("signing.element.nightly.keyId")
-            keyPassword System.env.ELEMENT_ANDROID_NIGHTLY_KEYPASSWORD ?: project.property("signing.element.nightly.keyPassword")
-            storeFile file('./signature/nightly.keystore')
-            storePassword System.env.ELEMENT_ANDROID_NIGHTLY_STOREPASSWORD ?: project.property("signing.element.nightly.storePassword")
-        }
         release {
             keyAlias project.property("signing.element.keyId")
             keyPassword project.property("signing.element.keyPassword")
@@ -245,101 +227,126 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix ".debug"
-            signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Element - dbg"
-
             if (project.hasProperty("coverage")) {
                 testCoverageEnabled = coverage == "true"
             }
+
+            signingConfig signingConfigs.debug
+            versionNameSuffix '-dbg'
         }
 
         release {
-            resValue "string", "app_name", "Element"
+            debuggable false
             postprocessing {
                 // FIXME Set to true.
                 removeUnusedCode false
-                removeUnusedResources true
+                removeUnusedResources false
                 // We do not activate obfuscation as it makes it hard then to read crash reports, and it's a bit useless on an open source project :)
                 obfuscate false
                 optimizeCode true
                 proguardFiles 'proguard-rules.pro'
             }
-            // signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
         }
 
-        nightly {
-            initWith release
-            applicationIdSuffix ".nightly"
-            versionNameSuffix "-nightly"
-            // Just override the background color of the launcher icon for the nightly build.
-            // We need to copy paste this block, this is not done automatically by `initWith release`
-            postprocessing {
-                // FIXME Set to true.
-                removeUnusedCode false
-                removeUnusedResources true
-                // We do not activate obfuscation as it makes it hard then to read crash reports, and it's a bit useless on an open source project :)
-                obfuscate false
-                optimizeCode true
-                proguardFiles 'proguard-rules.pro'
-            }
-            matchingFallbacks = ['release']
-            signingConfig signingConfigs.nightly
-            firebaseAppDistribution {
-                artifactType = "APK"
-                // We upload the universal APK to fix this error:
-                // "App Distribution found more than 1 output file for this variant.
-                // Please contact firebase-support@google.com for help using APK splits with App Distribution."
-                artifactPath = "$rootDir/${getNightlyUniversalApkPath()}"
-                // This file will be generated by the GitHub action
-                releaseNotesFile = "CHANGES_NIGHTLY.md"
-                groups = "external-testers"
-                // This should not be required, but if I do not add the appId, I get this error:
-                // "App Distribution halted because it had a problem uploading the APK: [404] Requested entity was not found."
-                appId = "${getFirebaseAppId()}"
-            }
-        }
+        /*     nightly {
+                 initWith release
+                 applicationIdSuffix ".nightly"
+                 versionNameSuffix "-nightly"
+                 // Just override the background color of the launcher icon for the nightly build.
+                 // We need to copy paste this block, this is not done automatically by `initWith release`
+                 postprocessing {
+                     // FIXME Set to true.
+                     removeUnusedCode false
+                     removeUnusedResources true
+                     // We do not activate obfuscation as it makes it hard then to read crash reports, and it's a bit useless on an open source project :)
+                     obfuscate false
+                     optimizeCode true
+                     proguardFiles 'proguard-rules.pro'
+                 }
+                 matchingFallbacks = ['release']
+                 signingConfig signingConfigs.nightly
+                 firebaseAppDistribution {
+                     artifactType = "APK"
+                     // We upload the universal APK to fix this error:
+                     // "App Distribution found more than 1 output file for this variant.
+                     // Please contact firebase-support@google.com for help using APK splits with App Distribution."
+                     artifactPath = "$rootDir/${getNightlyUniversalApkPath()}"
+                     // This file will be generated by the GitHub action
+                     releaseNotesFile = "CHANGES_NIGHTLY.md"
+                     groups = "external-testers"
+                     // This should not be required, but if I do not add the appId, I get this error:
+                     // "App Distribution halted because it had a problem uploading the APK: [404] Requested entity was not found."
+                     appId = "${getFirebaseAppId()}"
+                 }
+             }*/
     }
 
     sourceSets {
-        nightly {
-            java.srcDirs += "src/release/java"
-        }
+
     }
 
-    flavorDimensions = ["store"]
+    flavorDimensions = ["store", "env"]
 
     productFlavors {
-        gplay {
+
+        quali {
+            dimension "store"
             apply plugin: 'com.google.gms.google-services'
-            afterEvaluate {
-                tasks.matching { it.name.contains("GoogleServices") && !it.name.contains("Gplay") }*.enabled = false
-            }
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+            buildConfigField "String", "SHORT_FLAVOR_DESCRIPTION", "\"PROD\""
+            buildConfigField "String", "FLAVOR_DESCRIPTION", "\"PRODUCTION\""
+            isDefault = true
+        }
+
+        staging {
+            applicationIdSuffix ".staging"
+            dimension "env"
+            resValue "string", "app_name", "quali.chat-staging"
+            apply plugin: 'com.google.gms.google-services'
+
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+            buildConfigField "String", "SHORT_FLAVOR_DESCRIPTION", "\"STAGE\""
+            buildConfigField "String", "FLAVOR_DESCRIPTION", "\"STAGING\""
+
+            isDefault = false
+        }
+
+        production {
+            dimension "env"
+            resValue "string", "app_name", "quali.chat"
+            apply plugin: 'com.google.gms.google-services'
+
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+            buildConfigField "String", "SHORT_FLAVOR_DESCRIPTION", "\"PROD\""
+            buildConfigField "String", "FLAVOR_DESCRIPTION", "\"PRODUCTION\""
+
+            isDefault = false
+        }
+
+/*        gplay {
+            apply plugin: 'com.google.gms.google-services'
 
             dimension "store"
-            isDefault = true
-            versionName "${versionMajor}.${versionMinor}.${versionPatch}${getGplayVersionSuffix()}"
+
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
             buildConfigField "String", "SHORT_FLAVOR_DESCRIPTION", "\"G\""
             buildConfigField "String", "FLAVOR_DESCRIPTION", "\"GooglePlay\""
-        }
+        }*/
 
-        fdroid {
-            dimension "store"
-            versionName "${versionMajor}.${versionMinor}.${versionPatch}${getFdroidVersionSuffix()}"
-            buildConfigField "String", "SHORT_FLAVOR_DESCRIPTION", "\"F\""
-            buildConfigField "String", "FLAVOR_DESCRIPTION", "\"FDroid\""
-        }
+        /*     fdroid {
+                 dimension "store"
+
+                 versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+                 buildConfigField "String", "SHORT_FLAVOR_DESCRIPTION", "\"F\""
+                 buildConfigField "String", "FLAVOR_DESCRIPTION", "\"FDroid\""
+             }*/
 
     }
 
     variantFilter { variant ->
         def names = variant.flavors*.name
         def buildType = variant.buildType.name
-        // There is no nightly for fdroid
-        if (names.contains("fdroid") && buildType == "nightly") {
-            // Gradle ignores any variants that satisfy the conditions above.
-            setIgnore(true)
-        }
     }
 
     lintOptions {
@@ -393,25 +400,34 @@ dependencies {
     debugImplementation 'com.facebook.soloader:soloader:0.10.5'
     debugImplementation "com.kgurgul.flipper:flipper-realm-android:2.2.0"
 
-    gplayImplementation "com.google.android.gms:play-services-location:21.0.1"
+    qualiImplementation "com.google.android.gms:play-services-location:21.0.1"
+    stagingImplementation "com.google.android.gms:play-services-location:21.0.1"
     // UnifiedPush gplay flavor only
-    gplayImplementation platform(libs.google.firebaseBom)
-    gplayImplementation(libs.google.messaging) {
+    qualiImplementation platform(libs.google.firebaseBom)
+    stagingImplementation platform(libs.google.firebaseBom)
+
+    qualiImplementation(libs.google.messaging) {
+        exclude group: 'com.google.firebase', module: 'firebase-core'
+        exclude group: 'com.google.firebase', module: 'firebase-analytics'
+        exclude group: 'com.google.firebase', module: 'firebase-measurement-connector'
+    }
+    stagingImplementation(libs.google.messaging) {
         exclude group: 'com.google.firebase', module: 'firebase-core'
         exclude group: 'com.google.firebase', module: 'firebase-analytics'
         exclude group: 'com.google.firebase', module: 'firebase-measurement-connector'
     }
 
-    // Nightly
-    // API-only library
-    gplayImplementation libs.google.appdistributionApi
-    // Full SDK implementation
-    nightlyImplementation libs.google.appdistribution
+// Nightly
+// API-only library
+    qualiImplementation libs.google.appdistributionApi
+    stagingImplementation libs.google.appdistributionApi
+// Full SDK implementation
 
-    // OSS License, gplay flavor only
-    gplayImplementation 'com.google.android.gms:play-services-oss-licenses:17.0.1'
+// OSS License, gplay flavor only
+    qualiImplementation 'com.google.android.gms:play-services-oss-licenses:17.0.1'
+    stagingImplementation 'com.google.android.gms:play-services-oss-licenses:17.0.1'
     kapt libs.dagger.hiltCompiler
-    ksp libs.airbnb.epoxyProcessor
+    kapt libs.airbnb.epoxyProcessor
 
     androidTestImplementation libs.androidx.testCore
     androidTestImplementation libs.androidx.testRunner
@@ -425,9 +441,9 @@ dependencies {
     androidTestImplementation(libs.jetbrains.coroutinesTest) {
         exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
     }
-    // Plant Timber tree for test
+// Plant Timber tree for test
     androidTestImplementation libs.tests.timberJunitRule
-    // "The one who serves a great Espresso"
+// "The one who serves a great Espresso"
     androidTestImplementation('com.adevinta.android:barista:4.3.0') {
         exclude group: 'org.jetbrains.kotlin'
     }

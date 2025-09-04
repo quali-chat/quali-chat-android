@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +26,7 @@ import java.net.URLDecoder
 /**
  * This class turns a uri to a [PermalinkData].
  * element-based domains (e.g. https://app.element.io/#/user/@chagai95:matrix.org) permalinks
- * or matrix.to permalinks (e.g. https://matrix.to/#/@chagai95:matrix.org)
+ * or matrix.to permalinks (e.g. https://quali.chat/#/@chagai95:matrix.org)
  * or client permalinks (e.g. <clientPermalinkBaseUrl>user/@chagai95:matrix.org)
  */
 object PermalinkParser {
@@ -44,7 +45,7 @@ object PermalinkParser {
      */
     fun parse(uri: Uri): PermalinkData {
         // the client or element-based domain permalinks (e.g. https://app.element.io/#/user/@chagai95:matrix.org) don't have the
-        // mxid in the first param (like matrix.to does - https://matrix.to/#/@chagai95:matrix.org) but rather in the second after /user/ so /user/mxid
+        // mxid in the first param (like matrix.to does - https://quali.chat/#/@chagai95:matrix.org) but rather in the second after /user/ so /user/mxid
         // so convert URI to matrix.to to simplify parsing process
         val matrixToUri = MatrixToConverter.convert(uri) ?: return PermalinkData.FallbackLink(uri)
 

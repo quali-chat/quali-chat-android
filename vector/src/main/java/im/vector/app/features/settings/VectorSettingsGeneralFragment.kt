@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -56,6 +57,7 @@ import im.vector.app.features.MainActivity
 import im.vector.app.features.MainActivityArgs
 import im.vector.app.features.analytics.plan.MobileScreen
 import im.vector.app.features.discovery.DiscoverySettingsFragment
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.navigation.SettingsActivityPayload
 import im.vector.app.features.workers.signout.SignOutUiWorker
 import kotlinx.coroutines.Dispatchers
@@ -105,6 +107,7 @@ class VectorSettingsGeneralFragment :
     private val mManage3pidsPreference by lazy {
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_EMAILS_AND_PHONE_NUMBERS_PREFERENCE_KEY)!!
     }
+
     private val mIdentityServerPreference by lazy {
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_IDENTITY_SERVER_PREFERENCE_KEY)!!
     }
@@ -206,7 +209,7 @@ class VectorSettingsGeneralFragment :
 
         // Manage 3Pid
         // Hide the preference if 3pids can not be updated
-        mManage3pidsPreference.isVisible = homeServerCapabilities.canChange3pid
+        mManage3pidsPreference.isVisible = homeServerCapabilities.canChange3pid && !ProductFlavour.isQualiChat()
 
         val openDiscoveryScreenPreferenceClickListener = Preference.OnPreferenceClickListener {
             (requireActivity() as VectorSettingsActivity).navigateTo(

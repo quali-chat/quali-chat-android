@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright (c) 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -41,6 +42,7 @@ class InviteUsersToRoomViewModel @AssistedInject constructor(
 ) : VectorViewModel<InviteUsersToRoomViewState, InviteUsersToRoomAction, InviteUsersToRoomViewEvents>(initialState) {
 
     private val room = session.getRoom(initialState.roomId)!!
+    private val directRoomMembersLimit = initialState.limit
 
     @AssistedFactory
     interface Factory : MavericksAssistedViewModelFactory<InviteUsersToRoomViewModel, InviteUsersToRoomViewState> {
@@ -92,5 +94,9 @@ class InviteUsersToRoomViewModel @AssistedInject constructor(
 
     fun getUserIdsOfRoomMembers(): Set<String> {
         return room.roomSummary()?.otherMemberIds?.toSet().orEmpty()
+    }
+
+    fun getDirectRoomMembersLimit(): Int {
+        return directRoomMembersLimit
     }
 }

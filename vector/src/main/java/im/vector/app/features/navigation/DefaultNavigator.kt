@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -329,8 +330,9 @@ class DefaultNavigator @Inject constructor(
         }.start(context)
     }
 
-    override fun openCreateRoom(context: Context, initialName: String, openAfterCreate: Boolean) {
-        val intent = CreateRoomActivity.getIntent(context = context, initialName = initialName, openAfterCreate = openAfterCreate)
+    override fun openCreateRoom(context: Context, initialName: String, openAfterCreate: Boolean, directRoomMembersLimit: Int) {
+        val intent =
+                CreateRoomActivity.getIntent(context = context, initialName = initialName, openAfterCreate = openAfterCreate, limit = directRoomMembersLimit)
         context.startActivity(intent)
     }
 
@@ -341,16 +343,16 @@ class DefaultNavigator @Inject constructor(
         }.start(context)
     }
 
-    override fun openInviteUsersToRoom(fragmentActivity: FragmentActivity, roomId: String) {
+    override fun openInviteUsersToRoom(fragmentActivity: FragmentActivity, roomId: String, directRoomMembersLimit: Int) {
         when (val currentSpace = spaceStateHandler.getCurrentSpace()) {
-            null -> InviteUsersToRoomActivity.getIntent(fragmentActivity, roomId).start(fragmentActivity)
-            else -> showInviteToDialog(fragmentActivity, currentSpace, roomId)
+            null -> InviteUsersToRoomActivity.getIntent(fragmentActivity, roomId, directRoomMembersLimit).start(fragmentActivity)
+            else -> showInviteToDialog(fragmentActivity, currentSpace, roomId, directRoomMembersLimit)
         }
     }
 
-    private fun showInviteToDialog(fragmentActivity: FragmentActivity, currentSpace: RoomSummary, roomId: String) {
+    private fun showInviteToDialog(fragmentActivity: FragmentActivity, currentSpace: RoomSummary, roomId: String, limit: Int) {
         InviteRoomSpaceChooserBottomSheet.showInstance(fragmentActivity.supportFragmentManager, currentSpace.roomId, roomId) { itemId ->
-            InviteUsersToRoomActivity.getIntent(fragmentActivity, itemId).start(fragmentActivity)
+            InviteUsersToRoomActivity.getIntent(fragmentActivity, itemId, limit).start(fragmentActivity)
         }
     }
 

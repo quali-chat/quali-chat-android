@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,12 +17,10 @@
 
 package im.vector.app.features.login
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
@@ -33,12 +32,8 @@ import org.matrix.android.sdk.api.failure.Failure
 import java.net.UnknownHostException
 import javax.inject.Inject
 
-/**
- * In this screen, the user is viewing an introduction to what he can do with this application.
- */
 @AndroidEntryPoint
-class LoginSplashFragment :
-        AbstractLoginFragment<FragmentLoginSplashBinding>() {
+class LoginSplashFragment : AbstractLoginFragment<FragmentLoginSplashBinding>() {
 
     @Inject lateinit var vectorPreferences: VectorPreferences
     @Inject lateinit var buildMeta: BuildMeta
@@ -54,20 +49,12 @@ class LoginSplashFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupViews()
     }
 
     private fun setupViews() {
+        // Set up click listener for the submit button
         views.loginSplashSubmit.debouncedClicks { getStarted() }
-
-        if (buildMeta.isDebug || vectorPreferences.developerMode()) {
-            views.loginSplashVersion.isVisible = true
-            @SuppressLint("SetTextI18n")
-            views.loginSplashVersion.text = "Version : ${buildMeta.versionName}\n" +
-                    "Branch: ${buildMeta.gitBranchName} ${buildMeta.gitRevision}"
-            views.loginSplashVersion.debouncedClicks { navigator.openDebug(requireContext()) }
-        }
     }
 
     private fun getStarted() {
@@ -79,8 +66,7 @@ class LoginSplashFragment :
     }
 
     override fun onError(throwable: Throwable) {
-        if (throwable is Failure.NetworkConnection &&
-                throwable.ioException is UnknownHostException) {
+        if (throwable is Failure.NetworkConnection && throwable.ioException is UnknownHostException) {
             // Invalid homeserver from URL config
             val url = loginViewModel.getInitialHomeServerUrl().orEmpty()
             MaterialAlertDialogBuilder(requireActivity())

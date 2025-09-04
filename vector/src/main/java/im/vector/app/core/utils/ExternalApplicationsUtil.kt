@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2019 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -97,7 +98,16 @@ fun openUrlInChromeCustomTab(
         url: String
 ) {
     try {
-        CustomTabsIntent.Builder()
+        val browser = BrowserSelector.select(context, AnyBrowserMatcher)
+        val packageName = browser?.packageName
+
+        if (packageName == null) {
+            Toast.makeText(context, R.string.error_no_external_application_found, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        Timber.d("open url: $url")
+        val customTabsIntentBuilder = CustomTabsIntent.Builder()
                 .setDefaultColorSchemeParams(
                         CustomTabColorSchemeParams.Builder()
                                 .setToolbarColor(ThemeUtils.getColor(context, android.R.attr.colorBackground))
@@ -116,10 +126,12 @@ fun openUrlInChromeCustomTab(
                 .setStartAnimations(context, R.anim.enter_fade_in, R.anim.exit_fade_out)
                 .setExitAnimations(context, R.anim.enter_fade_in, R.anim.exit_fade_out)
                 .apply { session?.let { setSession(it) } }
-                .build()
-                .launchUrl(context, Uri.parse(url))
+
+        val customTabsIntent = customTabsIntentBuilder.build()
+        customTabsIntent.intent.setPackage(packageName)
+        customTabsIntent.launchUrl(context, Uri.parse(url))
     } catch (activityNotFoundException: ActivityNotFoundException) {
-        context.toast(R.string.error_no_external_application_found)
+        Toast.makeText(context, R.string.error_no_external_application_found, Toast.LENGTH_LONG).show()
     }
 }
 

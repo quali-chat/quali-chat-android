@@ -210,7 +210,7 @@
     <string name="settings_advanced_settings">Paramètres avancés</string>
     <string name="notification_initial_sync">Synchronisation initiale…</string>
     <string name="bug_report_error_too_short">La description est trop courte</string>
-    <string name="permalink_malformed">Votre lien matrix.to était malformé</string>
+    <string name="permalink_malformed">Votre lien quali.chat était malformé</string>
     <string name="soft_logout_sso_not_same_user_error">La session en cours est celle de l’utilisateur %1$s et vous fournissez des identifiants pour l’utilisateur %2$s. Ce n’est pas pris en charge par ${app_name}.
 \nEffacez d’abord les données, puis reconnectez-vous avec un autre compte.</string>
     <string name="soft_logout_clear_data_dialog_e2e_warning_content">Vous perdrez l’accès à vos messages sécurisés sauf si vous vous connectez pour récupérer vos clés de chiffrement.</string>
@@ -338,7 +338,7 @@
     <string name="settings_general_title">Général</string>
     <string name="navigate_to_room_when_already_in_the_room">Vous êtes déjà en train de visualiser ce salon !</string>
     <string name="settings_other_third_party_notices">Licences tierces</string>
-    <string name="settings_sdk_version">Version du SDK de Matrix</string>
+    <string name="settings_sdk_version">Version du SDK de quali.chat</string>
     <string name="import_e2e_keys_from_file">Importer les clés de chiffrement depuis le fichier « %1$s ».</string>
     <string name="keys_backup_unable_to_get_keys_backup_data">Une erreur est survenue lors de la récupération des données de sauvegarde de clés</string>
     <string name="keys_backup_unable_to_get_trust_info">Une erreur est survenue lors de la récupération des informations de confiance</string>
@@ -564,7 +564,7 @@
 \n
 \nDésactiver votre compte <b>ne nous fait pas oublier les messages que vous avez envoyés par défaut</b>. Si vous souhaitez que nous oubliions vos messages, cochez la case ci-dessous.
 \n
-\nLa visibilité des messages dans Matrix est identique à celle des courriels. Si nous oublions vos messages, cela signifie que les messages que vous avez envoyés ne seront plus partagés avec les nouveaux utilisateurs ou les utilisateurs non enregistrés, mais les utilisateurs enregistrés qui ont déjà accès à ces messages en conserveront leur copie.</string>
+\nLa visibilité des messages dans quali.chat est identique à celle des courriels. Si nous oublions vos messages, cela signifie que les messages que vous avez envoyés ne seront plus partagés avec les nouveaux utilisateurs ou les utilisateurs non enregistrés, mais les utilisateurs enregistrés qui ont déjà accès à ces messages en conserveront leur copie.</string>
     <string name="auth_reset_password_error_unauthorized">Impossible de vérifier l’adresse courriel : assurez-vous d’avoir cliqué sur le lien dans l’courriel</string>
     <string name="settings_emails_empty">Aucune adresse courriel n’a été ajoutée à votre compte</string>
     <string name="auth_email_already_defined">Cette adresse courriel est déjà utilisée.</string>
@@ -658,12 +658,12 @@
     <string name="command_description_discard_session_not_handled">Seulement pris en charge dans les salons chiffrés</string>
     <string name="command_description_discard_session">Force la session de groupe sortante actuelle dans un salon chiffré à être abandonnée</string>
     <string name="use_latest_app">Utilisez la dernière version de ${app_name} sur vos autres appareils :</string>
-    <string name="or_other_mx_capable_client">ou un autre client Matrix qui prend en charge la signature croisée</string>
+    <string name="or_other_mx_capable_client">ou un autre client quali.chat qui prend en charge la signature croisée</string>
     <string name="app_ios_android">${app_name} iOS
 \n${app_name} Android</string>
     <string name="app_desktop_web">${app_name} Web
 \n${app_name} pour Bureau</string>
-    <string name="use_other_session_content_description">Utilisez la dernière version de ${app_name} sur vos autres appareils : ${app_name} Web, ${app_name} pour Bureau, ${app_name} iOS, ${app_name} pour Android, ou un autre client Matrix qui prend en charge la signature croisée</string>
+    <string name="use_other_session_content_description">Utilisez la dernière version de ${app_name} sur vos autres appareils : ${app_name} Web, ${app_name} pour Bureau, ${app_name} iOS, ${app_name} pour Android, ou un autre client quali.chat qui prend en charge la signature croisée</string>
     <string name="change_password_summary">Définir un nouveau mot de passe de compte…</string>
     <string name="error_saving_media_file">Impossible d’enregistrer le fichier multimédia</string>
     <string name="settings_security_prevent_screenshots_summary">L’activation de ce paramètre ajoute FLAG_SECURE à toutes les activités. Redémarrez l’application pour que la modification soit prise en compte.</string>
@@ -860,7 +860,7 @@
     <string name="member_banned_by">Banni par %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">Révoquer l’invitation à %1$s \?</string>
     <string name="three_pid_revoke_invite_dialog_title">Révoquer l’invitation</string>
-    <string name="phone_book_perform_lookup">Rechercher des contacts sur Matrix</string>
+    <string name="phone_book_perform_lookup">Rechercher des contacts sur quali.chat</string>
     <string name="contacts_book_title">Carnet d’adresses</string>
     <string name="empty_contact_book">Votre carnet d’adresses est vide</string>
     <string name="loading_contact_book">Récupération de vos contacts…</string>
@@ -868,7 +868,7 @@
     <string name="disclaimer_positive_button">EN SAVOIR PLUS</string>
     <string name="disclaimer_negative_button">COMPRIS</string>
     <string name="disclaimer_content">Nous sommes heureux de vous annoncer que nous avons un nouveau nom ! Votre application est à jour et vous êtes connectés à votre compte.</string>
-    <string name="disclaimer_title">Riot est désormais Element !</string>
+    <string name="disclaimer_title">Riot est désormais quali.chat !</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Attente de l’historique du chiffrement</string>
     <string name="crypto_error_withheld_generic">Impossible d’accéder à ce message car l’envoyeur n’a intentionnellement pas envoyé les clés</string>
     <string name="crypto_error_withheld_unverified">Vous ne pouvez pas accéder à ce message car l’envoyeur n’a pas confiance en votre session</string>
@@ -876,16 +876,16 @@
     <string name="notice_crypto_unable_to_decrypt_friendly_desc">À cause du chiffrement de bout en bout, vous pouvez avoir besoin d’attendre l’arrivée du message de quelqu’un car les clés de chiffrement ne vous ont pas été correctement envoyées.</string>
     <string name="notice_crypto_unable_to_decrypt_friendly">Attente du message, cela peut prendre du temps</string>
     <string name="login_signin_matrix_id_hint">Identifiant de l’utilisateur</string>
-    <string name="login_signin_matrix_id_notice">Si vous avez créé un compte sur un serveur d\'accueil, utilisez ci-dessous votre identifiant Matrix (par ex. : @utilisateur:domaine.com) et mot de passe.</string>
+    <string name="login_signin_matrix_id_notice">Si vous avez créé un compte sur un serveur d\'accueil, utilisez ci-dessous votre identifiant quali.chat (par ex. : @utilisateur:domaine.com) et mot de passe.</string>
     <string name="login_signin_matrix_id_title">Se connecter</string>
-    <string name="login_connect_using_matrix_id_submit">Me connecter avec mon identifiant Matrix</string>
+    <string name="login_connect_using_matrix_id_submit">Me connecter avec mon identifiant quali.chat</string>
     <string name="login_error_outdated_homeserver_warning_content">Ce serveur d\'accueil utilise une version obsolète. Demandez à l’administrateur de votre serveur d\'accueil de le mettre à jour. Vous pouvez continuer, mais certaines fonctionnalités peuvent ne pas fonctionner correctement.</string>
     <string name="login_error_outdated_homeserver_title">Serveur d’accueil obsolète</string>
     <string name="login_validation_code_is_not_correct">Le code saisi n’est pas correct. Veuillez vérifier.</string>
     <string name="login_terms_title">Acceptez les termes pour continuer</string>
     <string name="login_a11y_captcha_container">Veuillez compléter le captcha</string>
     <string name="login_a11y_choose_other">Sélectionner un serveur d’accueil personnalisé</string>
-    <string name="login_a11y_choose_modular">Sélectionner Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Sélectionner quali.chat Services</string>
     <string name="login_a11y_choose_matrix_org">Sélectionner matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">Votre compte n’est pas encore crée. Arrêter le processus de création \?</string>
     <string name="login_signup_cancel_confirmation_title">Attention</string>
@@ -928,17 +928,17 @@
     <string name="login_registration_disabled">Désolé, ce serveur n’accepte pas de nouveau compte.</string>
     <string name="login_sso_error_message">Une erreur est survenue pendant le chargement de la page : %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Entrez l’adresse du serveur que vous voulez utiliser</string>
-    <string name="login_server_url_form_modular_notice">Saisir l’adresse de Element ou du serveur de Modular que vous voulez utiliser</string>
+    <string name="login_server_url_form_modular_notice">Saisir l’adresse de quali.chat ou du serveur de Modular que vous voulez utiliser</string>
     <string name="login_server_url_form_modular_text">Hébergement privé pour les organisations</string>
     <string name="login_server_url_form_other_hint">Adresse</string>
-    <string name="login_server_url_form_modular_hint">Adresse Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Adresse quali.chat Services</string>
     <string name="login_clear_homeserver_history">Effacer l’historique</string>
     <string name="login_signin_sso">Continuer avec l’authentification unique</string>
     <string name="login_signin">S’authentifier</string>
     <string name="login_signup">S’inscrire</string>
     <string name="login_signin_to">S’authentifier sur %1$s</string>
     <string name="login_connect_to_a_custom_server">Se connecter à un serveur personnalisé</string>
-    <string name="login_connect_to_modular">Se connecter à Element Matrix Services</string>
+    <string name="login_connect_to_modular">Se connecter à quali.chat Services</string>
     <string name="login_connect_to">Se connecter à %1$s</string>
     <string name="login_continue">Poursuivre</string>
     <string name="login_social_sso">authentification unique</string>
@@ -1146,7 +1146,7 @@
     <string name="error_threepid_auth_failed">Assurez-vous d\'avoir cliqué sur le lien envoyé par courriel.</string>
     <string name="account_email_validation_message">Vérifiez votre courriel et cliquez sur le lien qu’il contient. Une fois cela fait, cliquez sur continuer.</string>
     <string name="account_email_already_used_error">Cette adresse courriel est déjà utilisée.</string>
-    <string name="settings_emails_and_phone_numbers_summary">Gérer les courriels et numéros de téléphone liés à votre compte Matrix</string>
+    <string name="settings_emails_and_phone_numbers_summary">Gérer les courriels et numéros de téléphone liés à votre compte quali.chat</string>
     <string name="login_server_text">Tout comme les courriels, les comptes ont un serveur d’accueil, même si vous pouvez parler à tout le monde</string>
     <string name="settings_discovery_emails_title">Adresses courriel découvrables</string>
     <string name="settings_discovery_disconnect_identity_server_info">La déconnexion du serveur d’identité signifie que vous ne pourrez plus être découvrable par les autres utilisateurs et que vous ne pourrez plus inviter d’autres personnes par courriel ou par téléphone.</string>
@@ -1331,7 +1331,7 @@
     <string name="notification_off">Désactivé</string>
     <string name="markdown_has_been_disabled">Le Markdown a été désactivé.</string>
     <string name="markdown_has_been_enabled">Le Markdown a été activé.</string>
-    <string name="command_description_clear_scalar_token">Pour réparer la gestion des applications Matrix</string>
+    <string name="command_description_clear_scalar_token">Pour réparer la gestion des applications quali.chat</string>
     <string name="command_description_markdown">Markdown activé/désactivé</string>
     <string name="command_description_nick">Change le nom d’affichage</string>
     <string name="command_description_remove_user">Expulse l’utilisateur avec l’identifiant fourni</string>
@@ -1365,7 +1365,7 @@
     <string name="settings_labs_native_camera_summary">Lancer l’appareil photo du système plutôt que l’écran d’appareil photo personnalisé.</string>
     <string name="settings_labs_native_camera">Utiliser la caméra de l’appareil</string>
     <string name="room_manage_integrations">Gérer les intégrations</string>
-    <string name="room_add_matrix_apps">Ajouter des applications Matrix</string>
+    <string name="room_add_matrix_apps">Ajouter des applications quali.chat</string>
     <string name="widget_integration_missing_parameter">Un paramètre requis est manquant.</string>
     <string name="widget_integration_room_not_visible">Le salon %s n’est pas visible.</string>
     <string name="widget_integration_missing_user_id">user_id manquant dans la requête.</string>
@@ -1467,7 +1467,7 @@
     <string name="rooms_header">Salons</string>
     <string name="no_more_results">Plus aucun résultat</string>
     <string name="no_result_placeholder">Aucun résultat</string>
-    <string name="matrix_only_filter">Contacts Matrix uniquement</string>
+    <string name="matrix_only_filter">Contacts quali.chat uniquement</string>
     <string name="direct_chats_header">Discussions</string>
     <string name="system_alerts_header">Alertes système</string>
     <string name="low_priority_header">Priorité basse</string>
@@ -1764,7 +1764,7 @@
     <string name="room_displayname_two_members">%1$s et %2$s</string>
     <string name="room_displayname_room_invite">Invitation au salon</string>
     <string name="medium_phone_number">Numéro de téléphone</string>
-    <string name="matrix_error">Erreur de Matrix</string>
+    <string name="matrix_error">Erreur de quali.chat</string>
     <string name="unable_to_send_message">Envoi du message impossible</string>
     <string name="notice_crypto_error_unknown_inbound_session_id">L’appareil de l’expéditeur ne nous a pas envoyé les clés pour ce message.</string>
     <string name="notice_crypto_unable_to_decrypt">** Déchiffrement impossible : %s **</string>
@@ -1914,7 +1914,7 @@
     <string name="login_error_ssl_other">Erreur SSL.</string>
     <string name="login_error_ssl_peer_unverified">Erreur SSL : l\'identité du pair n\'a pas été vérifiée.</string>
     <string name="login_error_homeserver_not_found">Impossible de joindre le serveur d’accueil à cette URL, veuillez la vérifier</string>
-    <string name="login_error_no_homeserver_found">Ce n’est pas une adresse de serveur Matrix valide</string>
+    <string name="login_error_no_homeserver_found">Ce n’est pas une adresse de serveur quali.chat valide</string>
     <string name="login_error_invalid_home_server">Veuillez saisir une URL valide</string>
     <string name="auth_accept_policies">Veuillez lire et accepter les politiques de ce serveur d’accueil :</string>
     <string name="auth_recaptcha_message">Ce serveur d’accueil souhaite s’assurer que vous n’êtes pas un robot</string>

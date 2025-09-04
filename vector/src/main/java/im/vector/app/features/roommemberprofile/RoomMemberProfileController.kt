@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2025 Keypair Establishment
  * Copyright 2020 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +24,7 @@ import im.vector.app.core.epoxy.profiles.buildProfileAction
 import im.vector.app.core.epoxy.profiles.buildProfileSection
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.ui.list.genericFooterItem
+import im.vector.app.features.flavour.ProductFlavour
 import im.vector.lib.core.utils.epoxy.charsequence.toEpoxyCharSequence
 import org.matrix.android.sdk.api.session.Session
 import org.matrix.android.sdk.api.session.room.model.Membership
@@ -220,7 +222,7 @@ class RoomMemberProfileController @Inject constructor(
 
             val canInvite = state.actionPermissions.canInvite
 
-            if (canInvite && (membership == Membership.LEAVE || membership == Membership.KNOCK)) {
+            if (!ProductFlavour.isQualiChat() && canInvite && (membership == Membership.LEAVE || membership == Membership.KNOCK)) {
                 buildProfileAction(
                         id = "invite",
                         title = stringProvider.getString(R.string.room_participants_action_invite),
