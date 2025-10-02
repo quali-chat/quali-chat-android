@@ -204,6 +204,7 @@ import kotlin.math.min
         if (useScrimView && scrimView == null) {
             val scrimView = View(parent.context)
             scrimView.setBackgroundColor(scrimViewColor)
+            @Suppress("DEPRECATION")
             scrimView.translationZ = scrimViewTranslationZ * child.resources.displayMetrics.scaledDensity
             scrimView.isVisible = false
             val params = CoordinatorLayout.LayoutParams(
@@ -488,7 +489,7 @@ import kotlin.math.min
     }
 
     private fun isLayouting(child: V): Boolean {
-        return child.parent != null && child.parent.isLayoutRequested && ViewCompat.isAttachedToWindow(child)
+        return child.parent != null && child.parent.isLayoutRequested && child.isAttachedToWindow
     }
 
     private fun getTopOffsetForState(state: State): Int {
@@ -639,7 +640,7 @@ import kotlin.math.min
         }
 
         // Request to apply insets as soon as the view is attached to a window.
-        if (ViewCompat.isAttachedToWindow(view)) {
+        if (view.isAttachedToWindow) {
             ViewCompat.requestApplyInsets(view)
         } else {
             view.addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
@@ -790,7 +791,7 @@ import kotlin.math.min
 
             this.targetState = state
             if (!isContinueSettlingRunnablePosted) {
-                ViewCompat.postOnAnimation(view, continueSettlingRunnable)
+                view.postOnAnimation(continueSettlingRunnable)
                 isContinueSettlingRunnablePosted = true
             }
         }

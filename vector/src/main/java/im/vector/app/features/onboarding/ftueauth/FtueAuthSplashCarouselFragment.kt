@@ -30,7 +30,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
-import im.vector.app.R
 import im.vector.app.core.extensions.incrementByOneAndWrap
 import im.vector.app.core.extensions.setClickableTermsAndPrivacy
 import im.vector.app.core.extensions.setCurrentItem
@@ -41,6 +40,7 @@ import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.onboarding.OnboardingAction
 import im.vector.app.features.onboarding.OnboardingFlow
 import im.vector.app.features.settings.VectorPreferences
+import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -88,21 +88,22 @@ class FtueAuthSplashCarouselFragment :
 
         val isAlreadyHaveAccountEnabled = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
         views.loginSplashSubmit.apply {
-            setText(if (ProductFlavour.isQualiChat()) R.string.login_signin_sso else if (isAlreadyHaveAccountEnabled) R.string.login_splash_create_account else R.string.login_splash_submit)
-
-            debouncedClicks {
-                splashSubmit(isAlreadyHaveAccountEnabled)
-            }
+            setText(if (ProductFlavour.isQualiChat()) CommonStrings.login_signin_sso else if (isAlreadyHaveAccountEnabled) CommonStrings.login_splash_create_account else CommonStrings.login_splash_submit)
+            debouncedClicks { splashSubmit(isAlreadyHaveAccountEnabled) }
         }
+        /*views.loginSplashAlreadyHaveAccount.apply {
+            isVisible = isAlreadyHaveAccountEnabled
+            debouncedClicks { alreadyHaveAnAccount() }
+        }*/
 
         views.loginSplashTerms.apply {
-            text = getString(R.string.terms_privacy_text)
+            text = getString(CommonStrings.terms_privacy_text)
             setClickableTermsAndPrivacy(
-                    termsText = getString(R.string.terms_text),
-                    privacyText = getString(R.string.privacy_policy_text),
-                    termsUrl = getString(R.string.terms_url),
-                    privacyUrl = getString(R.string.privacy_policy_url),
-                    linkColor = ContextCompat.getColor(requireContext(), R.color.element_accent_light) // Assuming you have a color resource defined
+                    termsText = getString(CommonStrings.terms_text),
+                    privacyText = getString(CommonStrings.privacy_policy_text),
+                    termsUrl = getString(CommonStrings.terms_url),
+                    privacyUrl = getString(CommonStrings.privacy_policy_url),
+                    linkColor = ContextCompat.getColor(requireContext(), im.vector.lib.ui.styles.R.color.element_accent_light) // Assuming you have a color resource defined
             )
         }
 

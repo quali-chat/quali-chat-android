@@ -24,29 +24,28 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/carousel_item_image_container"
-        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_spacing"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_spacing"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:id="@+id/carousel_item_image_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
+        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_image_height"
         app:layout_constraintBottom_toTopOf="@id/carousel_item_image_bottom_space"
         app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
-        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_image_height"
         app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
         app:layout_constraintTop_toBottomOf="@id/carousel_item_top_space">
 
         <ImageView
             android:id="@+id/carousel_item_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:contentDescription="@null"
-            android:padding="16dp" />
+            android:contentDescription="@null" />
 
     </FrameLayout>
 

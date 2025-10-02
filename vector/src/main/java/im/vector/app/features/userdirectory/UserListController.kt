@@ -35,6 +35,7 @@ import im.vector.app.features.displayname.getBestName
 import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.lib.core.utils.epoxy.charsequence.toEpoxyCharSequence
+import im.vector.lib.strings.CommonStrings
 import me.gujun.android.span.span
 import org.matrix.android.sdk.api.session.Session
 import org.matrix.android.sdk.api.session.identity.IdentityServiceError
@@ -67,7 +68,7 @@ class UserListController @Inject constructor(
         if (currentState.isE2EByDefault && currentState.single3pidSelection && currentState.pendingSelections.isNotEmpty()) {
             textHeaderItem {
                 id("userListNotificationHeader")
-                textRes(R.string.direct_room_user_list_only_invite_one_email)
+                textRes(CommonStrings.direct_room_user_list_only_invite_one_email)
             }
         }
 
@@ -76,7 +77,7 @@ class UserListController @Inject constructor(
             if (currentState.showInviteActions()) {
                 actionItem {
                     id(R.drawable.ic_share)
-                    title(host.stringProvider.getString(R.string.invite_friends))
+                    title(host.stringProvider.getString(CommonStrings.invite_friends))
                     actionIconRes(R.drawable.ic_share)
                     clickAction {
                         host.callback?.onInviteFriendClick()
@@ -86,7 +87,7 @@ class UserListController @Inject constructor(
             if (currentState.showContactBookAction && !ProductFlavour.isQualiChat()) {
                 actionItem {
                     id(R.drawable.ic_baseline_perm_contact_calendar_24)
-                    title(host.stringProvider.getString(R.string.contacts_book_title))
+                    title(host.stringProvider.getString(CommonStrings.contacts_book_title))
                     actionIconRes(R.drawable.ic_baseline_perm_contact_calendar_24)
                     clickAction {
                         host.callback?.onContactBookClick()
@@ -96,7 +97,7 @@ class UserListController @Inject constructor(
             if (currentState.showInviteActions() && !ProductFlavour.isQualiChat()) {
                 actionItem {
                     id(R.drawable.ic_qr_code_add)
-                    title(host.stringProvider.getString(R.string.qr_code))
+                    title(host.stringProvider.getString(CommonStrings.qr_code))
                     actionIconRes(R.drawable.ic_qr_code_add)
                     clickAction {
                         host.callback?.onUseQRCode()
@@ -110,7 +111,7 @@ class UserListController @Inject constructor(
                 matchingEmail()?.let { threePidUser ->
                     userListHeaderItem {
                         id("identity_server_result_header")
-                        header(host.stringProvider.getString(R.string.discovery_section, currentState.configuredIdentityServer ?: ""))
+                        header(host.stringProvider.getString(CommonStrings.discovery_section, currentState.configuredIdentityServer ?: ""))
                     }
                     val isSelected = currentState.pendingSelections.any { pendingSelection ->
                         when (pendingSelection) {
@@ -159,13 +160,13 @@ class UserListController @Inject constructor(
                             text(
                                     span {
                                         span {
-                                            text = host.stringProvider.getString(R.string.settings_discovery_consent_notice_off_2)
+                                            text = host.stringProvider.getString(CommonStrings.settings_discovery_consent_notice_off_2)
                                         }
                                         +"\n"
                                         span {
-                                            text = host.stringProvider.getString(R.string.settings_discovery_consent_action_give_consent)
+                                            text = host.stringProvider.getString(CommonStrings.settings_discovery_consent_action_give_consent)
                                             textStyle = "bold"
-                                            textColor = host.colorProvider.getColorFromAttribute(R.attr.colorPrimary)
+                                            textColor = host.colorProvider.getColorFromAttribute(com.google.android.material.R.attr.colorPrimary)
                                         }
                                     }.toEpoxyCharSequence()
                             )
@@ -181,19 +182,19 @@ class UserListController @Inject constructor(
                             text(
                                     span {
                                         span {
-                                            text = host.stringProvider.getString(R.string.finish_setting_up_discovery)
-                                            textColor = host.colorProvider.getColorFromAttribute(R.attr.vctr_content_primary)
+                                            text = host.stringProvider.getString(CommonStrings.finish_setting_up_discovery)
+                                            textColor = host.colorProvider.getColorFromAttribute(im.vector.lib.ui.styles.R.attr.vctr_content_primary)
                                         }
                                         +"\n"
                                         span {
-                                            text = host.stringProvider.getString(R.string.discovery_invite)
-                                            textColor = host.colorProvider.getColorFromAttribute(R.attr.vctr_content_secondary)
+                                            text = host.stringProvider.getString(CommonStrings.discovery_invite)
+                                            textColor = host.colorProvider.getColorFromAttribute(im.vector.lib.ui.styles.R.attr.vctr_content_secondary)
                                         }
                                         +"\n"
                                         span {
-                                            text = host.stringProvider.getString(R.string.finish_setup)
+                                            text = host.stringProvider.getString(CommonStrings.finish_setup)
                                             textStyle = "bold"
-                                            textColor = host.colorProvider.getColorFromAttribute(R.attr.colorPrimary)
+                                            textColor = host.colorProvider.getColorFromAttribute(com.google.android.material.R.attr.colorPrimary)
                                         }
                                     }.toEpoxyCharSequence()
                             )
@@ -207,7 +208,7 @@ class UserListController @Inject constructor(
             is Loading -> {
                 userListHeaderItem {
                     id("identity_server_result_header_loading")
-                    header(host.stringProvider.getString(R.string.discovery_section, currentState.configuredIdentityServer ?: ""))
+                    header(host.stringProvider.getString(CommonStrings.discovery_section, currentState.configuredIdentityServer ?: ""))
                 }
                 loadingItem {
                     id("is_loading")
@@ -247,7 +248,7 @@ class UserListController @Inject constructor(
                 ?.let { userList ->
                     userListHeaderItem {
                         id("known_header")
-                        header(host.stringProvider.getString(R.string.direct_room_user_list_known_title))
+                        header(host.stringProvider.getString(CommonStrings.direct_room_user_list_known_title))
                     }
 
                     if (userList.isEmpty()) {
@@ -279,7 +280,7 @@ class UserListController @Inject constructor(
         }
         userListHeaderItem {
             id("suggestions")
-            header(host.stringProvider.getString(R.string.direct_room_user_list_suggestions_title))
+            header(host.stringProvider.getString(CommonStrings.direct_room_user_list_suggestions_title))
         }
         if (toDisplay.isEmpty()) {
             renderEmptyState()
@@ -309,7 +310,7 @@ class UserListController @Inject constructor(
         val host = this
         noResultItem {
             id("noResult")
-            text(host.stringProvider.getString(R.string.no_result_placeholder))
+            text(host.stringProvider.getString(CommonStrings.no_result_placeholder))
         }
     }
 

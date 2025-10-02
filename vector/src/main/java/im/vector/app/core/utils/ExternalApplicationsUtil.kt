@@ -44,6 +44,7 @@ import androidx.core.content.getSystemService
 import im.vector.app.R
 import im.vector.app.features.notifications.NotificationUtils
 import im.vector.app.features.themes.ThemeUtils
+import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okio.buffer
@@ -102,7 +103,7 @@ fun openUrlInChromeCustomTab(
         val packageName = browser?.packageName
 
         if (packageName == null) {
-            Toast.makeText(context, R.string.error_no_external_application_found, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, CommonStrings.error_no_external_application_found, Toast.LENGTH_LONG).show()
             return
         }
 
@@ -131,7 +132,7 @@ fun openUrlInChromeCustomTab(
         customTabsIntent.intent.setPackage(packageName)
         customTabsIntent.launchUrl(context, Uri.parse(url))
     } catch (activityNotFoundException: ActivityNotFoundException) {
-        Toast.makeText(context, R.string.error_no_external_application_found, Toast.LENGTH_LONG).show()
+        context.toast(CommonStrings.error_no_external_application_found)
     }
 }
 
@@ -157,7 +158,7 @@ fun openFileSelection(
             activity.startActivityForResult(fileIntent, requestCode)
         }
     } catch (activityNotFoundException: ActivityNotFoundException) {
-        activity.toast(R.string.error_no_external_application_found)
+        activity.toast(CommonStrings.error_no_external_application_found)
     }
 }
 
@@ -235,7 +236,7 @@ fun shareMedia(context: Context, file: File, mediaMimeType: String?) {
     val chooserIntent = ShareCompat.IntentBuilder(context)
             .setType(mediaMimeType)
             .setStream(mediaUri)
-            .setChooserTitle(R.string.action_share)
+            .setChooserTitle(CommonStrings.action_share)
             .createChooserIntent()
 
     context.safeStartActivity(chooserIntent)
@@ -245,7 +246,7 @@ fun shareText(context: Context, text: String) {
     val chooserIntent = ShareCompat.IntentBuilder(context)
             .setType("text/plain")
             .setText(text)
-            .setChooserTitle(R.string.action_share)
+            .setChooserTitle(CommonStrings.action_share)
             .createChooserIntent()
 
     context.safeStartActivity(chooserIntent)
@@ -255,7 +256,7 @@ fun Context.safeStartActivity(intent: Intent) {
     try {
         startActivity(intent)
     } catch (activityNotFoundException: ActivityNotFoundException) {
-        toast(R.string.error_no_external_application_found)
+        toast(CommonStrings.error_no_external_application_found)
     }
 }
 
@@ -298,8 +299,8 @@ suspend fun saveMedia(
 
             val uri = context.contentResolver.insert(externalContentUri, values)
             if (uri == null) {
-                Toast.makeText(context, R.string.error_saving_media_file, Toast.LENGTH_LONG).show()
-                throw IllegalStateException(context.getString(R.string.error_saving_media_file))
+                Toast.makeText(context, CommonStrings.error_saving_media_file, Toast.LENGTH_LONG).show()
+                throw IllegalStateException(context.getString(CommonStrings.error_saving_media_file))
             } else {
                 val source = file.inputStream().source().buffer()
                 context.contentResolver.openOutputStream(uri)?.sink()?.buffer()?.let { sink ->
@@ -332,8 +333,8 @@ private fun saveMediaLegacy(
 ) {
     val state = Environment.getExternalStorageState()
     if (Environment.MEDIA_MOUNTED != state) {
-        context.toast(context.getString(R.string.error_saving_media_file))
-        throw IllegalStateException(context.getString(R.string.error_saving_media_file))
+        context.toast(context.getString(CommonStrings.error_saving_media_file))
+        throw IllegalStateException(context.getString(CommonStrings.error_saving_media_file))
     }
 
     val dest = when {
@@ -366,7 +367,7 @@ private fun saveMediaLegacy(
             addToGallery(savedFile, mediaMimeType, context)
         }
     } catch (error: Throwable) {
-        context.toast(context.getString(R.string.error_saving_media_file))
+        context.toast(context.getString(CommonStrings.error_saving_media_file))
         throw error
     }
 }
@@ -424,7 +425,7 @@ fun selectTxtFileToWrite(
     try {
         activityResultLauncher.launch(chooserIntent)
     } catch (activityNotFoundException: ActivityNotFoundException) {
-        activity.toast(R.string.error_no_external_application_found)
+        activity.toast(CommonStrings.error_no_external_application_found)
     }
 }
 

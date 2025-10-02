@@ -18,7 +18,6 @@
 package im.vector.app.features.roomprofile.settings
 
 import com.airbnb.epoxy.TypedEpoxyController
-import im.vector.app.R
 import im.vector.app.core.epoxy.dividerItem
 import im.vector.app.core.epoxy.profiles.buildProfileAction
 import im.vector.app.core.epoxy.profiles.buildProfileSection
@@ -32,6 +31,7 @@ import im.vector.app.features.form.formSwitchItem
 import im.vector.app.features.home.AvatarRenderer
 import im.vector.app.features.home.room.detail.timeline.format.RoomHistoryVisibilityFormatter
 import im.vector.app.features.settings.VectorPreferences
+import im.vector.lib.strings.CommonStrings
 import org.matrix.android.sdk.api.session.room.model.GuestAccess
 import org.matrix.android.sdk.api.session.room.model.RoomJoinRules
 import org.matrix.android.sdk.api.util.toMatrixItem
@@ -80,7 +80,7 @@ class RoomSettingsController @Inject constructor(
         }
 
         buildProfileSection(
-                stringProvider.getString(R.string.settings)
+                stringProvider.getString(CommonStrings.settings)
         )
 
         verticalMarginItem {
@@ -92,7 +92,7 @@ class RoomSettingsController @Inject constructor(
             id("name")
             enabled(data.actionPermissions.canChangeName)
             value(data.newName ?: roomSummary.displayName)
-            hint(host.stringProvider.getString(R.string.room_settings_name_hint))
+            hint(host.stringProvider.getString(CommonStrings.room_settings_name_hint))
             autoCapitalize(true)
 
             onTextChange { text ->
@@ -104,7 +104,7 @@ class RoomSettingsController @Inject constructor(
             enabled(data.actionPermissions.canChangeTopic)
             value(data.newTopic ?: roomSummary.topic)
             singleLine(false)
-            hint(host.stringProvider.getString(R.string.room_settings_topic_hint))
+            hint(host.stringProvider.getString(CommonStrings.room_settings_topic_hint))
 
             onTextChange { text ->
                 host.callback?.onTopicChanged(text)
@@ -115,17 +115,16 @@ class RoomSettingsController @Inject constructor(
         }
         buildProfileAction(
                 id = "historyReadability",
-                title = stringProvider.getString(R.string.room_settings_room_read_history_rules_pref_title),
+                title = stringProvider.getString(CommonStrings.room_settings_room_read_history_rules_pref_title),
                 subtitle = roomHistoryVisibilityFormatter.getSetting(data.newHistoryVisibility ?: data.currentHistoryVisibility),
                 divider = true,
                 editable = data.actionPermissions.canChangeHistoryVisibility,
                 action = { if (data.actionPermissions.canChangeHistoryVisibility) callback?.onHistoryVisibilityClicked() }
         )
-
         if (!ProductFlavour.isQualiChat()) {
             buildProfileAction(
                     id = "joinRule",
-                    title = stringProvider.getString(R.string.room_settings_room_access_title),
+                    title = stringProvider.getString(CommonStrings.room_settings_room_access_title),
                     subtitle = data.getJoinRuleWording(stringProvider),
                     divider = true,
                     editable = data.actionPermissions.canChangeJoinRule,
@@ -139,7 +138,7 @@ class RoomSettingsController @Inject constructor(
             // add guest access option?
             formSwitchItem {
                 id("guest_access")
-                title(host.stringProvider.getString(R.string.room_settings_guest_access_title))
+                title(host.stringProvider.getString(CommonStrings.room_settings_guest_access_title))
                 switchChecked(guestAccess == GuestAccess.CanJoin)
                 listener {
                     host.callback?.onToggleGuestAccess()

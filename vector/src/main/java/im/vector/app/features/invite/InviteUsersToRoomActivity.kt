@@ -43,6 +43,7 @@ import im.vector.app.features.userdirectory.UserListFragment
 import im.vector.app.features.userdirectory.UserListFragmentArgs
 import im.vector.app.features.userdirectory.UserListSharedAction
 import im.vector.app.features.userdirectory.UserListSharedActionViewModel
+import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.parcelize.Parcelize
@@ -83,7 +84,7 @@ class InviteUsersToRoomActivity : SimpleFragmentActivity() {
                     views.container,
                     UserListFragment::class.java,
                     UserListFragmentArgs(
-                            title = getString(R.string.invite_users_to_room_title),
+                            title = getString(CommonStrings.invite_users_to_room_title),
                             menuResId = R.menu.vector_invite_users_to_room,
                             submitMenuItemId = R.id.action_invite_users_to_room_invite,
                             excludedUserIds = viewModel.getUserIdsOfRoomMembers(),
@@ -102,12 +103,12 @@ class InviteUsersToRoomActivity : SimpleFragmentActivity() {
             viewModel.handle(InviteUsersToRoomAction.InviteSelectedUsers(action.selections))
         } else {
             MaterialAlertDialogBuilder(this)
-                    .setTitle(R.string.dialog_title_confirmation)
-                    .setMessage(getString(R.string.invite_unknown_users_dialog_content, unknownUsers.joinToString("\n • ", " • ") { it.getMxId() }))
-                    .setPositiveButton(R.string.invite_unknown_users_dialog_submit) { _, _ ->
+                    .setTitle(CommonStrings.dialog_title_confirmation)
+                    .setMessage(getString(CommonStrings.invite_unknown_users_dialog_content, unknownUsers.joinToString("\n • ", " • ") { it.getMxId() }))
+                    .setPositiveButton(CommonStrings.invite_unknown_users_dialog_submit) { _, _ ->
                         viewModel.handle(InviteUsersToRoomAction.InviteSelectedUsers(action.selections))
                     }
-                    .setNegativeButton(R.string.action_cancel, null)
+                    .setNegativeButton(CommonStrings.action_cancel, null)
                     .show()
         }
     }
@@ -123,7 +124,7 @@ class InviteUsersToRoomActivity : SimpleFragmentActivity() {
         if (allGranted) {
             doOnPostResume { addFragmentToBackstack(views.container, ContactsBookFragment::class.java) }
         } else if (deniedPermanently) {
-            onPermissionDeniedSnackbar(R.string.permissions_denied_add_contact)
+            onPermissionDeniedSnackbar(CommonStrings.permissions_denied_add_contact)
         }
     }
 
@@ -136,20 +137,20 @@ class InviteUsersToRoomActivity : SimpleFragmentActivity() {
     }
 
     private fun renderInviteLoading() {
-        updateWaitingView(WaitingViewData(getString(R.string.inviting_users_to_room)))
+        updateWaitingView(WaitingViewData(getString(CommonStrings.inviting_users_to_room)))
     }
 
     private fun renderInviteFailure(error: Throwable) {
         hideWaitingView()
         val message = if (error is Failure.ServerError && error.httpCode == HttpURLConnection.HTTP_INTERNAL_ERROR /*500*/) {
             // This error happen if the invited userId does not exist.
-            getString(R.string.invite_users_to_room_failure)
+            getString(CommonStrings.invite_users_to_room_failure)
         } else {
             errorFormatter.toHumanReadable(error)
         }
         MaterialAlertDialogBuilder(this)
                 .setMessage(message)
-                .setPositiveButton(R.string.ok, null)
+                .setPositiveButton(CommonStrings.ok, null)
                 .show()
     }
 

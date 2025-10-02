@@ -23,6 +23,7 @@ import im.vector.app.core.pushers.FcmHelper
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.utils.startAddGoogleAccountIntent
 import im.vector.app.features.settings.troubleshoot.TroubleshootTest
+import im.vector.lib.strings.CommonStrings
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -33,7 +34,7 @@ class TestFirebaseToken @Inject constructor(
         private val context: FragmentActivity,
         private val stringProvider: StringProvider,
         private val fcmHelper: FcmHelper,
-) : TroubleshootTest(R.string.settings_troubleshoot_test_fcm_title) {
+) : TroubleshootTest(CommonStrings.settings_troubleshoot_test_fcm_title) {
 
     override fun perform(testParameters: TestParameters) {
         status = TestStatus.RUNNING
@@ -44,28 +45,28 @@ class TestFirebaseToken @Inject constructor(
                             // Can't find where this constant is (not documented -or deprecated in docs- and all obfuscated)
                             description = when (val errorMsg = task.exception?.localizedMessage ?: "Unknown") {
                                 "SERVICE_NOT_AVAILABLE" -> {
-                                    stringProvider.getString(R.string.settings_troubleshoot_test_fcm_failed_service_not_available, errorMsg)
+                                    stringProvider.getString(CommonStrings.settings_troubleshoot_test_fcm_failed_service_not_available, errorMsg)
                                 }
                                 "TOO_MANY_REGISTRATIONS" -> {
-                                    stringProvider.getString(R.string.settings_troubleshoot_test_fcm_failed_too_many_registration, errorMsg)
+                                    stringProvider.getString(CommonStrings.settings_troubleshoot_test_fcm_failed_too_many_registration, errorMsg)
                                 }
                                 "ACCOUNT_MISSING" -> {
-                                    quickFix = object : TroubleshootQuickFix(R.string.settings_troubleshoot_test_fcm_failed_account_missing_quick_fix) {
+                                    quickFix = object : TroubleshootQuickFix(CommonStrings.settings_troubleshoot_test_fcm_failed_account_missing_quick_fix) {
                                         override fun doFix() {
                                             startAddGoogleAccountIntent(context, testParameters.activityResultLauncher)
                                         }
                                     }
-                                    stringProvider.getString(R.string.settings_troubleshoot_test_fcm_failed_account_missing, errorMsg)
+                                    stringProvider.getString(CommonStrings.settings_troubleshoot_test_fcm_failed_account_missing, errorMsg)
                                 }
                                 else -> {
-                                    stringProvider.getString(R.string.settings_troubleshoot_test_fcm_failed, errorMsg)
+                                    stringProvider.getString(CommonStrings.settings_troubleshoot_test_fcm_failed, errorMsg)
                                 }
                             }
                             status = TestStatus.FAILED
                         } else {
                             task.result?.let { token ->
                                 val tok = token.take(8) + "********************"
-                                description = stringProvider.getString(R.string.settings_troubleshoot_test_fcm_success, tok)
+                                description = stringProvider.getString(CommonStrings.settings_troubleshoot_test_fcm_success, tok)
                                 Timber.e("Retrieved FCM token success [$tok].")
                                 // Ensure it is well store in our local storage
                                 fcmHelper.storeFcmToken(token)
@@ -74,7 +75,7 @@ class TestFirebaseToken @Inject constructor(
                         }
                     }
         } catch (e: Throwable) {
-            description = stringProvider.getString(R.string.settings_troubleshoot_test_fcm_failed, e.localizedMessage)
+            description = stringProvider.getString(CommonStrings.settings_troubleshoot_test_fcm_failed, e.localizedMessage)
             status = TestStatus.FAILED
         }
     }

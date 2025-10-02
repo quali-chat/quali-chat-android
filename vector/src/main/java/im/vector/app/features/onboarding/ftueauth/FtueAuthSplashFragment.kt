@@ -24,7 +24,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import dagger.hilt.android.AndroidEntryPoint
-import im.vector.app.R
 import im.vector.app.core.resources.BuildMeta
 import im.vector.app.databinding.FragmentFtueAuthSplashBinding
 import im.vector.app.features.VectorFeatures
@@ -32,6 +31,7 @@ import im.vector.app.features.flavour.ProductFlavour
 import im.vector.app.features.onboarding.OnboardingAction
 import im.vector.app.features.onboarding.OnboardingFlow
 import im.vector.app.features.settings.VectorPreferences
+import im.vector.lib.strings.CommonStrings
 import javax.inject.Inject
 
 /**
@@ -57,7 +57,7 @@ class FtueAuthSplashFragment :
     private fun setupViews() {
         val isAlreadyHaveAccountEnabled = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
         views.loginSplashSubmit.apply {
-            setText(if (ProductFlavour.isQualiChat()) R.string.login_signin_sso else if (isAlreadyHaveAccountEnabled) R.string.login_splash_create_account else R.string.login_splash_submit)
+            setText(if (ProductFlavour.isQualiChat()) CommonStrings.login_signin_sso else if (isAlreadyHaveAccountEnabled) CommonStrings.login_splash_create_account else CommonStrings.login_splash_submit)
             debouncedClicks { splashSubmit(isAlreadyHaveAccountEnabled) }
         }
         views.loginSplashAlreadyHaveAccount.apply {

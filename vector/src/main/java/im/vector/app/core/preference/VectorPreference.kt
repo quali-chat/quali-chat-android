@@ -106,33 +106,34 @@ open class VectorPreference : Preference {
 
             summary?.setTypeface(null, mTypeface)
 
-            if (title != null) {
-                title.isSingleLine = false
-                if (!ProductFlavour.isQualiChat()) {
-                    title.setTypeface(null, mTypeface)
-                } else {
-                    title.typeface = ResourcesCompat.getFont(context, R.font.nutino_regular)
+            if (tintIcon) {
+                // Tint icons (See #1786)
+                val icon = holder.findViewById(android.R.id.icon) as? ImageView
+
+                icon?.let {
+                    val color = ThemeUtils.getColor(context, im.vector.lib.ui.styles.R.attr.vctr_content_secondary)
+                    ImageViewCompat.setImageTintList(it, ColorStateList.valueOf(color))
                 }
             }
 
             if (!ProductFlavour.isQualiChat()) {
                 summary?.setTypeface(null, mTypeface)
             } else {
-                summary?.setTypeface(ResourcesCompat.getFont(context, R.font.nutino_regular))
+                summary?.setTypeface(ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.nutino_regular))
             }
 
             // Tint icons (See #1786)
             val icon = holder.findViewById(android.R.id.icon) as? ImageView
 
             icon?.let {
-                val color = ThemeUtils.getColor(context, R.attr.vctr_content_secondary)
+                val color = ThemeUtils.getColor(context, im.vector.lib.ui.styles.R.attr.vctr_content_secondary)
                 ImageViewCompat.setImageTintList(it, ColorStateList.valueOf(color))
             }
 
 
             if (isHighlighted) {
                 val colorFrom = Color.TRANSPARENT
-                val colorTo = ThemeUtils.getColor(itemView.context, R.attr.colorPrimary)
+                val colorTo = ThemeUtils.getColor(itemView.context, com.google.android.material.R.attr.colorPrimary)
                 currentHighlightAnimator = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo).apply {
                     duration = 250 // milliseconds
                     addUpdateListener { animator ->

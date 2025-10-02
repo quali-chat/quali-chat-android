@@ -30,8 +30,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.edit
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.preference.PreferenceManager
-import im.vector.app.R
 import im.vector.app.features.flavour.ProductFlavour
+import im.vector.lib.ui.styles.R
 import timber.log.Timber
 import java.util.concurrent.atomic.AtomicReference
 

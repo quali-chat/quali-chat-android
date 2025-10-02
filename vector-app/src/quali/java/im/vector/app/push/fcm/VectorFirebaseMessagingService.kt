@@ -30,6 +30,7 @@ import im.vector.app.core.pushers.VectorPushHandler
 import im.vector.app.features.mdm.MdmData
 import im.vector.app.features.mdm.MdmService
 import im.vector.app.features.settings.VectorPreferences
+import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
@@ -71,7 +72,7 @@ class VectorFirebaseMessagingService : FirebaseMessagingService() {
                         pushKey = token,
                         gateway = mdmService.getData(
                                 mdmData = MdmData.DefaultPushGatewayUrl,
-                                defaultValue = getString(R.string.pusher_http_url),
+                                defaultValue = getString(im.vector.app.config.R.string.pusher_http_url),
                         ),
                 )
             }

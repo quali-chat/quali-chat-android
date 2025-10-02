@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     android:background="@null">
 
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/splashCarousel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="72dp" />
+        app:layout_constraintTop_toBottomOf="@+id/logoContainer" />
 
     <LinearLayout
         android:id="@+id/logoContainer"
@@ -41,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/carouselIndicator"
@@ -77,19 +76,19 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/loginSplashSubmit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/carouselIndicator" />
 
-    <Button
+
+     <Button
         android:id="@+id/loginSplashAlreadyHaveAccount"
         style="@style/Widget.Vector.Button.Login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/login_splash_sign_in"
         android:textAllCaps="true"
-        android:transitionName="loginSubmitTransition"
         android:visibility="gone"
+        android:transitionName="loginSubmitTransition"
         app:layout_constraintBottom_toTopOf="@id/loginSplashSubmit"
         app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
         app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"

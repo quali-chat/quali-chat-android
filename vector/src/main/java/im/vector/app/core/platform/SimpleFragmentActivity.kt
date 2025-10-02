@@ -79,6 +79,7 @@ abstract class SimpleFragmentActivity : VectorBaseActivity<ActivityBinding>() {
         super.hideWaitingView()
     }
 
+    @Suppress("OVERRIDE_DEPRECATION")
     override fun onBackPressed() {
         if (waitingView!!.isVisible) {
             // ignore

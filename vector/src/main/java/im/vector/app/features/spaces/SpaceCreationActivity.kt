@@ -17,6 +17,7 @@
 
 package im.vector.app.features.spaces
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -39,6 +40,7 @@ import im.vector.app.features.spaces.create.CreateSpaceState
 import im.vector.app.features.spaces.create.CreateSpaceViewModel
 import im.vector.app.features.spaces.create.SpaceTopology
 import im.vector.app.features.spaces.create.SpaceType
+import im.vector.lib.strings.CommonStrings
 
 @Suppress("DEPRECATION")
 @AndroidEntryPoint
@@ -100,7 +102,7 @@ class SpaceCreationActivity : SimpleFragmentActivity() {
                     hideWaitingView()
                     MaterialAlertDialogBuilder(this)
                             .setMessage(it.errorMessage)
-                            .setPositiveButton(getString(R.string.ok), null)
+                            .setPositiveButton(getString(CommonStrings.ok), null)
                             .show()
                 }
                 is CreateSpaceEvents.FinishSuccess -> {
@@ -122,7 +124,7 @@ class SpaceCreationActivity : SimpleFragmentActivity() {
     }
 
     private fun navigateToFragment(fragmentClass: Class<out Fragment>) {
-        val frag = supportFragmentManager.findFragmentByTag(fragmentClass.name) ?: fragmentClass.newInstance()
+        val frag = supportFragmentManager.findFragmentByTag(fragmentClass.name) ?: fragmentClass.getDeclaredConstructor().newInstance()
         supportFragmentManager.beginTransaction()
                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
                 .replace(
@@ -133,20 +135,22 @@ class SpaceCreationActivity : SimpleFragmentActivity() {
                 .commit()
     }
 
+    @Suppress("OVERRIDE_DEPRECATION")
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         viewModel.handle(CreateSpaceAction.OnBackPressed)
     }
 
     private fun renderState(state: CreateSpaceState) {
         val titleRes = when (state.step) {
-            CreateSpaceState.Step.ChooseType -> R.string.activity_create_space_title
+            CreateSpaceState.Step.ChooseType -> CommonStrings.activity_create_space_title
             CreateSpaceState.Step.SetDetails,
             CreateSpaceState.Step.AddRooms -> {
-                if (state.spaceType == SpaceType.Public) R.string.your_public_space
-                else R.string.your_private_space
+                if (state.spaceType == SpaceType.Public) CommonStrings.your_public_space
+                else CommonStrings.your_private_space
             }
             CreateSpaceState.Step.AddEmailsOrInvites,
-            CreateSpaceState.Step.ChoosePrivateType -> R.string.your_private_space
+            CreateSpaceState.Step.ChoosePrivateType -> CommonStrings.your_private_space
         }
         supportActionBar?.let {
             it.title = getString(titleRes)
@@ -155,7 +159,7 @@ class SpaceCreationActivity : SimpleFragmentActivity() {
         }
 
         if (state.creationResult is Loading) {
-            showWaitingView(getString(R.string.create_spaces_loading_message))
+            showWaitingView(getString(CommonStrings.create_spaces_loading_message))
         }
     }
 

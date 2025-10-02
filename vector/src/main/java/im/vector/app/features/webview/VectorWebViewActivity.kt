@@ -95,11 +95,11 @@ class VectorWebViewActivity : VectorBaseActivity<ActivityVectorWebViewBinding>()
      * UI event
      * ========================================================================================== */
 
+    @Suppress("OVERRIDE_DEPRECATION")
     override fun onBackPressed() {
         if (views.simpleWebview.canGoBack()) {
             views.simpleWebview.goBack()
         } else {
-            @Suppress("DEPRECATION")
             super.onBackPressed()
         }
     }

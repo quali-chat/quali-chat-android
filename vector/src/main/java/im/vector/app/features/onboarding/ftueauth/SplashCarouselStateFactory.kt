@@ -29,6 +29,7 @@ import im.vector.app.features.themes.ThemeProvider
 import im.vector.app.features.themes.ThemeUtils
 import im.vector.lib.core.utils.epoxy.charsequence.EpoxyCharSequence
 import im.vector.lib.core.utils.epoxy.charsequence.toEpoxyCharSequence
+import im.vector.lib.strings.CommonStrings
 import javax.inject.Inject
 
 class SplashCarouselStateFactory @Inject constructor(
@@ -40,31 +41,31 @@ class SplashCarouselStateFactory @Inject constructor(
 
     fun create(): SplashCarouselState {
         val lightTheme = themeProvider.isLightTheme()
-        fun background(@DrawableRes lightDrawable: Int) = if (lightTheme) lightDrawable else R.drawable.bg_color_background
+        fun background(@DrawableRes lightDrawable: Int) = if (lightTheme) lightDrawable else im.vector.lib.ui.styles.R.drawable.bg_color_background
         fun hero(@DrawableRes lightDrawable: Int, @DrawableRes darkDrawable: Int) = if (lightTheme) lightDrawable else darkDrawable
         return SplashCarouselState(
                 listOf(
                         SplashCarouselState.Item(
-                                R.string.ftue_auth_carousel_secure_title.colorTerminatingFullStop(R.attr.colorAccent),
-                                R.string.ftue_auth_carousel_secure_body,
+                                CommonStrings.ftue_auth_carousel_secure_title.colorTerminatingFullStop(com.google.android.material.R.attr.colorAccent),
+                                CommonStrings.ftue_auth_carousel_secure_body,
                                 hero(R.drawable.ic_splash_conversations, R.drawable.ic_splash_conversations),
-                                background(R.drawable.bg_carousel_page_1),
-                                ContextCompat.getColor(context, R.color.title_first)
+                                background(im.vector.lib.ui.styles.R.drawable.bg_carousel_page_1),
+                                ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.title_first)
 
                         ),
                         SplashCarouselState.Item(
-                                R.string.ftue_auth_carousel_control_title.colorTerminatingFullStop(R.attr.colorAccent),
-                                R.string.ftue_auth_carousel_control_body,
+                                CommonStrings.ftue_auth_carousel_control_title.colorTerminatingFullStop(com.google.android.material.R.attr.colorAccent),
+                                CommonStrings.ftue_auth_carousel_control_body,
                                 hero(R.drawable.ic_splash_control, R.drawable.ic_splash_control),
-                                background(R.drawable.bg_carousel_page_2),
-                                ContextCompat.getColor(context, R.color.title_second)
+                                background(im.vector.lib.ui.styles.R.drawable.bg_carousel_page_2),
+                                ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.title_second)
                         ),
                         SplashCarouselState.Item(
-                                R.string.ftue_auth_carousel_encrypted_title.colorTerminatingFullStop(R.attr.colorAccent),
-                                R.string.ftue_auth_carousel_encrypted_body,
+                                CommonStrings.ftue_auth_carousel_encrypted_title.colorTerminatingFullStop(com.google.android.material.R.attr.colorAccent),
+                                CommonStrings.ftue_auth_carousel_encrypted_body,
                                 hero(R.drawable.ic_splash_secure, R.drawable.ic_splash_secure),
-                                background(R.drawable.bg_carousel_page_3),
-                                ContextCompat.getColor(context, R.color.title_third)
+                                background(im.vector.lib.ui.styles.R.drawable.bg_carousel_page_3),
+                                ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.title_third)
                         )
                 )
         )

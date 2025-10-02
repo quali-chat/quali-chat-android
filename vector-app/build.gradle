@@ -228,7 +228,7 @@ android {
     buildTypes {
         debug {
             if (project.hasProperty("coverage")) {
-                testCoverageEnabled = coverage == "true"
+                testCoverageEnabled = project.coverage == "true"
             }
 
             signingConfig signingConfigs.debug
@@ -349,7 +349,7 @@ android {
         def buildType = variant.buildType.name
     }
 
-    lintOptions {
+    lint {
         lintConfig file("../tools/lint/lint.xml")
 
         checkDependencies true
@@ -362,7 +362,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = versions.jvmTarget
         freeCompilerArgs += [
                 "-opt-in=kotlin.RequiresOptIn",
                 // Fixes false positive "This is an internal Mavericks API. It is not intended for external use."
@@ -377,6 +377,13 @@ android {
 
     buildFeatures {
         viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        pickFirsts.add("META-INF/LICENSE.md")
+        pickFirsts.add("META-INF/LICENSE-notice.md")
+        pickFirsts.add("MANIFEST.MF")
     }
 }
 
@@ -384,6 +391,7 @@ dependencies {
     implementation project(':vector')
     implementation project(':vector-config')
     implementation project(':library:core-utils')
+    implementation project(':library:ui-strings')
     debugImplementation project(':library:external:span')
     debugImplementation project(':library:ui-styles')
     implementation libs.dagger.hilt
@@ -398,10 +406,10 @@ dependencies {
         exclude group: 'com.facebook.fbjni', module: 'fbjni'
     }
     debugImplementation 'com.facebook.soloader:soloader:0.10.5'
-    debugImplementation "com.kgurgul.flipper:flipper-realm-android:2.2.0"
+    debugImplementation "com.kgurgul.flipper:flipper-realm-android:2.3.0"
 
-    qualiImplementation "com.google.android.gms:play-services-location:21.0.1"
-    stagingImplementation "com.google.android.gms:play-services-location:21.0.1"
+    qualiImplementation "com.google.android.gms:play-services-location:21.3.0"
+    stagingImplementation "com.google.android.gms:play-services-location:21.3.0"
     // UnifiedPush gplay flavor only
     qualiImplementation platform(libs.google.firebaseBom)
     stagingImplementation platform(libs.google.firebaseBom)
@@ -424,8 +432,8 @@ dependencies {
 // Full SDK implementation
 
 // OSS License, gplay flavor only
-    qualiImplementation 'com.google.android.gms:play-services-oss-licenses:17.0.1'
-    stagingImplementation 'com.google.android.gms:play-services-oss-licenses:17.0.1'
+    qualiImplementation 'com.google.android.gms:play-services-oss-licenses:17.1.0'
+    stagingImplementation 'com.google.android.gms:play-services-oss-licenses:17.1.0'
     kapt libs.dagger.hiltCompiler
     kapt libs.airbnb.epoxyProcessor
 

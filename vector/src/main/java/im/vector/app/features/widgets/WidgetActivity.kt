@@ -17,6 +17,7 @@
 
 package im.vector.app.features.widgets
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.PendingIntent
 import android.app.PendingIntent.FLAG_IMMUTABLE
@@ -37,7 +38,6 @@ import androidx.core.view.isVisible
 import com.airbnb.mvrx.Mavericks
 import com.airbnb.mvrx.viewModel
 import dagger.hilt.android.AndroidEntryPoint
-import im.vector.app.R
 import im.vector.app.core.extensions.addFragment
 import im.vector.app.core.platform.VectorBaseActivity
 import im.vector.app.databinding.ActivityWidgetBinding
@@ -46,6 +46,8 @@ import im.vector.app.features.widgets.permissions.RoomWidgetPermissionViewEvents
 import im.vector.app.features.widgets.permissions.RoomWidgetPermissionViewModel
 import im.vector.lib.core.utils.compat.getParcelableCompat
 import im.vector.lib.core.utils.compat.getSerializableCompat
+import im.vector.lib.strings.CommonStrings
+import im.vector.lib.ui.styles.R
 import org.matrix.android.sdk.api.extensions.orFalse
 import org.matrix.android.sdk.api.session.events.model.Content
 import java.io.Serializable
@@ -85,7 +87,7 @@ class WidgetActivity : VectorBaseActivity<ActivityWidgetBinding>() {
 
     override fun getBinding() = ActivityWidgetBinding.inflate(layoutInflater)
 
-    override fun getTitleRes() = R.string.room_widget_activity_title
+    override fun getTitleRes() = CommonStrings.room_widget_activity_title
 
     override fun initUiAndData() {
         val widgetArgs: WidgetArgs? = intent?.extras?.getParcelableCompat(Mavericks.KEY_ARG)
@@ -174,8 +176,8 @@ class WidgetActivity : VectorBaseActivity<ActivityWidgetBinding>() {
         val actions = mutableListOf<RemoteAction>()
         val intent = Intent(ACTION_MEDIA_CONTROL).putExtra(EXTRA_CONTROL_TYPE, CONTROL_TYPE_HANGUP)
         val pendingIntent = PendingIntent.getBroadcast(this, REQUEST_CODE_HANGUP, intent, FLAG_IMMUTABLE)
-        val icon = Icon.createWithResource(this, R.drawable.ic_call_hangup)
-        actions.add(RemoteAction(icon, getString(R.string.call_notification_hangup), getString(R.string.call_notification_hangup), pendingIntent))
+        val icon = Icon.createWithResource(this, im.vector.app.R.drawable.ic_call_hangup)
+        actions.add(RemoteAction(icon, getString(CommonStrings.call_notification_hangup), getString(CommonStrings.call_notification_hangup), pendingIntent))
 
         val aspectRatio = Rational(resources.getDimensionPixelSize(R.dimen.call_pip_width), resources.getDimensionPixelSize(R.dimen.call_pip_height))
         return PictureInPictureParams.Builder()
@@ -186,6 +188,7 @@ class WidgetActivity : VectorBaseActivity<ActivityWidgetBinding>() {
 
     private var hangupBroadcastReceiver: BroadcastReceiver? = null
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     private val pictureInPictureModeChangedInfoConsumer = Consumer<PictureInPictureModeChangedInfo> {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) return@Consumer
 
