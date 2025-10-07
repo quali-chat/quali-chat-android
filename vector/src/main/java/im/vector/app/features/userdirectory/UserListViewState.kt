@@ -22,9 +22,10 @@ import com.airbnb.mvrx.Async
 import com.airbnb.mvrx.MavericksState
 import com.airbnb.mvrx.Uninitialized
 import im.vector.app.core.contacts.MappedContact
+import im.vector.app.features.flavour.ProductFlavour
 import org.matrix.android.sdk.api.session.user.model.User
 
-const val directRoomMembersLimit = 2
+val directRoomMembersLimit: Int = if (ProductFlavour.isQualiChat()) 21 else 2
 
 data class UserListViewState(
         val excludedUserIds: Set<String>? = null,
